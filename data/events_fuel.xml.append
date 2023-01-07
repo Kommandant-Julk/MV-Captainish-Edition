@@ -1,0 +1,1276 @@
+<eventList name="NO_FUEL">
+	<event load="FUEL_FLEET_DELAY"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_TRADER"/>
+	<event load="FUEL_EXPLORE"/>
+	<event load="FUEL_APPROACH"/>
+	<event load="FUEL_OFF_ENGI_DUBIOUS"/>
+	<event load="FUEL_OFF_ROCK_WRECK"/>
+	<event load="NO_FUEL_REFUGEE_FRIENDLY"/>
+	<event load="CE_FUEL_CREW_FOR_FUEL"/>
+	<event load="C_FUEL_REBEL_GUNBOAT"/>
+</eventList>
+<eventList name="NO_FUEL_REFUGEE_PIRATE_ACCEPT">
+	<event>
+		<text>The refugee ship makes the exchange, and wishes you well on your mission.</text>
+		<item_modify>
+			<item type="fuel" min="5" max="7"/>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Having traded supplies, the ship suddenly powers up and attacks - it's a pirate ship!</text>
+		<item_modify>
+			<item type="fuel" min="5" max="7"/>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NO_FUEL_REFUGEE_PIRATE_REJECT">
+	<event>
+		<text>The refugee ship apologizes, but they need their fuel. They wish you well, and then vanish from the system.</text>
+	</event>
+	<event>
+		<text>Sensing your reluctance, the refugee ship nevertheless parts with a small amount of fuel. It warns you to leave the sector as quickly as possible before it is overtaken by the Rebels, then it jumps and vanishes to parts unknown.</text>
+		<autoReward level="LOW">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>Taking your reluctance as weakness, the refugee ship suddenly bristles with weapons - it's a pirate ship, and it believes it's found easy prey!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>Taking your reluctance as weakness, the refugee ship suddenly bristles with weapons - it's a pirate ship, and it believes it's found easy prey!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="FUEL_OFF_ROCK_WRECK_LIST">
+	<event>
+		<text>A short time later the team returns with a stash of ammunition and scrap - but all the fuel on board is long gone.</text>
+		<autoReward level="MED">missiles</autoReward>
+	</event>
+	<event>
+		<text>One of the crew reports that the main computer was housed in this section and is still partially operational. They're able to download local telemetry as well the location of the ship's reserve fuel! Your map has been updated.</text>
+		<reveal_map/>
+		<autoReward level="MED">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>The team returns home rather sooner than expected. Turns out just as they were making entry to the frigate, the ship's emergency fuel cell just happened to drift by!</text>
+		<autoReward level="MED">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>The away team reports in, but then screams are heard and the comm goes dead! When it comes back on-line, a Rockman can be heard - he's the lone survivor from the frigate's crew, and completely mad. He demands you pay a scrap ransom in return for your crew-member's life!</text>
+		<choice>
+			<text>Pay.</text>
+			<event>
+				<text>Despite his fragile condition, the Rockman is good to his word and returns your crew-member, who is suitably grateful. Sadly, gratitude doesn't power the FTL drive.</text>
+				<item_modify >
+					<item type="scrap" min="-40" max="-25"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Refuse.</text>
+			<event>
+				<text>It's a tough call, but it's for the Federation and the liberty of all. You set off before you can change your mind.</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>Before preparing to jump you check the Clone Bay but there is no sign of activity.</text>
+				</removeCrew>
+			</event>
+		</choice>
+ 		<choice hidden="true" req="WEAPONS_DAMAGE">
+			<text>Fire.</text>
+			<event>
+				<text>With a blank stare, you close communications and fire a full salvo at the crippled ship, tearing it apart.</text>
+				<autoReward level="MED">fuel_only</autoReward>
+				<removeCrew>
+					<clone>true</clone>
+					<text>Your crew member reforms in the clone bay, thankfully. While they accept your decision, they politely request never to do that again.</text>
+				</removeCrew>
+			</event>
+		</choice>
+ 		<choice hidden="true" req="teleporter">
+			<text>(Teleporter) Beam them back.</text>
+			<event>
+				<text>You lock on to their transponder and rescue your crew member before the hostage-taking Rockman has time to react. You prepare to leave on impulse power before he gets any more ideas.</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="FUEL_NOTHING"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_NOTHING">
+	<text load="FUEL_NOTHING_LIST"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while you wait.</text>
+		<event load="CE_SOCIAL_CIVILIAN"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_NO_FUEL"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_FUEL_RECYCLE" hidden="true"> 
+		<text>(FTL Fuel Recycler) Recycle some FTL fuel cells.</text>
+		<event>
+			<text>You ran out of fuel, but you can always try to squeeze some more out of the capsules with your recycler device.</text>
+			<item_modify>
+				<item type="fuel" min="2" max="4"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="AE_AMMO_MANUFACTURER" hidden="true"> 
+		<text>(Demolitions Lab) Assemble some missiles while you wait. [ Scrap: -20 ]</text>
+		<event>
+			<text>There is not much to do while you drift out here. You decide it's important to keep the crew busy and order them to produce some ammunition. The on board ammo fabricator turns some harmless scrap into lethal warheads. You feel better prepared for the next engagement.</text>
+			<item_modify>
+				<item type="scrap" min="-20" max="-20"/>
+				<item type="missiles" min="7" max="8"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="AE_DRONE_MANUFACTURER" hidden="true"> 
+		<text>(Drone Manufacturer) Assemble some drone parts while you wait. [ Scrap: -15 ]</text>
+		<event>
+			<text>There is not much to do while you drift out here. You decide it's important to keep the crew busy and order them to produce some drones. The on board assembler device turns some ship scrap into functional robots. You feel better prepared for the next engagement.</text>
+			<item_modify>
+				<item type="scrap" min="-15" max="-15"/>
+				<item type="missiles" min="3" max="4"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event>
+			<text>You ask for a full damage report and consider your options.</text>
+			<choice>
+				<text>Perform emergency repairs while waiting for help. [ Hull: +5 ]</text>
+				<event>
+					<text load="CE_QUICK_MAINTENANCE_TEXT"/>
+					<item_modify>
+						<item type="scrap" min="-15" max="-15"/>
+					</item_modify>
+					<damage amount="-5"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice hidden="true" req="anaerobic">
+						<text>(Lanius Crew) Have your Lanius use its metal-shaping ability to further improve the hull.</text>
+						<event>
+							<text load="CE_LANIUS_MAINTENANCE_TEXT"/>
+							<damage amount="-1"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Follow the standard Federation maintenance procedure while waiting for help. [ Hull: +10 ]</text>
+				<event>
+					<text load="CE_STANDARD_MAINTENANCE_TEXT"/>
+					<item_modify>
+						<item type="scrap" min="-20" max="-20"/>
+					</item_modify>
+					<damage amount="-10"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice hidden="true" req="anaerobic">
+						<text>(Lanius Crew) Have your Lanius use its metal-shaping ability to further improve the hull.</text>
+						<event>
+							<text load="CE_LANIUS_MAINTENANCE_TEXT"/>
+							<damage amount="-2"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Spend even more time at the beacon and perform full ship maintenance. [ Hull: +20, +1 Pursuit ]</text>
+				<event>
+					<text load="CE_FULL_MAINTENANCE_TEXT"/>
+					<item_modify>
+						<item type="scrap" min="-30" max="-30"/>
+					</item_modify>
+					<damage amount="-20"/>
+					<modifyPursuit amount="1"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice hidden="true" req="anaerobic">
+						<text>(Lanius Crew) Have your Lanius use its metal-shaping ability to further improve the hull.</text>
+						<event>
+							<text load="CE_LANIUS_MAINTENANCE_TEXT"/>
+							<damage amount="-4"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Scan the sector while you wait.</text>
+		<event>
+			<text>There is nothing to do in the endless black, so you put the whole team on scanner duty. The crew spends a decent time together, drawing out virtual star charts. Everyone hopes that you can acquire some fuel soon to travel onwards through the sector. Your map has been updated.</text>
+			<reveal_map/>
+		</event>
+	</choice>
+	<choice req="AE_HOLOGRAM_GENERATOR"> 
+		<text>(Hologram Projector) Bring a sentient holographic crew member into existence.</text>
+		<event load="CE_HOLOGRAM_BIRTH_LIST"/>
+	</choice>
+	<choice req="AE_PRODUCTION" hidden="true">
+		<text>(Goods Manufacturer) Manufacture some trade goods while waiting.</text>
+		<event load="CE_ONBOARD_PRODUCTION"/>
+	</choice>
+	<choice hidden="true"> 
+		<text>Continue...</text>
+		<event/>
+	</choice>
+</event>
+<textList name="CE_AUGMENT_UPGRADE_NO_FUEL_TEXT">
+	<text>You have to wait here anyway, so you decide that you can just as well spend the time working on custom ship upgrades.</text>
+	<text>You hope some manual labour will get the crew's thoughts off the dire situation you are in.</text>
+	<text>You are stuck here anyway, so you might as well spend the time tinkering on your ship.</text>
+	<text>Ship maintenance should give the team something to do. Waiting is not good for crew morale.</text>
+	<text>Cabin fever begins to spread among your crew. It might be best to give them something to do, before everyone goes completely crazy in this isolation...</text>
+</textList>
+<eventList name="CE_AUGMENT_UPGRADE_NO_FUEL">
+	<event>
+		<text load="CE_AUGMENT_UPGRADE_NO_FUEL_TEXT"/>
+		<choice hidden="true">
+			<text>Examine your offensive options.</text>
+			<event load="CE_AUGMENT_UPGRADE_OFFENSE"/>
+		</choice>
+		<choice hidden="true">
+			<text>Examine your defensive options.</text>
+			<event load="CE_AUGMENT_UPGRADE_DEFENSE"/>
+		</choice>
+		<choice hidden="true">
+			<text>Examine your support options.</text>
+			<event load="CE_AUGMENT_UPGRADE_SUPPORT"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="CE_CLONING_NO_FUEL">
+	<event>
+	<text>You assure your crew that this is necessary. Bitter jokes make the round on the ship; some say you've turned into a mad scientist, cloning the crew out of boredom while there is nothing else to do.</text>
+			<choice req="human">
+				<text>(Human Crew) Clone your human crew member.</text>
+	<event>
+		<text>Your crewman agrees to supply the DNA needed. The cloning process is completed while you wait and a fully self-aware human being steps out of the lab.</text>
+		<item_modify>
+			<item type="scrap" min="-10" max="-10"/>
+		</item_modify>
+		<crewMember amount="1" class="human">Clone Trooper</crewMember>
+	</event>
+			</choice>
+			<choice req="mantis">
+				<text>(Mantis Crew) Clone your Mantis crew member.</text>
+	<event>
+		<text>Your Mantis immediately agrees to supply the DNA needed. Its kind is well known for making use of bio-technology in order to strengthen their forces.</text>
+		<item_modify>
+			<item type="scrap" min="-10" max="-10"/>
+		</item_modify>
+		<crewMember amount="1" class="mantis">Mantis Clone</crewMember>
+	</event>
+			</choice>
+			<choice req="slug">
+				<text>(Slug Crew) Clone your Slug crew member.</text>
+	<event>
+		<text>After a while, a Slug almost indistinguishable from its genetic parent slumps out of the glowing lab cylinder. The cloning process was a success, the clone is ready for duty and a little distressed by the circumstances of its birth.</text>
+		<item_modify>
+			<item type="scrap" min="-10" max="-10"/>
+		</item_modify>
+		<crewMember amount="1" class="slug">Cloned Slug</crewMember>
+	</event>
+			</choice>
+			<choice hidden="true">
+				<text>Change your mind and move on.</text>
+				<event/>
+			</choice>
+		</event>
+</eventList>
+<mod:findName type="event" name="FUEL_NOTHING_DISTRESS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_NOTHING_DISTRESS">
+	<text load="FUEL_NOTHING_DISTRESS_LIST"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while you wait for help.</text>
+		<event load="CE_SOCIAL_CIVILIAN"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_NO_FUEL"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_FUEL_RECYCLE"> 
+		<text>(FTL Fuel Recycler) Recycle some FTL fuel cells.</text>
+		<event>
+			<text>You ran out of fuel, but you can always try to squeeze some more out of the capsules with your recycler device.</text>
+			<item_modify>
+				<item type="fuel" min="1" max="3"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="AE_AMMO_MANUFACTURER"> 
+		<text>(Demolitions Lab) Assemble some missiles while you wait.</text>
+		<event>
+			<text>You are undisturbed here and can use the time to produce some ammunition. The on-board ammo fabricator turns some harmless scrap into lethal warheads. You feel better prepared for the next engagement and prepare the FTL drive.</text>
+			<item_modify>
+				<item type="scrap" min="-20" max="-20"/>
+				<item type="missiles" min="7" max="8"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="AE_DRONE_MANUFACTURER"> 
+		<text>(Drone Manufacturer) Assemble some drone parts while you wait.</text>
+		<event>
+			<text>There is not much to do while you drift out here. You decide it's important to keep the crew busy and order them to produce some drones. The on-board assembler device turns some ship scrap into functional robots. You feel better prepared for the next engagement and prepare the FTL drive.</text>
+			<item_modify>
+				<item type="scrap" min="-15" max="-15"/>
+				<item type="missiles" min="3" max="4"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event>
+			<text>You ask for a full damage report and consider your options.</text>
+			<choice>
+				<text>Perform emergency repairs while waiting for help. [ Hull: +5 ]</text>
+				<event>
+					<text load="CE_QUICK_MAINTENANCE_TEXT"/>
+					<item_modify>
+						<item type="scrap" min="-15" max="-15"/>
+					</item_modify>
+					<damage amount="-5"/>
+					<choice hidden="true" req="anaerobic">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice hidden="true" req="anaerobic">
+						<text>(Lanius Crew) Have your Lanius use its metal-shaping ability to further improve the hull.</text>
+						<event>
+							<text load="CE_LANIUS_MAINTENANCE_TEXT"/>
+							<damage amount="-1"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Follow the standard Federation maintenance procedure while waiting for help. [ Hull: +10 ]</text>
+				<event>
+					<text load="CE_STANDARD_MAINTENANCE_TEXT"/>
+					<item_modify>
+						<item type="scrap" min="-20" max="-20"/>
+					</item_modify>
+					<damage amount="-10"/>
+					<choice hidden="true" req="anaerobic">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice hidden="true" req="anaerobic">
+						<text>(Lanius Crew) Have your Lanius use its metal-shaping ability to further improve the hull.</text>
+						<event>
+							<text load="CE_LANIUS_MAINTENANCE_TEXT"/>
+							<damage amount="-2"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Spend even more time at the beacon and perform full ship maintenance. [ Hull: +20, +1 Pursuit ]</text>
+				<event>
+					<text load="CE_FULL_MAINTENANCE_TEXT"/>
+					<item_modify>
+						<item type="scrap" min="-30" max="-30"/>
+					</item_modify>
+					<damage amount="-20"/>
+					<modifyPursuit amount="1"/>
+					<choice hidden="true" req="anaerobic">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice hidden="true" req="anaerobic">
+						<text>(Lanius Crew) Have your Lanius use its metal-shaping ability to further improve the hull.</text>
+						<event>
+							<text load="CE_LANIUS_MAINTENANCE_TEXT"/>
+							<damage amount="-4"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Scan the sector while you wait.</text>
+		<event>
+			<text>There is nothing to do in the endless black, so you put the whole team on scanner duty. The crew spends a decent time together drawing out virtual star charts. Everyone hopes that you can acquire some fuel soon, to travel onwards through the sector. Your map has been updated.</text>
+			<reveal_map/>
+		</event>
+	</choice>
+	<choice req="AE_PRODUCTION" hidden="true">
+		<text>(Goods Manufacturer) Manufacture some trade goods while waiting.</text>
+		<event load="CE_ONBOARD_PRODUCTION"/>
+	</choice>
+	<choice req="AE_HOLOGRAM_GENERATOR"> 
+		<text>(Hologram Projector) Bring a sentient holographic crew member into existence.</text>
+		<event load="CE_HOLOGRAM_BIRTH_LIST"/>
+	</choice>
+	<choice hidden="true"> 
+		<text>Continue...</text>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="NO_FUEL_FLEET_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NO_FUEL_FLEET_DLC">
+	<img planet="NONE" back="BG_WARNING_TARGETING_FLEET" />
+	<text planet="NONE" back="BG_WARNING_TARGETING_FLEET">The Rebel fleet has caught up to you and you are out of fuel. Could the situation be any worse?</text>
+	<fleet>rebel</fleet>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="CE_NO_FUEL_FLEET_LIST_DLC"/>
+	</choice>
+</event>	
+<eventList name="CE_NO_FUEL_FLEET_LIST_DLC">
+	<event>
+		<text>Your pilot deftly avoids incoming artillery fire from the surrounding fleet while you try to sort out exactly what your plan is... One of the many approaching fighters gets into weapon range and your scanners detect it has surplus fuel. Maybe you can still pull this off.</text>
+		<ship load = "REBEL_FLEET_FUEL" hostile ="true"/>
+		<fleet>rebel</fleet>
+		<environment type="PDS" target="player"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<fleet>rebel</fleet>
+		<text>Far away, the Rebel fleet lines up in loose formation, almost out of your primary sensor range. A single automated spotter ship moves in. The Rebels know you cannot escape and will try to execute you with their long-range artillery.</text>
+		<ship load="CE_SPOTTER_REBEL_FLEET_NO_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+	<text>Several fighter squadrons jump in and start to circle your immobile ship. They stay just out of weapons range, apparently waiting for the cruisers to move in.</text>
+	<fleet>rebel</fleet>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text load="C_NO_FUEL_FLEET_TEXT"/>
+			<ship load="REBEL_CRUISER_FLEET_FUEL" hostile="false"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You detect significant fuel reserves on board the cruiser. Maybe you can still pull this off.</text>
+					<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+</eventList>
+<mod:findName type="event" name="NO_FUEL_FLEET"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NO_FUEL_FLEET">
+	<img planet="NONE" back="BG_WARNING_TARGETING_FLEET" />
+	<text planet="NONE" back="BG_WARNING_TARGETING_FLEET">The Rebel fleet has caught up to you and you are out of fuel. Could the situation be any worse?</text>
+	<fleet>rebel</fleet>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="CE_NO_FUEL_FLEET_LIST"/>
+	</choice>
+</event>
+<eventList name="CE_NO_FUEL_FLEET_LIST">
+	<event>
+		<fleet>rebel</fleet>
+		<text>Far away, the Rebel fleet lines up in loose formation, almost out of your primary sensor range. A single automated spotter ship moves in. The Rebels know you cannot escape and will try to execute you with their long-range point defense weapons.</text>
+		<ship load="CE_SPOTTER_REBEL_FLEET_NO_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+<event>
+	<text>Several fighter squadrons jump in and start to circle your immobile ship. They stay just out of weapons range, apparently waiting for the cruisers to move in.</text>
+	<fleet>rebel</fleet>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text load="C_NO_FUEL_FLEET_TEXT"/>
+			<ship load="REBEL_CRUISER_FLEET_FUEL" hostile="false"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You detect significant fuel reserves on board the cruiser. Maybe you can still pull this off.</text>
+					<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<event>
+	<text>Your pilot deftly avoids incoming artillery fire from the surrounding fleet while you try to sort out exactly what your plan is... One of the many approaching fighters gets into weapon range and your scanners detect it has surplus fuel. Maybe you can still pull this off.</text>
+	<fleet>rebel</fleet>
+	<environment type="PDS" target="player"/>
+	<ship load = "REBEL_FLEET_FUEL" hostile ="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+</eventList>
+<textList name="C_NO_FUEL_FLEET_TEXT">
+	<text>A shockwave ripples through your ship as a Rebel cruiser jumps in right in front of you. A scarred Rebel, apparently an Admiral, appears on the vidscreen, "A lot of the men you killed were under my command. I'm glad I can deal with your personally."</text>
+	<text>Waiting like this is unbearable. Everyone is on their station and battle-ready. Finally the cruiser jumps in and hails, "We heard you are out of fuel..." The Rebel gives you a dirty grin and cuts communication.</text>
+	<text>You don't have to wait long for the cruiser. It enters the system with its impulse engines at full power. You receive a hail: "Looks like you made some terrible mistakes, Captain. We were called in to finally finish you. Farewell." They cut communication and open fire.</text>
+	<text>When the cruiser arrives, you are already encircled by an entire battalion. They send a message, "TMaybe we would have considered accepting your surrender, but you didn't give that courtesy to most of our boys. There will be no way out of this for you."</text>
+</textList>
+<eventList name="FUEL_APPROACH_ACCEPT_LIST">
+	<event>
+		<text>They pull close to your ship and unload some fuel saying, "Try not to run out of fuel again. These are dangerous times; who knows who could have showed up."</text>
+		<ship load="CIVILIAN_SHIP" hostile="false"/>
+		<item_modify>
+			<item type="fuel" min="2" max="6"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>They approach and dock with your ship.  On board they present an offer.</text>
+		<ship load="CIVILIAN_SHIP" hostile="false"/>
+		<choice>
+			<text>Gladly trade.</text>
+			<event load="FUEL_TRADER_HIGH_LIST"/>
+		</choice>
+		<choice>
+			<text>Respectfully decline.</text>
+			<event load="FUEL_TRADER_PT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>As their ship pulls up next to yours, their Captain continues, "Yes, we'll certainly help...  Help to relieve you of that nice ship!"  Sensors detect a hidden teleporter has been activated.</text>
+		<ship load="PIRATE_FUEL" hostile="false"/>
+		<choice req="AE_TELEPORTER_JAMMER" hidden="true">
+			<text>(Teleporter Disruptor) Deflect their teleporter signal.</text>
+			<event>
+				<text>"Ah I see... that didn't work..." The Captain is obviously quite irritated. "Alright, we try something else then..." All he can come up with is charging weapons.</text>
+				<ship load="PIRATE_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Continue...</text>
+			<event>
+				<text>We've been boarded!</text>
+				<boarders min="2" max="3" class="human"/>
+				<ship load="PIRATE_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>As they approach, you detect their weapons powering up.  It seems their intentions are hostile!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="FUEL_APPROACH_DECLINE_LIST">
+	<event>
+		<text>"I assure you that we mean no harm.  See, we'll send some fuel over on a transport."  A small ship docks and offloads some fuel just as they said. They leave, saying, "Stay cautious, friend."</text>
+		<ship load="CIVILIAN_SHIP" hostile="false"/>
+		<item_modify>
+			<item type="fuel" min="1" max="4"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>"No one trusts anyone these days..."  The ship jumps away.</text>
+	</event>
+	<event>
+		<text>They reply,"Keep our distance?  Let's see if you can stop us!"  They power up their weapons and advance.</text>
+		<ship load="PIRATE_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="FUEL_APPROACH_SCAN_LIST">
+	<event>
+		<text>Sensors indicate their ship is without military-grade weaponry, even small arms. You allow them to dock and they give you some fuel saying, "I remember a time when we didn't have to be so paranoid about each others intentions... Stay safe."</text>
+		<item_modify>
+			<item type="fuel" min="3" max="7"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Sensors are picking up armed crew and considerably more weaponry than is legal for a craft of this size. This is surely a trap.</text>
+		<choice>
+			<text>Prepare for a fight.</text>
+			<event>
+				<text load="CE_PRE_FIGHT_TEXT"/>
+				<ship load="PIRATE_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice req="cloaking" hidden="true"> 
+			<text>(Cloaking) Cloak and get out of scanning range before they have a chance to lock on.</text>
+			<event>
+				<text>Your highly advanced cloaking system allows you to get out of range easily since they were still out of firing range. Eventually the ship jumps away.</text>
+			</event>
+		</choice>
+	</event>		
+</eventList>
+<mod:findName type="event" name="FUEL_TRADER"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_TRADER">
+	<text load="FUEL_TRADER_TEXT_LIST"/>
+	<ship load="CIVILIAN_SHIP" hostile="false"/>
+	<choice>
+		<text>Gladly trade.</text>
+		<event load="FUEL_TRADER_HIGH_LIST"/>
+	</choice>
+	<choice>
+		<text>Respectfully decline.</text>
+		<event load="FUEL_TRADER_PT2"/>
+	</choice>
+	<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+		<text>Attack the trader. This is an act of piracy, but your crew will obey your orders.</text>
+		<event load="CR_PIRACY_ATTACK_START"/>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text>Attack the trader. However this is an act of piracy, your crew may be disturbed.</text>
+		<event load="C_PIRACY_RESULTS"/>
+	</choice>
+	<choice req="AE_REQUISITION" hidden="true"> 
+		<text>(Requisition License) Order the seizure of their cargo.</text>
+		<event load="CE_REQUISITION_CIVILIAN"/>
+	</choice>
+</event>
+<mod:findName type="event" name="FUEL_TRADER_DISTRESS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_TRADER_DISTRESS">
+	<text load="FUEL_TRADER_DISTRESS_TEXT_LIST"/>
+	<ship load="CIVILIAN_SHIP" hostile="false"/>
+	<choice>
+		<text>Gladly trade.</text>
+		<event load="FUEL_TRADER_HIGH_LIST"/>
+	</choice>
+	<choice>
+		<text>Respectfully decline.</text>
+		<event load="FUEL_TRADER_PT2"/>
+	</choice>
+	<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+		<text>Attack the trader. This is an act of piracy, but your crew will obey your orders.</text>
+		<event load="CR_PIRACY_ATTACK_START"/>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text>Attack the trader. However this is an act of piracy, your crew may be disturbed.</text>
+		<event load="C_PIRACY_RESULTS"/>
+	</choice>
+	<choice req="AE_REQUISITION" hidden="true"> 
+		<text>(Requisition License) Order the seizure of their cargo.</text>
+		<event load="CE_REQUISITION_CIVILIAN"/>
+	</choice>
+</event>
+<eventList name="FUEL_EXPLORE_LIST">
+	<event>
+		<text>You happen across a small asteroid field near the beacon.</text>
+		<choice hidden="true">
+			<text>Approach the asteroid field to scan it.</text>
+			<event load="ASTEROID_EXPLORE_RESULTS"/>
+		</choice>
+		<choice>
+			<text>Avoid the risk.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>You find a small outpost for local travellers, but it seems few ships in this area employ FTL drives. Their stock of fuel cells is small and their price high, but beggars can't be choosers...</text>
+		<choice hidden="true">
+			<text>Trade 20 scrap for 5 fuel.</text>
+			<event>
+				<text>You gladly make the trade.</text>
+				<item_modify>
+					<item type="fuel" min="5" max="5"/>
+					<item type="scrap" min="-20" max="-20"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Trade 10 scrap for 2 fuel.</text>
+			<event>
+				<text>This fuel won't last long, but you gladly make the trade.</text>
+				<item_modify>
+					<item type="fuel" min="2" max="2"/>
+					<item type="scrap" min="-10" max="-10"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Trade 5 scrap for 1 fuel.</text>
+			<event>
+				<text>This fuel won't last long, but at least you can jump to another beacon.</text>
+				<item_modify>
+					<item type="fuel" min="1" max="1"/>
+					<item type="scrap" min="-5" max="-5"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Don't make a trade.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>By accident, you stumble upon an unlicensed station, carefully shielded from long-range scanners. They are not very talkative, but offer a deal.</text>
+		<ship load="BS_PIRATE" hostile="false"/>
+		<choice hidden="true">
+			<text>Trade 30 scrap for 5 fuel.</text>
+			<event>
+				<text>You gladly make the trade.</text>
+				<item_modify>
+					<item type="fuel" min="5" max="5"/>
+					<item type="scrap" min="-30" max="-30"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Trade 15 scrap for 2 fuel.</text>
+			<event>
+				<text>This fuel won't last long, but you gladly make the trade.</text>
+				<item_modify>
+					<item type="fuel" min="2" max="2"/>
+					<item type="scrap" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Trade 10 scrap for 1 fuel.</text>
+			<event>
+				<text>This fuel won't last long, but at least you can jump to another beacon.</text>
+				<item_modify>
+					<item type="fuel" min="1" max="1"/>
+					<item type="scrap" min="-10" max="-10"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Don't make a trade.</text>
+			<event/>
+		</choice>
+		<choice>
+			<text>Attack and try to seize their fuel supply.</text>
+			<event>
+				<text>You engage the outlaw station.</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>No ships respond to your hails and you find nothing of interest.</text>
+	</event>
+	<event>
+		<text>You wander within scanning range of a small Rebel automated scout!</text>
+		<ship load="REBEL_AUTO_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="FUEL_ON_REBEL_ATTACK"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_ON_REBEL_ATTACK">
+	<text load="FUEL_ON_REBEL_ATTACK"/>
+	<ship load="REBEL_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="FUEL_ON_REBEL_WARNING"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_ON_REBEL_WARNING">
+	<text>A ship responding to your distress moves in. Unfortunately it turns out to be an automated Rebel scout. It immediately reverses thrust after scanning your ship.</text>
+	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="FUEL_ON_MANTIS_ATTACK"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_ON_MANTIS_ATTACK">
+	<text load="FUEL_ON_MANTIS_ATTACK"/>
+	<ship load="MANTIS_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="FUEL_OFF_ROCK_CURIOUS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_OFF_ROCK_CURIOUS">
+	<text>A curious Rock ship comes in for a closer look at you. They refuse all hails.</text>
+	<choice hidden="true">
+		<text>Attack.</text>
+		<event>
+			<text>The Rock people are not renowned for their generosity. If it's fuel you need, it's fuel you must take!</text>
+			<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Wait and see.</text>
+		<event load="FUEL_OFF_ROCK_CURIOUS_LIST"/>	
+	</choice>
+</event>
+<eventList name="FUEL_OFF_ROCK_CURIOUS_LIST">
+	<event>
+		<text>The Rock ship circles yours, running scans on your systems. You fear the worst, but the scans pause on your fuel tank. They obviously have no wish to communicate, but they transfer over a cache of fuel before flashing their lights and jumping away!</text>
+		<item_modify>
+			<item type="fuel" min="3" max="8"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>The Rock ship circles yours, running scans on your systems. Your worst fears are confirmed when they identify your engine room and somehow manage to sabotage it! Combat ready!</text>
+		<status type="limit" target="player" system="engines" amount="1"/>
+		<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="FTL_BOOSTER" hidden="true">
+			<text>(FTL Charge Booster) Activate the backup generators.</text>
+			<event load="CE_RESIST_ENGINE_JAMMING"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="FUEL_ON_SLUG_OVERPRICED"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_ON_SLUG_OVERPRICED">
+	<text>A mobile Slug fuel depot enters scanning range. "My prices are fair, but I ask one thing - do not insult me with negotiation!" You check out his price list.</text>
+	<ship load="JELLY_OVERPRICED" hostile="false"/>
+	<choice hidden="true">
+		<text>Buy 5 fuel for 50 scrap.</text>
+		<event>
+			<text>The trader looks shocked. You're struck by the sense that this is the first time anyone's ever paid him these prices.</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+				<item type="fuel" min="10" max="10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Buy 10 fuel for 95 scrap. (BEST DEAL!)</text>
+		<event>
+			<text>The trader looks shocked. You're struck by the sense that this is the first time anyone's ever paid him these prices.</text>
+			<item_modify>
+				<item type="scrap" min="-95" max="-95"/>
+				<item type="fuel" min="10" max="10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Negotiate.</text>
+		<event>
+			<text>You offer a more reasonable price but the Slug is outraged! He moves in to attack!</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="NO_FUEL_REFUGEE_DAMAGED"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NO_FUEL_REFUGEE_DAMAGED">
+	<text>A refugee ship fleeing the Rebel advance enters the system, having picked up your distress beacon. While it doesn't have much fuel to spare, its hull looks damaged - it is in bad need of scrap and is willing to trade fuel for it.</text>
+	<choice>
+		<text>Trade some scrap for fuel.</text>
+		<event>
+			<text>The refugees thank you for the parts, and gladly pass along the much-needed fuel. They wish you well on your mission, and declare their support for the Federation.</text>
+			<item_modify>	
+				<item type="fuel" min="3" max="3"/>
+				<item type="scrap" min="-10" max="-10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="engi" hidden="true">
+		<text>(Engi Crew) Negotiate a better trade.</text>
+		<event>
+			<text>Your Engi analyses scans of the extensive damage to their hull, calculating potential repair costs. The refugees grumble and protest, but in the end, they admit that their need for repairs is greater than their fuel surplus and offer a better trade.</text>
+			<choice>
+				<text>Accept it.</text>
+				<event>
+					<item_modify>
+						<item type="fuel" min="6" max="6"/>
+						<item type="scrap" min="-10" max="-10"/>
+					</item_modify>
+				</event>
+			</choice>
+			<choice>
+				<text>Refuse it.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Refuse their offer.</text>
+		<event load="NO_FUEL_REFUGEE_REFUSE"/>
+	</choice>
+	<choice hidden="true">
+		<text>The helpless refugees make easy targets. Attack them.</text>
+		<event>
+			<text>Panicked, the refugees immediately surrender as your weapons power up. They pass along their fuel and what few other supplies they have left in exchange for their lives.</text>
+			<autoReward level="MED">fuel</autoReward>
+			<choice>
+				<text>Continue...</text>
+				<event load="C_PIRACY_SUCCESS"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="FUEL_OFF_ENGI_DUBIOUS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_OFF_ENGI_DUBIOUS">
+	<text>As you drift through space an Engi ship passes through. From listening to their comms channel, it sounds like they're discussing making repairs on their ship.</text>
+	<choice hidden="true">
+		<text>Hail them.</text>
+		<event load="FUEL_OFF_ENGI_DUBIOUS_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore them.</text>
+		<event>
+			<text>They clearly are busy because they don't notice your ship at all.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="SHIP_REPAIR">
+		<text>(Hull Repair Drone) Offer to help repair their hull.</text>
+		<event>
+			<text>They happily accept your offer for help. Once the drone does its work, they transfer over some fuel for your trouble.</text>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+				<item type="fuel" min="4" max="6"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<eventList name="FUEL_OFF_ENGI_DUBIOUS_LIST">
+	<event>
+		<text>The Engi respond to your signal. "Identity: Federation. I/O error: Federation = [void]." All further hails go unanswered.</text>
+		<ship load="C_ENGI_TRANSPORT" hostile="false"/>
+		<choice>
+			<text>Ignore the ship.</text>
+			<event>
+				<text>Everyone remains silent till the ship eventually jump away. You are alone again.</text>
+			</event>
+		</choice>
+		<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+			<text>Attack the Engi. This is an act of piracy, but your crew will obey your orders.</text>
+			<event load="CR_PIRACY_ATTACK_START"/>
+		</choice>
+		<choice req="engines" hidden="true" blue="false" max_group="0">
+			<text>Attack the Engi. However this is an act of piracy, your crew may be disturbed.</text>
+			<event load="C_PIRACY_RESULTS"/>
+		</choice>
+		<choice req="AE_REQUISITION" hidden="true"> 
+			<text>(Requisition License) Order the seizure of their cargo.</text>
+			<event load="CE_REQUISITION_CIVILIAN"/>
+		</choice>
+	</event>
+	<event>	
+		<text>The Engi fail to respond, but move to intercept. You detect abnormal electromagnetic signals aboard the ship - someone has reprogrammed them to fight!</text>
+		<ship load="FUEL_OFF_ENGI_DUBIOUS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>The Engi respond to your signal. "Your need: fuel. This unit's need: scrap. Exchange beneficial. Exchange permitted?</text>
+		<ship load="C_ENGI_TRANSPORT" hostile="false"/>
+		<choice>
+			<text>Make the trade.</text>
+			<event>	
+				<text>You make the exchange and the Engi leave without another word.</text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-10"/>
+					<item type="fuel" min="4" max="6"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Decline.</text>
+			<event>
+				<text>The Engi coolly cut communications and continue on their journey.</text>
+			</event>
+		</choice>
+		<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+			<text>Attack the Engi. This is an act of piracy, but your crew will obey your orders.</text>
+			<event load="CR_PIRACY_ATTACK_START"/>
+		</choice>
+		<choice req="engines" hidden="true" blue="false" max_group="0">
+			<text>Attack the Engi. However this is an act of piracy, your crew may be disturbed.</text>
+			<event load="C_PIRACY_RESULTS"/>
+		</choice>
+		<choice req="AE_REQUISITION" hidden="true"> 
+			<text>(Requisition License) Order the seizure of their cargo.</text>
+			<event load="CE_REQUISITION_CIVILIAN"/>
+		</choice>
+	</event>
+	<event>
+		<text>Upon discovering your need, the Engi gladly offer some of their extra fuel reserves. It's amazing how altruistic these robotic creatures can be.</text>
+		<ship load="C_ENGI_TRANSPORT" hostile="false"/>
+		<item_modify>
+			<item type="fuel" min="2" max="6"/>
+		</item_modify>
+		<choice>
+			<text>Thank them and continue on your way.</text>
+			<event/>
+		</choice>
+		<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+			<text>Attack the Engi. This is an act of piracy, but your crew will obey your orders.</text>
+			<event load="CR_PIRACY_ATTACK_START"/>
+		</choice>
+		<choice req="engines" hidden="true" blue="false" max_group="0">
+			<text>Attack the Engi. However this is an act of piracy, your crew may be disturbed.</text>
+			<event load="C_PIRACY_RESULTS"/>
+		</choice>
+		<choice req="AE_REQUISITION" hidden="true"> 
+			<text>(Requisition License) Order the seizure of their cargo.</text>
+			<event load="CE_REQUISITION_CIVILIAN"/>
+		</choice>
+	</event>
+</eventList>
+<event name="CE_FUEL_CREW_FOR_FUEL" unique="true">   
+	<text>Dead in space, you detect a Slug ship on a slow approaches course. They message: "We have a lotss of fuel! Perhapssss we can help you, for the moderate price of a life. We need fresh mindss for our experimentsss."</text>
+	<choice hidden="true"> 
+		<text>Ask if someone would volunteer to leave the ship in exchange for fuel. [ Fuel: +20 ]</text>
+		<event>
+			<text>One of your crew members sacrifices himself for the good of the mission. You try to not think about the hideous fate awaiting them.</text>
+			<crewMember amount="-1"/>
+			<item_modify>
+				<item type="fuel" min="20" max="20"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Tell them that you won't offer a crew member for the sake of the ship.</text>
+		<event>
+			<text>"As you wissh." The slugs sends out a signal that points the fleet to your position and head off.</text>
+			<modifyPursuit amount="1"/>
+		</event>
+	</choice>
+</event>
+<event name="C_FUEL_REBEL_GUNBOAT">
+	<text>It appear the Rebels realized that you are dead in the water, they sent a fast-mover patrol craft ahead to deal with you. Battle stations!</text> 
+	<ship load="C_REBEL_GUNBOAT_FUEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="FUEL_ON_SLUG_CHUCKLE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FUEL_ON_SLUG_CHUCKLE">
+   <text>A poorly-armed Slug ship cruises by and offers assistance. Their captain seems to be chuckling to himself, perhaps at the prices he's charging.</text>
+   <ship load="JELLY" hostile="false" />
+   <choice hidden="true">
+      <text>Pay 15 scrap for 5 fuel.</text>
+      <event load="FUEL_ON_SLUG_CHUCKLE_LIST" />
+   </choice>
+   <choice hidden="true">
+      <text>Ignore the offer.</text>
+      <event>
+         <text>You know better than to do business with a Slugman who seems like he knows something you don't. He jumps off with another chuckle.</text>
+      </event>
+   </choice>
+   <choice hidden="true" req="slug">
+      <text>(Slug Crew) Have your Slug make the purchase.</text>
+      <event>
+         <text>As soon as he sees your crew member the Slug stops his incessant chuckling. The exchange appears to go smoothly although you wonder what mental battles are telepathically occurring between the two Slugs.</text>
+         <item_modify>
+            <item type="scrap" min="-15" max="-15" />
+            <item type="fuel" min="5" max="5" />
+         </item_modify>
+      </event>
+   </choice>
+   <choice hidden="true">
+      <text>Attack.</text>
+      <event>
+         <text>No good can come of this lowlife slug vessel. Battle stations!</text>
+         <ship hostile="true" />
+      </event>
+   </choice>
+</event>

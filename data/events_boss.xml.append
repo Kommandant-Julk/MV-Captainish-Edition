@@ -1,0 +1,3600 @@
+<eventList name="BOSS_WARNING_NODE">
+	<event load="BOSS_FLEETS_REBEL"/>
+	<event load="BOSS_FLEETS_BOTH_FIGHT"/>
+	<event load="BS_EVENT_FED_BOSS"/>
+	<event load="C_BOSS_CRUISER_WARNING"/>
+</eventList>
+<eventList name="BOSS_HOSTILE">
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="C_EVENT_GUNBOAT_BOSS_SUN"/>
+	<event load="C_FED_REBEL_CRUISER_ASTEROID"/>
+	<event load="C_EVENT_GUNBOAT_BOSS_PDS_DELAYED"/>
+</eventList>
+<eventList name="BOSS_NEUTRAL">
+	<event load="BOSS_SCOUT_RESCUE"/>
+	<event load="BOSS_FLEETS_BOTH_FIGHT"/>
+	<event load="BOSS_FLEETS_FED"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="REBEL"/>
+	<event load="CE_FED_DESERTER"/>
+	<event load="BS_EVENT_FED_BOSS"/>
+	<event load="C_EVENT_GUNBOAT_BOSS"/>
+	<event load="C_BOSS_CRUISER_RESCUE"/>
+	<event load="C_BOSS_CRUISER"/>
+	<event load="NOTHING_FED_BATTLE"/>
+</eventList>
+<mod:findName type="event" name="LAST_STAND_START"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LAST_STAND_START">
+	<text>You arrive at an outpost close to the Federation Base. Your access codes get you past initial security and an officer sets up a direct feed to the Federation Base's war room. Admiral Tully speaks first saying, "What is the meaning of this?! Who are you?"</text>
+	<choice>
+		<text>Explain your mission.</text>
+		<event>
+			<text>Your explanation is met with murmurs of cynicism and disbelief among the officers. General Turzil of the Engi Brigade speaks up: "Intel suggests potential counter to Rebel technology. Risk all or save none."</text>
+			<choice hidden="true">
+				<text>Explain the weakness of the enemy fleet, the Rebel flagship.</text>
+				<event>
+					<text>Tully responds, "It's settled. The Rebels will be here in a matter of moments. We will do what we can to hold off their warships but you must succeed in destroying this flagship. Your current outpost can provide some repairs and fuel, and the other repair stations and the Federation Base can provide aid as well if you can reach them in time. Good luck."</text>
+					<item_modify>
+						<item type="fuel" min="10" max="10"/>
+					</item_modify>
+					<damage amount="-10"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event>
+			<text>There's no time for idle chatter right now, the mission is almost over. Everyone is at their posts and ready for orders. You've never seen your crew act so dutiful.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew go through a final training exercise.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_HOLOGRAM_GENERATOR"> 
+		<text>(Hologram Projector) Supplement your crew with a sentient hologram.</text>
+		<event load="CE_HOLOGRAM_BIRTH_LIST"/>
+	</choice>
+	<choice req="AE_AMMO_MANUFACTURER">
+		<text>(Demolitions Lab) Assemble some missiles for the final battle.</text>
+		<event load="CE_AMMO_PRODUCTION"/>
+	</choice>
+	<choice req="AE_DRONE_MANUFACTURER">
+		<text>(Drone Manufacturer) Assemble some drone parts for the last push.</text>
+		<event load="CE_DRONE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some more hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Scan the entire sector.</text>
+		<event>
+			<text>You synchronize your scanner with all remaining nearby Federation units and quickly gather full situation data on the battleground. This should give you the edge on the final approach. Let's roll out.</text>
+			<reveal_map/>
+		</event>
+	</choice>
+	<choice req="AE_SECTOR_MAPPING" hidden="true">
+		<text>(Sector Scout Unit) Send out mapping drones to gather detailed data in this final sector.</text>
+		<event>
+			<text>As soon as a nearby Federation cruiser spots you attempting to deploy the scout drones, they hail you and say that they won't last long enough to gather full sector data. Instead, they offer you their own area telemetry. Let's roll out.</text>
+			<reveal_map/>
+		</event>
+	</choice>
+	<choice req="AE_BOUNTYHUNTER" hidden="true">
+		<text>(Mercenary Database) Attempt to acquire a contract for this sector.</text>
+		<event>
+			<text>Predictably, the database is completely offline due to all the sector-wide conflicts. There's more than enough fighting to go around.</text>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<fleet>fed</fleet>
+</event>
+<mod:findName type="event" name="FEDERATION_BASE"> 
+    <mod:removeTag />
+</mod:findName>
+<event name="FEDERATION_BASE">
+	<text>You arrive near the Federation Base to find the bulk of their fleet skirmishing with Rebel forces. You hang back near the far side of the moon at a small supply depot to avoid the conflict, patch up your ship and find some last-minute supplies. There's not much you can do to help in that battle, and your mission holds the key to turn the tide of the war. You prepare to face the Flagship.</text>
+	<damage amount="-5"/>
+	<store/>
+	<choice>
+		<text>Time to prepare for the final battle. Are we ready?</text>
+		<event load="TE_STORE_BOSS_LIST_BOOSTED"/>
+	</choice>
+</event>
+<mod:findName type="event" name="BOSS_AUTOMATED"> 
+    <mod:removeTag />
+</mod:findName>
+<event name="BOSS_AUTOMATED">
+	<text>As the final crew member on board the flagship is defeated, it would appear that victory has been sealed.. however scans detect an advanced AI system coming online, assuming full control of all ship systems. It charges weapons and moves in to attack!</text>
+	<status type="limit" target="enemy" system="oxygen" amount="0"/>
+</event>
+<mod:findName type="event" name="BOSS_ESCAPED"> 
+    <mod:removeTag />
+</mod:findName>
+<event name="BOSS_ESCAPED">
+	<text>A wing of the flagship breaks off as it takes terminal damage, but it somehow manages to charge and engage the FTL drive, jumping away from the firefight. You've bought the fleet some time, but it's not over yet.. after them!</text>
+	<autoReward level="HIGH">standard</autoReward>
+</event>
+<mod:findName type="event" name="BOSS_TEXT_1"> 
+    <mod:removeTag />
+</mod:findName>
+<event name="BOSS_TEXT_1">
+	<text>This is it... The Rebel flagship, the command vessel of the entire Rebellion. If you are somehow able to destroy this monstrosity, the Rebel fleet will fall into chaos and the Federation will have a chance of survival. There's no turning back!</text>
+	<choice>
+		<text load="GENERIC_ATTACK_TEXT"/>
+		<event>
+			<status type="clear" target="player" system="sensors" amount="100"/>
+		</event>
+	</choice>
+	<choice req="AE_COMBATAUGS" hidden="true"> 
+		<text load="GENERIC_CAS_TEXT"/>
+		<event load="SMCE_CAS_BOSS_1"/>
+	</choice>
+</event>
+<eventList name="SMCE_CAS_BOSS_1">
+	<event>
+		<text>The sheer size of the Flagship is still visible in the corner of your eye as you turn to the Combat Augment display. If ever there was a time to deploy auxiliary support, now is that time.</text>
+		<status type="clear" target="player" system="sensors" amount="100"/>
+		<choice req="AE_WEAPON_JAMMER" hidden="true">
+			<text>(Combat Disruptor) "Jam the Flagship weapon targeting. We have to weaken their attack capabilities."  [ Power: -2 ]</text>
+			<event>
+				<text>The jamming field interferes with the flagships weapon targeting. This will make targeting you more difficult for the Rebels.</text>
+				<status type="loss" target="enemy" system="artillery" amount="1"/>
+				<status type="loss" target="player" system="reactor" amount="2"/>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power this augment.</text>
+					<event>
+						<status type="clear" target="player" system="reactor" amount="100"/>
+					</event>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+					<event load="CE_PRE_FIGHT_NO_WEAPON_JAMMER"/>
+				</choice>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="AE_DRONE_JAMMER" hidden="true">
+			<text>(Drone Disruptor) "Jam the flagship drones. Don't let it send its servants against us."  [ Power: -2 ]</text>
+			<event load="CE_DRONE_JAMMING_RESULTS_1"/>
+		</choice>
+		<choice req="AE_TELEPORTER_JAMMER" hidden="true"> 
+			<text>(Teleporter Disruptor) "Activate the teleporter disruption field. Make sure they don't board us from this thing." [ Power: -1 ]</text>
+			<event load="CE_TELEPORTER_JAMMING_RESULTS_1"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Track the flagship with your advanced scanner device. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_CLOAK_BREAK"/>
+		</choice>
+		<choice req="AE_FIREWALL" hidden="true"> 
+			<text>(Resistive Plating) Protect the ship against hostile mind control and hacking attempts. [ Power: -1 ]</text>
+			<event load="CE_PRE_FIGHT_FIREWALL"/>
+		</choice>
+		<choice req="AE_SHIELD_JAMMER" hidden="true"> 
+			<text>(Shield Disruptor) "Activate the ion field. Bring their defenses down now!"  [ Power: -2 ]</text>
+			<event>
+								<text load="CE_PRE_FIGHT_ION_TEXT"/>
+				<status type="loss" target="enemy" system="shields" amount="2"/>
+				<status type="loss" target="player" system="reactor" amount="2"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power this augment.</text>
+					<event>
+						<status type="clear" target="player" system="reactor" amount="100"/>
+					</event>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+					<event load="CE_PRE_FIGHT_NO_SHIELD_JAMMER"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="AE_IRRADIATOR" hidden="true"> 
+			<text>(Radiation Projector) "No mercy. Irradiate them!"</text>
+			<event>
+				<text load="CE_PRE_FIGHT_BIOWEAPON_TEXT"/>
+				<status type="loss" target="enemy" system="oxygen" amount="1"/>
+				<status type="loss" target="player" system="reactor" amount="2"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power this augment.</text>
+					<event>
+						<status type="clear" target="player" system="reactor" amount="100"/>
+					</event>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+					<event load="CE_PRE_FIGHT_NO_IRRADIATOR"/>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>We won't need any backup here, prepare to fight.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="BOSS_TEXT_2"> 
+    <mod:removeTag />
+</mod:findName>
+<event name="BOSS_TEXT_2">
+	<text>You chase down the flagship and discover it is heavily damaged from the previous fight. However the vessel still poses a considerable threat: scans indicate additional personnel on board, and its vast arsenal of assault drones has been brought online. Prepare for combat!</text>
+	<choice>
+		<text load="GENERIC_ATTACK_TEXT"/>
+		<event>
+			<status type="clear" target="player" system="sensors" amount="100"/>
+		</event>
+	</choice>
+	<choice req="AE_COMBATAUGS" hidden="true"> 
+		<text load="GENERIC_CAS_TEXT"/>
+		<event load="SMCE_CAS_BOSS_2"/>
+	</choice>
+</event>
+<eventList name="SMCE_CAS_BOSS_2">
+	<event>
+		<text>You glance down at the Combat Augment interface again once you get within attack range of the weakened Flagship.</text>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+		<choice req="AE_WEAPON_JAMMER" hidden="true">
+			<text>(Combat Disruptor) "Jam the flagship's weapon targeting. Keep their weapons down!"</text>
+			<event>
+				<text>The jamming field interferes with the flagships weapon targeting. This will make targeting you more difficult for the Rebels.</text>
+				<status type="loss" target="enemy" system="artillery" amount="1"/>
+				<status type="loss" target="player" system="reactor" amount="2"/>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power this augment.</text>
+					<event>
+						<status type="clear" target="player" system="reactor" amount="100"/>
+					</event>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+					<event load="CE_PRE_FIGHT_NO_WEAPON_JAMMER"/>
+				</choice>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="AE_DRONE_JAMMER" hidden="true">
+			<text>(Drone Disruptor) "Jam the flagship drones. Don't let it send its servants against us." [ Power: -2 ]</text>
+			<event load="CE_DRONE_JAMMING_RESULTS_1"/>
+		</choice>
+		<choice req="AE_TELEPORTER_JAMMER" hidden="true"> 
+			<text>(Teleporter Disruptor) "Activate the teleporter disruption field. Make sure they don't board us from this thing."</text>
+			<event load="CE_TELEPORTER_JAMMING_RESULTS_1"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Track the flagship with your advanced scanner device.</text> 
+			<event load="CE_PRE_FIGHT_CLOAK_BREAK"/>
+		</choice>
+		<choice req="AE_FIREWALL" hidden="true"> 
+			<text>(Resistive Plating) Protect the ship against hostile mind control and hacking attempts. [ Power: -1 ]</text>
+			<event load="CE_PRE_FIGHT_FIREWALL"/>
+		</choice>
+		<choice req="AE_SHIELD_JAMMER" hidden="true"> 
+			<text>(Shield Disruptor) "Activate the ion field. Keep their defenses down now!" [ Power: -2 ]</text>
+			<event>
+								<text load="CE_PRE_FIGHT_ION_TEXT"/>
+				<status type="loss" target="enemy" system="shields" amount="2"/>
+				<status type="loss" target="player" system="reactor" amount="2"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power this augment.</text>
+					<event>
+						<status type="clear" target="player" system="reactor" amount="100"/>
+					</event>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+					<event load="CE_PRE_FIGHT_NO_SHIELD_JAMMER"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="AE_IRRADIATOR" hidden="true"> 
+			<text>(Radiation Projector) "We won't hold back. Irradiate that ship!"</text>
+			<event>
+				<text load="CE_PRE_FIGHT_BIOWEAPON_TEXT"/>
+				<status type="loss" target="enemy" system="oxygen" amount="1"/>
+				<status type="loss" target="player" system="reactor" amount="2"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power this augment.</text>
+					<event>
+						<status type="clear" target="player" system="reactor" amount="100"/>
+					</event>
+				</choice>
+				<choice req="AE_AUG_GENERATOR" hidden="true"> 
+					<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+					<event load="CE_PRE_FIGHT_NO_IRRADIATOR"/>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>We won't need any backup here, prepare to fight.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="BOSS_TEXT_3"> 
+    <mod:removeTag />
+</mod:findName>
+<event name="BOSS_TEXT_3">
+	<text>You're not certain how it's able to keep fighting with the amount of damage it has sustained, but before you can scan the condition of the ship it diverts all power from its FTL core to the engines and moves at an alarming speed to try and confer an advantage to itself.</text>
+	<choice hidden="true">
+		<text>Attempt to intercept the Flagship.</text>
+		<event load="BOSS_3_LIST_DIRE"/>
+	</choice>
+	<choice hidden="true" req="engines" lvl="5" max_group="1">
+		<text>(Lv5/7 Engines) Full power to thrusters!</text>
+		<event load="BOSS_3_LIST_RISK"/>
+	</choice>
+	<choice hidden="true" req="engines" lvl="7" max_group="1">
+		<text>(Lv7/7 Engines) No one escapes you!</text>
+		<event>
+			<text>The speed of the Flagship is truly impressive, but your cruiser easily manages to cut in front of it and force it to ready battle stations. It looks like it's transferred power to the teleporter and internal defenses, but you can sense something powerful charging up deep inside its hull. Be prepared, this is it!</text>
+			<status type="clear" target="player" system="sensors" amount="100"/>		
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="FTL_BOOSTER">
+		<text>(FTL Recharge Booster) Attempt a quick jump to cut ahead of the Flagship.</text>
+		<event>
+			<text>With a sudden burst of speed, your cruiser cuts right in front of the Flagship, forcing them to stand their ground. It looks like it's transferred power to the teleporter and internal defenses, but you can sense something powerful charging up deep inside its hull. Be prepared, this is it!</text>
+			<item_modify>    
+				<item type="fuel" min="-1" max="-1"/>
+			</item_modify>
+			<status type="clear" target="player" system="sensors" amount="100"/>		
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="FTL_JAMMER">
+		<text>(FTL Jammer) Jam their FTL drive, don't let them get away!</text>
+		<event>
+			<text>By the time their crew has realised their loss in speed, you have already manoeuvred your ship ahead of them to force the engagement. It looks like it's transferred power to the teleporter and internal defenses, but you can sense something powerful charging up deep inside its hull. Be prepared, this is it!</text>
+			<status type="clear" target="player" system="sensors" amount="100"/>		
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="BOSS_3_LIST_DIRE">
+	<event>
+		<text>Catching up to such a fast-moving target is a fruitless affair... You eventually approach the Flagship nestled deep inside a dense field of asteroids. You detect multiple reserve systems powering up on board the vessel, but now you have more to worry about in this final, bumpy ride. Be prepared, this is it!</text>
+		<environment type="asteroid"/>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+		<fleet>battle</fleet>
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	<event>
+		<text>Catching up to such a fast-moving target is a fruitless affair... When you eventually catch up, you find that it has led you within range of a star! You detect multiple reserve systems powering up on board the vessel, but now you have more to worry about in this final, heated engagement. Be prepared, this is it!</text>
+		<environment type="sun"/>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+		<fleet>battle</fleet>
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	<event>
+		<text>Catching up to such a fast-moving target is a fruitless affair... You lose sight of the flagship as it flies into a nebula and slip in to confront it. Your sensors can't determine what it's about to do, but you can only prepare for the worst... this is it!</text>
+		<environment type="nebula"/>
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event/>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+	</event>
+	<event>
+		<text>Catching up to such a fast-moving target is a fruitless affair... Your worst fears come to light as your pursuit leads you directly into the eye of an ion storm. Your sensors can't determine what it's about to do, but you can only prepare for the worst... this is it!</text>
+		<environment type="storm"/>
+		<status type="limit" target="player" system="battery" amount="2"/>
+		<status type="limit" target="enemy" system="shields" amount="4"/>
+	<choice req="AE_COMBATAUGS" hidden="true" blue="false" max_group="0">
+		<text>Prepare to fight. Your Combat Augments are not responding.</text>
+		<event>
+				<status type="loss" target="enemy" system="reactor" amount="6"/>	
+		</event>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text load="GENERIC_ATTACK_TEXT"/>
+		<event>
+				<status type="loss" target="enemy" system="reactor" amount="6"/>	
+		</event>
+	</choice>
+	</event>
+	<event>
+		<text>Catching up to such a fast-moving target is a fruitless affair... The Flagship retreats deep into the Rebel fleet, and you register an ASB lock on your cruiser. You detect multiple reserve systems powering up on board the vessel, but now you have a lot more to fear as a Rebel cruiser joins the fight. Be prepared, this is it!</text>
+		<environment type="PDS" target="player"/>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+</eventList>
+<eventList name="BOSS_3_LIST_RISK">
+	<event>
+		<text>Trying to keep up with such speed proves difficult, and by the time you catch up to the Flagship it has managed to maneuver deep inside an asteroid belt. You detect multiple reserve systems powering up on board the vessel, but now you have more to worry about in this final, bumpy ride. Be prepared, this is it!</text>
+		<environment type="asteroid"/>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+		<fleet>battle</fleet>
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	<event>
+		<text>Trying to keep up with such speed proves difficult, and by the time you catch up to the Flagship it has moved dangerously close to a class M star! You detect multiple reserve systems powering up on board the vessel, but now you have more to worry about in this final, heated engagement. Be prepared, this is it!</text>
+		<environment type="sun"/>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+		<fleet>battle</fleet>
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+	</event>
+	<event>
+		<text>Trying to keep up with such speed proves difficult, and by the time you catch up to the Flagship it has made a small gas cloud into its personal battlefield. Your sensors can't determine what it's about to do, but you can only prepare for the worst... this is it!</text>
+		<environment type="nebula"/>
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event/>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	<event>
+		<text>Your ship just about manages to keep up with the Flagship and cuts in front of it to force the engagement. It looks like it's transferred power to the teleporter and internal defenses, but you can sense something powerful charging up deep inside its hull. Be prepared, this is it!</text>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	<event>
+		<text>Your ship just about manages to keep up with the Flagship and cuts in front of it to force the engagement. It looks like it's transferred power to the teleporter and internal defenses, but you can sense something powerful charging up deep inside its hull. Be prepared, this is it!</text>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+	<event>
+		<text>Your ship just about manages to keep up with the Flagship and cuts in front of it to force the engagement. It looks like it's transferred power to the teleporter and internal defenses, but you can sense something powerful charging up deep inside its hull. Be prepared, this is it!</text>
+		<status type="clear" target="player" system="sensors" amount="100"/>		
+			<choice>
+				<text load="GENERIC_ATTACK_TEXT"/>
+				<event>
+					<status type="clear" target="player" system="sensors" amount="100"/>
+				</event>
+			</choice>
+			<choice req="AE_COMBATAUGS" hidden="true"> 
+				<text load="GENERIC_CAS_TEXT"/>
+				<event load="SMCE_CAS_BOSS_3"/>
+			</choice>
+		</event>
+</eventList>
+<eventList name="SMCE_CAS_BOSS_3">
+	<event>
+		<text>You turn to the Combat Augment interface one last time.</text>
+			<choice req="AE_WEAPON_JAMMER" hidden="true">
+				<text>(Combat Disruptor) "Jam the flagship's weapon targeting. Keep their weapons down!"</text>
+				<event>
+					<text>The jamming field interferes with the flagships weapon targeting. This will make targeting you more difficult for the Rebels.</text>
+					<status type="loss" target="enemy" system="artillery" amount="1"/>
+					<status type="loss" target="player" system="reactor" amount="2"/>
+					<choice req="AE_AUG_GENERATOR" hidden="true"> 
+						<text>(Internal Generator) Use your internal generator to power this augment.</text>
+						<event>
+							<status type="clear" target="player" system="reactor" amount="100"/>
+						</event>
+					</choice>
+					<choice req="AE_AUG_GENERATOR" hidden="true"> 
+						<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+						<event load="CE_PRE_FIGHT_NO_WEAPON_JAMMER"/>
+					</choice>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+			<choice req="AE_DRONE_JAMMER" hidden="true">
+				<text>(Drone Disruptor) "Jam the flagship drones. Don't let it send its servants against us."  [ Power: -2 ]</text>
+				<event load="CE_DRONE_JAMMING_RESULTS_1"/>
+			</choice>
+			<choice req="AE_TELEPORTER_JAMMER" hidden="true"> 
+				<text>(Teleporter Disruptor) "Activate the teleporter disruption field. Make sure they don't board us from this thing."</text>
+				<event load="CE_TELEPORTER_JAMMING_RESULTS_1"/>
+			</choice>
+			<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+				<text>(Subspace Scanner) Track the flagship with your advanced scanner device.</text> 
+				<event load="CE_PRE_FIGHT_CLOAK_BREAK"/>
+			</choice>
+			<choice req="AE_FIREWALL" hidden="true"> 
+				<text>(Resistive Plating) Protect the ship against hostile mind control and hacking attempts. [ Power: -1 ]</text>
+				<event load="CE_PRE_FIGHT_FIREWALL"/>
+			</choice>
+			<choice req="AE_SHIELD_JAMMER" hidden="true"> 
+				<text>(Shield Disruptor) "Activate the ion field. We have to weaken this shield!" [ Power: -2 ]</text>
+				<event>
+					<text load="CE_PRE_FIGHT_ION_TEXT"/>
+					<status type="loss" target="enemy" system="shields" amount="2"/>
+					<status type="loss" target="player" system="reactor" amount="2"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice req="AE_AUG_GENERATOR" hidden="true"> 
+						<text>(Internal Generator) Use your internal generator to power this augment.</text>
+						<event>
+							<status type="clear" target="player" system="reactor" amount="100"/>
+						</event>
+					</choice>
+					<choice req="AE_AUG_GENERATOR" hidden="true"> 
+						<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+						<event load="CE_PRE_FIGHT_NO_SHIELD_JAMMER"/>
+					</choice>
+				</event>
+			</choice>
+			<choice req="AE_IRRADIATOR" hidden="true"> 
+				<text>(Radiation Projector) "Let's end this. Irradiate the crew!"</text>
+				<event>
+					<text load="CE_PRE_FIGHT_BIOWEAPON_TEXT"/>
+					<status type="loss" target="enemy" system="oxygen" amount="1"/>
+					<status type="loss" target="player" system="reactor" amount="2"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event/>
+					</choice>
+					<choice req="AE_AUG_GENERATOR" hidden="true"> 
+						<text>(Internal Generator) Use your internal generator to power this augment.</text>
+						<event>
+							<status type="clear" target="player" system="reactor" amount="100"/>
+						</event>
+					</choice>
+					<choice req="AE_AUG_GENERATOR" hidden="true"> 
+						<text>(Internal Generator) Use your internal generator to power up a secondary combat augment.</text>
+						<event load="CE_PRE_FIGHT_NO_IRRADIATOR"/>
+					</choice>
+				</event>
+			</choice>
+		<choice hidden="true">
+			<text>We won't need any backup here, prepare to fight.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="BOSS_REPAIR_STATION">
+	<event load="BOSS_REPAIR_STATION_ACTUAL"/>
+	<event load="BOSS_REPAIR_STATION_ACTUAL"/>
+	<event load="BOSS_REPAIR_STATION_ACTUAL"/>
+	<event load="BOSS_REPAIR_STATION_ACTUAL"/>
+	<event>
+		<text load="BOSS_REPAIR_STATION_ASB"/>
+		<damage amount="-15"/>
+		<repair/>
+		<item_modify>
+			<item type="missiles" min="4" max="4"/>
+			<item type="fuel" min="5" max="5"/>
+			<item type="drones" min="5" max="5"/>
+			<item type="scrap" min="22" max="44"/>
+		</item_modify>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>A wing of Rebel fighters enters the system just as the engineers are about to finish their work. The base is put into high alert and prepares its remaining Anti-Ship Batteries. When you exit the space dock, the carnage has already started. Laser shots impact all around you, tearing the base apart. You pick your target.</text>
+				<ship load="REBEL_FIGHTER_BOSS_REPAIR_STATION" hostile="true"/>
+				<environment type="PDS" target="enemy"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text load="BOSS_REPAIR_STATION"/>
+		<damage amount="-15"/>
+		<repair/>
+		<item_modify>
+			<item type="missiles" min="4" max="4"/>
+			<item type="fuel" min="5" max="5"/>
+			<item type="drones" min="5" max="5"/>
+			<item type="scrap" min="22" max="44"/>
+		</item_modify>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>You barely detach from the station when all hell breaks loose. A Rebel gunboat formation jumps directly into the base perimeter and opens fire on the installation with its arsenal. You engage the closest ship and request fire support from the base.</text>
+				<ship load="REBEL_GUNBOAT_BOSS_REPAIR_STATION" hostile="true"/>
+				<environment type="PDS" target="enemy"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<textList name="BOSS_REPAIR_STATION_ASB">
+	<text back="BG_WARNING_ASB_ALLIED" planet="NONE">You arrived at one of the few remaining Federation strongholds. The planetary ASB acquires you immediately and you have to personally verify your ID before they allow you to dock. The Rebels stand at the gates and the planets population must be terrified.</text>
+	<text back="BG_WARNING_ASB_ALLIED" planet="NONE">This planet accommodates a huge Federation outpost. Orbital debris and plasma fires on the surface indicate that large battles have been taken place here. You request emergency supplies and prepare to move on.</text>
+	<text back="BG_WARNING_ASB_ALLIED" planet="NONE">This planet is still under Federation control and serves as a supply base. The Anti-Ship Batteries stand strong and cover the entire orbit, but you know that will not matter. The bases and settlements won't stand a chance once the Rebels arrive in full force.</text>
+</textList>
+<event name="BOSS_REPAIR_STATION_ACTUAL"> 
+	<text load="BOSS_REPAIR_STATION"/>
+	<damage amount="-15"/>
+	<ship load="BS_FED_BOSS" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<repair/>
+	<item_modify>
+		<item type="missiles" min="4" max="4"/>
+		<item type="fuel" min="5" max="5"/>
+		<item type="drones" min="5" max="5"/>
+		<item type="scrap" min="22" max="44"/>
+	</item_modify>
+	<choice hidden="true">
+		<text>Consider some last-minute upgrades.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice hidden="true">
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="BOSS_FLEETS_FED"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="BOSS_FLEETS_FED">
+	<fleet>fed</fleet>
+	<text load="BOSS_FLEETS_FED"/>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew go through a final training exercise.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_HOLOGRAM_GENERATOR" hidden="true"> 
+		<text>(Hologram Projector) Supplement your crew with a sentient hologram. [ Scrap: -15 ]</text>
+		<event load="CE_HOLOGRAM_BIRTH_LIST"/>
+	</choice>
+	<choice req="AE_AMMO_MANUFACTURER" hidden="true">
+		<text>(Demolitions Lab) Assemble some missiles for the final battle. [ Scrap: -20 ]</text>
+		<event load="CE_AMMO_PRODUCTION"/>
+	</choice>
+	<choice req="AE_DRONE_MANUFACTURER" hidden="true">
+		<text>(Drone Manufacturer) Assemble some drone parts for the last push. [ Scrap: -15 ]</text>
+		<event load="CE_DRONE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some more hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Scan the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="BOSS_SCOUT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="BOSS_SCOUT" unique="false">
+	<text load="BOSS_SCOUT"/>
+	<ship load="REBEL_AND_AUTO" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="BOSS_SCOUT_RESCUE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="BOSS_SCOUT_RESCUE">
+	<text load="BOSS_SCOUT_RESCUE"/>
+	<choice>
+		<text>Prepare to fight the Rebel ship!</text>
+		<event>
+			<text>You move in to intercept.</text>
+			<ship load="BOSS_SCOUT_RESCUE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>There's no time; get ready to jump.</text>
+		<event>
+			<text>You try to block out the horrors of war and focus on your mission.</text>
+		</event>
+	</choice>
+</event> 
+<mod:findName type="event" name="BOSS_FLEETS_BOTH_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="BOSS_FLEETS_BOTH_FIGHT">
+	<fleet>battle</fleet>
+	<text load="BOSS_FLEETS_BOTH"/>
+	<ship load="BOSS_FLEETS_REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="BOSS_FLEETS_REBEL"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="BOSS_FLEETS_REBEL">
+	<fleet>rebel</fleet>
+	<text load="BOSS_FLEETS_REBEL"/>
+	<ship load="BOSS_FLEETS_REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="BS_EVENT_FED_BOSS" unique="true">
+	<fleet>battle</fleet>
+	<text load="BS_EVENT_FED_BOSS_TEXT"/>
+	<ship load="BS_FED_BOSS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="BS_EVENT_FED_BOSS_TEXT">
+	<text>You arrive amidst the debris of a destroyed Federation cruiser. The battle still rages on in the distance, but you will have to worry about the weapons fire from a nearby station first. It must have been taken over by Rebel marines.</text>
+	<text>While the fighting continues a few klicks away, the wreck of a Rebel dropship floats quietly near the beacon. The marines seem to have evacuated to a nearby Federation station, because it IDs as Rebel-controlled now and picks you as an easy target.</text>
+	<text>As the two fleets battle it out in the distance you are happy to see a nearby Federation station still intact. To your surprise, they start targeting your ship! You transmit friendly fire codes but realize this is to no avail. A small Rebel boarding shuttle detaches from the station and jumps away. The station has been occupied by the Rebel forces!</text>
+	<text>At first, massive explosions and plasma flares in the distance distract you from the small Federation outpost nearby, but as a quick scan shows Rebel marines and combat drones on board, you realize it is the greater threat here. They start targeting you!</text>
+</textList>
+<event name="BS_EVENT_FED_REBEL" unique="true">
+	<text>The Rebels have managed to bring one of their smaller stations right into the sector. It must serve as some kind of forward command center or supply base.</text>
+	<ship load="BS_REBEL" hostile="false"/>
+	<choice>
+		<text>Attack the installation.</text>
+		<event>
+			<text>The Rebel base activates its defense weapons.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Try to get away before you are discovered.</text>
+		<event>
+			<text>You power down all systems and jump away as soon as the FTL charge allows.</text>
+		</event>
+	</choice>
+</event>
+<event name="C_EVENT_GUNBOAT_BOSS">
+	<fleet>battle</fleet>
+	<text load="C_EVENT_GUNBOAT_BOSS_TEXT"/>
+	<ship load="C_REBEL_GUNBOAT_BOSS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_EVENT_GUNBOAT_BOSS_TEXT">
+	<text planet="PLANET_POPULATED_REAL">You cross paths with a Rebel patrol craft securing a small planet.</text>
+	<text>A small Rebel patrol is securing the perimeter of this beacon while the fleets battle in the distance.</text>
+	<text>A forward Rebel patrol unit is hunting down a few scattered Federation scouts. As soon as you arrive it turns to you.</text>
+	<text>A Rebel patrol craft hails you, "Federation scum! We've waited a long time for this!"</text>
+	<text>You receive a transmission, "Sorry sir, this is nothing personal but we're under orders." The Rebel patrol craft's weapons go hot.</text>
+	<text>Rebel patrols seem to be covering the whole system. A larger craft detects you and starts its strafing run.</text>
+	<text>A Rebel patrol ship hails you, "Aha, we have found you! Surrender is not an option. Die, Federation scum!"</text>	
+	<text>This system has not been spared by the hostilities. A fierce battle rages in the distance and one of the Rebel gunboats moves in to attack.</text>
+</textList>
+<event name="C_EVENT_GUNBOAT_BOSS_PDS_DELAYED" unique="true">
+	<fleet>battle</fleet>
+	<text load="C_EVENT_GUNBOAT_BOSS_PDS_DELAYED_TEXT"/>
+	<ship load="C_REBEL_GUNBOAT_PDS_DELAYED" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_EVENT_GUNBOAT_BOSS_PDS_DELAYED_TEXT">
+	<text back="BG_WARNING_ASB_ALLIED" planet="NONE">You complete the jump and find yourself directly within a breathtaking battle for control of this planet. The Rebel forces are in the process of securing the orbit, systematically eliminating the outdated Federation outriders that skirmish with them. A Rebel gunboat intercepts you before you can properly evaluate the situation.</text>
+	<text back="BG_WARNING_ASB_ALLIED" planet="NONE">This planet is housing a major Federation military base and the Rebels are about to eradicate it. Their missile weapons devastate the planet's surface; the Federation anti-ship batteries are still firing, but can't do much against the sheer amount of Rebel cruisers. A small gunboat moves in on your position before you can contact the local Federation comms hub.</text>
+	<text back="BG_WARNING_ASB_ALLIED" planet="NONE">A battle of planetary scale takes place here. The local Federation garrison is under heavy attack from space. When you try to contact the base, a Rebel gunboat immediately scrambles your comms and gets into an attack vector.</text>
+</textList>
+<eventList name="C_REBEL_GUNBOAT_PDS_DELAYED_LIST">
+	<event>
+		<text>You transmit your secret Federation codes. "Really? ... Ahem, mission priority confirmed. Commencing fire mission." Several of the planetary guns switch target and start firing on your opponent. The Rebel cruisers easily advance into close orbit, as they are no longer pressured by the artillery, but at least you get some help.</text>
+		<environment type="PDS" target="enemy"/>
+	</event>
+	<event>
+		<text>"Negative free asset, danger close. We lost our primary targeting arrays for the guns designated to your quadrant. You navigate too close to your opponent and we can only fire full spread, your ship might be hit as well if we fire on the hostile."</text>
+		<choice hidden="true">
+			<text>Order them to fire anyway.</text>
+			<event>
+				<text>"Ahem, yes Sir. Commencing fire mission, danger close." As you zip through the battlefield, several of the planetary guns switch target and start firing at a wide area around you. The Rebel cruisers easily advanced into close orbit, as their main squadron is no longer pressured by the artillery.</text>
+				<environment type="PDS" target="all"/>
+			</event>
+		</choice>
+		<choice req="MARK_FED" hidden="true">
+			<text>(Federation Cruiser) Order them to dedicate all their assets to support your position.</text>
+			<event>
+				<text>"This will leave us completely defenseless, Sir." You repeat your order and the officer complies. This base will be sacrificed to ensure your safe passage.</text>
+				<environment type="PDS" target="enemy"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Continue the engagement without ASB support.</text>
+			<event>
+				<text>"Sorry Sir, good luck." You cut communication and focus on the hostile. The planetary batteries continue to fire on the cruisers, but barely hit anything. The Rebels easily advance into close orbit, commencing a short-range assault.</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<event name="C_EVENT_GUNBOAT_BOSS_SUN" unique="true">
+	<environment type="sun"/>
+	<fleet>battle</fleet>
+	<text load="C_EVENT_GUNBOAT_BOSS_SUN_TEXT"/>
+	<ship load="C_REBEL_GUNBOAT_BOSS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_EVENT_GUNBOAT_BOSS_SUN_TEXT">
+	<text>Prolonged antimatter bombardment has melted the crust of this planet and started an unstable fusion reaction in the core. There is no time to think about the people who lost their lives here: the attack fleet is still in orbit and a gunboat approaches.</text>
+	<text>This forward beacon shows the eagle emblem of the Rebels. They must have brought it close to this sun to conceal the jump field. A surprise attack is already underway, multiple cruiser squadrons have arrived in the system and battle the local defenders. The patrol craft that is guarding the beacon spots you.</text>
+	<text>The battle in this region has gotten way out of hand. Contradicting information says that either Rebel or Federation ships have fired antimatter weapons at the local star in order to cause a supernova and obstruct the opponent's advance. A burned patrol boat picks you as its target.</text>
+</textList>
+<event name="C_BOSS_CRUISER" unique="false">
+	<text load="C_BOSS_CRUISER_TEXT"/>
+	<ship load="C_REBEL_CRUISER_BOSS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_BOSS_CRUISER_TEXT">
+	<text>Although this sector is still under Federation control, an enemy cruiser has broken through the defensive lines. They hail you, "You made it this far, but you won't get further. Target their engines!" They move in to engage.</text>
+	<text>Long range scanners show this system is empty of any capital ships. Clearly it is not of strategic value. Wait... FTL signatures show a Rebel cruiser just jumped nearby! A Rebel officer hails, "Our big guns are charging up. Meet your executioner!"</text>
+	<text planet="PLANET_UNPOPULATED">Sensors indicate a Rebel cruiser hiding behind the nearby planet's moon. As it registers you it hails, "We've heard a lot about you. Looks like we'll get promoted soon." They move in to attack!</text>
+	<text>Federation ships are scarce in this region of space despite a number of civilian space stations. You see a Rebel cruiser mopping up the remains of a Federation medevac squadron. It lets the last ship escape and targets you instead. "Look what has become of the Federation. You have escaped us long enough. Prepare to be annihilated!"</text>
+	<text>As soon as you arrive at the beacon, a Rebel cruiser turns to engage. How could they have gotten here so fast? They send a message, "Our fleet has encircled the entire sector and the Federation base will fall soon. You won't get out of this!" Time to power up the weapons.</text>
+</textList>
+<event name="C_BOSS_CRUISER_WARNING" unique="false">
+	<fleet>battle</fleet>
+	<text load="C_BOSS_CRUISER_WARNING_TEXT"/>
+	<ship load="C_REBEL_CRUISER_BOSS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_BOSS_CRUISER_WARNING_TEXT">
+	<text>You arrive amidst the debris of a destroyed Federation cruiser. The enemy ship that blew it apart immediately starts to target you. "Moving in hot, suckers!" Brace for impact!</text>
+	<text>Fierce fighting is taking place in the distance. You hope to move on unnoticed but a Rebel cruiser breaks away from the main fleet and engages you. They send a short hail, "God, you are annoying, but now we have you." Evasive manoeuvres!</text>
+	<text>The commander of a nearby Federation cruiser sends a warning message, "Multiple enemy assets converging on your position, we can't stop them all. You have to take on one of their cruisers for a bit. Try to get away as fast as..." The Rebel cruiser interrupts your communications, "We will blow you apart, Federation scum." Red alert!</text>
+	<text>The commander of the nearby Federation cruiser squadron sends an encrypted message, "We will try to distract them to enable you to jump... Concentrate fire on unit 26-b! ... Damn, they got away. You've got incoming, Captain. May God help you!" One of the Rebel cruisers performed a short distance jump and appears right in front of your ship.</text>
+</textList>
+<event name="C_BOSS_CRUISER_RESCUE">
+	<fleet>battle</fleet>
+	<text load="C_BOSS_CRUISER_RESCUE_TEXT"/>
+	<choice>
+		<text>Prepare to take on the Rebel cruiser!</text>
+		<event>
+			<text>You program an attack vector.</text>
+			<ship load="C_REBEL_CRUISER_BOSS_RESCUE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>The Rebel flagship is our target; we can't fight the whole fleet by ourselves.</text>
+		<event>
+			<text>You remind your crew to focus on the mission. Charge the FTL!</text>
+		</event>
+	</choice>
+</event>
+<textList name="C_BOSS_CRUISER_RESCUE_TEXT">
+	<text planet="PLANET_POPULATED_REAL">You arrive to find a Rebel fighter squadron battling with a few heavily-damaged Federation assault ships. The main fleet is holding back near the core of the system, but a cruiser has already broken through the lines and has started to bombard a settlement on a nearby planet. Should we move in to assist?</text>
+	<text>As soon as you arrive you register a Rebel capital ship pounding into a Federation cruiser. They hail, "We are under heavy attack. Systems security breached by cyber-attacks. Weapons and artillery beam off-line. Requesting assistance... God, please help us, we are a sitting duck here!"</text>
+	<text>While the battle rages in the distance, a Federation scout squadron is being decimated by a nearby Rebel cruiser. Shall we assist?</text>
+	<text planet="PLANET_POPULATED_REAL">A series of space stations in orbit around a nearby planet is under attack from a Rebel cruiser that has broken away from the main fleet. No Federation ship seems to be willing, or able, to assist. You might be, though.</text>
+	<text planet="PLANET_POPULATED_REAL">A single Rebel cruiser is pounding the colonies on this small planet while the main fleets battle a few klicks away. You receive a distorted hail from the surface, "You are the only friendly ship in range. They are going to murder us all, please help us!"</text>
+</textList>
+<eventList name="C_REBEL_CRUISER_BOSS_RESCUE_LIST">
+	<event>
+		<text>You are hailed, "Thank you!  We will send out some repair drones to fix as much damage to your ship as possible. Good luck with your mission!"</text>
+		<damage amount="-15"/>
+	</event>
+	<event>
+		<text>The survivors send a message, "Thanks for the support, I don't know how much longer we could have held on. Take some supplies, we probably won't need them at this point."</text>
+		<autoReward level="HIGH">stuff</autoReward>
+	</event>
+</eventList>
+<eventList name="HOSTILE_FED">
+	<event load="PIRATE"/>
+	<event load="REBEL_AUTO"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="BOSS_FLEETS_BOTH_FIGHT"/>
+	<event load="BOSS_FLEETS_BOTH_FIGHT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="REBEL"/>
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO_AUGMENTED"/>
+	<event load="BS_EVENT_FED_BOSS"/>
+	<event load="BS_EVENT_FED"/>
+	<event load="BS_EVENT_FED_AUTO"/>
+	<event load="C_FED_CRUISER_WARNING"/>
+	<event load="C_EVENT_GUNBOAT_BOSS"/>
+	<event load="C_EVENT_GUNBOAT_BOSS_SUN"/>
+	<event load="C_FED_REBEL_CRUISER"/>
+	<event load="C_FED_REBEL_CRUISER_ASTEROID"/>
+	<event load="CE_PDS_FED"/>
+	<event load="CE_PDS_FED_2"/>
+	<event load="C_EVENT_GUNBOAT_BOSS_PDS_DELAYED"/>
+</eventList>
+<eventList name="NEUTRAL_FED">
+	<event load="AUTO_CIVILIAN"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="BOSS_SCOUT_RESCUE"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="ALISON_DEFECTOR"/>
+	<event load="MERCENARY"/>
+	<event load="REFUGEE_NO_DISTRESS"/>
+	<event load="WRECKAGE_EVENT"/>
+	<event load="FUELING_STATION"/>
+	<event load="REBEL_CHECKPOINT"/>
+	<event load="REBEL_HELPERS"/>
+	<event load="ROGUE_REBEL"/>
+	<event load="BS_EVENT_FED_REBEL"/>
+	<event load="CE_FED_REPAIR_STATION"/>
+	<event load="CE_FED_DESERTER"/>
+	<event load="C_FED_CRUISER_RESCUE"/>
+	<event load="C_EVENT_CIVILIAN_TRANSPORT_FED"/>
+</eventList>
+<eventList name="DISTRESS_BEACON_FED">
+	<event load="REBEL_VS_FEDERATION"/> 
+	<event load="REBEL_VS_FEDERATION"/>  
+	<event load="ESCORT_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="REFUGEE_DISTRESS"/>
+	<event load="CE_DISTRESS_AIRSUPPORT"/>
+	<event load="CE_DISTRESS_AIRSUPPORT"/>
+	<event load="BS_EVENT_FED_AUTO_DORMANT"/>
+</eventList>
+<eventList name="QUESTS_FED">
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="QUEST_MANTIS_INVASION_START"/>
+	<event load="QUEST_ESCORT"/>
+	<event load="QUEST_FED_BATTLE_1"/>
+</eventList>
+<eventList name="BOARDERS_FED">
+	<event load="BOARDERS"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_HACKING"/>
+	<event load="CE_BOARDERS_BOUNTYHUNTER"/>
+	<event load="CE_REBEL_AUTO_AI_BOARDERS"/>
+	<event load="BS_EVENT_AUTO_AI_BOARDERS"/>
+</eventList>
+<eventList name="ITEMS_FED">
+	<event load="FIND_DRONE_FED"/>
+	<event load="FIND_WEAPON_FED"/>
+	<event load="FREE_ITEMS_FED"/>
+	<event load="FREE_ITEMS_FED"/>
+	<event load="FUEL_FOR_DRONE_STATION"/>
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TAVERN_HIRE"/>
+	<event load="CE_STRAY_FLEET"/>
+	<event load="CE_STRAY_FLEET"/>
+</eventList>
+<event name="START_BEACON_FED_ACTUAL">
+	<text load="SE_START_BEACON_FED_TEXT"/>
+	<choice req="MARK_FED" hidden="true">
+		<text>(Federation Cruiser) Use your high level encryption codes to contact Federation command.</text>
+		<event load="QUEST_FED_BATTLE_START"/>
+	</choice>
+	<choice req="sensors" lvl="3" hidden="true"> 
+		<text>(Lv3 Sensors) Scan the nearby beacons for Federation vessels and re-establish contact with Federation command.</text>
+		<event load="QUEST_FED_BATTLE_START"/>
+	</choice>  
+	<choice req="ADV_SCANNERS" hidden="true"> 
+		<text>(Long-Ranged Scanners) Scan for the closest Federation base and re-establish contact with Federation command.</text>
+		<event load="QUEST_FED_BATTLE_START"/>
+	</choice>  
+	<choice req="TE_GOODS_REBEL_CONTRABAND" hidden="true">
+		<text>(Federation Contraband) Search your cargo for a working Federation transmitter and re-establish contact with Federation command.</text>
+		<event load="QUEST_FED_BATTLE_START"/>
+	</choice>
+	<choice hidden="true"> 
+		<text>Prepare the jump drive.</text>
+		<event>
+		<text>You have to get to the exit beacon and jump to the next sector before the pursuing Rebels catch you.</text>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_BOUNTYHUNTER" hidden="true">
+		<text>(Mercenary Database) Acquire a contract for this sector.</text>
+		<event load="QUEST_FED_BATTLE_START_MERC"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="DRONES_BEAM" hidden="true">
+		<text>(Beam Drone) Refit some beam drones for mining duty and send them ahead into the sector. [ Drone Parts: -3 ]</text>
+		<event>
+			<text load="CE_DRONE_MINING_START_TEXT"/>
+			<item_modify>
+				<item type="drones" min="-3" max="-3"/>
+			</item_modify>
+			<quest event="CE_DRONE_MINING_CIVILIAN"/>
+		</event>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="AE_SECTOR_MAPPING" hidden="true">
+		<text>(Sector Scout Unit) Send out mapping drones to gather detailed data on the sector. [ Drone Parts: -3 ]</text>
+		<event load="CE_SECTOR_MAPPING"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [3 Missiles]</text>
+		<event>
+			<text>Undisturbed as you are here, you can lay some mines while the FTL charges. You put up a hazard beacon as well to warn the locals. The Rebel forces will have to avoid this area, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+		</event>
+	</choice>
+</event>
+<textList name="SE_START_BEACON_FED_TEXT">
+	<text>The latest reports state that this sector is about to be evacuated. Local Federation forces might need any help they can get, but you will have to keep in mind that your have you own mission.</text>
+	<text>Forward units of the Rebel fleet battle with Federation squadrons for the control of this sector. If you want to complete your mission, you will have to get through this mess alive somehow.</text>
+	<text>You arrive in a sector that is technically still under Federation control. Because the monumental Rebel fleet is approaching the main Federation base, local forces will have to retreat soon, or fight their last battles.</text>
+	<text>You arrive in a contested sector. Officially it is still under Federation control, but Rebel forward units are everywhere and the local Federation fleet detachments are performing a disorganized retreat.</text>
+</textList>
+<eventList name="CE_BOUNTY_LIST_FED">
+	<event>
+		<text>The wealth of a small but prosperous colony government has become well known to the Rebel fleet. A requisition craft pays them regular visits. The local magistrate wants that ship to disappear. Target: Rebel Requisition Officers. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_REBEL_REQUISITION"/>
+	</event>
+	<event>
+		<text>Students on a small planetary settlement are unhappy about being watched by a Rebel surveillance satellite. While some of them have taken up military training, others want to hire outside help, so that no one (other than maybe you) gets hurt. Target: Auto-Satellite. Payment: Low.</text>
+		<quest event="CE_BOUNTY_AUTO_SURVEYOR"/>
+	</event>
+	<event>
+		<text>A tiny settlement still loyal to the Federation seeks to recruit a gun for hire. They'll pay you to destroy the automated scouts that guards their system. Target: Automated Craft. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_AUTO"/>
+	</event>
+	<event>
+		<text>Some of your fellow Federation officers have deserted the cause. Their commanding officer has personally put out a bounty on the former Federation crew. Target: Federation Traitors. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_FED"/>
+	</event>
+	<event>
+		<text>Some of your fellow Federation officers have deserted the cause. Their commanding officer has personally put out a bounty on the former Federation crew. Target: Federation Traitors. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_FED"/>
+	</event>
+	<event>
+		<text>Some of your fellow Federation officers have deserted the cause. Their commanding officer has personally put out a bounty on the former Federation crew. Target: Federation Traitors. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_FED"/>
+	</event>
+</eventList>
+<eventList name="QUEST_FED_BATTLE_START">
+	<event>
+		<text>You transmit your security codes and a Federation comm assistant contacts you, secured audio only, "This is Federation Command [encrypted], we read you. Be advised that Rebel forces are invading the sector. All Federation vessels up to [encrypted] rank are under our command in order to coordinate the evacuation."</text>
+		<choice>
+			<text>Continue...</text>
+			<event>
+				<text>"Oh... apparently your tags say you are Freelancing Level Violet, meaning none of our orders are binding. Well, aren't you special? Seriously, we are in a tight spot here and need every ship we can get. Can you help us out somewhere?"</text>
+				<choice>
+				<text>All right, give us a task.</text>
+					<event>
+						<text>"Good, stand by... okay... proceed to the next crossroad beacon and join up with Fleet Detachment [encrypted]. Receive further orders from its commanding officer. Engage any Rebel forces you encounter on the way. Transmitting coordinates. Take care and good luck." You close the channel and prepare to jump.</text>
+					<quest event="QUEST_FED_BATTLE_1"/>
+					</event>
+				</choice>
+				<choice>
+					<text>We have a high priority mission and request assistance.</text>
+					<event>
+						<text>"YOU request assistance? Did you listen to me at all? ... okay, all right, you might get some help at one of our last outposts. Transmitting coordinates. Now get out of the channel." Communication is cut immediately.</text>
+						<quest event="FEDERATION_BASE_ASSIST"/>
+					</event>
+				</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="QUEST_FED_BATTLE_START_MERC">
+	<event>
+		<text>You are surprised when the database brings up a direct link to the local Federation command centre. A high-ranking officer appears on screen. "How'd you get onto this channel? ...I see, a gun for hire. Regardless, we are in the process of evacuating this sector. All non-combatants are to leave as soon as possible. That includes you."</text>
+		<choice>
+			<text>"Understood. We will leave the sector as quickly as we can."</text>
+			<event>
+				<text>"Roger that, unmarked vessel. Watch out for heavy resistance on your way out. Good luck."</text>
+			</event>
+		</choice>
+		<choice>
+			<text>"Negative. We wish to offer assistance to the evacuation effort."</text>
+			<event>
+				<text>"Are you sure? ...I understand. Be advised we cannot pay compensation for your efforts. Proceed to the next crossroad beacon and join up with Fleet Detachment [encrypted]. Receive further orders from its commanding officer. Engage any Rebel forces you encounter on the way. Transmitting coordinates. Take care and good luck." You close the channel and prepare to jump.</text>
+				<quest event="QUEST_FED_BATTLE_1"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="QUEST_FED_BATTLE_1">
+	<event>
+		<fleet>battle</fleet>
+		<text>You arrive right in the middle of a major fleet battle. The beacon took heavy damage and can barely stabilize its jump circle. A junior Federation Captain contacts you on secure audio channels, "Free asset, you are considered part of this battle-group now. Stand by for your combat task."</text>
+		<choice>
+			<text>Understood.</text>
+			<event load="QUEST_FED_BATTLE_1_LIST"/>
+		</choice>
+	</event>
+	<event>
+		<fleet>battle</fleet>
+		<text>You arrive right in the middle of a major fleet battle. The beacon took heavy damage and can barely stabilize its jump circle. A senior Federation Captain contacts you on secure audio channels, "Free asset, we have lost general situation awareness. Engage targets at your own discretion."</text>
+		<choice>
+			<text>Try to pick out the Rebel lead cruiser and engage it.</text>
+			<event>
+				<text>You power up your weapons and engage what you think is the Rebel command asset.</text>
+				<ship load="QUEST_FED_BATTLE_1_SHIP_CRUISER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Engage one of the fighters.</text>
+			<event>
+				<text>You make out the closest fighter craft and go after it. The capital ships continue to fire at each other.</text>
+				<ship load="QUEST_FED_BATTLE_1_SHIP_FIGHTER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Try to pick off a weaker support craft.</text>
+			<event>
+				<text>You break away from the battle group and engage some Rebel support units. Two cruisers get into formation with you and assist.</text>
+				<ship load="QUEST_FED_BATTLE_1_SHIP_SUPPORT" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Chase away their troop ships.</text>
+			<event>
+				<text>You break away from the battle group and engage some Rebel boarding craft.</text>
+				<ship load="QUEST_FED_BATTLE_1_SHIP_TROOPSHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="QUEST_FED_BATTLE_1_LIST">
+	<event>
+		<fleet>battle</fleet>
+		<text>Communications are cut for a moment as the command ship takes a missile hit. "Holy scrap! Free asset, we are under heavy fire from the Rebel lead cruiser. Move in to assist! We will shift our targeting and keep their fighters away from you."</text>
+		<ship load="QUEST_FED_BATTLE_1_SHIP_CRUISER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<fleet>battle</fleet>
+		<text>Stray lasers hit your ship as the battle rages around you. Your pilot tries best to dodge all the wreckage. "Our flanks are threatened by several fighter squadrons at [encrypted]. Take some of them out, will you?" You pick your target.</text>
+		<ship load="QUEST_FED_BATTLE_1_SHIP_FIGHTER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<fleet>battle</fleet>
+		<text>You try to get in formation with the battle group, but the situation is too chaotic. "Free asset, break away from the fleet and engage the support ships at [encrypted]. Federation cruisers [encrypted] and [encrypted] will assist you.</text>
+		<ship load="QUEST_FED_BATTLE_1_SHIP_SUPPORT" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<fleet>battle</fleet>
+		<text>You fire shots at everything that looks like a Rebel ship while your pilot frantically navigates through the raging battle. "Free asset, come in. Parts of the [encrypted] squadron have been disabled, Rebel dropships are moving in on their position. Engage the attackers immediately. Federation cruiser [encrypted] will assist you.</text>
+		<ship load="QUEST_FED_BATTLE_1_SHIP_TROOPSHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="QUEST_FED_BATTLE_2">
+<event>
+	<text>You were supposed to meet up with your battle group here. However, only a few of the Federation ships have made it. "Free asset, be advised: Dynamic simulations no longer show any likelihood of overall success in this this sector. New orders from Federation high command suggest a full-out evacuation. We are aware of your primary mission however, we'll do what we can to help."</text>
+	<fleet>fed</fleet>
+	<autoReward level="MED">weapon</autoReward>
+</event>
+<event>
+	<text>You were supposed to meet up with your battle group here in order to finish the Rebel squadron. Something must have gone horribly wrong because the system is littered with the wrecks of Federation ships. An ambush? Reinforcements?</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>It seems there is no stopping the Rebel fleet. You pick the bones of the many ships, finding a serviceable weapon amongst the wreckage.</text>
+			<autoReward level="MED">weapon</autoReward>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text load="QUEST_FED_BATTLE_2_TEXT"/>
+					<ship load="C_REBEL_CRUISER_FED_QUEST_END" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+</eventList>
+<textList name="QUEST_FED_BATTLE_2_TEXT">
+	<text>As you pick through the debris a Rebel cruiser jumps in. They hail, "We knew we would catch some stragglers here... but you? You are special! Prepare to meet your maker." They move in to engage.</text>
+</textList>
+<event name="FREE_ITEMS_FED">
+	<text load="FREE_ITEMS_FED_TEXT"/>
+	<autoReward level="MED">standard</autoReward>
+</event>
+<textList name="FREE_ITEMS_FED_TEXT">
+	<text>You arrive in a system and discover a badly-damaged Rebel destroyer. The crew must be dead, there are no life signs on board. You salvage anything useful.</text>
+	<text>The evacuation seems to have made some progress, everyone has left this system. While the FTL charges, you strip some materials from an abandoned defensive platform nearby.</text>
+	<text planet="PLANET_POPULATED_REAL">As you arrive in the system, you are hailed by a loyalist settlement. Upon learning of your quest, they offer you supplies.</text>
+	<text planet="PLANET_UNPOPULATED">Debris from recent battles still orbits the planets in this system. Some of it still might be usable.</text>
+</textList>
+<event name="FIND_DRONE_FED">
+	<text load="FIND_DRONE_FED_TEXT"/>
+	<autoReward level="MED">drone</autoReward>
+	<fleet>fed</fleet>
+</event>
+<textList name="FIND_DRONE_FED_TEXT">
+	<text planet="PLANET_POPULATED_REAL">A heavily-defended space station circles a urbanized world. When you ask for help, the local technicians transmit schematics for a drone.</text>
+	<text planet="PLANET_POPULATED_REAL">A Federation cruiser squadron is moving in to reinforce this position. They transmit schematics for a drone to help you out.</text>
+	<text>You are surprised to find a couple of mothballed Federation cruisers in open space. The commanding officer of a lonely guard squadron authorizes you to take some of the ships technology aboard. She explains that the local forces were unable to gather enough personnel to man all the ships. Too many Federation officers have deserted to the Rebels and these ships will likely fall into the hand of the enemy as well.</text>
+</textList>
+<event name="FIND_WEAPON_FED">
+	<text load="FIND_WEAPON_FED_TEXT"/>
+	<autoReward level="MED">weapon</autoReward>
+	<fleet>fed</fleet>
+</event>
+<textList name="FIND_WEAPON_FED_TEXT">
+	<text>An entire Federation cruiser detachment lies dead in space. Battle analysis suggest that some of the crews have been suffocated when their life support systems were hacked, while other ships where taken over by hostile infantry squads and boarding drones. The Rebels didn't even take the time to properly strip the ships, you find a weapon that has been left behind.</text> 
+	<text planet="PLANET_POPULATED_REAL">The fleet in orbit around this planet is gearing up for their final defense effort. Upon transmitting your missions codes, a Federation repair ship is dispatched to install a weapon aboard your ship.</text> 
+	<text>Debris from a battle is scattered around this system, a few pieces bouncing against your ship. You passively scan them and discover there is a functioning weapon among them!</text> 
+</textList>
+<event name="NOTHING_FED">
+	<text load="NOTHING_FED_TEXT"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [3 Missiles]</text>
+		<event>
+			<text>Undisturbed as you are here, you can lay some mines while the FTL charges. You put up a hazard beacon as well to warn the locals. The Rebel forces will have to avoid this area, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="NOTHING_FED_TEXT">
+	<text planet="NONE" back="BG_DARK">Your jump leads you to nothing but empty space. This jump beacon serves no purpose other than as a connection. Scans reveal the debris of a Federation scout squadron is scattered through the entire system.</text>
+	<text planet="NONE">You jump into an unremarkable system. No life signs detected within scanning range.</text>
+	<text>Your scans reveal a mining base on a nearby planet, completely destroyed by an orbital strike. No life signs detected.</text>
+	<text planet="PLANET_POPULATED_SMALL">Your scans reveal an ore refinery and several factories showing heavy damage from beam impacts. No life signs detected.</text>
+	<text planet="PLANET_POPULATED_SMALL">You discover a nearby planet speckled with settlements, although none respond to your hails. Several small cities have been largely destroyed by orbital missile strikes.</text>
+	<text>This beacon has been built for a nearby civilian space station. No one hails your ship.</text>
+	<text planet="NONE">Your jump leads to a completely unremarkable binary star system. There is nothing else around but the wreck of an old Kestrel cruiser. Scans reveal it has been stripped clean of any usable parts.</text>
+	<text planet="NONE">Your jump leads to a remarkable binary star system. An encrypted hazard beacon warns of minefields nearby, undoubtedly laid by the Federation to help protect their evacuation forces.</text>
+</textList>
+<mod:findName type="event" name="NOTHING_FED_BATTLE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NOTHING_FED_BATTLE">
+	<fleet>fed</fleet>
+	<text load="NOTHING_FED_BATTLE_TEXT"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event>
+			<text>There's no time for idle chatter right now, the mission is almost over. Everyone is at their posts and ready for orders. You've never seen your crew act so dutiful.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some last-minute upgrades.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="ARTILLERY_FED" hidden="true"> 
+		<text>(Vindicator Beam) Offer to render artillery support.</text>
+		<event>
+			<text>The Federation forces gladly accept your offer. Spotter ships are send out and start to mark targets for your beam strikes. The reactor runs hot as you pound away at the Rebel ships, forcing them to retreat beyond weapon range. You doubt that they will be deterred for long. Only a few of the spotter ships return, but they agree to share their spoils with you.</text>
+			<autoReward level="MED">standard</autoReward>
+		</event>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [3 Missiles]</text>
+		<event>
+			<text>Undisturbed as you are here, you can lay some mines while the FTL charges. You put up a hazard beacon as well to warn the locals. The Rebel forces will have to avoid this area, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="NOTHING_FED_BATTLE_TEXT">
+	<text>You arrive to see a number of Federation forward carriers and dreadnoughts. This must be a system of high importance to warrant such a fleet. A small Rebel detachment is approaching, but they are still far away.</text>
+	<text>There are a few Federation fleets in the nearby area as well as a lot of wreckage. There must have been minor skirmishes in the area. Scanners show at least one battle is still raging at the far edge of the system.</text> 
+	<text>A few scattered vessels are left to defend the nearby Federation settlement. They seem to be in the process of evacuation. Two Rebel battleships are stationed near the systems sun, probably evaluating their next move.</text>
+	<text>A large host of Federation vessels are in formation around the beacon. Sensors run hot with missile locks, but once you transmit your ship signature they leave you alone. They inform you that a wing of Rebel elite fighters have been sighted nearby. Everyone has itchy trigger fingers.</text>
+	<text>A battalion of Federation fighters are fighting around a nearby moon with their carriers waiting in the distance. They must have encountered a Rebel scout squadron.</text>
+</textList>
+<event name="CE_FED_REPAIR_STATION" unique="true"> 
+	<text load="BOSS_REPAIR_STATION"/>
+	<damage amount="-5"/>
+	<ship load="BS_FED_BOSS" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<repair/>
+	<item_modify>
+		<item type="missiles" min="0" max="2"/>
+		<item type="fuel" min="1" max="2"/>
+		<item type="drones" min="0" max="1"/>
+	</item_modify>
+</event>
+<event name="C_EVENT_CIVILIAN_TRANSPORT_FED" unique="true">
+	<text load="C_EVENT_CIVILIAN_TRANSPORT_FED_TEXT"/>
+	<ship load="C_CIVILIAN_TRANSPORT" hostile="false"/>
+	<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+		<text>Attack the civilians. This is an act of piracy, but your crew will obey your orders.</text>
+		<event load="CR_PIRACY_ATTACK_START"/>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text>Attack the civilians. However this is an act of piracy, your crew may be disturbed.</text>
+		<event load="C_PIRACY_RESULTS"/>
+	</choice>
+	<choice req="AE_REQUISITION" hidden="true"> 
+		<text>(Requisition License) Order the seizure of their cargo.</text>
+		<event load="CE_REQUISITION_CIVILIAN"/>
+	</choice>
+	<choice>
+		<text>Ignore the ship.</text>
+		<event>
+			<text>The ship remains at the beacon until you eventually jump away.</text>
+		</event>
+	</choice>
+</event>
+<textList name="C_EVENT_CIVILIAN_TRANSPORT_FED_TEXT">
+	<text>You spot a civilian transport ship nearby. They must be fleeing from the conflict.</text>
+	<text>A lightly armed transport ship jumps in shortly after you. They refuse all hails, so you just quietly recharge your FTLs and watch each other.</text>
+	<text>A civilian transport hails, "You are the good guys right? Maybe you can guard us until we jump? So much battling and planet bombarding going on here, can't really tell any more who represents what. We want to get out of this sector as fast as possible."</text>
+	<text>A civilian recharges its FTL at this beacon. They greet you, "Wow, nice cruiser you have there... We are a simple merchant vessel and we are no threat, okay?" They seem to feel threatened.</text>
+</textList>
+<event name="C_FED_REBEL_CRUISER_ASTEROID" unique="true">
+	<environment type="asteroid"/>
+	<fleet>battle</fleet>
+	<text load="C_FED_REBEL_CRUISER_ASTEROID_TEXT"/>
+	<ship load="C_REBEL_CRUISER_FED_ASTEROID" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_FED_REBEL_CRUISER_ASTEROID_TEXT">
+	<text>Why would the fleets battle it out right within an asteroid field? Both sides probably hope to gain an advantage. You receive a warning message from a nearby Federation cruiser, "Free asset, be advised that a Rebel cruiser has acquired a lock on you." Here they come.</text>
+	<text>A small Federation cruiser squadron has been chased into this asteroid field by the Rebel invaders. One of their cruisers hails, "How nice of you to join us here. I'm sure you know that you are a priority target, we will give you our full attention."</text>
+	<text>The battle raging at this beacon has become even more vicious due to the asteroid swarm that is passing through the system right now. One of the Rebel cruisers immediately starts targeting you.</text>
+</textList>
+<event name="C_FED_REBEL_CRUISER" unique="false">
+	<text load="C_FED_REBEL_CRUISER_TEXT"/>
+	<ship load="C_REBEL_CRUISER_FED" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_FED_REBEL_CRUISER_TEXT">
+	<text>Although this sector is still under Federation control, an enemy cruiser has broken through the defensive lines. They hail, "You made it this far, but you won't get further. Target their engines!" They move in to engage.</text> 
+	<text>Long range scanners show this system is empty of any capital ships. Clearly it is not of strategic value. Wait... FTL signatures show a Rebel cruiser just jumped nearby! A Rebel officer hails, "Our big guns are charging up. Meet your executioner!"</text>
+	<text planet="PLANET_UNPOPULATED">Sensors indicate a Rebel cruiser hiding behind the nearby planet's moon. As it registers you it hails, "We've heard a lot about you. Looks like we'll get promoted soon." They move in to attack!</text> 
+	<text>Federation ships are scarce in this region of space despite a number of civilian space stations. You see a Rebel cruiser mopping up the remains of a Federation medevac squadron. It lets the last ship escape and targets you instead. "Look what has become of the Federation. You have escaped us long enough. Prepare to be annihilated!"</text>	
+	<text>As soon as you arrive at the beacon, a Rebel cruiser turns to engage. How could they have gotten here so fast? They send a message, "Our fleet has encircled the entire sector. You won't get out of this!" Time to power up the weapons once more.</text>
+</textList>
+<event name="C_FED_CRUISER_WARNING" unique="false"> 
+	<fleet>battle</fleet>
+	<text load="C_FED_CRUISER_WARNING_TEXT"/>
+	<ship load="C_REBEL_CRUISER_FED" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="C_FED_CRUISER_WARNING_TEXT">
+	<text>You arrive amidst the debris of a destroyed Federation cruiser. The enemy ship that blew it apart immediately starts to target you. "Moving in hot, suckers!" Brace for impact!</text>
+	<text>Fierce fighting is taking place in the distance. You hope to move on unnoticed but a Rebel cruiser breaks away from the main fleet and engages you. They send a short hail, "God, you are annoying, but now we have you." Evasive manoeuvres!</text>
+	<text>Federation command hails you, "Free asset, be advised that a Rebel cruiser is closing in on you. We cannot render assistance at this time. You will have to battle them on your own." You check the shields and move into a defensive position as the cruiser approaches.</text>
+</textList>
+<event name="C_FED_CRUISER_RESCUE">
+	<fleet>battle</fleet>
+	<text load="C_FED_CRUISER_RESCUE_TEXT"/>
+	<choice>
+		<text>Prepare to take on the Rebel cruiser!</text>
+		<event>
+			<text>You program an attack vector.</text>
+			<ship load="C_FED_CRUISER_RESCUE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>We can't fight the whole fleet by ourselves. Let's get out of here.</text>
+		<event>
+			<text>You remind your crew to focus on the mission. Charge the FTL!</text>
+		</event>
+	</choice>
+</event>
+<textList name="C_FED_CRUISER_RESCUE_TEXT">
+	<text planet="PLANET_POPULATED_REAL">You arrive to find a Rebel fighter squadron battling with a few heavily-damaged Federation assault ships. The main fleet is holding back near the core of the system but a cruiser has already broken through the lines and has started to bombard a settlement on a nearby planet. Should we move in to assist?</text>
+	<text>As soon as you arrive, you register a Rebel capital ship pounding into a Federation cruiser. They hail, "We are under heavy attack. Systems security breached by cyber-attacks. Weapons and artillery beam off-line. Requesting assistance... God, please help us, we are a sitting duck here!"</text>
+	<text>While the battle rages in the distance, a Federation scout squadron is being decimated by a nearby Rebel cruiser. Shall we assist?</text>
+	<text planet="PLANET_POPULATED_REAL">A series of space stations in orbit around a nearby planet is under attack from a Rebel cruiser that has broken away from the main fleet. No Federation ship seems to be willing, or able, to assist. You might be, though.</text>
+	<text planet="PLANET_POPULATED_REAL">A single Rebel cruiser is pounding the colonies on this small planet while the main fleets battle a few klicks away. You receive a distorted hail from the surface, "You are the only friendly ship in range. They are going to murder us all, please help us!"</text>
+</textList>
+<eventList name="C_FED_CRUISER_RESCUE_LIST">  
+	<event>
+		<text>You are hailed, "Thank you! We will send out some repair drones to fix as much damage to your ship as possible. Good luck with your mission!"</text>
+		<damage amount="-10"/>
+	</event>
+	<event>
+		<text>The survivors send a message, "Thanks for the support, I don't know how much longer we could have held on. Take some supplies, we probably won't need them at this point."</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event>  
+		<text>You receive a message on encrypted Federation channels. It says, "Thanks for helping us, Captain. Our drones can fix some of the damage that was done to your ship."</text>
+		<damage amount="-5"/>
+	</event>
+</eventList>
+<event name="CE_DISTRESS_AIRSUPPORT" unique="true"> 
+	<text planet="PLANET_UNPOPULATED">The distress call is coming from a civilian space-port on this small colony planet. Their evacuation is threatened by Rebel ground forces, closing in on the settlement. The Federation still has air and space superiority in this system, but it appears you are the only ship responding to the distress call.</text>
+	<distressBeacon/>
+	<choice hidden="true"> 
+		<text>Enter the atmosphere for a close-range strafing run.</text>
+		<event load="CE_DISTRESS_AIRSUPPORT_RESULTS"/>
+	</choice>
+	<choice hidden="true" req="WEAPONS_STUNGUN">
+		<text>(Neural Stunner) Incapacitate the Rebel forces.</text>
+		<event>
+			<text>You get into a low orbit, synchronized with the advancing Rebel forces. From your station, you casually tab the areas on the map that you want the field projector to target. The device runs on full capacity and knocks out line after line of Rebel infantry. Federation forces start a counter-offensive, represented by little green blips on your screen. It's almost like a video game.</text>
+			<choice hidden="true"> 
+				<text>Continue...</text>
+				<event>
+					<text>The red blip representing Rebel marines fade away one after one as the Federation forces advanced and slaughter the incapacitated soldiers. After some time, the Federation infantry realizes that no one will put up resistance and starts taking prisoners. After the operation is completed, you request some supplies.</text>
+					<autoReward level="MED">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="WEAPONS_ARTILLERY_LASER" hidden="true"> 
+		<text>(Laser Cannon) Target the Rebel forces with an orbital strike.</text>
+		<event>
+			<text>You get the ship into a stable orbit above the Rebel forces. The bridge is totally calm. A cup of synthesized coffee in your hand, you give the fire command. An overcharged laser blast zips to the surface, detonating right in the middle of the Rebel ground forces.</text>
+			<choice hidden="true"> 
+				<text>Continue...</text>
+				<event>
+					<text>Hundreds of Rebel marines are incinerated within a split-second. You bought the evacuation some time. A shuttle offers to unload some supplies as thanks.</text>
+					<autoReward level="LOW">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="WEAPONS_BEAMS_STRONG" hidden="true"> 
+		<text>(High-Power Beam) Perform an orbital beam strike.</text>
+		<event>
+			<text>You order an accurate targeting calculation and prepare the beam weapon. On board, only a monotone discharge sound can be heard as it fires. The beam impacts into the Rebel forward command base, cutting deep into the structure and then starts melting the crust of the planet.</text>
+			<choice hidden="true"> 
+				<text>Continue...</text>
+				<event>
+					<text>The local Rebel command is turned into a dark pool of molten glass within minutes. The ground forces halt their advance, you bought the evacuation some time. A shuttle offers to unload some supplies as thanks.</text>
+					<autoReward level="LOW">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="WEAPONS_MISSILES_SWARM" hidden="true"> 
+		<text>(Swarm Missiles) Fire a missile barrage from lower orbit. [ Missiles: -1 ]</text>
+		<event>
+			<text>You order the ship closer to the planet. After putting on your favourite piece of music, you watch the Rebel forces advance for a bit. Time passes and still no other ship enters the system. You give the command to engage. The missile batteries firing sound is dampened by the insulated hull and is barely audible.</text>
+			<item_modify>
+				<item type="missiles" min="-1" max="-1"/>
+			</item_modify>
+			<choice hidden="true"> 
+				<text>Continue...</text>
+				<event>
+					<text>About a minute later, the missiles reach the surface. A few are intercepted by Rebel AA turrets, but most detonate in the middle of their ranks, throwing their forces into disarray. You bought the evacuation some time, and an escaping shuttle offers to unload some supplies as thanks.</text>
+					<autoReward level="LOW">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="WEAPONS_BOMB_FIRE" hidden="true"> 
+		<text>(Fire Bomb) Target the Rebels with incendiary bombs. [ Missiles: -3 ]</text>
+		<event>
+			<text>You remain silent for a while, then order the bombs to be readied. It is set with a short fuse, and teleported in high above the Rebel forces. The detonation is small, but the slow-burning components rain down over a wide area.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<choice hidden="true"> 
+				<text>Continue...</text>
+				<event>
+					<text>Many unprepared marines are burned alive. The wind carries parts of the payload to the outskirts of the space-port. Houses catch fire. Still, you bought the evacuation some time. A shuttle offers to unload some supplies as thanks.</text>
+					<autoReward level="LOW">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="ARTILLERY_FED" hidden="true"> 
+		<text>(Vindicator Beam) Perform an orbital beam strike.</text>
+		<event>
+			<text>You order an accurate targeting calculation and prepare the Vindicator Beam. On board, only a monotone discharge sound can be heard as it fires. The beam impacts into the Rebel forward command base, cutting deep into the structure and then starts melting the crust of the planet.</text>
+			<choice hidden="true"> 
+				<text>Continue...</text>
+				<event>
+					<text>The local Rebel command is turned into an incandescent cloud of gas in the blink of an eye. The ground forces halt their advance, you bought the evacuation some time. A shuttle offers to unload some supplies as thanks.</text>
+					<autoReward level="LOW">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Prepare to jump on.</text>
+		<event>
+			<text>Most of the Federation ships get off world unthreatened, but some try to engage the Rebel forces and are shot down by AA tanks. The Rebels take the town. You receive a few angry and desperate messages, asking why you did not intervene. The shuttles regroup in space and jump away.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="CE_DISTRESS_AIRSUPPORT_RESULTS">   
+	<event>
+		<text>You blast down to the surface, over the town and towards the advancing Rebel forces. Your ships weapons tear through their ranks, disabling armoured targets and foot-soldiers alike.</text>
+		<choice hidden="true"> 
+			<text>Continue...</text>
+			<event>
+				<text>As you go in for a second run, their AA guns are charged and fire off an impressive barrage. Your ship takes some damage and is forced to abort the strafing run, but you bought the civilians some time. Back in orbit, an escaping shuttle offers to unload some supplies as thanks.</text>
+				<damage amount="3"/>
+				<autoReward level="LOW">stuff</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You fly a wide circle and bring the ship down into a large canyon system. Approaching the Rebel forces from behind, you take out their AA tanks first and then fly a second run to decimate their forces further. The Rebels halt their offensive, for now.</text>
+		<choice hidden="true"> 
+			<text>Continue...</text>
+			<event>
+				<text>You bought the civilians some time. Back in orbit, a shuttle offers to unload some supplies as thanks.</text>
+				<autoReward level="LOW">stuff</autoReward>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<event name="CE_FED_DESERTER" unique="true">
+	<text load="CE_FED_DESERTER_TEXT"/>
+	<ship load="FED_SHIP" hostile="false"/>
+	<fleet>battle</fleet>
+	<choice req="MARK_FED" hidden="true">
+		<text>(Federation Cruiser) Order them to return to the front line.</text>
+		<event load="CE_FED_DESERTER_LIST"/>
+	</choice>
+	<choice>
+		<text>Offer supplies.</text>
+		<event>
+			<text>You send over some supplies to help them on their way. "Thank you! We still have access to some recent situation reports. Transmitting data now... Lets hope that we all get out of this somehow, right? If you want my opinion: Tully threw us all into the fire here." Your map has been updated.</text>
+			<item_modify>
+				<item type="fuel" min="-3" max="-1"/>
+				<item type="scrap" min="-26" max="-15"/>
+			</item_modify>
+			<reveal_map/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attack the traitors.</text>
+		<event>
+			<text>Deserters cannot be tolerated. You open fire on the cowards - though it doesn't please you to do so. The Federation needs every soldier it can get.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave them be.</text>
+		<event>
+			<text>You send them a friendly warning regarding the armada of Rebel ships pursuing you, and then get underway lest they catch you up.</text>
+		</event>
+	</choice>
+</event>
+<textList name="CE_FED_DESERTER_TEXT">
+	<text planet="PLANET_POPULATED_SMALL">The fighting has died down in this system. A large assortment of still-glowing scrap hulks marks the site of a major battle. In the distance, Rebel gunboats hunt down the remaining Federation forces. A ship flagged with a 'deserter' tag is charging its drive nearby.</text>
+	<text>The Federation has taken heavy losses here, but the admiralty refuses to give up this beacon. Comms chatter indicates that many captains started disobeying direct orders to save their crews lives.</text>
+	<text planet="PLANET_POPULATED_REAL">An intense battle is fought on the other side of this planet, but a few Federation ships just calmly charge their drives at this beacon. "We have been ordered to retreat with our squadron." You doubt that this is true.</text>
+	<text>Another battle is raging here, but the only ships in close vicinity are with the Federation. You hail them and they state that they are evacuating the wounded. A message from the local battle command contradicts this: "Free asset, be advised: These units have disobeyed direct orders. You are ordered to open fire on the deserters."</text>
+</textList>
+<eventList name="CE_FED_DESERTER_LIST">
+	<event>
+		<text>"We ain't going back, we'd rather die here!" They had their chance...</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>Facing your cruiser and its devastating arsenal, the deserters think twice about running. They swing their ship around and head towards the Rebel fleet. You know it's pointless, you've just sent these people to their death.</text>
+	</event>
+	<event>
+		<text>They don't seem inclined to follow your orders. "What for? Look at this sector, this is hopeless!"</text>
+		<choice hidden="true">
+			<text>Tell them that there is still hope.</text>
+			<event>
+				<text>"You command this ship everyone talks about? A standard cruiser? I though they would send some high-tech stealth craft. Rumours even have it that you fly a repainted Kestrel. So this is real..." They say they'll try holding off the fleet to facilitate your passage. There is only so much a single ship can do, but you never know...</text>
+				<modifyPursuit amount="-1"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<event name="CE_PDS_FED" unique="true">
+	<img planet="NONE" back="BG_WARNING_TARGETING_CIV"/>
+	<text load="CE_PDS_FED_TEXT"/>	
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="CE_PDS_FED_LIST"/>
+	</choice>
+</event>
+<textList name="CE_PDS_FED_TEXT">
+	<text planet="NONE" back="BG_WARNING_TARGETING_CIV">You are too late to save anyone here. The main planet of this system has already been taken over by your enemy, and the powerful planetary defense beams of the Federation are now in Rebel hands.</text>
+	<text planet="NONE" back="BG_WARNING_TARGETING_CIV">The current star charts show this system still under Federation control, but a local space dock informs you that the whole planetary government has defected to the Rebels. The planetary defense weapons of the Federation have fallen into the hands of the enemy.</text>
+	<text planet="NONE" back="BG_WARNING_TARGETING_CIV">This planet is bustling with civilian activity. You consider ferrying some refugees to the next beacon, but Rebel ground troops have taken over several military bases on the surface and are in control of the point defense beams.</text>
+</textList>
+<eventList name="CE_PDS_FED_LIST">
+	<event>
+		<text>A ship of the local defense squadron is dispatched to mark you for the beam strike. You will have to get out of this system quickly in order to evade the planetary weapons.</text>
+		<ship load="CE_SPOTTER_REBEL_BEAM" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<event name="CE_PDS_FED_2" unique="true">
+	<fleet>battle</fleet>
+	<img back="BG_WARNING_TARGETING_FLEET"/>
+	<text load="CE_PDS_FED_2_TEXT"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="CE_PDS_FED_LIST_2"/>
+	</choice>
+</event>
+<textList name="CE_PDS_FED_2_TEXT">
+	<text back="BG_WARNING_TARGETING_FLEET">You find yourself directly between two fleets engaged in fierce combat here. The Federation detachment is distracted by a swarm of fighters and the Rebel artillery is pounding away at the mighty cruisers.</text>
+	<text back="BG_WARNING_TARGETING_FLEET">Two fleets are firing at each other in this area. A Federation cruiser in pristine condition is torn to pieces right in front of you by a Rebel artillery strike. You doubt you will get through this without being noticed.</text>
+	<text back="BG_WARNING_TARGETING_FLEET">Your receive a priority hail from a decimated Federation cruiser squadron, "Free asset, you are ordered to retreat immediately. Multiple cruiser squadrons are converging on this beacon. Artillery spotters are in the area. I repeat: Retreat immediately."</text>
+</textList>
+<eventList name="CE_PDS_FED_LIST_2">
+	<event>
+		<text>An escort craft quickly spots you and moves in to mark you for the fleet artillery.</text>
+		<ship load="CE_SPOTTER_REBEL_ARTILLERY_2" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<event name="STORE_FED">
+	<text load="STORE_FED_TEXT"/>
+	<store/>
+	<choice req="MARK_FED" hidden="true">
+		<text>(Federation Cruiser) Request emergency repairs.</text>
+		<event>
+			<text load="STORE_FED_REPAIR_TEXT"/>
+			<damage amount="-5"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="TE_STORE_FED_LIST_BOOSTED"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+	<choice hidden="true">
+		<text>Check to see what trade goods they sell here.</text>
+		<event load="TE_STORE_FED_LIST_BUY"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+		<text>Offload your current trade goods.</text>
+		<event load="TE_STORE_FED_LIST_BOOSTED"/>
+	</choice>
+</event>
+<event name="STORE_BOSS">
+	<text load="STORE_FED_TEXT"/>
+	<store/>
+	<choice req="MARK_FED" hidden="true">
+		<text>(Federation Cruiser) Request emergency repairs.</text>
+		<event>
+			<text load="STORE_FED_REPAIR_TEXT"/>
+			<damage amount="-5"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="TE_STORE_BOSS_LIST_BOOSTED"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event load="TE_STORE_BOSS_LIST_BOOSTED"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+</event>
+<textList name="STORE_FED_TEXT">
+	<text>You discover a re-supply station that is still operational. A Federation scout squadron is refuelled and a few traders have gathered here.</text>
+	<text>Arriving in the system, you discover a small trade station. It has been completely militarized and is under full Federation fleet control.</text>
+	<text>You receive some trade offers from a nearby public shipyard. They currently serve the remaining local Federation fleet in order to facilitate the evacuation.</text>
+	<text planet="PLANET_POPULATED_REAL">A trade hub orbits this Federation controlled planet. You dock with the station and check their offers.</text>
+	<text planet="PLANET_POPULATED_REAL">A trade station is about to be evacuated nearby. Some Federation engineers re-purposed their shipyard to perform military repairs.</text>
+</textList>
+<textList name="STORE_FED_REPAIR_TEXT">
+	<text>You give your mission ID and some drones are sent out to work on your ship. You check what the outpost has to offer.</text>
+	<text>After a brief exchange, they give you clearance to receive emergency repairs. You decide to dock and see what the traders have to offer.</text>
+	<text>You call in for a repair crew at a nearby Federation shipyard. Your mission ID gets you to the top of the waiting list, but only a few repair drones can be spared per ship.</text>
+	<text>You high-level Federation codes get the local commanders to quickly dispatch a repair drone for you. While the ship is patched up, you check the local offers.</text>
+	<text>Your mission has a high priority and the local Federation engenders immediately start fixing up your ship while you check the trade post.</text>
+</textList>
+<eventList name="TE_STORE_FED_LIST">
+	<event load="TE_STORE_FED_LIST_BOOSTED"/>
+</eventList>
+<eventList name="TE_STORE_BOSS_LIST">
+	<event load="TE_STORE_BOSS_LIST_BOOSTED"/>
+</eventList>
+<textList name="STORE_FED_BUY_TEXT">
+	<text>You transfer the scrap. Loading the cargo poses some problems, as the entire hangar is packed with refugees that want to get out of the system. You have a look at the ship equipment the shop also offers.</text>
+	<text>You write a scrap transfer order. The office is full of traders that want to strike last minute deals and get out of the system. Loading the cargo takes a while. You check the ship equipment catalogue while waiting.</text>
+	<text>You hand over the crates with the scrap. Loading the cargo takes its time. The cargo drones are in much less of a hurry than you and there are people everywhere, most of them refugees. While waiting, you get a chance to check the ship equipment they offer here.</text>
+</textList>
+<textList name="STORE_FED_SELL_TEXT"> 
+	<text>Negotiations are interrupted when the station takes a hit. Lights flicker and everyone screams. Some fighters must have broken through the lines. Better deliver the cargo to the shop and get out of here quick.</text>
+	<text>After receiving your advance, you have problems finding the shop to unload the cargo. The station's corridors are crammed with refugees from the entire system. Better unload the cargo at the shop and leave.</text>
+	<text>The station is full of aliens that hope to be saved here. It takes a while until you find a trustworthy trader. After agreeing on a price, you have to unload the cargo at the shop to receive full payment.</text>
+	<text>After time-consuming negotiations, you get an advance payment. "You get the rest after you unloaded the cargo at the shop." The shopkeeper seems stressed and worried. No way to tell what will happen to this place when the fleet arrives.</text>
+</textList>
+<eventList name="TE_STORE_FED_LIST_BUY">
+	<event>
+		<text>You consider striking a deal with the trader.</text>
+		<choice>
+			<text>Buy a decommissioned ship hulk. You try not to think of how you can actually fit this inside your cargo bay, and instead think of who might be able to make it serviceable again.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<item_modify>
+					<item type="scrap" min="-15" max="-15"/>
+				</item_modify>
+				<augment name="TE_GOODS_FED_WRECK"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Buy some goods illegal under the new Rebel laws. You wonder if the people these items belonged to originally are still alive.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<item_modify>
+					<item type="scrap" min="-20" max="-20"/>
+				</item_modify>
+				<augment name="TE_GOODS_REBEL_CONTRABAND"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just quickly check the available ship equipment.</text>
+			<event/>
+		</choice>
+		<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+			<text>Offload your current trade goods.</text>
+			<event load="TE_STORE_FED_LIST_BOOSTED"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="TE_STORE_FED_LIST_BOOSTED">
+	<event>
+		<text>You consider striking a deal here.</text>
+		<choice req="TE_GOODS_FED_WRECK" hidden="true">
+			<text>The Ship Wreckage you have somehow managed to fit inside the hold does not sell well here.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_REBEL_CONTRABAND" hidden="true">
+			<text>The Federation-issue items in your hold are in plentiful supply in this sector... for now, at least.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MEDICINE" hidden="true">
+			<text>A doctor approaches you, "Do you have medical supplies? Look around you, we need this stuff badly here..." [Sell Pharmaceuticals for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ENGI_MEDICINE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_SHIELDS" hidden="true">
+			<text>Various virtual blackboard entries offer money for shield systems here. People must be afraid of the war. [Sell Shield Components for about 45 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_SHIELDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="42" max="48"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_NEBULA_GAS" hidden="true">
+			<text>[Sell Compressed Nebula Gas for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_NEBULA_GAS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_ORE" hidden="true">
+			<text>[Sell Raw Asteroid Ore for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_ORE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_ENGINES" hidden="true">
+			<text>[Sell Engine Parts for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_ENGINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_FOOD" hidden="true">
+			<text>[Sell Space Rations for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_FOOD"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_CONSUMER" hidden="true">
+			<text>[Sell Consumer Goods for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_CONSUMER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_LUXURY" hidden="true">
+			<text>[Sell Luxury Goods for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_LUXURY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_ELECTRONICS" hidden="true">
+			<text>[Sell Ship Hardware for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_ELECTRONICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MACHINES" hidden="true">
+			<text>[Sell Industrial Machinery for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MACHINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_BEACONS" hidden="true">
+			<text>[Sell Beacon Parts for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_BEACONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_CODEX" hidden="true">
+			<text>[Sell the Zoltan Legal Codex for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_CODEX"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_LITERATURE" hidden="true">
+			<text>[Sell Religious Rock Literature for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ROCK_LITERATURE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_HULLS" hidden="true">
+			<text>[Sell Ship Hull Panels for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_HULLS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_WEAPONS" hidden="true">
+			<text>[Sell Weapon Components for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_WEAPONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_BOUNTY" hidden="true">
+			<text>[Sell Looted Bounty for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_BOUNTY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_DRUGS" hidden="true">
+			<text>[Sell Slug Hallucinogens for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_DRUGS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ART" hidden="true">
+			<text>[Sell Eccentric Artwork for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ART"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ANIMALS" hidden="true">
+			<text>[Sell Alien Livestock for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ANIMALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PIRATE_ARMS" hidden="true">
+			<text>[Sell Small Arms for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PIRATE_ARMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CRYSTAL_ARTIFACTS" hidden="true">
+			<text>[Sell Crystal Artifacts for about 75 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CRYSTAL_ARTIFACTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="70" max="80"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_HAZARD_ELEMENTS" hidden="true">
+			<text>[Sell Rare Elements for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_HAZARD_ELEMENTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_DATA" hidden="true">
+			<text>[Sell AI Research Data for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_DATA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_NANOBOTS" hidden="true">
+			<text>[Sell Obedient Nanobots for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_NANOBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_QUARANTINE_DISEASE" hidden="true">
+			<text>[Sell Disease Samples for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_QUARANTINE_DISEASE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_TERRAFORMING" hidden="true">
+			<text>[Sell Terraforming Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_TERRAFORMING"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_REACTOR" hidden="true">
+			<text>[Sell Reactor Modules for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_REACTOR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LANIUS_POLYMERS" hidden="true">
+			<text>[Sell Plastic Items for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LANIUS_POLYMERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GIRDERS" hidden="true">
+			<text>[Sell Building Material for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GIRDERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CHEMICALS" hidden="true">
+			<text>[Sell Basic Chemicals for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CHEMICALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_TEXTILES" hidden="true">
+			<text>[Sell Synth-Textiles for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_TEXTILES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ORGANISMS" hidden="true">
+			<text>[Sell Xeno Organisms for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ORGANISMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_O2" hidden="true">
+			<text>[Sell Stored Oxygen for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_O2"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_H2O" hidden="true">
+			<text>[Sell Huge Water Supply for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_H2O"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SEEDS" hidden="true">
+			<text>[Sell Bio-Engineered Seeds for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SEEDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CONDUITS" hidden="true">
+			<text>[Sell Power Conduits for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CONDUITS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PRODUCE" hidden="true">
+			<text>[Sell Station-Grown Vegetables for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PRODUCE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ANTIMATTER" hidden="true">
+			<text>[Sell Antimatter for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ANTIMATTER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GAMES" hidden="true">
+			<text>You spot a flyer that is advertising the use of flight simulator programs of all kinds to train new Federation pilots. ...wait, they're using videogames to train their new hopefuls? The Federation must be really desperate. [Sell Virtual Games for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GAMES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SENSORS" hidden="true">
+			<text>[Sell Sensor Components for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SENSORS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LIFESUPPORT" hidden="true">
+			<text>[Sell Life Support Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LIFESUPPORT"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROBOTS" hidden="true">
+			<text>[Sell Serve Drones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RESEARCH" hidden="true">
+			<text>[Sell Research Equipment for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RESEARCH"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SOLAR" hidden="true">
+			<text>[Sell Solar Panels for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SOLAR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RELICS" hidden="true">
+			<text>[Sell Archaeological Relics for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RELICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CLONES" hidden="true">
+			<text>[Sell Trooper DNA Backups for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CLONES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GLANDS" hidden="true">
+			<text>[Sell Alien Glands for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GLANDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GEMS" hidden="true">
+			<text>[Sell Deep-Space Gemstones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GEMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AMBRA" hidden="true">
+			<text>[Sell Space Whale Ambra for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AMBRA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just check the available ship equipment.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="TE_STORE_BOSS_LIST_BOOSTED">
+	<event>
+		<text>This looks like the last chance you'll get to offload any cargo you are carrying.</text>
+		<choice req="TE_GOODS_FED_WRECK" hidden="true">
+			<text>[Sell Ship Wreckage for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_FED_WRECK"/>
+				<text load="STORE_OUTLAW_SELL_TEXT"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_REBEL_CONTRABAND" hidden="true">
+			<text>[Sell Federation Contraband for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_REBEL_CONTRABAND"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MEDICINE" hidden="true">
+			<text>A doctor approaches you, "Do you have medical supplies? Look around you, we need this stuff badly here..." [Sell Pharmaceuticals for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ENGI_MEDICINE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_SHIELDS" hidden="true">
+			<text>Various virtual blackboard entries offer money for shield systems here. People must be afraid of the war. [Sell Shield Components for about 45 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_SHIELDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="42" max="48"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_NEBULA_GAS" hidden="true">
+			<text>[Sell Compressed Nebula Gas for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_NEBULA_GAS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_ORE" hidden="true">
+			<text>[Sell Raw Asteroid Ore for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_ORE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_ENGINES" hidden="true">
+			<text>[Sell Engine Parts for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_ENGINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_FOOD" hidden="true">
+			<text>[Sell Space Rations for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_FOOD"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_CONSUMER" hidden="true">
+			<text>[Sell Consumer Goods for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_CONSUMER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_LUXURY" hidden="true">
+			<text>[Sell Luxury Goods for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_LUXURY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_ELECTRONICS" hidden="true">
+			<text>[Sell Ship Hardware for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_ELECTRONICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MACHINES" hidden="true">
+			<text>[Sell Industrial Machinery for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MACHINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_BEACONS" hidden="true">
+			<text>[Sell Beacon Parts for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_BEACONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_CODEX" hidden="true">
+			<text>[Sell the Zoltan Legal Codex for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_CODEX"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_LITERATURE" hidden="true">
+			<text>[Sell Religious Rock Literature for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ROCK_LITERATURE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_HULLS" hidden="true">
+			<text>The amount of ship repairs being performed at this spot alone is quite simply staggering. Supplies of replacement armour plates is dwindling. [Sell Ship Hull Panels for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_HULLS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_WEAPONS" hidden="true">
+			<text>[Sell Weapon Components for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_WEAPONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_BOUNTY" hidden="true">
+			<text>[Sell Looted Bounty for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_BOUNTY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_DRUGS" hidden="true">
+			<text>[Sell Slug Hallucinogens for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_DRUGS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ART" hidden="true">
+			<text>[Sell Eccentric Artwork for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ART"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ANIMALS" hidden="true">
+			<text>[Sell Alien Livestock for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ANIMALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PIRATE_ARMS" hidden="true">
+			<text>[Sell Small Arms for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PIRATE_ARMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CRYSTAL_ARTIFACTS" hidden="true">
+			<text>[Sell Crystal Artifacts for about 75 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CRYSTAL_ARTIFACTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="70" max="80"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_HAZARD_ELEMENTS" hidden="true">
+			<text>[Sell Rare Elements for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_HAZARD_ELEMENTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_DATA" hidden="true">
+			<text>[Sell AI Research Data for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_DATA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_NANOBOTS" hidden="true">
+			<text>[Sell Obedient Nanobots for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_NANOBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_QUARANTINE_DISEASE" hidden="true">
+			<text>Your request to offload the disease samples is met with a reaction of disgust. "Look at the casualties around you. Can't you see we've got our hands full already?"</text> 
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_TERRAFORMING" hidden="true">
+			<text>[Sell Terraforming Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_TERRAFORMING"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_REACTOR" hidden="true">
+			<text>[Sell Reactor Modules for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_REACTOR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LANIUS_POLYMERS" hidden="true">
+			<text>[Sell Plastic Items for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LANIUS_POLYMERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<!-- generic -->
+		<choice req="TE_GOODS_GIRDERS" hidden="true">
+			<text>[Sell Building Material for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GIRDERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CHEMICALS" hidden="true">
+			<text>[Sell Basic Chemicals for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CHEMICALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_TEXTILES" hidden="true">
+			<text>[Sell Synth-Textiles for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_TEXTILES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ORGANISMS" hidden="true">
+			<text>[Sell Xeno Organisms for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ORGANISMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_O2" hidden="true">
+			<text>[Sell Stored Oxygen for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_O2"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_H2O" hidden="true">
+			<text>[Sell Huge Water Supply for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_H2O"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SEEDS" hidden="true">
+			<text>[Sell Bio-Engineered Seeds for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SEEDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CONDUITS" hidden="true">
+			<text>[Sell Power Conduits for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CONDUITS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PRODUCE" hidden="true">
+			<text>[Sell Station-Grown Vegetables for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PRODUCE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ANTIMATTER" hidden="true">
+			<text>[Sell Antimatter for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ANTIMATTER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GAMES" hidden="true">
+			<text>You spot a flyer that is advertising the use of flight simulator programs of all kinds to train new Federation pilots. ...wait, they're using videogames to train their new hopefuls? The Federation must be really desperate. [Sell Virtual Games for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GAMES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SENSORS" hidden="true">
+			<text>[Sell Sensor Components for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SENSORS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LIFESUPPORT" hidden="true">
+			<text>[Sell Life Support Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LIFESUPPORT"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROBOTS" hidden="true">
+			<text>[Sell Serve Drones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RESEARCH" hidden="true">
+			<text>[Sell Research Equipment for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RESEARCH"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SOLAR" hidden="true">
+			<text>You spot a nearby colonist ticking off a list of items for setting up home on a planet close by. Every item on the list is accounted for, except... [Sell Solar Panels for about 45 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SOLAR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="42" max="48"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RELICS" hidden="true">
+			<text>[Sell Archaeological Relics for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RELICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CLONES" hidden="true">
+			<text>[Sell Trooper DNA Backups for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CLONES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GLANDS" hidden="true">
+			<text>[Sell Alien Glands for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GLANDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GEMS" hidden="true">
+			<text>[Sell Deep-Space Gemstones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GEMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AMBRA" hidden="true">
+			<text>[Sell Space Whale Ambra for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AMBRA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just check the available ship equipment.</text>
+			<event/>
+		</choice>
+		<choice hidden="true">
+			<text>Consider some last-minute upgrades before heading in.</text>
+			<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+		</choice>
+	</event>
+</eventList>

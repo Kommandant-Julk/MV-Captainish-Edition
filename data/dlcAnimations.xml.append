@@ -1,0 +1,228 @@
+<anim name="anaerobic_portrait">
+	<sheet>anaerobic</sheet>
+	<desc length="1" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="chaingun_heavy_charge" w="84" h="71" fw="28" fh="71">weapons/heavy_chain_chargeglow.png</animSheet>
+<anim name="chaingun_heavy_charge">
+	<sheet>chaingun_heavy_charge</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="heavy_chain" w="224" h="71" fw="28" fh="71">weapons/heavy_chain_strip8.png</animSheet>
+<weaponAnim name="heavy_chain">
+	<sheet>heavy_chain</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="18" y="10"/>
+	<mountPoint x="6" y="45"/>
+	<chargeImage>weapons/heavy_chain_glow.png</chargeImage>
+	<boost>chaingun_heavy_charge</boost>
+</weaponAnim>
+<animSheet name="shotgun_3" w="336" h="61" fw="42" fh="61">weapons/shotgun_3_strip8.png</animSheet>
+<weaponAnim name="shotgun_3">
+	<sheet>shotgun_3</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="18" y="26"/>
+	<mountPoint x="3" y="33"/>
+	<chargeImage>weapons/shotgun_3_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="laser_auto_charge" w="115" h="64" fw="23" fh="64">weapons/laser_auto_charge.png</animSheet>
+<anim name="laser_auto_charge">
+	<sheet>laser_auto_charge</sheet>
+	<desc length="5" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="laser_auto" w="276" h="64" fw="23" fh="64">weapons/laser_auto_strip12.png</animSheet>
+<weaponAnim name="laser_auto">
+	<sheet>laser_auto</sheet>
+	<desc length="12" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint  x="13" y="7"/>
+	<mountPoint x="3" y="44"/>
+	<boost>laser_auto_charge</boost>
+</weaponAnim>
+<animSheet name="missiles_hydra" w="224" h="50" fw="28" fh="50">weapons/missiles_hydra_strip8.png</animSheet>
+<weaponAnim name="missiles_hydra">
+	<sheet>missiles_hydra</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="20"/>
+	<mountPoint x="4" y="32"/>
+	<chargeImage>weapons/missiles_hydra_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="missile_hydra" w="344" h="59" fw="43" fh="59">weapons/missile_hydra.png</animSheet>
+<anim name="missile_hydra">
+	<sheet>missile_hydra</sheet>
+	<desc length="8" x="0" y="0"/>
+	<time>3.5</time>
+</anim>
+<animSheet name="chargelaser_large_charge" w="190" h="48" fw="38" fh="48">weapons/chargelaser_large_charges.png</animSheet>
+<anim name="chargelaser_large_charge">
+	<sheet>chargelaser_large_charge</sheet>
+	<desc length="5" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="chargelaser_large" w="798" h="48" fw="38" fh="48">weapons/chargelaser_large_base.png</animSheet>
+<weaponAnim name="chargelaser_large">
+	<sheet>chargelaser_large</sheet>
+	<desc length="21" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="34" y="16" charge="6"/>
+	<mountPoint x="4" y="37"/>
+	<boost>chargelaser_large_charge</boost>
+</weaponAnim>
+<animSheet name="chargeion2_charge" w="140" h="40" fw="35" fh="40">weapons/ion_charger2_charges.png</animSheet>
+<anim name="chargeion2_charge">
+	<sheet>chargeion2_charge</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="chargeion2" w="490" h="40" fw="35" fh="40">weapons/ion_charger2_base.png</animSheet>
+<weaponAnim name="chargeion2">
+	<sheet>chargeion2</sheet>
+	<desc length="14" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="28" y="10" charge="6"/>
+	<mountPoint x="8" y="34"/>
+	<boost>chargeion2_charge</boost>
+ <chargeImage>weapons/ion_charger2_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="flare_cannon" w="75" h="55" fw="25" fh="55">weapons/flare_cannon_strip8.png</animSheet>
+<weaponAnim name="flare_cannon">
+	<sheet>flare_cannon</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="23"/>
+	<mountPoint x="3" y="37"/>
+	<chargeImage>weapons/flare_cannon_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="flare_cannon_shot" w="55" h="23" fw="55" fh="23">weapons/flare_cannon_shot.png</animSheet>
+<anim name="flare_cannon_shot">
+	<sheet>flare_cannon_shot</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.00</time>
+</anim>
+<animSheet name="torpedoes_1" w="60" h="68" fw="20" fh="68">weapons/torpedoes_1_strip3.png</animSheet>
+<weaponAnim name="torpedoes_1">
+	<sheet>torpedoes_1</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="13" y="32"/>
+	<mountPoint x="3" y="49"/>
+	<chargeImage>weapons/torpedoes_1_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="torpedo_1" w="35" h="7" fw="35" fh="7">weapons/torpedo_1.png</animSheet>
+<anim name="torpedo_1">
+	<sheet>torpedo_1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<animSheet name="torpedoes_dual" w="78" h="74" fw="26" fh="74">weapons/torpedoes_dual_strip3.png</animSheet>
+<weaponAnim name="torpedoes_dual">
+	<sheet>torpedoes_dual</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="32"/>
+	<mountPoint x="3" y="49"/>
+	<chargeImage>weapons/torpedoes_dual_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="torpedo_dual_W" w="25" h="11" fw="25" fh="11">weapons/torpedo_dual_W.png</animSheet>
+<anim name="torpedo_dual_W">
+	<sheet>torpedo_dual_W</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="torpedo_dual_E" w="25" h="11" fw="25" fh="11">weapons/torpedo_dual_E.png</animSheet>
+<anim name="torpedo_dual_E">
+	<sheet>torpedo_dual_E</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<animSheet name="torpedoes_burst" w="90" h="73" fw="30" fh="73">weapons/torpedoes_burst_strip3.png</animSheet>
+<weaponAnim name="torpedoes_burst">
+	<sheet>torpedoes_burst</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="18" y="32"/>
+	<mountPoint x="3" y="49"/>
+	<chargeImage>weapons/torpedoes_burst_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="torpedo_burst_C" w="15" h="19" fw="15" fh="19">weapons/torpedo_burst_C.png</animSheet>
+<anim name="torpedo_burst_C">
+	<sheet>torpedo_burst_C</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="torpedo_burst_W" w="15" h="19" fw="15" fh="19">weapons/torpedo_burst_W.png</animSheet>
+<anim name="torpedo_burst_W">
+	<sheet>torpedo_burst_W</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="torpedo_burst_WW" w="15" h="19" fw="15" fh="19">weapons/torpedo_burst_WW.png</animSheet>
+<anim name="torpedo_burst_WW">
+	<sheet>torpedo_burst_WW</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="torpedo_burst_E" w="15" h="19" fw="15" fh="19">weapons/torpedo_burst_E.png</animSheet>
+<anim name="torpedo_burst_E">
+	<sheet>torpedo_burst_E</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="torpedo_burst_EE" w="15" h="19" fw="15" fh="19">weapons/torpedo_burst_EE.png</animSheet>
+<anim name="torpedo_burst_EE">
+	<sheet>torpedo_burst_EE</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<animSheet name="chargelaser_heavy_charge" w="70" h="68" fw="35" fh="68">weapons/chargelaser_heavy_charges.png</animSheet>
+<anim name="chargelaser_heavy_charge">
+	<sheet>chargelaser_heavy_charge</sheet>
+	<desc length="2" x="0" y="0"/>
+	<time>0.1</time>
+</anim>
+<animSheet name="chargelaser_medium_charge" w="105" h="50" fw="35" fh="50">weapons/chargelaser_medium_charges.png</animSheet>
+<anim name="chargelaser_medium_charge">
+	<sheet>chargelaser_medium_charge</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="hellfire_charge" w="125" h="60" fw="25" fh="60">weapons/missiles_hellfire_charges.png</animSheet>
+<anim name="hellfire_charge">
+	<sheet>hellfire_charge</sheet>
+	<desc length="5" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="missiles_hellfire" w="275" h="60" fw="25" fh="60">weapons/missiles_hellfire_strip11.png</animSheet>
+<weaponAnim name="missiles_hellfire">
+	<sheet>missiles_hellfire</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="17" y="19" charge="2"/>
+	<mountPoint x="2" y="37"/>
+	<boost>hellfire_charge</boost>
+</weaponAnim>
+<animSheet name="missile_swarm" w="256" h="80" fw="32" fh="80">weapons/missile_swarm_strip8.png</animSheet>
+<anim name="missile_swarm">
+   <sheet>missile_swarm</sheet>
+   <desc length="8" x="0" y="0"/>
+   <time>0.05</time>
+</anim>

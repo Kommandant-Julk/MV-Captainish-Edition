@@ -1,0 +1,1822 @@
+
+<mod:findName type="ship" name="NEW_TESTS" auto_blueprint="REBEL_FAT"> 
+    <mod:removeTag />
+</mod:findName>	
+<eventList name="HOSTILE1">
+	<event load="SQUAT_WARNING"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="AUTO_WARNING"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_CIVILIAN"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="REBEL"/>
+	<event load="REBEL"/>
+	<event load="REBEL"/>
+	<event load="MANTIS_HOSTILE"/>
+	<event load="MANTIS_HOSTILE"/>
+	<event load="REBEL_AUTO_AUGMENTED"/>
+	<event load="BS_EVENT_FED"/>
+	<event load="BS_EVENT_FED_AUTO"/>
+	<event load="BS_EVENT_AUTO"/>
+	<event load="BS_EVENT_AUTO_SUICIDE"/>
+</eventList>
+<eventList name="HOSTILE2">
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="AUTO_SUN"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="PIRATE_AUGMENTED"/>
+	<event load="BS_EVENT_FED"/>
+	<event load="BS_EVENT_AUTO"/>
+	<event load="BS_EVENT_AUTO_SUICIDE"/>
+</eventList>
+<eventList name="HOSTILE2S1">
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="AUTO_SUN"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="PIRATE_AUGMENTED"/>
+</eventList>
+<eventList name="NEUTRAL">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="MERCENARY"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<event load="DONOR_PONY"/>
+	<event load="DONOR_PLAGUE"/>
+	<event load="CE_PIRATE_CREW_BOUNTY"/>
+	<event load="CE_LONE_SHUTTLE"/>
+	<event load="CE_DERELICT_TREASURE"/>
+</eventList>
+<eventList name="NEUTRAL_EXIT">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<event load="DONOR_PONY"/>
+	<event load="DONOR_PLAGUE"/>
+	<event load="CE_PIRATE_CREW_BOUNTY"/>
+	<event load="CE_LONE_SHUTTLE"/>
+	<event load="CE_DERELICT_TREASURE"/>
+</eventList>
+<eventList name="NEUTRAL2">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="PIRATE_STATION_CROPS"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_MAP"/> 
+	<event load="AUTO_DEFENSE_ITEM"/>
+	<event load="CE_PIRATE_CREW_BOUNTY"/>
+	<event load="CE_LONE_SHUTTLE"/>
+	<event load="CE_DERELICT_TREASURE"/>
+</eventList>
+<eventList name="NEUTRAL2S1">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="PIRATE_STATION_CROPS"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_MAP"/> 
+	<event load="AUTO_DEFENSE_ITEM"/>
+	<event load="CE_PIRATE_CREW_BOUNTY"/>
+	<event load="CE_LONE_SHUTTLE"/>
+	<event load="CE_DERELICT_TREASURE"/>
+</eventList>
+<eventList name="NEBULA">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="STORM_REBEL"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_ITEMS"/>
+	<event load="NEBULA_LOST_SHIP"/>  
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_MANTIS_FIGHT"/> 
+	<event load="NEBULA_WEAPONS_TRADER"/>
+	<event load="NEBULA_AUTO_AUGMENTED"/>
+	<event load="NEBULA_AUTO_STORM_DELAY"/>
+	<event load="BS_EVENT_AUTO_NEBULA"/>
+	<event load="BS_EVENT_AUTO_SUICIDE_NEBULA"/>
+	<event load="BS_EVENT_PIRATE_NEBULA"/>		
+</eventList>
+<eventList name="NEBULAS1">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="STORM_REBEL"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_ITEMS"/>
+	<event load="NEBULA_LOST_SHIP"/>  
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_MANTIS_FIGHT"/> 
+	<event load="NEBULA_WEAPONS_TRADER"/>
+	<event load="NEBULA_AUTO_AUGMENTED"/>
+	<event load="NEBULA_AUTO_STORM_DELAY"/>
+</eventList>
+<eventList name="DISTRESS_BEACON">
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="STRANDED_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>  
+	<event load="REBEL_VS_FEDERATION"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_INFESTATION"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+	<event load="CE_DISTRESS_SUN"/>
+	<event load="CE_DISTRESS_DEFENSE"/>
+	<event load="CE_DISTRESS_MELTDOWN"/>
+	<event load="CE_DISTRESS_OXYGEN"/>
+	<event load="CE_DISTRESS_DRONES"/>
+	<event load="BS_EVENT_FED_AUTO_DORMANT"/>
+</eventList>
+<eventList name="ITEMS">
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TRADER_CIV"/>	
+	<event load="CE_STRAY_FLEET"/>
+</eventList>
+<textList name="TIPS_LIST">
+	<text>TIP: Crew Movement - When moving multiple crew members into a single room, the order in which they are ordered affects where they stand. Use this to keep weakened crew members safe when directly fighting enemies.</text>
+	<text>TIP: Super Shields - These powerful defensive barriers can block any incoming threat, including energy weapons, explosives, assault drones and even teleporters. However, they do not recharge during a fight, and ion weaponry and beams are extremely effective against them.</text>
+	<text>TIP: The Humans - The most common form of crew in the galaxy. Humans don't excel in any particular area but that means they are versatile enough to perform any order acceptably. They are also quicker to learn key ship skills than any alien race.</text>
+	<text>TIP: The Engi - These mechanical beings are more experienced with space technology than anyone else in the known universe. Nobody else can maintain the health of a ship as well as an Engi, but their passive nature results in lacklustre performance when forced to fight the enemy directly.</text>
+	<text>TIP: The Zoltan - An alien race that literally radiates with innate energy. This power is great enough to power any system that the crew is inside of, but such power makes the Zoltan more fragile than any other race. And when they perish, the energy detonates violently, damaging everyone in the room.</text>
+	<text>TIP: The Mantis - Judging by their claws, it's clear to see that this race was born for battle. Their ability to tear apart their foes in melee combat is without equal, but the same can also be said of their inability to repair ship damage with any sort of urgency.</text>
+	<text>TIP: The Rockmen - These dense behemoths behave as predictably as a giant, stone man should. Their mobility is bettered by everything excluding internal drones, but their tough build grants them a severe health boost and the handy immunity to being burned.</text>
+	<text>TIP: The Slugs - A psychic race which is far from afraid of using its powers for its own greed gains. Their senses are developed enough to detect the presence of hostile personnel even if you cannot see them, but they are otherwise just as capable as any normal Human.</text>
+	<text>TIP: Hull Weapons - Anti-armour weapons inflict additional damage to enemy hull armour when they attack systemless rooms. This can be used to quickly deplete enemy health, but they are just as effective at attacking enemy systems as normal weaponry.</text>
+	<text>TIP: Crew Damage - Remember that all conventional weaponry cause harm to crew members. If you can eliminate the entire crew of the enemy ship, you can often get a better reward from the intact ship.</text>
+	<text>TIP: Teleporters - Beam your crew members aboard enemy ships to attack the enemy from inside and cause general chaos amongst their crew. Just be careful to keep an eye on their health, and watch your fire while attacking with your ships weapons!</text>
+	<text>TIP: Medbay - When powered, the medbay will recover the health of any crew members inside. An upgraded medbay will even recover crew health if the ship is critically low on oxygen.</text>
+	<text>TIP: Shields - Every shield barrier requires two power to function and blocks incoming lasers, space debris and energy beams. Unfortunately, they will not offer any defense against incoming missiles.</text>
+	<text>TIP: Engines - Your agility is key in battle, as it will offer you the ability to completely dodge all incoming fire, including lasers, ion pulses, space debris and explosives. Be warned that beams will always hit you regardless of how fast you are.</text>
+	<text>TIP: Life Support - Without air, your crew cannot breathe, so ensure your oxygen levels are stable by powering Life Support. Don't be afraid to reroute its power to other systems when in combat, but don't forget to power it back up when the dust settles.</text>
+	<text>TIP: Death - Remember, losing is part of the fun! ... No, I'm serious...</text>
+	<text>TIP: Grinding Sectors - It can be beneficial to stay in a Sector for as long as possible to improve the ship since each Sector is increasingly difficult.</text>
+	<text>TIP: Exits - It's tempting to rush for the Sector exits, but exploring is the only way to upgrade your ship. Try and get as much out of each Sector as possible.</text>
+	<text>TIP: Targets - Prioritize your targeting in combat. Weapons and Shields are usually the best choice, but if they're going to flee, hit their Engines or Helm to prevent escape.</text>
+	<text>TIP: Hidden Choices - When you see a blue choice in an event, it's a special option that has been made available by your current equipment. These will often allow you to make less risky decisions, but the safest option isn't necessarily the best option...</text>
+	<text>TIP: System Damage - If a system is reduced to zero health due to taking damage from fires or boarders, the ship will take one point of hull damage. Try your best to prevent such hazards from causing unnecessary damage.</text>
+	<text>TIP: Power Bars - Upgraded Systems can be helpful even if you don't have enough reactor power to use them, as they will be able to absorb minor damage while keeping factors powered by the system operational.</text>
+	<text>TIP: Weapons - You can queue up an attack before the weapon is charged. It will fire automatically when it is fully charged, but it is often best to allow your weapons to fire in a single, coordinated volley.</text>
+	<text>TIP: Cloaking - Cloaking increases your evasive capacity by 60 percent and prevents enemy weapons from locking onto your ship. Cloak to dodge dangerous attacks or to delay the enemy from attacking you for a short time.</text>
+	<text>TIP: Boarding - If you're having trouble with intruders, use your system of airlocks to suffocate them. Luring enemies into your medbay is also effective.</text>
+	<text>TIP: Oxygen - If the ship's room colour changes from tan to red, it means it's running low on oxygen. Rooms with stripes will suffocate both fires and crew members.</text>
+	<text>TIP: Shield Piercing - Missiles can pass through all conventional shields, very useful for striking key systems. Be warned that Defense drones will shoot down incoming missiles.</text>
+	<text>TIP: Choices - Results of most choices have multiple outcomes. You can never be sure what will happen, but you can learn from your decisions.</text>
+	<text>TIP: Autofire - Autofire will cause weapons to repeatedly attack its chosen target until commanded to attack something else. Ion weaponry works best when used with Autofire, while explosive weaponry will rapidly deplete your missile supply if you're not careful.</text>
+	<text>TIP: Evasion - Evading enemy fire is critical, but you need someone controlling the Helm in order to be able to dodge. Manning Engines will also increase your evasion.</text>
+	<text>TIP: Sensors - If the ship goes dark, then your ships Sensors are offline. Until they are repaired, you will need to rely on your intuition to know what is going on.</text>
+	<text>TIP: Drones - If you're struggling against an enemy using drones, target their Drone Control to take hostile drones offline.</text>
+	<text>TIP: Beams - Beam weapons do damage based on the number of rooms they hit and the number of shield barriers defending the enemy. In order to deal maximum hull damage, target as many rooms as possible when their shields are down.</text>
+	<text>TIP: Beams - While hull and system damage is inflicted on a per-room basis, secondary effects and personnel damage are inflicted to every individual tile the beam cuts across. You can use this to optimise crew damage and the chances of setting rooms on fire.</text>
+	<text>TIP: Fire - Fires will constantly drain the health of any systems and crew in the room. If fires are blazing inside your ship, consider using your airlocks to drain the air from the burning room: fires cannot burn without oxygen.</text>
+	<text>TIP: Health - Pay attention to your crew's health, a warning sound and icon will appear when crew members are close to death. Use your medical facilities to help crew members recover their health.</text>
+	<text>TIP: Upgrades - Don't forget to upgrade your ship! Any scrap unspent can be put to task, reinforcing your ships offenses and defenses.</text>
+	<text>TIP: Fuel - Every jump consumes one unit of fuel, so keep an eye on your reserves. Buy fuel at stores to avoid being left stranded.</text>
+	<text>TIP: Sound - Go into the options menu to turn on or off the sound effects and music. Don't turn the sound effects down too low however, as you will not be able to hear audio warnings!</text>
+	<text>TIP: Asteroids - Asteroid fields will constantly pelter ships with space debris. Extremely dangerous to ships with weak shields, but the rocks hitting any enemy ship can be used to your advantage.</text>
+	<text>TIP: Nebulas - These gas clouds will slow down the Rebel pursuit when you travel through them, but Sensors will not function inside of them, and they contain their own dangers.</text>
+	<text>TIP: Solar Flares - Being too close to a sun when it releases a solar flare will cause your ship to catch fire and possibly take hull damage. Unshielded ships will take significant damage from them.</text>
+	<text>TIP: Score - Your score is based on how many ships you defeat, the number of beacons explored, and the base amount of scrap you have collected. Augments that modify your scrap income have no effect on score.</text>
+	<text>TIP: Augmentations - This equipment will bestow your ship and crew with a diverse array of offensive, defensive and passive benefits, but your ship can only carry three augments at once.</text>
+	<text>TIP: Breaches - Hull breaches will rapidly drain oxygen from rooms and prevent system repairs. If a room with a breach has no air remaining in it, opening doors to the surrounding rooms and diverting power to Life Support can help stabilise the oxygen levels.</text>
+	<text>TIP: Rebel Fleet - The Rebel fleet (represented by the red circle on the map) moves closer to your position every time you jump. Certain events can slow or speed up their movement.</text>
+	<text>TIP: Ion Weapons - Ion weapons de-power and lock a System for a time. If they hit a shield barrier, they deal their ion damage directly to the Shield Generator.</text>
+	<text>TIP: Bomb Weapons - Bombs teleport directly onto either ship. They bypass Shields AND Defense Drones. However, they affect only crew and Systems; they do no damage to the ship's hull.</text>
+	<text>TIP: Door Control - Upgrading your doors will greatly reduce the chance of fire spreading between rooms and will significantly slow boarder movement.</text>
+	
+	<text>TIP: Space Stations - Enemy space stations have extremely strong durability and defensive capability, but are completely immobile, making it impossible for them to evade incoming attacks.</text>
+	<text>TIP: Light Lasers - These peculiar energy weapons are capable of weakening both systems and crew members without damaging the hull of the target, making them excellent for capturing vessels intact.</text>
+	<text>TIP: Laser Repeaters - The sustained fire from these lasers is best used alongside other sources of similar damage such as ion weaponry and other rapid-fire lasers.</text>
+	<text>TIP: Burst Missile Launchers - Some missile launchers fire multiple warheads at once. This increases their hit probability but adds damage variance which can prove troublesome.</text>
+	<text>TIP: System Disruptors - These electronic-warfare devices surpass shields, allowing you to shut down enemy systems at will. Use them to target key systems.</text>
+	<text>TIP: Focused Beams - Some beam weapons deal high damage, but can only hit one room. Use them to score reliable damage against fast-moving opponents.</text>
+	<text>TIP: Alternative Targets - Keep in mind that Weapons and Shields are not always the prime targets. Some enemies might rely on different systems for attacking or defending themselves. Target them accordingly.</text>
+	<text>TIP: Scouts - These basic craft only carry light amounts of hull armour, but they can still prove dangerous with strong mobility and offensive force.</text>
+	<text>TIP: Fighters, Bombers and Assault Classes - These ships are well rounded and have no special strengths and weaknesses. Like all enemies, their equipment and weapon load-out depends on the faction they belong to.</text>
+	<text>TIP: Dropships - These ships are almost always equipped with teleporters and transport a lot of personnel. Get your crew ready for close combat when you encounter them.</text>
+	<text>TIP: Interceptors - These fast ships can dodge a lot of your attacks but often carry subpar levels of shields. Target their helm or engines first to slow them down.</text>
+	<text>TIP: Medevacs - These medical support ships are always equipped with proper medbays and usually transport extra crew, which makes boarding them quite difficult.</text>
+	<text>TIP: Mechanics - These support ships are always equipped with various repair drones, which makes keeping key systems damaged quite difficult.</text>
+	<text>TIP: Droneships - These slow ships will use attack drones as their primary mean of attacking, but can't power a lot of conventional weaponry.</text>
+	<text>TIP: Hunters - Some enemy ships are specialized for injuring and killing your crew, and might even use weaponry designed for that purpose. Keep an eye on your crew's health and make good use of your medbay when encountering them.</text>
+	<text>TIP: Exotic Ships - Some enemy ships are specialized in unique ways, and might be equipped with distinct armaments or equipment. Try to discover their capabilities and weaknesses to deal with them effectively. You can always flee from an encounter if you are not sure what you are dealing with.</text>
+	<text>TIP: Anti-Armour Weapons - Some weapons and drones deal extra damage when fired at empty rooms. While they perform poorly against small ships, they can come in handy against enemies with a lot of hull strength and empty rooms, like space stations and cruisers.</text>
+	<text>TIP: Capital Ships - Your cruiser is not designed to fight every type of ship. If you feel that your enemy outright outclasses you, then trying to flee might be your best bet.</text>
+	<text>TIP: Rebel Cruisers - When the fleet catches up with you, you might have to fight strong Rebel cruisers, and the Rebels will also station these ships at exit beacons.</text>
+	<text>TIP: Fighting Rebel Cruisers - Taking out Rebel cruisers can throw the fleet into disarray and buy you some time, but fleeing from these powerful ships might often be the better option.</text>
+	<text>TIP: Stealth Missile Launchers - Some missile weapons can scramble enemy defense systems and will only be shot down by Level 2 defense drones.</text>
+	<text>TIP: Trade Routes - Trading is most lucrative between civilian (green) and hostile (red) sectors. Check the sector map and plan your route through the sectors accordingly to increase your profits.</text>
+	<text>TIP: Goods Value - Trade goods come at different scarcities, which range from Basic to Very Rare. This puts them into different price ranges. Buying more expensive goods requires greater investments, but also nets bigger profits with one haul.</text>
+	<text>TIP: Cargo Space - Trade goods take up Augmentation slots. Make sure you have enough cargo space when buying commodities. If you realize that your holds are already full, then you can still sell the goods at the shop again, but you won't profit anywhere near as much.</text>
+	<text>TIP: Selling Goods - When you sell your cargo at shops, you will first negotiate a price and get an advance payment. Then you have to sell the goods at the shop to receive the rest of your scrap.</text>
+	<text>TIP: Supply and Demand - Trade goods are never bought at good prices in the sectors where they are for sale. You can still sell the commodities at the shop to free up cargo space and make quick scrap, but delivering them to other sectors makes better money.</text>
+	<text>TIP: Sector Trade Capacity - Some sectors are more suitable for trading then others. Far-out places and regions with disrupted economies have less to offer. Stable core regions, on the other hand, sell and buy a lot of goods at strong prices.</text>
+	<text>TIP: High Demand - There is always a region of space where even the most ordinary of goods are in high demand. If you know where your freight is really needed, you can make very high profits with a single haul.</text>
+	<text>TIP: Quick Selling - You can always sell your trade goods directly to the shop, but only at very bad prices. This way, you can quickly get rid of excess cargo.</text>
+	<text>TIP: Piracy - Resorting to piracy will disillusion your crew and might make them desert your cause, but can also net you additional scrap and trade goods.</text>
+	<text>TIP: Pirate Factions - Some aliens are known to prey on defenseless ships on a regular basis. The crew of these factions' ships will not revolt if you engage in piracy, although piracy itself takes many different forms which need to be taken into account.</text>
+	<text>TIP: Anti-Crew Drones - These drones are designed to injure enemy crew, but cannot damage the enemy ship's hull. They are especially useful to soften up resistance before your boarders move in.</text>
+	<text>TIP: Ion Drones - These drones are mainly useful for ionizing enemy shields, but their inability to aim usually mandates support from conventional ion weaponry to be very effective.</text>
+	<text>TIP: Ship Size - The amount of rooms an enemy ship has factors into how effective certain drones are against them. Most drones excel when attacking smaller ships, because they are more likely to hit crew and systems.</text>
+	<text>TIP: Cargo Ships and Freighters - These ship often carry valuable cargo. They posses little firepower and rely on powerful engines and jump drives to avoid confrontations.</text>
+	<text>TIP: Hazard Sectors - The Rebel fleet will struggle to pursue you through these sectors, as they are full of ion storms and asteroid fields. Exploring them isn't always advisable. Hazard Sectors have little infrastructure and are full of dangers.</text>
+	<text>TIP: Civilian Coreworlds - These peaceful sectors offer a lot of opportunities to work and trade, but be careful, losing the Rebel fleet will be harder in populated areas and you never know who might give your position away to them.</text>
+	<text>TIP: Federation Controlled Sectors - Federation controlled sectors will be under Rebel attack when you arrive. There will be fierce fighting almost everywhere.</text>
+	<text>TIP: UI Prompts - Some weapons leave no visible traces, but your ship's computer will inform you about their activity with small UI prompts. The computer will also warn you about dangerous weapons fired at you via these prompts.</text>
+	<text>TIP: Weapon Spread - Many different weapons launch their attack in a small but noticeable spread pattern. They usually have very high damage in one respect, but are less effective against systems.</text>
+	<text>TIP: Mines - Space mines explode in close proximity to ships, dealing maximum damage to the hull. They cannot damage systems or crew and travel quite slow. They canalso  be used to deploy minefields, disrupting any pursuers.</text>
+	<text>TIP: Combat Augments - Combat augments can disrupt your opponent's systems during battle. Without special equipment, your ship can only power one of these augments at the same time.</text>
+	<text>TIP: Production Augments - Some augments can help you to conserve or gather resources. You need to find a beacon where you are undisturbed in order to use them.</text>
+	<text>TIP: Holograms - Holographic crew members are nowhere near as durable as any other species, but they can get any job done and don't require oxygen.</text>
+	<text>TIP: Debris Fields - The destruction of bigger ships might create vast debris fields. You can choose to spend more time in order to salvage additional materials, but the Rebel fleet will catch up faster if you do so.</text>
+	<text>TIP: Minefields - Fights in Minefields will cause proximity mines to home in on your ship early in the fight. Jump away before they hit you, or use drones or engine power to evade them.</text>
+	<text>TIP: Planetary Defense Weapons - Advancing into hostile territory might confront you with heavy planetary defense weapons. These guns charge slow; it is best to jump away before they fire.</text>
+	<text>TIP: Planetary Artillery - This defense weapon charges slow but pierces all shields and can cause fires and breaches. UI prompts will inform you about its targeting cycle and can tell you which rooms it will hit.</text>
+	<text>TIP: Planetary Beams - This defense weapon charges slow but will shoot right through your shields and ship, causing breaches. UI prompts will inform you about its targeting cycle and can tell you which rooms it will hit.</text>
+	<text>TIP: Rebel Point Defense System - If the fleet catches up with you the Rebels might consider finishing you off with a long range artillery barrage. Their PDS weapons charge significantly faster than planetary defenses.</text>
+	<text>TIP: Industrial Sectors - These nebula sectors feature large, hazard-rich dust clouds that might often best be avoided, unless you want to risk salvaging the derelict equipment that can often be found within them.</text>
+	<text>TIP: Quarantine Sectors - Some civilian sectors are under lockdown after dangerous diseases have spread. The plague might take its toll on your crew, but many people also will want to leave the system and might join you.</text>
+	<text>TIP: AI Controlled Sectors - These sectors are taken over by rogue combat AIs. The all-consuming nano-bot clouds that these AIs command are one of the most hazardous places in the galaxy.</text>
+	<text>TIP: Crew Interaction - An old Federation proverb says: "If you get to a place with nothing else to do, you can always just chat with your crew."</text>
+	<text>TIP: Crew Morale - Maintaining a good relationship with your crew is good for morale. And conversing regularly with your crew might open up all kinds of possibilities.</text>
+	<text>TIP: Crew Background - Most of your crewmen will have been around the galaxy for some time. Conversing with certain crew in certain sectors might have curious results.</text>
+	<text>TIP: Acid Clouds - These industrial hazards will damage your ship while charging your FTL drive. Time-consuming activities like salvaging and the usage of certain augments will result in more damage.</text>
+	<text>TIP: Pollution - These industrial smog clouds will affect your ship's sensors and clog the engines. Pollution hazards can vary in density, more dense clouds will have stronger effects on engines and sensors.</text>
+	<text>TIP: Radiation - Leaking wrecks in space can emit lethal amounts of radiation that will slowly kill your crew. Advanced life support systems can provide protection against this hazard.</text>
+	<text>TIP: Nano-Bot Clouds - Nanite swarms are capable of disassembling your hull and can disrupt all systems. This nebula hazard usually won't affect the enemy ships and should best be avoided entirely.</text>
+	<text>TIP: Black Holes - Jumping near a black hole is actually much less dangerous than it sounds. However, you will need to spend more fuel to escape its gravitational pull.</text>
+	<text>TIP: Anomalies - Some rare, unexplainable hazards will jam your sensors, drone communication and weapon targeting.</text>
+	<text>TIP: Ion Barriers - This curious space phenomena create massive barriers that emit strong ion fields. Your shields will be permanently weakened near them.</text>
+	<text>TIP: Mine Defense - Defense drones can easily pick off space mines that approach your ship. This is especially usefully if you happen to jump into a minefield.</text>
+	<text>TIP: Cloaked Projectiles - Some weapons fire cloaked missiles or drop stealth mines. These projectiles can only be intercepted by Level 2 defense drones.</text>
+	<text>TIP: Ice Fields - Ice fields exist in remote areas far away from active stars. These areas have almost no background radiation to speak of, which makes cloaking devices useless and hiding impossible within them.</text>
+	<text>TIP: Zoltan Diplomacy - Commanding a ship of the wise Zoltan will give you a natural degree of authority. You will be able to negotiate favourable surrender offers and find peaceful resolutions for many conflicts.</text>
+	<text>TIP: Slug "Flexibility" - The Federation is well know to use Slug auxiliaries for their dirty work. Your crew will not expect you to stick to the rules if you command a Slug vessel.</text>
+	<text>TIP: Outposts - These military stations are well-armed. Prepare for a tough fight when you encounter one.</text>
+	<text>TIP: Checkpoints - Checkpoint stations are attacked frequently, and are therefore equipped with clone bays to protect their staff. They can have various other systems as well.</text>
+	<text>TIP: EW Platforms - Electronic Warfare stations are always equipped with Hacking systems. Be prepared to deal with system disruption when engaging them.</text>
+	<text>TIP: Hives and Brood-stations - Some factions heavily rely on cloning facilities to swell their ranks. When you find yourself near one of their cloning stations, you will have to deal with almost endless waves of boarders.</text>
+	<text>TIP: Surveyors and Instigators - Some ship classes rely on Mind Control systems to force your crew to sabotage your ship. You will have to somehow deal with your turned crewmen if you encounter them.</text>
+	<text>TIP: Artillery System - The Artillery system you can buy at stores will equip your ship with its signature artillery weapon, often providing a strong boost for your offence.</text>
+	<text>TIP: Faction Artillery - Buy the artillery system to discover the various artillery guns available. Certain ships might receive different kinds of artillery.</text>
+	<text>TIP: Combat Augment Power Cost - The energy cost of combat augments can be offset with the Internal Generator augment. You can engineer it at empty beacons if you have combat augments.</text>
+	<text>TIP: Auto Sectors - This sectors are under the control of automated construction ships. You will rarely encounter manned ships here.</text>
+	<text>TIP: Pirate Homeworlds - Strong pirate cruisers roam the pirate strongholds. Naturally, they will pose a significant threat.</text>
+	<text>TIP: Rock Sectors - Extremely tough stations and many missile-wielding enemies can be encountered in these sectors. Black holes are also somewhat apparent occurrences here.</text>
+	<text>TIP: Mantis Sectors - The Mantis will often try to overwhelm you with boarders. Their brood stations and convoys can teleport almost infinite amounts of warriors to your ship.</text>
+</textList>
+<textList name="OVERRIDE_TIPS_LIST">
+	<text>TIP: Crew Movement - When moving multiple crew members into a single room, the order in which they are ordered affects where they stand. Use this to keep weakened crew members safe when directly fighting enemies.</text>
+	<text>TIP: Super Shields - These powerful defensive barriers can block any incoming threat, including energy weapons, explosives, invading drones, teleporters and mind control attempts. However, they do not recharge during a fight, and ion weaponry and beams are extremely effective against them.</text>
+	<text>TIP: The Humans - The most common form of crew in the galaxy. Humans don't excel in any particular area but that means they are versatile enough to perform any order acceptably. They are also quicker to learn key ship skills than any alien race.</text>
+	<text>TIP: The Engi - These mechanical beings are more experienced with space technology than anyone else in the known universe. Nobody else can maintain the health of a ship as well as an Engi, but their passive nature results in lacklustre performance when forced to fight the enemy directly.</text>
+	<text>TIP: The Zoltan - An alien race that literally radiates with innate energy. This power is great enough to power any system that the crew is inside of, but such power makes the Zoltan more fragile than any other race. And when they perish, the energy detonates violently, damaging everyone in the room.</text>
+	<text>TIP: The Mantis - Judging by their claws, it's clear to see that this race was born for battle. Their ability to tear apart their foes in melee combat is without equal, but the same can also be said of their inability to repair ship damage with any sort of urgency.</text>
+	<text>TIP: The Rockmen - These dense behemoths behave as predictably as a giant, stone man should. Their mobility is bettered by everything excluding internal drones, but their tough build grants them a severe health boost and the handy immunity to being burned.</text>
+	<text>TIP: The Slugs - A psychic race which is far from afraid of using its powers for its own greed gains. Their senses are developed enough to detect the presence of hostile personnel even if you cannot see them, and their minds are innately shielded from the Mind Control technology that they created themselves.</text>
+	<text>TIP: The Lanius - These strange anaerobes only appear in places where there is plenty of metal to scavenge, such as the remains of a great battle. They drain the oxygen out of any room they inhabit, which makes interactions with other races difficult to co-ordinate.</text>
+	<text>TIP: Hull Weapons - Anti-armour weapons inflict additional damage to enemy hull armour when they attack systemless rooms. This can be used to quickly deplete enemy health, but they are just as effective at attacking enemy systems as normal weaponry.</text>
+	<text>TIP: Crew Damage - Remember that all conventional weaponry cause harm to crew members. If you can eliminate the entire crew of the enemy ship, you can often get a better reward from the intact ship.</text>
+	<text>TIP: Teleporters - Beam your crew members aboard enemy ships to attack the enemy from inside and cause general chaos amongst their crew. Just be careful to keep an eye on their health, and watch your fire while attacking with your ships weapons!</text>
+	<text>TIP: Medbay - When powered, the medbay will recover the health of any crew members inside. An upgraded medbay will even recover crew health if the ship is critically low on oxygen.</text>
+	<text>TIP: Shields - Every shield barrier requires two power to function and blocks incoming lasers, space debris and energy beams. Unfortunately, they will not offer any defense against incoming missiles.</text>
+	<text>TIP: Engines - Your agility is key in battle, as it will offer you the ability to completely dodge all incoming fire, including lasers, ion pulses, space debris and explosives. Be warned that beams will always hit you regardless of how fast you are.</text>
+	<text>TIP: Life Support - Without air, your crew cannot breathe, so ensure your oxygen levels are stable by powering Life Support. Don't be afraid to reroute its power to other systems when in combat, but don't forget to power it back up when the dust settles.</text>
+	<text>TIP: Death - Remember, losing is part of the fun! ... No, I'm serious...</text>
+	<text>TIP: Grinding Sectors - It can be beneficial to stay in a Sector for as long as possible to improve the ship since each Sector is increasingly difficult.</text>
+	<text>TIP: Exits - It's tempting to rush for the Sector exits, but exploring is the only way to upgrade your ship. Try and get as much out of each Sector as possible.</text>
+	<text>TIP: Targets - Prioritize your targeting in combat. Weapons and Shields are usually the best choice, but if they're going to flee, hit their Engines or Helm to prevent escape.</text>
+	<text>TIP: Hidden Choices - When you see a blue choice in an event, it's a special option that has been made available by your current equipment. These will often allow you to make less risky decisions, but the safest option isn't necessarily the best option...</text>
+	<text>TIP: System Damage - If a system is reduced to zero health due to taking damage from fires or boarders, the ship will take one point of hull damage. Try your best to prevent such hazards from causing unnecessary damage.</text>
+	<text>TIP: Power Bars - Upgraded Systems can be helpful even if you don't have enough reactor power to use them, as they will be able to absorb minor damage while keeping factors powered by the system operational.</text>
+	<text>TIP: Weapons - You can queue up an attack before the weapon is charged. It will fire automatically when it is fully charged, but it is often best to allow your weapons to fire in a single, coordinated volley.</text>
+	<text>TIP: Cloaking - Cloaking increases your evasive capacity by 60 percent and prevents enemy weapons from locking onto your ship. Cloak to dodge dangerous attacks or to delay the enemy from attacking you for a short time.</text>
+	<text>TIP: Boarding - If you're having trouble with intruders, use your system of airlocks to suffocate them. Luring enemies into your medbay is also effective.</text>
+	<text>TIP: Oxygen - If the ship's room colour changes from tan to red, it means it's running low on oxygen. Rooms with stripes will suffocate both fires and crew members.</text>
+	<text>TIP: Shield Piercing - Missiles can pass through all conventional shields, very useful for striking key systems. Be warned that Defense drones will shoot down incoming missiles.</text>
+	<text>TIP: Choices - Results of most choices have multiple outcomes. You can never be sure what will happen, but you can learn from your decisions.</text>
+	<text>TIP: Autofire - Autofire will cause weapons to repeatedly attack its chosen target until commanded to attack something else. Ion weaponry works best when used with Autofire, while explosive weaponry will rapidly deplete your missile supply if you're not careful.</text>
+	<text>TIP: Evasion - Evading enemy fire is critical, but you need someone controlling the Helm in order to be able to dodge. Manning Engines will also increase your evasion.</text>
+	<text>TIP: Sensors - If the ship goes dark, then your ships Sensors are offline. Until they are repaired, you will need to rely on your intuition to know what is going on.</text>
+	<text>TIP: Drones - If you're struggling against an enemy using drones, target their Drone Control to take hostile drones offline.</text>
+	<text>TIP: Beams - Beam weapons do damage based on the number of rooms they hit and the number of shield barriers defending the enemy. In order to deal maximum hull damage, target as many rooms as possible when their shields are down.</text>
+	<text>TIP: Beams - While hull and system damage is inflicted on a per-room basis, secondary effects and personnel damage are inflicted to every individual tile the beam cuts across. You can use this to optimise crew damage and the chances of setting rooms on fire.</text>
+	<text>TIP: Fire - Fires will constantly drain the health of any systems and crew in the room. If fires are blazing inside your ship, consider using your airlocks to drain the air from the burning room: fires cannot burn without oxygen.</text>
+	<text>TIP: Health - Pay attention to your crew's health, a warning sound and icon will appear when crew members are close to death. Use your medical facilities to help crew members recover their health.</text>
+	<text>TIP: Upgrades - Don't forget to upgrade your ship! Any scrap unspent can be put to task, reinforcing your ships offenses and defenses.</text>
+	<text>TIP: Fuel - Every jump consumes one unit of fuel, so keep an eye on your reserves. Buy fuel at stores to avoid being left stranded.</text>
+	<text>TIP: Sound - Go into the options menu to turn on or off the sound effects and music. Don't turn the sound effects down too low however, as you will not be able to hear audio warnings!</text>
+	<text>TIP: Asteroids - Asteroid fields will constantly pelter ships with space debris. Extremely dangerous to ships with weak shields, but the rocks hitting any enemy ship can be used to your advantage.</text>
+	<text>TIP: Nebulas - These gas clouds will slow down the Rebel pursuit when you travel through them, but Sensors will not function inside of them, and they contain their own dangers.</text>
+	<text>TIP: Solar Flares - Being too close to a sun when it releases a solar flare will cause your ship to catch fire and possibly take hull damage. Unshielded ships will take significant damage from them.</text>
+	<text>TIP: Score - Your score is based on how many ships you defeat, the number of beacons explored, and the base amount of scrap you have collected. Augments that modify your scrap income have no effect on score.</text>
+	<text>TIP: Augmentations - This equipment will bestow your ship and crew with a diverse array of offensive, defensive and passive benefits, but your ship can only carry three augments at once.</text>
+	<text>TIP: Breaches - Hull breaches will rapidly drain oxygen from rooms and prevent system repairs. If a room with a breach has no air remaining in it, opening doors to the surrounding rooms and diverting power to Life Support can help stabilise the oxygen levels.</text>
+	<text>TIP: Rebel Fleet - The Rebel fleet (represented by the red circle on the map) moves closer to your position every time you jump. Certain events can slow or speed up their movement.</text>
+	<text>TIP: Ion Weapons - Ion weapons de-power and lock a System for a time. If they hit a shield barrier, they deal their ion damage directly to the Shield Generator.</text>
+	<text>TIP: Bomb Weapons - Bombs teleport directly onto either ship. They bypass Shields AND Defense Drones. However, they affect only crew and Systems; they do no damage to the ship's hull.</text>
+	<text>TIP: Door Control - Upgrading your doors will greatly reduce the chance of fire spreading between rooms and will significantly slow boarder movement.</text>
+	<text>TIP: Hacking - A powerful and versatile tool that requires a drone part to launch but can sabotage any hostile system of your discretion. Experiment with targets to see which hacks work best for your strategy.</text>
+	<text>TIP: Mind Control - Create chaos amongst the opposition by using this system to arrest control of hostile crew for a short time. You will need to be able to see the crew member in order to control him, and Slugs are resistant to its effects.</text>
+	<text>TIP: Emergency Power - Give your cruiser an energy advantage by activating this system to boost your reactor capacity for a short time, even when fighting in a storm. Keep an eye on its meter to prevent being caught out when the power is depleted.</text>
+	<text>TIP: Pulsars - These stars will persistently harass vessels in the vicinity with strong ion pulses that will heavily disrupt shields when they are up, and all other systems when they are not. Try to time your attacks to fire just before a pulse hits to maximise effectiveness against the enemy.</text>
+	<text>TIP: Anti-Ship Batteries - Should you be unfortunate enough to be in the vicinity of the Rebel fleet, the cruisers will open fire on you. Their cannons cause significant damage through even the strongest shielding, but with enough agility available, they can be dodged.</text>
+	<text>TIP: Space Stations - Enemy space stations have extremely strong durability and defensive capability, but are completely immobile, making it impossible for them to evade incoming attacks.</text>
+	<text>TIP: Light Lasers - These peculiar energy weapons are capable of weakening both systems and crew members without damaging the hull of the target, making them excellent for capturing vessels intact.</text>
+	<text>TIP: Laser Repeaters - The sustained fire from these lasers is best used alongside other sources of similar damage such as ion weaponry and other rapid-fire lasers.</text>
+	<text>TIP: Burst Missile Launchers - Some missile launchers fire multiple warheads at once. This increases their hit probability but adds damage variance which can prove troublesome.</text>
+	<text>TIP: System Disruptors - These electronic-warfare devices surpass shields, allowing you to shut down enemy systems at will. Use them to target key systems.</text>
+	<text>TIP: Focused Beams - Some beam weapons deal high damage, but can only hit one room. Use them to score reliable damage against fast-moving opponents.</text>
+	<text>TIP: Alternative Targets - Keep in mind that Weapons and Shields are not always the prime targets. Some enemies might rely on different systems for attacking or defending themselves. Target them accordingly.</text>
+	<text>TIP: Scouts - These ships only have weak hulls, but can bring a lot of firepower to the fight.</text>
+	<text>TIP: Fighters, Bombers and Assault Classes - These ships are well rounded and have no special strengths and weaknesses. Like all enemies, their equipment and weapon load-out depends on the faction they belong to.</text>
+	<text>TIP: Dropships - These ships are almost always equipped with teleporters and transport a lot of personnel. Get your crew ready for close combat when you encounter them.</text>
+	<text>TIP: Interceptors - These fast ships can dodge a lot of your attacks. Target their helm or engines first to slow them down.</text>
+	<text>TIP: Medevacs - These medical support ships are always equipped with proper medbays and usually transport extra crew, which makes boarding them quite difficult.</text>
+	<text>TIP: Mechanics - These slow and fragile support ships are always equipped with various repair drones, which makes damaging them quite difficult. They might even repair hull damage throughout the fight.</text>
+	<text>TIP: Droneships - These slow ships will use attack drones as their primary mean of attacking, but can't power a lot of conventional weaponry.</text>
+	<text>TIP: Hunters - Some enemy ships are specialized for injuring and killing your crew, and might even use weaponry designed for that purpose. Keep an eye on your crew's health and make good use of your medbay when encountering them.</text>
+	<text>TIP: Exotic Ships - Some enemy ships are specialized in unique ways, and might be equipped with distinct armaments or equipment. Try to discover their capabilities and weaknesses to deal with them effectively. You can always flee from an encounter if you are not sure what you are dealing with.</text>
+	<text>TIP: Anti-Armour Weapons - Some weapons and drones deal extra damage when fired at empty rooms. While they perform poorly against small ships, they can come in handy against enemies with a lot of hull strength and empty rooms, like space stations and cruisers.</text>
+	<text>TIP: Capital Ships - Your cruiser is not designed to fight every type of ship. If you feel that your enemy outright outclasses you, then trying to flee might be your best bet.</text>
+	<text>TIP: Rebel Cruisers - When the fleet catches up with you, you might have to fight strong Rebel cruisers, and the Rebels will also station these ships at exit beacons.</text>
+	<text>TIP: Fighting Rebel Cruisers - Taking out Rebel cruisers can throw the fleet into disarray and buy you some time, but fleeing from these powerful ships might often be the better option.</text>
+	<text>TIP: Stealth Missile Launchers - Some missile weapons can scramble enemy defense systems and will only be shot down by Level 2 defense drones.</text>
+	<text>TIP: Trade Routes - Trading is most lucrative between civilian (green) and hostile (red) sectors. Check the sector map and plan your route through the sectors accordingly to increase your profits.</text>
+	<text>TIP: Goods Value - Trade goods come at different scarcities, which range from Basic to Very Rare. This puts them into different price ranges. Buying more expensive goods requires greater investments, but also nets bigger profits with one haul.</text>
+	<text>TIP: Cargo Space - Trade goods take up Augmentation slots. Make sure you have enough cargo space when buying commodities. If you realize that your holds are already full, then you can still sell the goods at the shop again, but you won't profit anywhere near as much.</text>
+	<text>TIP: Selling Goods - When you sell your cargo at shops, you will first negotiate a price and get an advance payment. Then you have to sell the goods at the shop to receive the rest of your scrap.</text>
+	<text>TIP: Supply and Demand - Trade goods are never bought at good prices in the sectors where they are for sale. You can still sell the commodities at the shop to free up cargo space and make quick scrap, but delivering them to other sectors makes better money.</text>
+	<text>TIP: Sector Trade Capacity - Some sectors are more suitable for trading then others. Far-out places and regions with disrupted economies have less to offer. Stable core regions, on the other hand, sell and buy a lot of goods at strong prices.</text>
+	<text>TIP: High Demand - There is always a region of space where even the most ordinary of goods are in high demand. If you know where your freight is really needed, you can make very high profits with a single haul.</text>
+	<text>TIP: Quick Selling - You can always sell your trade goods directly to the shop, but only at very bad prices. This way, you can quickly get rid of excess cargo.</text>
+	<text>TIP: Piracy - Resorting to piracy will disillusion your crew and might make them desert your cause, but can also net you additional scrap and trade goods.</text>
+	<text>TIP: Pirate Factions - Some aliens are known to prey on defenseless ships on a regular basis. The crew of these factions' ships will not revolt if you engage in piracy, although piracy itself takes many different forms which need to be taken into account.</text>
+	<text>TIP: Anti-Crew Drones - These drones are designed to injure enemy crew, but cannot damage the enemy ship's hull. They are especially useful to soften up resistance before your boarders move in.</text>
+	<text>TIP: Ion Drones - These drones are mainly useful for ionizing enemy shields, but their inability to aim usually mandates support from conventional ion weaponry to be very effective.</text>
+	<text>TIP: Ship Size - The amount of rooms an enemy ship has factors into how effective certain drones are against them. Most drones excel when attacking smaller ships, because they are more likely to hit crew and systems.</text>
+	<text>TIP: Cargo Ships and Freighters - These ship often carry valuable cargo. They posses little firepower and rely on powerful engines and jump drives to avoid confrontations.</text>
+	<text>TIP: Hazard Sectors - The Rebel fleet will struggle to pursue you through these sectors, as they are full of ion storms and asteroid fields. Exploring them isn't always advisable. Hazard Sectors have little infrastructure and are full of dangers.</text>
+	<text>TIP: Civilian Coreworlds - These peaceful sectors offer a lot of opportunities to work and trade, but be careful, losing the Rebel fleet will be harder in populated areas and you never know who might give your position away to them.</text>
+	<text>TIP: Federation Controlled Sectors - Federation controlled sectors will be under Rebel attack when you arrive. There will be fierce fighting almost everywhere.</text>
+	<text>TIP: UI Prompts - Some weapons leave no visible traces, but your ship's computer will inform you about their activity with small UI prompts. The computer will also warn you about dangerous weapons fired at you via these prompts.</text>
+	<text>TIP: Weapon Spread - Many different weapons launch their attack in a small but noticeable spread pattern. They usually have very high damage in one respect, but are less effective against systems.</text>
+	<text>TIP: Mines - Space mines explode in close proximity to ships, dealing maximum damage to the hull. They cannot damage systems or crew and travel quite slow. They canalso  be used to deploy minefields, disrupting any pursuers.</text>
+	<text>TIP: Combat Augments - Combat augments can disrupt your opponent's systems during battle. Without special equipment, your ship can only power one of these augments at the same time.</text>
+	<text>TIP: Production Augments - Some augments can help you to conserve or gather resources. You need to find a beacon where you are undisturbed in order to use them.</text>
+	<text>TIP: Holograms - Holographic crew members are nowhere near as durable as any other species, but they can get any job done and don't require oxygen.</text>
+	<text>TIP: Debris Fields - The destruction of bigger ships might create vast debris fields. You can choose to spend more time in order to salvage additional materials, but the Rebel fleet will catch up faster if you do so.</text>
+	<text>TIP: Minefields - Fights in Minefields will cause proximity mines to home in on your ship early in the fight. Jump away before they hit you, or use drones or engine power to evade them.</text>
+	<text>TIP: Planetary Defense Weapons - Advancing into hostile territory might confront you with heavy planetary defense weapons. These guns charge slow; it is best to jump away before they fire.</text>
+	<text>TIP: Planetary Artillery - This defense weapon charges slow but pierces all shields and can cause fires and breaches. UI prompts will inform you about its targeting cycle and can tell you which rooms it will hit.</text>
+	<text>TIP: Planetary Beams - This defense weapon charges slow but will shoot right through your shields and ship, causing breaches. UI prompts will inform you about its targeting cycle and can tell you which rooms it will hit.</text>
+	<text>TIP: Rebel Point Defense System - If the fleet catches up with you the Rebels might consider finishing you off with a long range artillery barrage. Their PDS weapons charge significantly faster than planetary defenses.</text>
+	<text>TIP: Industrial Sectors - These nebula sectors feature large, hazard-rich dust clouds that might often best be avoided, unless you want to risk salvaging the derelict equipment that can often be found within them.</text>
+	<text>TIP: Quarantine Sectors - Some civilian sectors are under lockdown after dangerous diseases have spread. The plague might take its toll on your crew, but many people also will want to leave the system and might join you.</text>
+	<text>TIP: AI Controlled Sectors - These sectors are taken over by rogue combat AIs. The all-consuming nano-bot clouds that these AIs command are one of the most hazardous places in the galaxy.</text>
+	<text>TIP: Crew Interaction - An old Federation proverb says: "If you get to a place with nothing else to do, you can always just chat with your crew."</text>
+	<text>TIP: Crew Morale - Maintaining a good relationship with your crew is good for morale. And conversing regularly with your crew might open up all kinds of possibilities.</text>
+	<text>TIP: Crew Background - Most of your crewmen will have been around the galaxy for some time. Conversing with certain crew in certain sectors might have curious results.</text>
+	<text>TIP: Acid Clouds - These industrial hazards will damage your ship while charging your FTL drive. Time-consuming activities like salvaging and the usage of certain augments will result in more damage.</text>
+	<text>TIP: Pollution - These industrial smog clouds will affect your ship's sensors and clog the engines. Pollution hazards can vary in density, more dense clouds will have stronger effects on engines and sensors.</text>
+	<text>TIP: Radiation - Leaking wrecks in space can emit lethal amounts of radiation that will slowly kill your crew. Advanced life support systems can provide protection against this hazard.</text>
+	<text>TIP: Nano-Bot Clouds - Nanite swarms are capable of disassembling your hull and can disrupt all systems. This nebula hazard usually won't affect the enemy ships and should best be avoided entirely.</text>
+	<text>TIP: Black Holes - Jumping near a black hole is actually much less dangerous than it sounds. However, you will need to spend more fuel to escape its gravitational pull.</text>
+	<text>TIP: Anomalies - Some rare, unexplainable hazards will jam your sensors, drone communication and weapon targeting.</text>
+	<text>TIP: Ion Barriers - This curious space phenomena create massive barriers that emit strong ion fields. Your shields will be permanently weakened near them.</text>
+	<text>TIP: Mine Defense - Defense drones can easily pick off space mines that approach your ship. This is especially usefully if you happen to jump into a minefield.</text>
+	<text>TIP: Cloaked Projectiles - Some weapons fire cloaked missiles or drop stealth mines. These projectiles can only be intercepted by Level 2 defense drones.</text>
+	<text>TIP: Ice Fields - Ice fields exist in remote areas far away from active stars. These areas have almost no background radiation to speak of, which makes cloaking devices useless and hiding impossible within them.</text>
+	<text>TIP: Zoltan Diplomacy - Commanding a ship of the wise Zoltan will give you a natural degree of authority. You will be able to negotiate favourable surrender offers and find peaceful resolutions for many conflicts.</text>
+	<text>TIP: Slug "Flexibility" - The Federation is well know to use Slug auxiliaries for their dirty work. Your crew will not expect you to stick to the rules if you command a Slug vessel.</text>
+	<text>TIP: Player Surrender - Remember that you often can try to surrender if you are actively attacked. This might cost you some resources, but it can save your life in certain situations.</text>
+	<text>TIP: Breaking Ceasefire Agreements - Attacking an opponent whose surrender offer has been accepted constitutes a galactic war crime. This might disturb your crew a bit.</text>
+	<text>TIP: Making Surrender Offers - Bigger compensation offers will increase the chance of your surrender being accepted. Most opponents will always accept a great offer.</text>
+	<text>TIP: Trustworthiness of Opponents - Not all your opponents will obey the general etiquette of space combat. Certain factions might attack you again after you transfer a surrender offer.</text>
+	<text>TIP: Outposts - These military stations are well-armed. Prepare for a tough fight when you encounter one.</text>
+	<text>TIP: Checkpoints - Checkpoint stations are attacked frequently, and are therefore equipped with clone bays to protect their staff. They can have various other systems as well.</text>
+	<text>TIP: EW Platforms - Electronic Warfare stations are always equipped with Hacking systems. Be prepared to deal with system disruption when engaging them.</text>
+	<text>TIP: Hives and Brood-stations - Some factions heavily rely on cloning facilities to swell their ranks. When you find yourself near one of their cloning stations, you will have to deal with almost endless waves of boarders.</text>
+	<text>TIP: Surveyors and Instigators - Some ship classes rely on Mind Control systems to force your crew to sabotage your ship. You will have to somehow deal with your turned crewmen if you encounter them.</text>
+	<text>TIP: Artillery System - The Artillery system you can buy at stores will equip your ship with its signature artillery weapon, often providing a strong boost for your offence.</text>
+	<text>TIP: Faction Artillery - Buy the artillery system to discover the various artillery guns available. Certain ships might receive different kinds of artillery.</text>
+	<text>TIP: Combat Augment Power Cost - The energy cost of combat augments can be offset with the Internal Generator augment. You can engineer it at empty beacons if you have combat augments.</text>
+	<text>TIP: Auto Sectors - This sectors are under the control of automated construction ships. You will rarely encounter manned ships here.</text>
+	<text>TIP: Pirate Homeworlds - Strong pirate cruisers roam the pirate strongholds. Naturally, they will pose a significant threat.</text>
+	<text>TIP: Rock Sectors - Extremely tough stations and many missile-wielding enemies can be encountered in these sectors. Black holes are also somewhat apparent occurrences here.</text>
+	<text>TIP: Mantis Sectors - The Mantis will often try to overwhelm you with boarders. Their brood stations and convoys can teleport almost infinite amounts of warriors to your ship.</text>
+</textList>
+<mod:findName type="event" name="REFUGEE_DISTRESS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="REFUGEE_DISTRESS">
+	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
+	<choice>
+		<text>Hail them.</text>
+		<event load="REFUGEE_HAIL_LIST_NO_ESCAPE"/>
+	</choice>
+	<choice>
+		<text>Ignore the refugees.</text>
+		<event/>
+	</choice>
+	<distressBeacon/>
+</event>  
+<eventList name="REFUGEE_HAIL_LIST_NO_ESCAPE">
+	<event>
+		<text>As you hail the freighter, it advances, weapons bristling from its hull! It's a pirate ambush!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons!</text>
+		<ship load="ZOLTAN_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait!</text>
+		<ship load="PIRATE_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport and now they've found you instead!</text>
+		<ship load="SLUG_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event load="REFUGEE_TRADER_NO_ESCAPE"/>
+	<event load="REFUGEE_TRADER_NO_ESCAPE"/>
+	<event load="REFUGEE_TRADER_NO_ESCAPE"/>
+	<event load="REFUGEE_TRADER_NO_ESCAPE"/>
+</eventList>
+<event name="REFUGEE_TRADER_NO_ESCAPE">
+	<text>The vessel is relieved to hear from you! They are running low on supplies. They suggest a trade.</text>
+	<ship load="CIVILIAN_SHIP_NO_ESCAPE_REFUGE" hostile="false"/>
+	<choice>
+		<text>Trade with them.</text>
+		<event load="TRADER_LIST"/>
+	</choice>
+	<choice>
+		<text>Politely decline.</text>
+		<event/>
+	</choice>
+	<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+		<text>Attack the refugees. This is an act of piracy, but your crew will obey your orders.</text>
+		<event load="CR_PIRACY_ATTACK_START"/>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text>Attack the refugees. However this is an act of piracy, your crew may be disturbed.</text>
+		<event load="C_PIRACY_RESULTS"/>
+	</choice>
+	<choice req="AE_REQUISITION" hidden="true"> 
+		<text>(Requisition License) Order the seizure of their cargo.</text>
+		<event load="CE_REQUISITION_CIVILIAN"/>
+	</choice>
+</event>
+<mod:findName type="event" name="TERRAFORMING_SCAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="TERRAFORMING_SCAN"  unique="true">
+	<text>You receive a hail from a station orbiting a nearby planet. "Captain, we are Federation Terraforming Team C12 and are in need of assistance. Do you have some time?"</text>
+	<choice>
+		<text>You offer your assistance.</text>
+		<event>
+			<text>"Thank you! We need to scan this planet for life before we can begin terraforming, but our sensors can't get the necessary power to scan through this atmosphere. We've got a schedule to keep, any chance you can help?"</text>
+			<choice>
+				<text>Attempt to scan the planet.</text>
+				<event load="NORMAL_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice req="sensors" lvl="2" hidden="true">
+				<text>(Lv2 Sensors) Set sensors to maximum and scan.</text>
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice req="AE_SCIENCE" hidden="true"> 
+				<text>(Research Laboratory) Use your specialized equipment to help with the scan.</text>
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice req="energy" hidden="true">
+				<text>(Zoltan Crew) Send your crewman to overcharge their systems.</text>
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>You do not have time.</text>
+		<event>
+			<text>"We understand. Best of luck on your mission, sir!"</text>
+			<choice>
+				<text>Prepare to jump away.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="HIGH_SCAN_TERRAFORMING">
+	<event>
+		<text>After a complete scan of the planet, you find no life. The team is grateful and ready to get to work. The station scientists have a unique talent for life support units and offer to upgrade your oxygen system as thanks.</text>
+		<upgrade amount="1" system="oxygen"/>
+	</event>
+	<event>
+		<text>A complete scan of the planet reveals no life signs other than a single ship on the surface. The terraformers thank you for your help, and attempt to contact the ship. Just as you're about to jump away, the ship takes off and attacks, it's a pirate!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>A complete scan of the planet reveals a simple mold as the only life present. The terraformers claim their terraforming plans are only hindered by intelligent life; they can begin their work.</text>
+		<choice>
+			<text>Tell them to stop. Any life is valuable.</text>
+			<event>
+				<text>"But our livelihood depends on this job! Who cares about some silly mold? We'll pay you to look the other way!"</text>
+				<choice>
+					<text>Accept the bribe and leave.</text>
+					<event>
+						<item_modify>
+							<item type="scrap" min="15" max="25"/>
+						</item_modify>
+					</event>
+				</choice>
+				<choice>
+					<text>Offer to pay them to at least delay until the mold can be studied.</text>
+					<event>
+						<text>They see reason and accept the offer. The station scientists have a unique talent for life support units and offer to upgrade your oxygen system as an apology for their behaviour.</text>
+						<upgrade amount="1" system="oxygen"/>
+						<item_modify>
+							<item type="scrap" min="-25" max="-15"/>
+						</item_modify>
+					</event>
+				</choice>
+				<choice>
+					<text>Power your weapons and demand they leave at once.</text>
+					<event>
+						<text>They shut off communications, but you can tell they have begun an evacuation procedure.</text>
+					</event>
+				</choice>	
+			</event>
+		</choice>
+		<choice>
+			<text>Leave them to their work.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="REFUGEE_NO_DISTRESS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="REFUGEE_NO_DISTRESS">
+	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
+	<choice>
+		<text>Hail them.</text>
+		<event load="REFUGEE_HAIL_LIST"/>
+	</choice>
+	<choice>
+		<text>Ignore the refugees.</text>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="REFUGEE_TRADER"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="REFUGEE_TRADER">
+	<text>The vessel is relieved to hear from you! They are running low on supplies. They suggest a trade.</text>
+	<ship load="CIVILIAN_SHIP" hostile="false"/>
+	<choice>
+		<text>Trade with them.</text>
+		<event load="TRADER_LIST"/>
+	</choice>
+	<choice>
+		<text>Politely decline.</text>
+		<event/>
+	</choice>
+	<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+		<text>Attack the refugees. This is an act of piracy, but your crew will obey your orders.</text>
+		<event load="CR_PIRACY_ATTACK_START"/>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text>Attack the refugees. However this is an act of piracy, your crew may be disturbed.</text>
+		<event load="C_PIRACY_RESULTS"/>
+	</choice>
+	<choice req="AE_REQUISITION" hidden="true"> 
+		<text>(Requisition License) Order the seizure of their cargo.</text>
+		<event load="CE_REQUISITION_CIVILIAN"/>
+	</choice>
+</event>
+<eventList name="REFUGEE_HAIL_LIST">
+	<event>
+		<text>As you hail the freighter, it advances, weapons bristling from its hull! It's a pirate ambush!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons!</text>
+		<ship load="ZOLTAN_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait!</text>
+		<ship load="PIRATE_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport and now they've found you instead!</text>
+		<ship load="SLUG_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event load="REFUGEE_TRADER"/>
+	<event load="REFUGEE_TRADER"/>
+	<event load="REFUGEE_TRADER"/>
+	<event load="REFUGEE_TRADER"/>
+</eventList>
+<eventList name="REFUGEE_HAIL_LIST_ZOLTAN">
+	<event>
+		<text>As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons!</text>
+		<ship load="ZOLTAN_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event load="REFUGEE_TRADER"/>
+</eventList>
+<eventList name="REFUGEE_HAIL_LIST_PIRATE">
+	<event>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait!</text>
+		<ship load="PIRATE_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event load="REFUGEE_TRADER"/>
+</eventList>
+<eventList name="REFUGEE_HAIL_LIST_SLUG">
+	<event>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait!</text>
+		<ship load="PIRATE_REFUGEE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event load="REFUGEE_TRADER"/>
+</eventList>
+<eventList name="EMPTY_STATION2_LIST">
+	<event>
+		<text>As you approach it becomes clear that the station is simply an empty shell. It has been stripped of useful materials long ago.</text>
+	</event>
+	<event>	
+		<text>You approach cautiously but you detect no danger. It appears to have been a small rest stop that was abandoned a while ago. You take what few supplies you can find.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Upon closer inspection it appears to have a large portion of its hull destroyed. You take what few supplies you can find.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>The station is in disarray. You find a cloning bay partially intact but nothing else seems to be functioning.</text>
+		<choice hidden="true" req="clonebay">
+			<text>(Clone Bay) Search for a surviving DNA bank.</text>
+			<event>
+				<text>While the cloning facilities are no longer functioning, you find someone was in queue to be cloned. You transfer their data to your clone bay and after a time their body is rebuilt.</text>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="EMPTY_STATION2_CLONE"/>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Scrap the machinery.</text>
+			<event>
+				<text>You take what you can and prepare to move on.</text>
+				<autoReward level="LOW">scrap_only</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You dock with the station to take a look inside. However, no sooner do you open the airlock that pirates burst in. Meanwhile, scanners pick up a previously-undetected pirate ship moving in to attack!</text>
+		<boarders min="2" max="2"/>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile multiple warning signals go off on the bridge. The pirates have activated a remote planetary defense system and it's locking onto your ship!</text>
+		<boarders min="3" max="4"/>
+		<environment type="PDS" target="player"/>
+	</event>
+</eventList>	
+<eventList name="WRECKAGE_INVESTIGATE">
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and are able to salvage some useful material from the wreckage.</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event>
+		<text>As you approach the wreckage, a Mantis ship screams into the system... either sensing prey - or to finish the job its fellows started.</text>
+		<ship load="MANTIS_FIGHT" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>The wreckage appears to be a battle between Federation fighters and Rebel cruisers. Though outnumbered, it looks like the Federation fought valiantly. As you begin a more detailed scan of the wreckage, Rebel reinforcements arrive in the system and target your ship!</text>
+		<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you approach the wreckage, a Zoltan ship makes its arrival. It immediately mistakes you for one of the attackers, declares you as hostile aggressors in violation of Zoltan space, and opens fire!</text>
+		<ship load="ZOLTAN_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you approach the wreckage, a Slug ship makes its arrival. It hesitates for a moment, as if surprised to see anyone remaining, and then jumps away without a word. You resume scanning the system, wary of any other visitors.</text>
+	</event>
+</eventList>
+<eventList name="FUELING_STATION_PIRATE_LIST">
+	<event>
+		<text>You dock and signal the fuel station's staff to begin refuelling.</text>
+		<choice hidden="true">
+			<text>Wait for them to finish.</text>
+			<event load="FUELING_STATION_PIRATE_LIST2"/>
+		</choice>
+		<choice req="doors" lvl="2" hidden="true">
+			<text>(Lv2 Doors) Seal your blast doors, one can never be too careful when docked.</text>
+			<event>
+				<text>Pirates hidden on the station are confounded by your security locks, turning an attempted ambush into a fish-in-a-barrel firefight. You take control of the station and take its fuel reserves.</text>
+				<item_modify>
+					<item type="fuel" min="5" max="5"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>You have a bad feeling about this, undock and move away.</text>
+			<event>
+				<text>You signal the helmsman to bring the ship away from the station. Someone else could probably put the fuel to better use.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>The refuelling station welcomes you into one of its berths, and as you hail them, there is an explosion from your engine room! While assessing the damage, you detect a Pirate Ship closing fast!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<damage amount="3" system="engines"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="QUEST_CONSTRUCTIONYARD_LIST">
+	<event>
+	<img back="BG_WARNING_ASB_CIVILIAN" planet="NONE"/>
+	<text back="BG_WARNING_ASB_CIVILIAN" planet="NONE">You find the missing cargo ship docked to a Rebel station. You send a short-band message to them and discover they are being held against their will and forced to 'donate to their supplies for the war effort.'</text>
+		<choice hidden="true">
+			<text>Attack the Rebels to help them escape.</text>
+			<event>
+				<text>You move in to attack the Rebel ship that is threatening them and scanners detect weapon locks from a nearby Anti-Ship Battery. It's about to get hectic!</text>
+				<ship load="QUEST_CONSTRUCTIONYARD_SHIP" hostile="true"/>
+				<environment type="PDS" target="player"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave.</text>
+			<event>
+				<text>You apologize but it's not worth the risk to attack a Rebel station.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You find the missing cargo ship docked to an empty space station. However their hold appears to be empty and there are obvious signs that anyone is inside the ship or station. Everything looks abandoned.</text>
+		<choice hidden="true">
+			<text>Move in to examine the station.</text>
+			<event load="EMPTY_STATION2_LIST"/>
+		</choice>
+		<choice>
+			<text>Stay near the Beacon.</text>
+			<event>
+				<text>You decide it's not worth the time to examine.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You find the missing cargo ship floating near the beacon. "Thank heavens! We've been drifting here after using the last of our fuel to escape a pirate raid."</text>
+		<choice hidden="true">
+			<text>Give them the requested 4 fuel.</text>
+			<event>
+				<text>"Great, thank you. Here's some scrap metal for your troubles. Be careful out there."</text>
+				<autoReward level="MED">scrap_only</autoReward>
+				<item_modify>
+					<item type="fuel" min="-4" max="-4"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Give them 1 fuel.</text>
+			<event>
+				<text>"Well, I suppose that's better than nothing. Than you. Hopefully we can find a station at the next Beacon."</text>
+				<item_modify>
+					<item type="fuel" min="-1" max="-1"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Do not give them any.</text>
+			<event>
+				<text>"I see..."</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="ROCK_SLUG_COMMAND">
+	<event>
+		<text>Apparently the Rock Captain was more annoyed than you thought, they shut off all communication and turn on you, the 'slime balls' defender.'</text>
+		<ship load="ROCK_SLUG_REACTOR_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>With much grumbling, the Rock Captain agrees to pay the price.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="ROCK_SLUG_GRATEFUL"/>
+		</choice>
+	</event>
+	<event>
+		<text>A massive explosion emanates from the Rock Ship, shattering its hull and sending debris on an unavoidable collision course to your ship. Seems like that reactor upgrade was poorly done after all, and the Slugs took the opportunity to jump away.</text>
+		<damage amount="1"/>
+		<damage amount="1" system="random"/>
+		<damage amount="1" system="random"/>
+	</event>
+</eventList>
+<eventList name="HIGH_SCAN_TERRAFORMING">
+	<event>
+		<text>After a complete scan of the planet, you find no life. The team is grateful and ready to get to work. The station scientists have a unique talent for life support units and offer to upgrade your oxygen system as thanks.</text>
+		<upgrade amount="1" system="oxygen"/>
+	</event>
+	<event>
+		<text>A complete scan of the planet reveals no life signs other than a single ship on the surface. The terraformers thank you for your help, and attempt to contact the ship. Just as you're about to jump away, the ship takes off and attacks, it's a pirate!</text>
+		<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>A complete scan of the planet reveals a simple mold as the only life present. The terraformers claim their terraforming plans are only hindered by intelligent life; they can begin their work.</text>
+		<choice>
+			<text>Tell them to stop. Any life is valuable.</text>
+			<event>
+				<text>"But our livelihood depends on this job! Who cares about some silly mold? We'll pay you to look the other way!"</text>
+				<choice>
+					<text>Accept the bribe and leave.</text>
+					<event>
+						<item_modify>
+							<item type="scrap" min="15" max="25"/>
+						</item_modify>
+					</event>
+				</choice>
+				<choice>
+					<text>Offer to pay them to at least delay until the mold can be studied.</text>
+					<event>
+						<text>They see reason and accept the offer. The station scientists have a unique talent for life support units and offer to upgrade your oxygen system as an apology for their behaviour.</text>
+						<upgrade amount="1" system="oxygen"/>
+						<item_modify>
+							<item type="scrap" min="-25" max="-15"/>
+						</item_modify>
+					</event>
+				</choice>
+				<choice>
+					<text>Power your weapons and demand they leave at once.</text>
+					<event>
+						<text>They shut off communications, but you can tell they have begun an evacuation procedure.</text>
+					</event>
+				</choice>	
+			</event>
+		</choice>
+		<choice>
+			<text>Leave them to their work.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="PIRATE_SALESMAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_SALESMAN" unique="true">
+	<text>A ship with conspicuous pirate markings is orbiting a nearby moon, broadcasting a simple message claiming to have equipment available for sale.</text>
+	<choice>
+		<text>Hail the ship.</text>
+		<event load="CONTACT_PIRATE_SALESMAN"/>
+	</choice>
+	<choice>
+		<text>Attack him before he can attack!</text>
+		<event>
+			<text load="CE_PRE_FIGHT_TEXT"/>
+			<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Quickly prepare to jump away.</text>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="DOCK_DRONE_SALESMAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="DOCK_DRONE_SALESMAN">
+	<text>A human in an exquisite suit meets you on board. "Welcome to my ship! We specialize in drones of all kinds, can I interest you in any?"</text>
+	<choice>
+		<text>Buy some Drone parts.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-25" max="-25"/>
+				<item type="drones" min="5" max="5"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Drone schematic.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-35" max="-25"/>
+			</item_modify>
+			<drone name="DRONES_STANDARD_PLAYER"/>
+		</event>
+	</choice>
+	<choice req="drones" max_lvl="3" max_group="0" blue="false"> 
+		<text>Buy a Drone system upgrade.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-20" max="-15"/>
+			</item_modify>
+			<upgrade system="drones" amount="1"/>
+		</event>
+	</choice>
+	<choice req="drones" min_level="4" max_lvl="5" max_group="0" blue="false"> 
+		<text>Buy a Drone system upgrade.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-33" max="-25"/>
+			</item_modify>
+			<upgrade system="drones" amount="1"/>
+		</event>
+	</choice>
+	<choice req="drones" min_level="6" max_lvl="7" max_group="0" blue="false"> 
+		<text>Buy a Drone system upgrade.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-65" max="-50"/>
+			</item_modify>
+			<upgrade system="drones" amount="1"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy nothing.</text>
+		<event>
+			<text>"Ah, I'm sorry to hear that! Pleasant journeys." Once back to the helm, a series of explosions rocks your ship. The pirate ship has powered its weapons! You receive a message, "You shouldn't waste people's time Captain!"</text>
+			<ship load="PIRATE" hostile="true"/>
+			<damage amount="1" system="engines" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="DOCK_BOMB_SALESMAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="DOCK_BOMB_SALESMAN">
+	<text>A human in an exquisite suit meets you on board. "Welcome to my ship! We specialize in explosives of all kinds, can I interest you in any?"</text>
+	<choice>
+		<text>Buy some missiles.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-10" max="-10"/>
+				<item type="missiles" min="5" max="5"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a bomb launcher.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-60" max="-40"/>
+			</item_modify>
+			<weapon name="WEAPONS_BOMBS_CHEAP"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a rocket weapon.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-60" max="-50"/>
+			</item_modify>
+			<weapon name="WEAPONS_MISSILES_EXPENSIVE"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy nothing.</text>
+		<event>
+			<text>"Ah, I'm sorry to hear that! Pleasant journeys." Once back to the helm, a series of explosions rocks your ship. The pirate ship has powered its weapons!</text>
+			<ship load="PIRATE" hostile="true"/>
+			<damage amount="1" system="engines" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="REBEL_CHECKPOINT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="REBEL_CHECKPOINT">
+	<text load="REBEL_CHECKPOINT_TEXT"/>
+	<choice>
+		<text>Fend for yourself, attack and escape.</text>
+		<event>
+			<text load="CE_PRE_FIGHT_TEXT"/>
+			<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Bribe the Rebels to release the civilian ships.</text>	
+		<event>
+			<text load="REBEL_BRIBE_TEXT"/>
+			<item_modify>
+				<item type="scrap" min="-15" max="-10"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Contact the civilian ships.</text>
+				<event load="REBEL_BRIBE_RESULT"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text load="GENERIC_HIDE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<eventList name="REBEL_BRIBE_RESULT">
+	<event>
+		<text>Some of the civilians pool together their excess scrap to try to repay you for your help.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>One of the civilian ships quietly teleports over a crate of Federation military supplies.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>One of the civilian ships contacts you and reveals they are Federation loyalists. An eavesdropping Rebel swoops in, destroys the ship, and turns to attack you!</text>
+		<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="REBEL_HELPERS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="REBEL_HELPERS">
+	<text load="REBEL_HELPERS_TEXT"/>
+	<choice>
+		<text>Attack the Rebels.</text>
+		<event>
+			<ship load="REBEL_HELPERS_SHIP" hostile="true"/>
+			<text load="CE_PRE_FIGHT_TEXT"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice req="PIRACY_CHECK_ATTACK2" hidden="true" blue="false" max_group="0">
+		<text>Wait and steal the supplies from the civilians. This is an act of piracy, but your crew will obey your orders.</text>
+		<event load="REBEL_HELPERS_SUPPLIES"/>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text>Wait and steal the supplies from the civilians. However this is an act of piracy, your crew may be disturbed.</text>
+		<event>
+			<text>Your crew actively refuses to carry out your orders. It would seem that seeing the Rebels of all people offering humanitarian aid has had an effect on them. Let's move on before an argument breaks out.</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Leave them be.</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="REBEL_HELPERS_SUPPLIES">
+	<event>
+		<text>The colonists hand over the supplies. Their settlement has been hit by a flare-drought and the Rebels were delivering seeds to regrow the winters harvest. As you leave, you receive a message: "This is why the Rebels will always have support!"</text>
+		<augment name="TE_GOODS_SEEDS"/>
+	</event>
+	<event>
+		<text>The colonists hand over the supplies and you load it onto your ship. As you jump away, you crack it open and discover nothing more than synthetic smart-clothing essential for surviving the local cold-cycle.</text>
+		<augment name="TE_GOODS_TEXTILES"/>
+	</event>
+	<event>
+		<text>You make the colonists teleport the supplies to your ship. It's nothing more than nutritional goo. Oh well, someone somewhere else might buy this.</text>
+		<augment name="TE_GOODS_ORGANISMS"/>
+	</event>
+	<event>
+		<text>The colonists hand over the supplies. It appears to be mostly equipment meant for automated farming, but you can make use of it. As you leave, you receive a message: "This is why the Rebels will always have support!"</text>
+			<item_modify>
+				<item type="drones" min="1" max="3"/>
+			</item_modify>
+		<augment name="TE_GOODS_ROBOTS"/>
+	</event>
+	<event>
+		<text>The colonists hand over the supplies and you load it onto your ship. As you jump away, you crack it open and discover nothing more than vaccinations for a local plague.</text>
+		<augment name="TE_GOODS_ENGI_MEDICINE"/>
+	</event>
+	<event>
+		<text>You make the colonists teleport the supplies to your ship. It's nothing more than building construction supplies. Oh well, scrap is scrap.</text>
+		<item_modify>
+			<item type="scrap" min="5" max="15"/>
+		</item_modify>
+		<augment name="TE_GOODS_GIRDERS"/>
+	</event>
+	<event>
+		<text>The colonists willingly give up their supplies. But as you make to jump away, an explosion rocks your ship. The cargo was booby trapped!</text>
+		<damage amount="2" system="room" effect="random"/>
+	</event>
+	<event>
+		<text>The colonists willingly give up their supplies. But as you make to jump away, an explosion rocks your ship. The cargo was booby trapped!</text>
+		<damage amount="2" system="room" effect="random"/>
+	</event>
+</eventList>
+<mod:findName type="ship" name="REBEL_HELPERS_SHIP"> 
+    <mod:removeTag />
+</mod:findName>	
+<ship name="REBEL_HELPERS_SHIP" auto_blueprint="SHIPS_REBEL"> 
+	<destroyed>
+		<text>With the Rebel ship destroyed, you take the time to collect what little scrap remains. You find large supply containers among the debris, obviously meant for the local civilians.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>Take the supplies meant originally for the civilians.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_REBEL"/>
+		</choice>
+		<choice hidden="true">
+			<text>Leave the civilians supplies.</text>
+			<event load="REBEL_HELPER_NO_SUPPLIES"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>With the Rebel crew dead, you strip their ship for equipment. They had not yet made their delivery to the civilians, you find large supply containers in the ships cargo hold.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>Take the supplies meant originally for the civilians.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_REBEL"/>
+		</choice>
+		<choice hidden="true">
+			<text>Leave the civilians supplies.</text>
+			<event load="REBEL_HELPER_NO_SUPPLIES"/>
+		</choice>
+	</deadCrew>
+</ship>
+<eventList name="REBEL_HELPERS_SUPPLIES_REBEL">
+	<event>
+		<text>The settlement has been hit by a flare-drought and the Rebels were delivering seeds to regrow the winter harvest. As you are about to leave, you receive a message: "This is why the Rebels will always have support!"</text>
+		<choice hidden="true">
+			<text>Deliver the supplies yourself.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_DELIVER"/>
+		</choice>
+		<choice hidden="true">
+			<text>Keep the supplies.</text>
+			<event>
+				<text>Any Rebel possessions are declared free prizes. You fought hard for these goods and they might sell for a good profit. The scrap will be used for the good of the mission.</text>
+				<augment name="TE_GOODS_SEEDS"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>As you are about to jump away, you crack the crates open and discover nothing more than synthetic smart-clothing essential for surviving the local cold-cycle.</text>
+		<choice hidden="true">
+			<text>Deliver the supplies yourself.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_DELIVER"/>
+		</choice>
+		<choice hidden="true">
+			<text>Keep the supplies.</text>
+			<event>
+				<text>Any Rebel possessions are declared free prizes. You fought hard for these goods and they might sell for a good profit. The scrap will be used for the good of the mission.</text>
+				<augment name="TE_GOODS_TEXTILES"/>
+			</event>
+		</choice>	</event>
+	<event>
+		<text>You make the colonists teleport the supplies to your ship. It's nothing more than nutritional goo. Oh well, someone somewhere else might buy this.</text>
+		<choice hidden="true">
+			<text>Deliver the supplies yourself.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_DELIVER"/>
+		</choice>
+		<choice hidden="true">
+			<text>Keep the supplies.</text>
+			<event>
+				<text>Any Rebel possessions are declared free prizes. You fought hard for these goods and they might sell for a good profit. The scrap will be used for the good of the mission.</text>
+				<augment name="TE_GOODS_ORGANISMS"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>The supplies appears to be mostly equipment meant for automated farming, but you can make use of it. As you leave, you receive a message: "This is why the Rebels will always have support!"</text>
+		<choice hidden="true">
+			<text>Deliver the supplies yourself.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_DELIVER"/>
+		</choice>
+		<choice hidden="true">
+			<text>Keep the supplies.</text>
+			<event>
+				<text>Any Rebel possessions are declared free prizes. You fought hard for these goods and they might sell for a good profit. The scrap will be used for the good of the mission.</text>
+				<item_modify>
+					<item type="drones" min="1" max="3"/>
+				</item_modify>
+				<augment name="TE_GOODS_ROBOTS"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>As you jump away, you crack open the crates and discover nothing more than vaccinations for a local plague.</text>
+		<choice hidden="true">
+			<text>Deliver the supplies yourself.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_DELIVER"/>
+		</choice>
+		<choice hidden="true">
+			<text>Keep the supplies.</text>
+			<event>
+				<text>Any Rebel possessions are declared free prizes. You fought hard for these goods and they might sell for a good profit. The scrap will be used for the good of the mission.</text>
+				<augment name="TE_GOODS_ENGI_MEDICINE"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>It's nothing more than small scale building construction supplies. Oh well, scrap is scrap.</text>
+		<choice hidden="true">
+			<text>Deliver the supplies yourself.</text>
+			<event load="REBEL_HELPERS_SUPPLIES_DELIVER"/>
+		</choice>
+		<choice hidden="true">
+			<text>Keep the supplies.</text>
+			<event>
+				<text>Any Rebel possessions are declared free prizes. You fought hard for these goods and they might sell for a good profit. The scrap will be used for the good of the mission.</text>
+				<item_modify>
+					<item type="scrap" min="5" max="15"/>
+				</item_modify>
+				<augment name="TE_GOODS_GIRDERS"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>As you make to jump away, an explosion rocks your ship. The cargo was booby trapped! Were the Rebels planning to covertly murder these civilians?</text>
+		<damage amount="2" system="room" effect="random"/>
+	</event>
+	<event>
+		<text>As you make to jump away, an explosion rocks your ship. The cargo was booby trapped! Were the Rebels planning to covertly murder these civilians?</text>
+		<damage amount="2" system="room" effect="random"/>
+	</event>
+</eventList>
+<eventList name="REBEL_HELPERS_SUPPLIES_DELIVER">
+	<event>
+		<text>The colonists are surprised that you deliver the goods back to them; some turn out to be still loyal to the galactic order. "We appreciate what you did. A lesser officer might have made off with the supplies, leaving us to our fate in this forsaken system. We will repay you as best as we can for your compassion, but please, keep quiet about what happened here."</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Many people are seen fleeing into the hills as you bring your ship down near the settlement. The colonists are surprised that you deliver the goods back to them and give your crew suspicious looks as you unload the cargo. You jump away before they say another word.</text>
+	</event>
+</eventList>
+<mod:findName type="event" name="ROGUE_REBEL"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="ROGUE_REBEL">
+	<text load="ROGUE_REBEL_TEXT"/>
+	<choice>
+		<text>Go looking for the Rebel ship.</text>
+		<event load="ROGUE_REBEL_SEARCH"/>
+	</choice>
+	<choice>
+		<text>No time to search, you prepare to jump away.</text>
+		<event/>
+	</choice>
+	<choice req="sensors" lvl="2" max_group="0">
+		<text>(Lv2/3 Sensors) Perform a scan of the area.</text>
+		<event>
+			<text>You quickly find the Rebel ship's location and move to intercept.</text>
+			<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="3" max_group="0" hidden="true">
+		<text>(Lv3/3 Sensors) Pinpoint the Rebel's location.</text>
+		<event>
+			<text>You find the Rebel ship hiding on a nearby asteroid. You are able to get a shot off and permanently disable their engines before they notice you.</text>
+			<ship load="REBEL" hostile="true"/>
+			<status type="limit" target="enemy" system="engines" amount="0"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="ROGUE_REBEL_SEARCH">
+	<event>
+		<text>You spend some time looking around but your scanners cannot pick up any trace of the Rebel ship. You prepare to move on.</text>
+	</event>
+	<event>
+		<text>After a short search you find the Rebel ship. Let's hope he's as easy to defeat in combat as he was to find.</text>
+		<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You are able to quickly track down the Rebel. Let's hope he's as easy to defeat in combat as he was to find.</text>
+		<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>After far too long spent searching, you are finally able to track him down. You go into the fight pondering just how much of a head start you've lost on the Rebel Fleet...</text>
+		<modifyPursuit amount="1"/>
+		<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="TRADER_UPGRADES_EXCHANGE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="TRADER_UPGRADES_EXCHANGE" unique="true"> 
+	<text load="TRADER_UPGRADES_EXCHANGE_TEXT"/>
+  	 <choice req="reactor" lvl="0" max_lvl="24" blue="false">
+		<text>Agree to the trade.</text>
+		<event load="TRADER_UPGRADES_EXCHANGE_LIST"/>
+	</choice>
+	<choice>	
+		<text>Respectfully decline.</text>
+		<event>	
+			<text>You decide you need what supplies you have.</text>
+		</event>
+	</choice>
+</event>
+
+<mod:findName type="event" name="TAVERN_HIRE"> 
+    <mod:removeTag />
+</mod:findName>
+<event name="TAVERN_HIRE">
+	<text load="TAVERN_HIRE_TEXT"/>
+	<choice>
+		<text>Hire a crew member.</text>
+		<event>
+			<crewMember amount="1"/>
+			<item_modify>
+				<item type="scrap" min="-40" max="-25"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Hire a veteran.</text>
+		<event>
+			<crewMember amount="1" all_skills="2"/>
+			<item_modify>
+				<item type="scrap" min="-60" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Consider letting a crewman go to work as a mercenary.</text>
+		<event load="TAVERN_HIRE_RELEASE"/>
+	</choice>
+	<choice>
+		<text>Don't hire anyone.</text>
+		<event/>
+	</choice>
+</event>
+<event name="TAVERN_HIRE_EXIT">
+	<text load="TAVERN_HIRE_TEXT"/>
+	<choice>
+		<text>Hire a crew member.</text>
+		<event>
+			<crewMember amount="1"/>
+			<item_modify>
+				<item type="scrap" min="-40" max="-25"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Hire an experienced crew member.</text>
+		<event>
+			<crewMember amount="1" all_skills="2"/>
+			<item_modify>
+				<item type="scrap" min="-60" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Consider letting a crewman go to work as a mercenary.</text>
+		<event load="TAVERN_HIRE_RELEASE"/>
+	</choice>
+	<choice>
+		<text>Don't hire anyone.</text>
+		<event/>
+	</choice>
+</event>
+<event name="TAVERN_HIRE_RELEASE">
+	<text>There also exists other ships in the area looking for potential allies, allies that you might be able to provide if you are willing.</text>
+	<choice req="engi" blue="false">
+		<text>Allow an Engi crew member to serve as a mechanic for some Mantis.</text>
+		<event>
+			<text>You formally salute with your Engi crew, which nods in your general direction without much emotion. Before taking its leave, the Engi programs into your navigation computer a location up ahead where it might be possible to acquire additional technology to help in its stead.</text>
+			<item_modify>
+				<item type="scrap" min="40" max="50"/>
+			</item_modify>
+			<quest event="FIND_DRONE"/>
+			<removeCrew class="engi">
+				<clone>false</clone>
+				<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+			</removeCrew>
+		</event>
+	</choice>
+	<choice req="mantis" blue="false">
+		<text>Allow a Mantis crew member to serve aboard a Dropship.</text>
+		<event>
+			<text>You formally salute with your Mantis crew, which responds with a collection of clicking sounds that the universal translator fails to interpret. Without much else, it makes its way onto the Dropship to participate in what it does best.</text>
+			<item_modify>
+				<item type="scrap" min="50" max="60"/>
+			</item_modify>
+			<removeCrew class="mantis">
+				<clone>false</clone>
+				<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+			</removeCrew>
+		</event>
+	</choice>
+	<choice req="slug" blue="false">
+		<text>Allow a Slug to work as a replacement pilot for a mercenary ship.</text>
+		<event>
+			<text>You formally salute with your Slug, which wiggles its antennae in a manner which is difficult to read the true meaning of. Before it leaves for its new job, it makes mention that it has sensed the presence of a rather notorious Slug pirate somewhere up ahead, chuckling to itself.</text>
+			<item_modify>
+				<item type="scrap" min="35" max="45"/>
+			</item_modify>
+			<quest event="DONOR_BLACK_RAVEN_MERC"/>
+			<removeCrew class="slug">
+				<clone>false</clone>
+				<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+			</removeCrew>
+		</event>
+	</choice>
+	<choice req="energy" blue="false">
+		<text>Allow your Zoltan crew to work as a luminescent engineer.</text>
+		<event>
+			<text>You formally salute with your Zoltan crew, which glows radiantly before you before returning the salute himself. He speaks of the location of a moon nearby that local star charts had revealed which caught his interest, before being teleported away by his new crew.</text>
+			<item_modify>
+				<item type="scrap" min="50" max="60"/>
+			</item_modify>
+			<quest event="ZOLTAN_ODD_MOON"/>
+			<removeCrew class="energy">
+				<clone>false</clone>
+				<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+			</removeCrew>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>View your other crew options.</text>
+		<event>
+			<text>Cursing user interface limitations, you consider the rest of your crew.</text>
+			<choice req="ghost" blue="false">
+				<text>Allow your Hologram to serve as an away party for hazardous missions.</text>
+				<event>
+					<text>You formally salute with your Hologram which replies with a copy of your salute so accurate and in-time with yours that it takes you by surprise. It integrates itself with the ship computer for one last moment before making its way aboard the expeditionary ship. Upon return to the helm, you discover your map has been updated.</text>
+					<item_modify>
+						<item type="scrap" min="40" max="50"/>
+					</item_modify>
+					<reveal_map/>
+					<removeCrew class="ghost">
+						<clone>false</clone>
+						<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+					</removeCrew>
+				</event>
+			</choice>
+			<choice req="rock" blue="false">
+				<text>Allow your Rockman to act as the security detail of a Zoltan freighter.</text>
+				<event>
+					<text>You formally salute with your Rockman, having to tilt your head upwards to meet eyes with its stoic figure. It punches in the location of a nearby asteroid field into your navigation computer before slowly making its leave, its lasting impression upon your ship being the now-broken terminal that it used.</text>
+					<item_modify>
+						<item type="scrap" min="45" max="55"/>
+					</item_modify>
+					<quest event="ASTEROID_DERELICT_SHIP_MERC"/>
+					<removeCrew class="rock">
+						<clone>false</clone>
+						<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+					</removeCrew>
+				</event>
+			</choice>
+			<choice req="crystal" blue="false">
+				<text>Against your better judgement, let your Crystalline crew member go to explore the galaxy.</text>
+				<event>
+					<text>You formally salute with your Crystalline companion, who seems particularly happy at the prospect of being able to travel around the universe. The only compensation for letting him go is the knowledge that those who have taken him aboard have left your hold positively bursting with scrap.</text>
+					<item_modify>
+						<item type="scrap" min="70" max="80"/>
+					</item_modify>
+					<removeCrew class="crystal">
+						<clone>false</clone>
+						<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+					</removeCrew>
+				</event>
+			</choice>
+			<choice req="anaerobic" blue="false">
+				<text>Allow your Lanius to work aboard a mining vessel.</text>
+				<event>
+					<text>You formally salute with your anaerobic crew member, which makes a clumsy attempt at copying your gesture. Before you are forced to leave the room from asphyxia, it has marked down the location of a strange ship signal coming from up ahead, suggesting in its best attempt at Human speech that it might be one of his kind.</text>
+					<item_modify>
+						<item type="scrap" min="40" max="50"/>
+					</item_modify>
+					<quest event="LANIUS_RESEARCHER_CRAFT"/>
+					<removeCrew class="anaerobic">
+						<clone>false</clone>
+						<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+					</removeCrew>
+				</event>
+			</choice>
+			<choice req="human" blue="false">
+				<text>Allow a Human crew member to serve for anyone in particular.</text>
+				<event>
+					<text>You formally salute with your crew member before he steps out of the airlock onto his new vessel. Before the ship makes its leave, he transmits to you the location of where he heard rumours of a hidden Federation facility located somewhere up ahead and wishes you the best of luck on completing your mission.</text>
+					<item_modify>
+						<item type="scrap" min="35" max="45"/>
+					</item_modify>
+					<quest event="HIDDEN_FEDERATION_BASE_LIST"/>
+					<removeCrew class="human">
+						<clone>false</clone>
+						<text>Dismissing crew members is a tough decision. Federation protocol dismissing the option to create simultaneous clones of a single person, you clear the entry from the Clone Bay database and prepare to move on.</text>
+					</removeCrew>
+				</event>
+			</choice>
+			<choice>
+				<text>Our crew is invaluable to our success, don't let anyone go and move on.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Our crew is invaluable to our success, don't let anyone go and move on.</text>
+		<event/>
+	</choice>
+</event>

@@ -1,0 +1,2693 @@
+<eventList name="CE_BOUNTY_LIST_GLOBAL">
+	<event>
+		<text>Its the usual deal: A small backwater colony is terrorized by a local raider. The farmers collected a meagre amount of ship scrap as payment and put a bounty on the pirate's head, seemingly the only way they see to escape their peril. Target: Unknown Pirate Craft. Payment: Low.</text>
+		<quest event="CE_BOUNTY_PIRATE_RAIDER"/>
+	</event>
+	<event>
+		<text>The wealth of a small but prosperous colony government has become well known to the Rebel fleet. A requisition craft pays them regular visits. The local magistrate wants that ship to disappear. Target: Rebel Requisition Officers. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_REBEL_REQUISITION"/>
+	</event>
+	<event>
+		<text>Students on small planetary settlement are unhappy about being watched by a Rebel surveillance satellite. While some of them have taken up military training, others want to hire outside help, so that no one (other than maybe you) gets hurt. Target: Auto Satellite. Payment: Low.</text>
+		<quest event="CE_BOUNTY_AUTO_SURVEYOR"/>
+	</event>
+	<event>
+		<text>A tiny settlement still loyal to the Federation seeks to recruit a gun for hire. They'll pay you to destroy the automated scouts that guards their system. Target: Automated Craft. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_AUTO"/>
+	</event>
+	<event>
+		<text>Organized crime is on an all-time high in the sector. The militia have put a price on the head of one of the ringleaders. Target: Gang Leader. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_GANG"/>
+	</event>
+	<event>
+		<text>The Militia have come down hard on the gangs in this sector, often using unreasonable force. A price is out on one of the Militia Captains, who has gone rogue after destroying a secluded station. Target: Militia Leader. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_MILITIA"/>
+	</event>
+	<event>
+		<text>A local planetary government wants you to track down a small Federation cruiser that is carrying stolen Rebel data... That sounds familiar. You'd do a lot for scrap, but you won't give up your mission. The locals are obviously looking for you, caution is advised. Target: You. Payment: Extremely High.</text>
+	</event>
+	<event>
+		<text>A civilian craft has broken through a quarantine checkpoint. The quarantine patrol is short on ships in this part of the sector, they are outsourcing the job. Target: Infected Civilians. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_INFECTED"/>
+	</event>
+	<event>
+		<text>The Engi can't defend themselves against the Rebels effectively and have put out bounties on some of the invading craft. Target: Rebel Forward Unit. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_ENGI_REBEL_INVADER"/>
+	</event>
+	<event>
+		<text>The Engi accuse some of their kind of "deviating from adequate behaviour parameters". The delinquents have fled the collective in a weaponized ship and the local Engi do not have the resources and firepower to pursue them. Target: Rogue Engi Ship. Payment: Low.</text>
+		<quest event="CE_BOUNTY_ENGI_PIRATE"/>
+	</event>
+	<event>
+		<text>A small outbreak of the personality degradation virus has been reported from a nearby system. The local Engi have become completely deranged and the collective is looking to hire a purge force. You could be part of it. Target: Rogue Engi Ship. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_ENGI_INFECTED"/>
+	</event>
+	<event>
+		<text>The crew of a Zoltan outpost has caught some nasty deep space dementia. Any passing civilians are put in danger by the station, but the Zoltan do now want to bear having to pacify their kind themselves. Target: Rogue Zoltan Outpost. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_ZOLTAN_STATION"/>
+	</event>
+	<event>
+		<text>A Zoltan AI ship has gone missing. This is never good news. Zoltan authority suspect a small scale AI revolt and need someone to discretely take care of the situation. Target: Rogue AI Ship. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_ZOLTAN_AI"/>
+	</event>
+	<event>
+		<text>Even though the Rebels have millions of supporters in this sector, not everyone seems to be happy. A wealthy underground group is ready to pay any Captain mad enough to fight the Rebels right in their core territory. Target: Rebel Cruiser. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_REBEL_CRUISER"/>
+	</event>
+	<event>
+		<text>Even with the Rebel fleet at the gates, the pirate lords in this sector keep busying themselves with slaughtering each other. Guns for hire are looked for everywhere. Target: Pirate Cruiser. Payment: High.</text>
+		<quest event="CE_BOUNTY_PIRATE_CRUISER"/>
+	</event>
+	<event>
+		<text>A small settlement has been raided by a Mantis slaver. The colonists want you to hunt the hunters, and agree to pay a small sum for it. Target: Mantis Slaver. Payment: Low.</text>
+		<quest event="CE_BOUNTY_MANTIS_SLAVER"/>
+	</event>
+	<event>
+		<text>The Mantis are raiding colonies in this sector and the locals lack the military power to defend themselves. You could become their exterminator. Target: Mantis Invaders. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_MANTIS_RAIDERS"/>
+	</event>
+	<event>
+		<text>A territorial dispute has aggregated a local Rock basilisk. Social etiquette forbids him to take action personally, but the Rockman is willing to pay an outsider to do the deed. You'll be paid to make it look like a pirate ambush, conducted by a foreign invader. Target: Rock Ship. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_ROCK"/>
+	</event>
+	<event>
+		<text>Some of your fellow Federation officers have deserted the cause. Their commanding officer has personally put out a bounty on the former Federation crew. Target: Federation Traitors. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_FED"/>
+	</event>
+	<event>
+		<text>Since the sector has been largely abandoned, the last remaining locals depend on the rare mercenary to defend their colonies against the Lanius invaders. Target: Lanius Scavengers. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_LANIUS"/>
+	</event>
+	<event>
+		<text>An anonymous client wants you hunt down a convicted weapon smuggler, as the local authorities are unwilling to act. This has corporate interests written all over it. Target: Weapon Smuggler. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_CORPORATE"/>
+	</event>
+	<event>
+		<text>There are no legal marks available in this sector. No one has need for a mercenary bounty hunter right now.</text>
+	</event>
+	<event>
+		<text>There are no legal marks available in this sector. No one has need for a mercenary bounty hunter right now.</text>
+	</event>
+	<event>
+		<text>There are no legal marks available in this sector. No one has need for a mercenary bounty hunter right now.</text>
+	</event>
+	<event>
+		<text>There are no legal marks available in this sector. No one has need for a mercenary bounty hunter right now.</text>
+	</event>
+	<event>
+		<text>There are no legal marks available in this sector. No one has need for a mercenary bounty hunter right now.</text>
+	</event>
+	<event>
+		<text>There are no legal marks available in this sector. No one has need for a mercenary bounty hunter right now.</text>
+	</event>
+</eventList>
+<event name="CE_BOUNTY_PIRATE_RAIDER">
+	<text>You found your mark: The pirate that is harassing the local colonies. Time to move in for the kill.</text>
+	<ship load="CE_SHIP_BOUNTY_PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_REBEL_REQUISITION">
+	<text>You successfully tracked down the Rebel commissars that are bleeding the local colonies. Time to make them disappear.</text>
+	<ship load="CE_SHIP_BOUNTY_REBEL_REQUISITION" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_AUTO_SURVEYOR">
+	<text>You arrive at the colony that seeks to be liberated from Rebel oppression. Let's hope they make it worth your while.</text>
+	<ship load="BS_STATION_BOUNTY_AUTO_SURVEYOR" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_AUTO">
+	<text>You arrive at the colony that seeks to be liberated from Rebel oppression. Let's hope they make it worth your while.</text>
+	<ship load="CE_SHIP_BOUNTY_AUTO" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_GANG">
+	<text>You chase down the gang leaders at the far end of the system. Their destruction will pay good money.</text>
+	<ship load="CE_SHIP_BOUNTY_GANG" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_MILITIA">
+	<text>You lure the rogue Militia leaders to the far side of the systems by transmitting some fake engagement reports. This gives you an opportunity to strike.</text>
+	<ship load="CE_SHIP_BOUNTY_MILITIA" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_INFECTED">
+	<text>These are the infected civilians you've been looking for. Repeated hails yield no answer. If you let them escape, they might infect millions. You'll have to kill these people to collect your payment.</text>
+	<ship load="CE_SHIP_BOUNTY_INFECTED" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_ENGI_REBEL_INVADER">
+	<text>You tracked down a Rebel forward unit that is spearheading into Engi territory. The Engi collective confirms that payment is available should you destroy the craft.</text>
+	<ship load="CE_SHIP_BOUNTY_ENGI_REBEL_INVADER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_ENGI_PIRATE">
+	<text>This is the rogue Engi vessel. You have no idea what they have done to deserve to die, but it is none of your business. The local Engi hive-mind confirms your contract. You move in for the kill.</text>
+	<ship load="CE_SHIP_BOUNTY_ENGI_PIRATE" hostile="true"/> 
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_ENGI_INFECTED">
+	<text>These are the deranged Engi you've been looking for. Time to purge their circuits forever.</text>
+	<ship load="CE_SHIP_BOUNTY_ENGI_INFECTED" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_ZOLTAN_STATION">
+	<text>A station makes contact. "The nature of the day is rotational. The fever is emaciated. The reason is-" These must be the demented Zoltan you are paid to take care of.</text>
+	<ship load="BS_STATION_BOUNTY_ZOLTAN" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_ZOLTAN_AI">
+	<text>You track down the AIs that have gone rogue. Eliminate them before they can escape to collect your payment.</text>
+	<ship load="CE_SHIP_BOUNTY_ZOLTAN_AI" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_REBEL_CRUISER">
+	<text>Whoever is paying you for taking on a Rebel cruiser probably isn't paying enough. The Rebels spot you from far away and move in to attack immediately.</text>
+	<ship load="CE_SHIP_BOUNTY_REBEL_CRUISER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_PIRATE_CRUISER">
+	<text>You track down your mark: A pirate lord commanding a large cruiser, passing though the system. This job starts to look worse the more you think about it. The pirates don't even bother with altering trajectory when you engage them. They don't seem to take your attack seriously.</text>
+	<ship load="CE_SHIP_PIRATE_CRUISER" hostile="true"/>
+	<status type="loss" target="enemy" system="reactor" amount="4"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_MANTIS_SLAVER">
+	<text>After a brief search, you locate the Mantis slaver ship. It is powered down and obviously tries to hide at the edge of the system. You easily get the drop on them and move in for the kill.</text>
+	<ship load="CE_SHIP_BOUNTY_MANTIS_SLAVER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_MANTIS_RAIDERS">
+	<text>You found your mark: A Mantis raider. The local settlers react euphorically to your arrival, hailing you as their saviour. You tell them to make sure that the payment is ready.</text>
+	<ship load="CE_SHIP_BOUNTY_MANTIS_RAIDER" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_ROCK">
+	<text>It is as simple as always: Destroy the ship, get paid and leave the sector. You're glad that you don't have to concern yourself with the all the intrigue that is probably connected to this contract.</text>
+	<ship load="CE_SHIP_BOUNTY_ROCK" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_FED">
+	<text>The deserters try to hide their ship near a small depot, but you track them down without mercy.</text>
+	<ship load="CE_SHIP_BOUNTY_FED" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_AI">
+	<text>Your client sends a burst message, confirming that he expects you to destroy this ship. You are still not sure if the AIs are playing games with you, but you move in to engage the ship nevertheless. A job is a job.</text>
+	<ship load="CE_SHIP_BOUNTY_AI" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_SLUG_NEBULA">
+	<text>Your client requires you to eliminate this particular Slug ship. Ambushing the telepaths is out of the question, you move in for a frontal assault.</text>
+	<ship load="CE_SHIP_BOUNTY_SLUG_NEBULA" hostile="true"/>
+		<environment type="nebula"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_PIRATE_NEBULA">
+	<text>Your mark has been sighted in this part of the nebula, but searching for the ship in the clouds would be a hopeless endeavour. Instead the pirate finds you, and descends on your ship with guns blazing!</text>
+	<ship load="CE_SHIP_BOUNTY_PIRATE_NEBULA" hostile="true"/>
+		<environment type="nebula"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_LANIUS">
+	<text>The deserters try to hide their ship near a small depot, but you track them down without mercy.</text>
+	<ship load="CE_SHIP_BOUNTY_LANIUS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="CE_BOUNTY_CORPORATE">
+	<text>This is your target, the local arms dealer. You must have interrupted an ongoing deal here: The ship was about to dock with a civilian vessel. The supposed client jumps away immediately after you arrived and the arms dealer moves into a defensive position.</text>
+	<ship load="CE_SHIP_BOUNTY_CORPORATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<eventList name="HOSTILE_OUTLAW">
+	<event load="PIRATE"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>	
+	<event load="PIRATE_AUGMENTED"/>
+	<event load="BS_EVENT_PIRATE"/>
+	<event load="BS_EVENT_PIRATE_SUICIDE"/>
+	<event load="BS_EVENT_AUTO"/>
+	<event load="BS_EVENT_AUTO_SUICIDE"/>
+</eventList>
+<eventList name="NEUTRAL_OUTLAW">
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="MERCENARY"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="ASTEROID_DERELICT_SHIP"/>
+	<event load="REFUGEE_NO_DISTRESS_PIRATE"/>
+	<event load="CE_PIRATE_CREW_BOUNTY"/>
+	<event load="CE_LONE_SHUTTLE"/>
+	<event load="CE_DERELICT_TREASURE"/>	
+	<event load="BS_EVENT_PIRATE_CHOICE"/>
+	<event load="BS_EVENT_PIRATE_BLACKMARKET_ASTEROID"/>
+</eventList>
+<eventList name="DISTRESS_BEACON_OUTLAW">
+	<event load="STRANDED_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+	<event load="REFUGEE_DISTRESS_PIRATE"/>
+	<event load="CE_DISTRESS_SUN"/>
+	<event load="CE_DISTRESS_DEFENSE"/>
+	<event load="CE_DISTRESS_MELTDOWN"/>
+	<event load="CE_DISTRESS_OXYGEN"/>
+	<event load="CE_DISTRESS_DRONES"/>
+	<event load="BS_EVENT_FED_AUTO_DORMANT"/>
+</eventList>
+<eventList name="NEBULA_OUTLAW">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_REBEL_UNDETECTED"/> 
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_REBEL_BOARDING"/>
+	<event load="STORM_ITEMS"/>
+	<event load="STORM_ITEMS"/>
+	<event load="BS_EVENT_AUTO_NEBULA"/>
+	<event load="BS_EVENT_AUTO_SUICIDE_NEBULA"/>
+	<event load="BS_EVENT_PIRATE_NEBULA"/>
+</eventList>
+<eventList name="BOARDERS_OUTLAW">
+	<event load="BOARDERS"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_HACKING"/>
+	<event load="FLOATING_CARGO"/>
+	<event load="CE_BOARDERS_PIRATE_SC"/>
+	<event load="CE_BOARDERS_TRAITOR"/>
+	<event load="CE_BOARDERS_BOUNTYHUNTER"/>
+</eventList>
+<eventList name="QUESTS_OUTLAW">
+	<event load="MERCHANT_REQUEST"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_ESCORT"/>
+	<event load="CE_DINER"/>
+</eventList>
+<eventList name="ITEMS_OUTLAW">
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TRADER_CIV"/>
+	<event load="CE_STRAY_FLEET"/>
+</eventList>
+<eventList name="DESTROYED_SHIP_PIRATE">
+	<event>
+		<text load="PIRATE_FIGHT_DESTROYED"/>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<textList name="PIRATE_FIGHT_DESTROYED">  
+	<text>Your efforts successfully convict these pirates of their terrible crimes. Their destruction is their punishment; your payment is their remains.</text>
+	<text>No longer shall these pirates terrorize the people of this sector; your final volley confirms their demise. You pick what looks useful from the debris before moving on.</text>
+	<text>As judge, jury, and executioner, your ending attack finishes these pirates off, earning them a sentence of fire. You collect their scorched components and charge the FTL drive.</text>
+	<text>The treachery and thievery of this crew are over as their ship explodes, the spoils of their career yours for the taking.</text>
+	<text>One last explosion marks their fate as their ship is torn apart.</text>
+</textList>
+<event name="START_BEACON_PIRATE_ACTUAL">
+	<text load="START_BEACON_OUTLAW_TEXT"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_BOUNTYHUNTER" hidden="true">
+		<text>(Mercenary Database) Acquire a contract for this sector.</text>
+		<event load="CE_BOUNTY_LIST_PIRATE"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="DRONES_BEAM" hidden="true">
+		<text>(Beam Drone) Refit some beam drones for mining duty and send them ahead into the sector. [ Drone Parts: -3 ]</text>
+		<event>
+			<text load="CE_DRONE_MINING_START_TEXT"/>
+			<item_modify>
+				<item type="drones" min="-3" max="-3"/>
+			</item_modify>
+			<quest event="CE_DRONE_MINING_CIVILIAN"/>
+		</event>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="AE_SECTOR_MAPPING" hidden="true">
+		<text>(Sector Scout Unit) Send out mapping drones to gather detailed data on the sector. [ Drone Parts: -3 ]</text>
+		<event load="CE_SECTOR_MAPPING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>Undisturbed as you are here you can lay some mines around the beacon while the FTL charges. The Rebel forces will have to avoid this beacon, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="START_BEACON_OUTLAW_TEXT">
+	<text>A few years ago this region was bustling with trade activity. Now it is overrun with bandits and marauders. You should tread lightly here.</text>
+	<text>This somewhat isolated region was thrown into chaos at the start of the Rebellion. Even in peacetime it was always beset by pirates but now it houses a center of operations for countless pirate fleets.</text>
+	<text>If the reports are true, this area has been under the control of pirates for quite some time. Some merchants still attempt to trade with the few settlements that remain, but they do so at great risk.</text>
+	<text>A few Federation-friendly planets still exist in this sector, but they are constantly under attack by pirate raids. This is a dangerous sector, so be careful.</text>
+	<text>This sparsely populated production sector is of little strategic value. It is unlikely that you will run into a lot of trouble with the Rebels here. Maybe you can even strike a good deal and stock up for your journey. Oh, and watch out for the pirates.</text>
+</textList>
+<eventList name="CE_BOUNTY_LIST_PIRATE">
+	<event>
+		<text>Its the usual deal: A small backwater colony is terrorized by a local raider. The farmers collected a meagre amount of ship scrap as payment and put a bounty on the pirate's head, seemingly the only way they see to escape their peril. Target: Unknown Pirate Craft. Payment: Low.</text>
+		<quest event="CE_BOUNTY_PIRATE_RAIDER"/>
+	</event>
+	<event>
+		<text>Even with the Rebel fleet at the gates, the pirate lords in this sector keep busying themselves with slaughtering each other. Guns for hire are looked for everywhere. Target: Pirate Cruiser. Payment: High.</text>
+		<quest event="CE_BOUNTY_PIRATE_CRUISER"/>
+	</event>
+	<event>
+		<text>Even with the Rebel fleet at the gates, the pirate lords in this sector keep busying themselves with slaughtering each other. Guns for hire are looked for everywhere. Target: Pirate Cruiser. Payment: High.</text>
+		<quest event="CE_BOUNTY_PIRATE_CRUISER"/>
+	</event>
+	<event>
+		<text>A small settlement has been raided by a Mantis slaver. The colonists want you to hunt the hunters, and agree to pay a small sum for it. Target: Mantis Slaver. Payment: Low.</text>
+		<quest event="CE_BOUNTY_MANTIS_SLAVER"/>
+	</event>
+	<event>
+		<text>The Mantis are raiding colonies in this sector and the locals lack the military power to defend themselves. You could become their exterminator. Target: Mantis Invaders. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_MANTIS_RAIDERS"/>
+	</event>
+</eventList>
+<event name="NOTHING_OUTLAW">
+	<text load="NOTHING_OUTLAW_TEXT"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>Undisturbed as you are here you can lay some mines around the beacon while the FTL charges. The Rebel forces will have to avoid this beacon, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="NOTHING_OUTLAW_TEXT">
+	<text back="BG_WARNING_MINES">A loose minefield lingers a few klicks away from the beacon. The scanners cannot determine if it has been laid recently by pirates or was here for longer. You wonder how many lives it has taken.</text>
+	<text>As soon as you arrive, a small ship de-cloaks behind yours. You immediately power up the shields and weapons, but they continue on their trajectory unimpressed. You try to calm your nerves.</text>
+	<text>A small pirate ship messages you, "That sure is a shiny ship you got there." You fire a warning shot across their bow and they respond, "Hey! No need for violence! It was just a comment..."</text>
+	<text>The only thing within scanning range is an old abandoned mining structure and a resupply station. They appear to have been picked clean by marauders.</text>
+	<text>You arrive to have a small fleet of Engi ships target you with a message, "Piracy results in negative societal impact. Not permitted." You assure them of your honest intentions and they allow you to pass.</text>
+</textList>
+<eventList name="SAVE_CIVILIAN_LIST">   
+	<event>
+		<text>The ship you saved was badly damaged in the battle. Most of the crew accepts your offer to be dropped off at a nearby station. One offers to join your crew.</text>
+		<choice>
+			<text>Welcome aboard!</text>
+			<event>
+				<text>The survivor gets on board the ship.</text>
+				<crewMember amount="1"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Decline their request.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Apparently the ship that was being assaulted was a science vessel. They thank you for saving them and offer a small reward.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice req="AE_SCIENCE" hidden="true"> 
+			<text>(Research Laboratory) Inquire what their research is about.</text>
+			<event>
+				<text>They are travelling sociologists that try to get a deeper insight into the conflict, right in the field. Your interest in their project is most appreciate. When realizing that you are a fellow scientist, they give you some of their spy-drones. You should be able to re-purpose their components.</text>
+				<item_modify>
+					<item type="drones" min="2" max ="5"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Continue...</text>
+			<event/>
+		</choice>
+	</event> 
+	<event> 
+		<text>It seems the crew did not survive the assault. You take what you can from the remains of the ship.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>They respond, "It's a good thing you came when you did; we'd be dead now otherwise. I'm a shipwright and I'd like to help you like you helped me."</text>
+		<choice>
+			<text>The captain offers to install a piece of equipment on your ship.</text>
+			<event>
+				<autoReward level="LOW">weapon</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"This sector has become increasingly dangerous for friends of the Federation. I think my crew can patch up some of your hull damage as thanks."</text>
+		<damage amount="-5"/>
+	</event>
+	<event>
+		<text>The civilian ship wisely made a fast retreat while you distracted the hostile ship.</text>
+	</event>
+</eventList>
+<mod:findName type="event" name="PIRATE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE">
+	<text load="PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="PIRATE">
+	<text>As you jump into the system, a pirate advances on your position. They are refusing all hails. Prepare for a fight.</text>
+	<text>Soon after arriving in the system, you are hailed by a small cruiser. "What good fortune that we happen to run into each other. Nothing personal, but you have some information we need!"</text>
+	<text>At first it appears you've arrived in an empty system, but a ship appears from behind a planet and hails you: "Haha! I am the dread pirate Tuco, prepare to die!"</text>
+	<text>The only other ship at this beacon messages you: "Finally, after months of waiting, someone has fallen into our trap!"</text>
+	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot.</text>
+	<text>A small blip appears on the system map. The sector archive lists this ship as a local pirate with a long rap sheet. "Unidentified cruiser, surrender or you will be destroyed." They are closing in fast.</text>
+	<text>A small ship remains stationary in the distance. Its captain hails and claims that she is a Federation requisition officer, here to collect the war toll from passing ships. When you demand to see the official requisition license, the ship's weapons come online. "You resist a Federation official? We will take what we demand by force then."</text>
+	<text>The captain of this ship with pirate markings claims to be an official Rebel requisition officer. When you refuse to donate to the Rebellion, the ship cuts communications and moves in to attack.</text>
+</textList>
+<mod:findName type="event" name="PIRATE_NO_ESCAPE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_NO_ESCAPE" unique="true">
+	<text>Once you arrive, your screen lights up with warnings. A nearby pirate seems to have advanced hacking tools and they have tried to shut down our engines. Your crew manages to keep them barely operational and you move in to attack.</text>
+	<status type="limit" target="player" system="engines" amount="1"/>
+	<ship load="PIRATE_NO_ESCAPE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="FTL_BOOSTER" hidden="true">
+			<text>(FTL Charge Booster) Activate the backup generators.</text>
+			<event load="CE_RESIST_ENGINE_JAMMING"/>
+		</choice>
+</event>
+<mod:findName type="event" name="PIRATE_CIVILIAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_CIVILIAN" unique="false">
+	<text load="PIRATE_CIVILIAN"/>
+	<img back="BACKGROUND" planet="PLANET_POPULATED_REAL"/>
+	<choice>
+		<text>Aid the civilian ship.</text>
+		<event>
+			<text>You power up your weapons and engage the pirate ship.</text>
+			<ship load="PIRATE_CIVILIAN" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Stay out of it.</text>
+		<event>
+			<text>The fight brings them out of your immediate scanning range. After a time the distress calls stop coming over the comms, but still echo in your mind.</text>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="PIRATE_BRIBER"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_BRIBER" unique="true">
+	<text load="PIRATE_BRIBER"/>
+	<ship load="PIRATE_BRIBER" hostile="false"/>
+	<choice>
+		<text>Accept their bribe.</text>
+		<event>
+			<text>"Good choice, son. We'll both come out of this richer."</text>
+			<autoReward level="LOW">standard</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>Try to be a hero. Attack the pirate.</text>
+		<event>
+			<text>The pirate ship stops its pursuit and locks weapons onto your ship.</text> 
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="PIRATE_CHOICE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_CHOICE" unique="false">
+	<img planet="NONE"/>
+	<text>Upon completing your jump, you receive a message from a nearby ship. "Greetings and welcome to our beacon! For a small fee, we'll let you continue on your way."</text>
+	<ship load="PIRATE" hostile="false"/>
+	<choice>
+		<text>Pay their toll.</text>
+		<event>
+			<text>"You made the right decision friend."</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-15"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Reject their 'offer'.</text>
+		<event>
+			<text>"Too bad... You will regret this decision!"</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="PIRATE_SLAVER"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_SLAVER">
+	<text>An especially well-armed pirate ship approaches you. "Hand over one of your crew members, and the rest of you can go free unharmed."</text>
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<choice hidden="true">
+		<text>Draw straws and send a crew-member over to the slavers.</text>
+		<event>
+			<text>The chosen crew leaves without complaint, knowing you had no choice.</text>
+			<removeCrew>
+				<clone>false</clone>
+				<text>You briefly consider cloning a replacement, but decide to respect the Federation laws regarding simultaneous duplicates.</text>
+			</removeCrew>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>We will never surrender one of our crew to slavers!</text>
+		<event>
+			<text>"We will see about that. Engage them!"</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice req="engines" lvl="6" hidden="true">
+		<text>(Engines) Attempt to out-run the slaver ship.</text>
+		<event load="PIRATE_SLAVER_RUN"/>
+	</choice>
+</event>
+<eventList name="PIRATE_SLAVER_RUN">
+	<event>
+		<text>You quickly fire up your engines and make a break for it. However, it seems to be in vain. They catch up to you effortlessly and power up their weapons.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You divert all available power to your engines and flee. You caught them off-guard but they seem to be gaining on you. Luckily you are able to stay out of range long enough to charge the FTL drive.</text>
+	</event>
+	<event>
+		<text>You fire up the engines and try to escape. Their slower ship is unable to keep pace; eventually it gives up and returns to the beacon to await an easier target.</text>
+	</event>
+</eventList>
+<mod:findName type="event" name="FRIENDLY_SLAVER"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="FRIENDLY_SLAVER" unique="true">
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<text>You recognize the ship as a well known slave trader. He hails you and offers you "labourers" for cheap.</text>
+	<choice>
+		<text>Buy one slave and free them to join your crew.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-45" max="-25"/>
+			</item_modify>
+			<crewMember amount="1"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attack the slaver scum.</text>
+		<event>
+		<text>Slavery cannot be forgiven. Attack!</text>
+		<text load="CE_PRE_FIGHT_TEXT"/>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Ignore the slaver and continue on your way.</text>
+		<event/>
+	</choice>
+	<choice req="teleporter" lvl="2" hidden="true">
+		<text>(Teleporter) Use your teleporter to attempt to board the ship and release some of the slaves.</text>
+		<event load="FRIENDLY_SLAVER_TELEPORTER"/>
+	</choice>
+</event>
+<eventList name="FRIENDLY_SLAVER_TELEPORTER">
+	<event>
+		<text>You beam a small team into their holds. They work quickly to free the slaves and teleport back to your ship. One of the captives is a recently-enslaved Federation officer. You throw them a weapon in preparation for the fight ahead.</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You teleport an away team into their hold to attempt to free their prisoners. They are able to get to one person before being caught and forced into a corner by the crew. You quickly beam the team and prisoner back to your ship.</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You beam a team onto their ship. However, your estimations of the location of their prisoners was off. By the time they get their bearings, the slavers spot them. You beam them back to the ship and prepare for a fight.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="PIRATE_SUN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_SUN" unique="true">
+	<img back="BG_DARK"/>
+	<text>This beacon has been placed too close to a super-giant class M star! The ship will gradually overheat until you get out of here... or die. A pirate, apparently oblivious to the danger of the sun, moves in to engage.</text>
+	<environment type="sun"/>
+	<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="PIRATE_ASTEROID"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="PIRATE_ASTEROID" unique="true">
+	<img planet="NONE" back="BG_DARK"/>
+	<environment type="asteroid"/>
+	<text>A pirate ship was lying in wait inside this asteroid field. It immediately moves in to attack.</text>
+	<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="BOARDERS_SUN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="BOARDERS_SUN" unique="true">
+	<text>You arrive to find yourself extremely close to a star. You receive a message from a pirate ship, "I'm glad you arrived; our ship is damaged and we were getting desperate... I hope you don't mind if we take yours."</text>
+	<ship load="PIRATE" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<status type="limit" target="enemy" system="pilot" amount="0"/>
+	<status type="limit" target="enemy" system="engines" amount="0"/>
+	<status type="limit" target="enemy" system="shields" amount="0"/>
+	<status type="limit" target="enemy" system="cloaking" amount="0"/>
+	<status type="limit" target="enemy" system="oxygen" amount="0"/>
+	<status type="limit" target="enemy" system="weapons" amount="2"/>
+	<status type="limit" target="enemy" system="drones" amount="1"/>
+	<status type="limit" target="enemy" system="medbay" amount="0"/>
+	<environment type="sun"/>
+	<choice req="AE_TELEPORTER_JAMMER" hidden="true">
+		<text>(Teleporter Disruptor) "Actually, we do mind."</text>
+		<event>
+			<text>"Oh, a disruption field. How quaint... You played your cards well, Captain. I guess we are at your mercy now."</text>
+		<choice>
+			<text>Open fire.</text>
+			<event>
+				<text>The Captain sends a last message, "Very well, that's what I would have done."</text>
+				<ship hostile="true"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<status type="limit" target="enemy" system="pilot" amount="0"/>
+	<status type="limit" target="enemy" system="engines" amount="0"/>
+	<status type="limit" target="enemy" system="shields" amount="0"/>
+	<status type="limit" target="enemy" system="cloaking" amount="0"/>
+	<status type="limit" target="enemy" system="oxygen" amount="0"/>
+	<status type="limit" target="enemy" system="weapons" amount="2"/>
+	<status type="limit" target="enemy" system="drones" amount="1"/>
+	<status type="limit" target="enemy" system="medbay" amount="0"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave them to their fate.</text>
+			<event>
+				<text>"I'm sure we will meet again." They cut communication.</text>
+			</event>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>Hostiles are detected on board our ship. The signal strength indicates that they teleported some of their ship equipment as well. You order your crew to fend off the boarders and seize the supplies.</text>
+			<autoReward level="LOW">standard</autoReward>
+			<boarders min="3" max="5" class="random"/>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="BOARDERS_ASTEROID"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="BOARDERS_ASTEROID" unique="true">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>You jump into a perilous asteroid field. Worse, sensors show a pirate stronghold has locked onto our ship and is activating a teleporter.</text>
+	<environment type="asteroid"/>
+	<ship load="BS_PIRATE" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<choice req="AE_TELEPORTER_JAMMER" hidden="true">
+		<text>(Teleporter Disruptor) Activate the disruptor augment and program an escape course.</text>
+		<event>
+			<text>You detect a lot of encrypted comm chatter after activating the disruption field. The pirates must be calling in ships. Let's hope the FTL drive is charged before any arrive.</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Continue...</text>
+		<event>
+			<text>Prepare for a fight!</text>
+			<boarders min="3" max="5" class="random"/>
+		</event>
+	</choice>
+</event>
+<eventList name="FLOATING_CARGO_LIST">
+	<event>
+		<text>They appear to be filled with some military supplies! You take everything you can use and jettison the rest.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>They appear to be filled with some military supplies! You take everything you can use and jettison the rest.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>The cargo was primarily consumer goods. You could trade this stuff for some scrap at a store.</text>
+		<augment name="TE_GOODS_CIVILIAN_CONSUMER"/>
+	</event>
+	<event>
+		<text>The cargo was primarily clothing, nothing particularly useful. You could still trade this stuff for some scrap though.</text>
+		<augment name="TE_GOODS_TEXTILES"/>
+	</event>
+	<event>
+		<text>Once you bring the cargo onto your ship a pirate bursts out of one of the crates saying, "Ugh... I was getting cramped in there.  Oh, yeah! Prepare to die!" Immediately after this battle-cry your ship is filled with the sound of crates breaking open...</text>
+		<boarders min="3" max="5" class="random"/>
+	</event>
+	<event>
+		<text>You bring the cargo aboard. Before you have a chance to open them a pirate ship appears out of hiding and charges. At the same time, the crates fly open. Intruders aboard the ship!</text>
+		<boarders min="2" max="3" class="random"/>
+		<ship load="JELLY_PIRATE_WITHBOARDERS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>Once you bring the cargo onto your ship a pirate bursts out of one of the crates saying, "Ugh... I was getting cramped in there.  Oh, yeah! Prepare to die!" Immediately after this battle-cry your ship is filled with the sound of crates breaking open...</text>
+		<boarders min="3" max="5" class="random"/>
+	</event>
+	<event>
+		<text>You bring the cargo aboard. Before you have a chance to open them a pirate ship appears out of hiding and charges. At the same time, the crates fly open. Intruders aboard the ship!</text>
+		<boarders min="2" max="3" class="random"/>
+		<ship load="JELLY_PIRATE_WITHBOARDERS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="FLOATING_CARGO_SCAN_LIST">
+	<event>
+		<text>The crates appear to contain consumer goods. You can trade this for scrap and also salvage some debris from the destroyed ship.</text>
+		<augment name="TE_GOODS_CIVILIAN_CONSUMER"/>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>The crates appear to contain only simple clothing, nothing particularly useful. You could still trade this for scrap though and also salvage some debris from the destroyed ship.</text>
+		<augment name="TE_GOODS_TEXTILES"/>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Your advanced sensors are able to breach the protective barrier and scan the cargo. It appears to be filled with some military supplies! You take everything you can use.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Your advanced sensors are able to breach the protective barrier and scan the cargo. It appears to be filled with some military supplies! You take everything you can use.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed. This looks like a planned pirate ambush.</text>
+		<choice hidden="true">
+			<text>Destroy the crates to prevent another ship from falling victim.</text>
+			<event>
+				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
+				<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave it alone and prepare to jump.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed. This looks like a planned pirate ambush.</text>
+		<choice hidden="true">
+			<text>Destroy the crates to prevent another ship from falling victim.</text>
+			<event>
+				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
+				<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave it alone and prepare to jump.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed. This looks like a planned pirate ambush.</text>
+		<choice hidden="true">
+			<text>Destroy the crates to prevent another ship from falling victim.</text>
+			<event>
+				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
+				<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave it alone and prepare to jump.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed. This looks like a planned pirate ambush.</text>
+		<choice hidden="true">
+			<text>Destroy the crates to prevent another ship from falling victim.</text>
+			<event>
+				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
+				<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave it alone and prepare to jump.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="PIRATE_BRIBER_WIN">
+	<event>
+		<text>Upon closer inspection, you realize the ship under attack was a Rebel scout! It's too damaged to put up much of a fight.</text>
+		<choice hidden="true">
+			<text>Destroy the ship and salvage it.</text>
+			<event>
+				<text>No mercy for the Rebels. They might give away informations about your whereabouts later.</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+		<choice>
+			<text>Use the leverage you gained by saving their lives to convince them to delay the pursuing fleet.</text>
+			<event>
+				<text>Hopefully that will buy you more time to get to the next sector.</text>
+				<modifyPursuit amount="-1"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You were too late. A hull breach deprived the crew of oxygen during your fight with the pirate. You salvage what you can.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>The pirate's victim quickly jumps away before you have a chance to speak to them.</text>
+	</event>
+	<event>
+		<text>"Thank you for the aid! I'm an arms dealer that usually only works with Rebels, but considering the circumstances I'll make an exception."</text>
+		<choice>
+			<text>See what he has to offer.</text>
+			<event>
+				<text>You bring the ship alongside and dock to trade.</text>
+				<store/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>We don't deal with Rebel collaborators. Destroy this ship!</text>
+			<event>
+				<text>You order a full broadside. The weapons chief reluctantly programs the firing solution. The weapons go off. "What? Wait, noooo!" Communication is cut as the ship's core detonates. You sweep through the debris.</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+	</event>-
+	<event>
+		<text>"Thank the heavens you showed up! We don't have much to offer as a reward, but our engineer should be proficient enough to patch your ship up a bit after that nasty fight."</text>
+		<damage amount="-15"/>
+	</event>
+</eventList>
+<event name="CE_BOARDERS_PIRATE_SC" unique="true">
+	<text load="BOARDERS_TEXT"/>
+	<choice req="AE_TELEPORTER_JAMMER" hidden="true">
+		<text>(Teleporter Disruptor) Activate the teleporter disruption field. [ Power: -1 ]</text>
+		<event>
+			<text>With the field in place, the boarders have no choice but to stay where they are. You hurry to leave before they call in ship support.</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Continue...</text>
+		<event>
+			<text>You register only a single intruder aboard. What is going on?</text>
+			<boarders min="1" max="1" class="random"/>
+			<choice>
+				<text>Continue...</text>
+				<event>
+					<text>The boarder immediately deploys several combat AIs! It seems you are up against a special forces unit.</text>
+					<boarders min="2" max="4" class="ghost"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<event name="BS_EVENT_PIRATE" unique="true">
+	<text load="BS_EVENT_PIRATE_TEXT"/>
+	<ship load="BS_PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="BS_EVENT_PIRATE_TEXT">
+	<text>As you jump into the system, you find yourself right in front of a small pirate station. They are refusing all hails. Prepare for a fight.</text>
+	<text>Immediately after arriving in the system, you are hailed by a station, "We know who you are and what you carry. You will have to get past us if you want to jump from this beacon. Except you won't."</text>
+	<text>This beacon lies in close proximity to a considerably well armed pirate station. You will have to stay in their weapon range if you want to charge your FTL drive... According to the confused, apparently drug-influenced comms chatter you receive, the pirates seem quite amused by that.</text>
+	<text>A station at this beacon messages you, "Greetings, travellers. We are almost out of food and fuel here. We might have more if we would trade instead of destroying every ship that comes here, but that wouldn't be so exciting, right?"</text>
+	<text>You barely have time to register jump completion before your ship warns you of the station with weapons locked that floats right in front of your nose.</text>
+	<text>You receive hail from a small station, "Thank god you are here. These last weeks were so boring. Come on, power your weapons. Let's do this!"</text>
+</textList>
+<event name="BS_EVENT_PIRATE_CHOICE" unique="false">
+	<text load="BS_EVENT_PIRATE_CHOICE_TEXT"/>
+	<ship load="BS_PIRATE" hostile="false"/>
+	<choice>
+		<text>Pay their toll.</text>
+		<event>
+			<text>"You made the right decision friend."</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-15"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Refuse to pay.</text>
+		<event>
+			<text>"Just as good... We will take what we need from your ship's wreckage."</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<textList name="BS_EVENT_PIRATE_CHOICE_TEXT">
+	<text>Upon completing your jump, you receive a message from a station on your starboard side. "Greetings and welcome to our pleasure dome! We can't find you on the list of our usual customers. For a small registration fee, we'll let you continue on your way."</text>
+	<text>As you jump into the system you find yourself right in front of a small pirate station. They are refusing all hails, but constantly transmit a scrap transfer protocol and also lock weapons. The message is pretty clear.</text>
+	<text>Immediately after arriving in the system, you are hailed by a station. "Pirate hold-up, transfer-scrap-or-get-evaporated, you know the drill. Let's get this over with."</text>
+	<text>You receive a hail from a small station, "Turn off your engines, this is a hold-up! Let's keep it nice and clean; no one has to get hurt here."</text>
+</textList>
+<event name="BS_EVENT_PIRATE_SUICIDE" unique="true">
+	<text load="BS_EVENT_PIRATE_SUICIDE_TEXT"/>
+	<ship load="BS_PIRATE_SUICIDE" hostile="true"/>
+	<status type="limit" target="enemy" system="engines" amount="0"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="BS_EVENT_PIRATE_SUICIDE_TEXT">
+	<text>As you jump in, you register a dreadful looking pirate station. Its hull is reinforced with parts from various ships and the corpses of various species are attached to it as well. They are refusing all hails. Better prepare for the worst.</text>
+	<text>After arriving in the system you are hailed, "YOU! We've been... looking... for YOU. Yes, yes exactly for you. Let's get it on!" These guys seem seriously messed up, but you will have to stay in their range if you want to jump from this beacon.</text>
+	<text>You receive confused comm chatter from a small pirate station. Various individuals scream into the comms, the voices modified by overlay effects. Strange music plays in the background. You don't understand what they say, but they definitely don't seem friendly. After a moment, they power up their weapons.</text>
+	<text>A station at this beacon messages you, "Greetings! We hate you and will kill you now!"</text>
+	<text>After completing the jump, your ship's AI warns you of a station with both a considerable threat level and improvised FTL systems. Their weapons are hot and you will have to engage them to remain in beacon range.</text>
+	<text>You get hailed by an FTL-core-powered station: "Welcome to your own private hostile encounter, you are our thirty-sixth customer in this standard year. Prepare to receive your payload."</text>
+</textList>
+<event name="PIRATE_AUGMENTED" unique="true">
+	<text load="PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<event name="STORE_OUTLAW">
+	<text load="STORE_OUTLAW_TEXT"/>
+	<store/>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+	<choice hidden="true">
+		<text>Check to see what trade goods they sell here.</text>
+		<event load="TE_STORE_OUTLAW_LIST_BUY"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+		<text>Offload your current trade goods.</text>
+		<event load="TE_STORE_OUTLAW_LIST_BOOSTED"/>
+	</choice>
+</event>
+<textList name="STORE_OUTLAW_TEXT">
+	<text>A few small ships are visible on the vidscreen, and you almost power your weapons. However, sensors indicate they are simply honest merchants. The pirates must be making you jumpy. You message them asking about their wares.</text>
+	<text>You detect a hub of activity nearby. A large corporation has set up a trade depot and has a number of well armed ships patrolling. This appears to be a relatively safe place to get repairs.</text>
+	<text>You receive a wide-band automated message, "Welcome to our humble trade depot and shipyard! All are welcome, but try any funny business and our 152 automated turret satellites will tear your ship to shreds!"</text>
+	<text>A well armed transport ship and a squadron of fighters are in orbit nearby. You are wary of their trustworthiness but beggars can't be choosers.</text>
+	<text planet="PLANET_POPULATED_REAL">A zero-gravity drug den orbits an illegally-settled planet inhabited by outlaws. The perfect place for doing risk-free business.</text>
+	<text>An old cruiser that has been converted into a stationary base of commerce lingers at this beacon. They seem to be willing to trade with anyone.</text>
+</textList>
+<eventList name="TE_STORE_OUTLAW_LIST">
+	<event load="TE_STORE_OUTLAW_LIST_BOOSTED"/>
+</eventList>
+<event name="STORE_OUTLAW_TRAP">
+	<text load="STORE_OUTLAW_TEXT"/>
+	<store/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="STORE_OUTLAW_TRAP_LIST"/>
+	</choice>
+</event>
+<eventList name="STORE_OUTLAW_TRAP_LIST">
+	<event>
+		<text load="STORE_OUTLAW_TRAP_TEXT_BOARDERS"/>
+		<choice>
+			<text>Continue...</text>
+			<event>
+				<text>There will likely be trouble at your ship after you finished shopping.</text>
+				<boarders min="3" max="5" class="random"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text load="STORE_OUTLAW_TRAP_TEXT_BOARDERS"/>
+		<choice hidden="true"> 
+			<text>Continue...</text> 
+			<event>
+				<text>A bystander addresses you: "You're not from around here, are you Cap? Let me tell you, you've found yourself in a bad part of town, and these guys you just saw mean business. They don't care about your fancy Federation. Lucky for you, I'm looking for a ride out of here. One could say I'm for hire, could help you dealing with these guys."</text>
+				<boarders min="3" max="5" class="random"/>
+				<choice>
+					<text>"Consider yourself hired."</text>
+					<event>
+						<text>"Good decision skipper. Let's mess these guys up. I still have a score to settle with them myself."</text>
+					<item_modify>
+						<item type="scrap" min="-45" max="-35"/>
+					</item_modify>
+						<crewMember amount="1" class="random"/>
+					</event>
+				</choice>
+				<choice>
+					<text>"We can handle ourselves, thanks."</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="doors" lvl="2" hidden="true">
+			<text>(Lv2 Doors) "Put the ship under lockdown until I'm back. Stand your ground and let nobody in!"</text>
+			<event>
+				<text>Your reinforced bulkheads and advanced internal security systems will hopefully deter the local hoodlums until your business is concluded.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text load="STORE_OUTLAW_TRAP_TEXT_SHIP"/>
+		<ship load="PIRATE_STORE_TRAP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text load="STORE_OUTLAW_TRAP_TEXT_SHIP"/>
+		<ship load="PIRATE_STORE_TRAP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<textList name="STORE_OUTLAW_TRAP_TEXT_BOARDERS">
+	<text>You don't like this place. Various mean-looking types hang around in the docking bay, following you with their gaze. The trader is uncooperative and claims to only trade in ship equipment. Then your personal terminal beeps. "Sir we have a situation here, armed pirates are approaching the ship, better watch your back out there." You keep your hand on your blaster while browsing the shop.</text>
+	<text>There seems to be no one trading in goods here, only ship equipment is available. While looking at the gear, you see a bunch of pirate goons heading for your ship. What do these guys want?</text>
+</textList>
+<textList name="STORE_OUTLAW_TRAP_TEXT_SHIP">
+	<text>You don't like this place. No one is ready to trade with you, all they offer is some general ship equipment. Your first mate contacts you over the comms. "Captain, I know this is supposed to be trade space, but we detect enemies closing in... You better get back here immediately." It's a trap!</text>
+	<text>After docking you head for the store. While browsing the equipment, you see several ships circling the store. Your personal terminal beeps. "Uh, Captain, you better get back here. These guys keep threatening us and now they started charging their guns." Seems no place is safe in these parts.</text>
+</textList>
+<textList name="STORE_OUTLAW_BUY_TEXT">
+	<text>You transfer the scrap and they transfer the cargo. While your freight is loaded, you have your crew standby as security personnel. The trader brought his own guards as well. The situation is tense, but all goes well. The trader even offers some ship equipment as well.</text>
+	<text>You write a scrap transfer order. Processing it takes a while, and loading the cargo takes even longer. You check the ship equipment catalogue while waiting.</text>
+	<text>You hand over the crates with the scrap. Loading the cargo takes its time, probably because half of the cargo drones just monitor the transaction with guns charged to ensure security. While waiting, you get a chance to check the ship equipment they offer here.</text>
+</textList>
+<textList name="STORE_OUTLAW_SELL_TEXT">
+	<text>It takes a while to negotiate a good price. After receiving some scrap as advance, you are asked to unload the cargo at the shop to get the rest of your payment.</text>
+	<text>Security is tight and all the message encryption doesn't make price negotiation easier. After receiving some scrap as advance, you are asked to unload the cargo at the shop to get the rest of your payment.</text>
+	<text>You try to haggle, but the trader does not seem to trust you much. It takes a while to reach an agreement, and you still have to unload the cargo at the shop to receive the rest of your payment.</text>
+	<text>After some time-consuming negotiations, you get an advance payment. "You get the rest after you unload the cargo at the shop." They don't seem to trust you much.</text>
+</textList>
+<eventList name="TE_STORE_OUTLAW_LIST_BUY">
+	<event>
+		<text>You consider striking a deal with the trader.</text>
+		<choice>
+			<text>Buy some loot. You're sure that the owners are still alive and willing to get these back.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<item_modify>
+					<item type="scrap" min="-20" max="-20"/>
+				</item_modify>
+				<augment name="TE_GOODS_MANTIS_BOUNTY"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Buy an arms shipment. You wonder who would pay most for these, given how many lasers are already around.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<item_modify>
+					<item type="scrap" min="-25" max="-25"/>
+				</item_modify>
+				<augment name="TE_GOODS_PIRATE_ARMS"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just quickly check the available ship equipment.</text>
+			<event/>
+		</choice>
+		<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+			<text>Offload your current trade goods.</text>
+			<event load="TE_STORE_OUTLAW_LIST_BOOSTED"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="TE_STORE_OUTLAW_LIST_BOOSTED">
+	<event>
+		<text>You consider striking a deal with the trader. The atmosphere seems hostile, you might want to not hang around for too long.</text>
+		<choice req="TE_GOODS_MANTIS_BOUNTY" hidden="true">
+			<text>Your Looted Bounty is not fetching a good price here. The pirates would be more willing to just steal it from you.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_PIRATE_ARMS" hidden="true">
+			<text>Everyone in this sector is already armed to the teeth, even the civilians. Even if they wanted your shipment, they'd likely just steal it from you.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_SLUG_DRUGS" hidden="true">
+			<text>A young slug contacts your ship, "Greetingss sssugar man. I ran out here and my little helperss tell me you got ssome ssstuff. Normally I don't do dealss with ssstrangers but..." [Sell Slug Hallucinogens for about 65 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_SLUG_DRUGS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="61" max="69"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_FOOD" hidden="true">
+			<text>Apparently all this pillaging and looting isn't that good for planetary agriculture. Food prices have skyrocketed here. [Sell Space Rations for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_FOOD"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_LUXURY" hidden="true">
+			<text>You are messaged, "We'll make you a one-time deal for that fancy stuff you carry. Better sell it off now before someone steals it from you anyway." [Sell Luxury Goods for about 65 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_LUXURY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="61" max="69"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_CONSUMER" hidden="true">
+			<text>Production is disrupted and the outlaws all swim in money. Consumer goods find a good buyer easily here. [Sell Consumer Goods for about 30 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_CONSUMER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="28" max="32"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_QUARANTINE_DISEASE" hidden="true">
+			<text>Some rookie freedom fighters message you: "We see you carry some... dangerous substances. They could be valuable in our struggle. What's the price?" [Sell Disease Samples for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_QUARANTINE_DISEASE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CLONES" hidden="true">
+			<text>You publish a network add that says "Small Clone Army For Sale." It does not take long before the first pirate king contacts you with a generous offer. [Sell Trooper DNA Backups for about 45 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_CLONES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="42" max="48"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MEDICINE" hidden="true">
+			<text>[Sell Pharmaceuticals for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MEDICINE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_ELECTRONICS" hidden="true">
+			<text>[Sell Ship Hardware for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_ELECTRONICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MACHINES" hidden="true">
+			<text>[Sell Industrial Machinery for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MACHINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_BEACONS" hidden="true">
+			<text>[Sell Beacon Parts for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_BEACONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_CODEX" hidden="true">
+			<text>Common law around these parts has almost entirely degraded. The only replies to your offer on the copy of the Codex are humoured mockeries.</text> 
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_SHIELDS" hidden="true">
+			<text>[Sell Shield Components for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_SHIELDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_LITERATURE" hidden="true">
+			<text>[Sell Religious Rock Literature for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ROCK_LITERATURE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_ORE" hidden="true">
+			<text>[Sell Raw Asteroid Ore for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_ORE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_HULLS" hidden="true">
+			<text>[Sell Ship Hull Panels for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_HULLS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_ENGINES" hidden="true">
+			<text>A heavily-modified shuttle with flames painted on the nose pulls up beside your ship. The owner needs high-performance parts to prepare for an illegal racing tournament soon, and you have them. [Sell Engine Parts for about 45 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_ENGINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="42" max="48"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_WEAPONS" hidden="true">
+			<text>[Sell Weapon Components for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_WEAPONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ART" hidden="true">
+			<text>[Sell Eccentric Artwork for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ART"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ANIMALS" hidden="true">
+			<text>[Sell Alien Livestock for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ANIMALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_REBEL_CONTRABAND" hidden="true">
+			<text>[Sell Federation Contraband for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_REBEL_CONTRABAND"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_NEBULA_GAS" hidden="true">
+			<text>[Sell Compressed Nebula Gas for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_NEBULA_GAS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CRYSTAL_ARTIFACTS" hidden="true">
+			<text>[Sell Crystal Artifacts for about 75 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CRYSTAL_ARTIFACTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="70" max="80"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_FED_WRECK" hidden="true">
+			<text>[Sell Ship Wreckage for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_FED_WRECK"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_HAZARD_ELEMENTS" hidden="true">
+			<text>[Sell Rare Elements for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_HAZARD_ELEMENTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_DATA" hidden="true">
+			<text>[Sell AI Research Data for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_DATA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_NANOBOTS" hidden="true">
+			<text>[Sell Obedient Nanobots for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_NANOBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_TERRAFORMING" hidden="true">
+			<text>[Sell Terraforming Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_TERRAFORMING"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_REACTOR" hidden="true">
+			<text>[Sell Reactor Modules for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_REACTOR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LANIUS_POLYMERS" hidden="true">
+			<text>[Sell Plastic Items for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LANIUS_POLYMERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GIRDERS" hidden="true">
+			<text>[Sell Building Material for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GIRDERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CHEMICALS" hidden="true">
+			<text>[Sell Basic Chemicals for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CHEMICALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_TEXTILES" hidden="true">
+			<text>[Sell Synth-Textiles for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_TEXTILES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ORGANISMS" hidden="true">
+			<text>[Sell Xeno Organisms for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ORGANISMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_O2" hidden="true">
+			<text>[Sell Stored Oxygen for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_O2"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_H2O" hidden="true">
+			<text>[Sell Huge Water Supply for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_H2O"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SEEDS" hidden="true">
+			<text>[Sell Bio-Engineered Seeds for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SEEDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CONDUITS" hidden="true">
+			<text>[Sell Power Conduits for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CONDUITS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PRODUCE" hidden="true">
+			<text>[Sell Station-Grown Vegetables for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PRODUCE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ANTIMATTER" hidden="true">
+			<text>[Sell Antimatter for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ANTIMATTER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GAMES" hidden="true">
+			<text>[Sell Virtual Games for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GAMES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SENSORS" hidden="true">
+			<text>[Sell Sensor Components for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SENSORS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LIFESUPPORT" hidden="true">
+			<text>[Sell Life Support Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LIFESUPPORT"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROBOTS" hidden="true">
+			<text>[Sell Serve Drones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RESEARCH" hidden="true">
+			<text>[Sell Research Equipment for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RESEARCH"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SOLAR" hidden="true">
+			<text>[Sell Solar Panels for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SOLAR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RELICS" hidden="true">
+			<text>[Sell Archaeological Relics for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RELICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GLANDS" hidden="true">
+			<text>[Sell Alien Glands for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GLANDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GEMS" hidden="true">
+			<text>[Sell Deep-Space Gemstones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GEMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AMBRA" hidden="true">
+			<text>[Sell Space Whale Ambra for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AMBRA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just check the available ship equipment.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="HOSTILE_OUTLAW_HOME">
+	<event load="ROCK_PIRATE_ASTEROID"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="PIRATE_AUGMENTED"/>
+	<event load="CE_PIRATE_HOME_FIGHT"/>
+	<event load="CE_PIRATE_HOME_FIGHT"/>
+	<event load="CE_PIRATE_HOME_FIGHT"/>
+	<event load="C_PIRATE_HOME_FIGHT_CRUISER"/>
+	<event load="BS_EVENT_PIRATE"/>
+	<event load="BS_EVENT_PIRATE_SUICIDE"/>
+</eventList>
+<eventList name="NEUTRAL_OUTLAW_HOME">
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="MERCENARY"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="CE_PIRATE_CREW_BOUNTY"/>
+	<event load="CE_LONE_SHUTTLE"/>
+	<event load="CE_DERELICT_TREASURE"/>	
+	<event load="BS_EVENT_PIRATE_CHOICE"/>
+	<event load="BS_EVENT_PIRATE_BLACKMARKET_ASTEROID"/>
+</eventList>
+<eventList name="DISTRESS_BEACON_OUTLAW_HOME">
+	<event load="STRANDED_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+	<event load="CE_DISTRESS_SUN"/>
+	<event load="CE_DISTRESS_DEFENSE"/>
+	<event load="CE_DISTRESS_MELTDOWN"/>
+	<event load="CE_DISTRESS_OXYGEN"/>
+	<event load="CE_DISTRESS_DRONES"/>
+	<event load="BS_EVENT_FED_AUTO_DORMANT"/>
+</eventList>
+<eventList name="NEBULA_OUTLAW_HOME">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_REBEL_UNDETECTED"/> 
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_REBEL_BOARDING"/>
+	<event load="STORM_ITEMS"/>
+	<event load="STORM_ITEMS"/>
+	<event load="BS_EVENT_AUTO_NEBULA"/>
+	<event load="BS_EVENT_AUTO_SUICIDE_NEBULA"/>
+	<event load="BS_EVENT_PIRATE_NEBULA"/>
+</eventList>
+<eventList name="BOARDERS_OUTLAW">
+	<event load="BOARDERS"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_HACKING"/>
+	<event load="FLOATING_CARGO"/>
+	<event load="CE_BOARDERS_PIRATE_SC"/>
+	<event load="CE_BOARDERS_BOUNTYHUNTER"/>
+</eventList>
+<eventList name="BOARDERS_OUTLAW_HOME">
+	<event load="BOARDERS"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_HACKING"/>
+	<event load="FLOATING_CARGO"/>
+	<event load="CE_BOARDERS_PIRATE_SC"/>
+	<event load="CE_BOARDERS_BOUNTYHUNTER"/>
+</eventList>
+<eventList name="QUESTS_OUTLAW_HOME">
+	<event load="MERCHANT_REQUEST"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_ESCORT"/>
+	<event load="CE_DINER"/>
+	<event load="C_QUEST_PIRATE_HOME_RIVALRY"/>
+</eventList>
+<eventList name="ITEMS_OUTLAW_HOME">
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TRADER_CIV"/>
+</eventList>
+<event name="NOTHING_OUTLAW_HOME">
+	<text load="NOTHING_OUTLAW_HOME_TEXT"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>Undisturbed as you are here you can lay some mines around the beacon while the FTL charges. The Rebel forces will have to avoid this beacon, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="NOTHING_OUTLAW_HOME_TEXT">
+	<text back="BG_WARNING_MINES">A loose minefield has been placed a few klicks away from the beacon. The scanners cannot determine if it has been laid recently by pirates, or long before by local authorities. You wonder how many lives it has taken.</text>
+	<text>As soon as you arrive, a small ship de-cloaks behind yours. You immediately power up the shields and weapons, but they continue on their trajectory unimpressed. You try to calm your nerves.</text>
+	<text>Two small pirate fleets battle amongst each other at the other side of the system. You decide to lay low and leave them to themselves.</text>
+	<text>A small pirate ship messages you, "That sure is a shiny ship you got there." You fire a warning shot across their bow and they respond, "Hey! No need for violence! It was just a comment..."</text>
+	<text>The only thing within scanning range is an old abandoned mining structure and a resupply station. They appear to have been picked clean by marauders.</text>
+	<text planet="PLANET_POPULATED_SMALL">Your sensors reveal several factories, all active and in the hands of local crime syndicates. The local guard ships deter you from attempting a detailed scan.</text>
+	<text planet="PLANET_POPULATED_REAL">No one bothers you when arriving at this fully-colonized rimworld. The local criminals and smugglers live an easy life here.</text>
+	<text planet="PLANET_POPULATED_SMALL">According to the logs, this planet has been in complete anarchy for several decades. The people seem to do well by themselves though, small self-sustained city states with moderate populations dot the entire surface.</text>
+	<text planet="PLANET_UNPOPULATED">According to the sector lists, the local government of this settlement has been disposed of by a military coup several years ago. You decide its better not to arouse any suspicion and keep your distance from the planet.</text>
+	<text planet="PLANET_POPULATED_SMALL">According to the logs, this planet has been taken over by local crime syndicates just recently. Only registered trade ships get permission to land.</text>
+</textList>
+<event name="CE_PIRATE_HOME_FIGHT">
+	<text load="PIRATE_HOME_FIGHT_TEXT"/>
+	<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="PIRATE_HOME_FIGHT_TEXT">
+	<text>As you jump into the system, a pirate advances on your position. They are refusing all hails. Prepare for a fight.</text>
+	<text>Soon after arriving in the system you are hailed by a small cruiser. "What good fortune that we happen to run into each other. Nothing personal, but you have some information we need!"</text>
+	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot.</text>
+	<text>A small blip appears on the system map. The sector archive lists this ship as a local pirate with a long rap sheet. "Unidentified cruiser, surrender or you will be destroyed." They are closing in fast.</text>
+	<text>The crew wonders if you will ever find someone matching the romantic ideal of a space pirate. Most of the outlaws you encountered so far were pretty far away from being dashing rogues with a heart of gold. Just like the obviously-intoxicated captain waiting at this beacon, who demands that you surrender.</text>
+	<text planet="PLANET_POPULATED_SMALL">According to the logs, this planet is a major base for a local smuggler ring. You are hailed before you can even get anywhere near it: "What do you think your doing here, Fed scum? We're gonna mess you up good!" They send a ship to fight you.</text>
+	<text planet="PLANET_UNPOPULATED">This planet was listed as a save haven for Federation forces, but obviously the outlaws have taken over here as well. The local defenders don't react kindly to ships representing a centralized galactic government.</text>
+</textList>
+<event name="C_PIRATE_HOME_FIGHT_CRUISER" unique="true">
+	<text load="CE_PIRATE_HOME_FIGHT_CRUISER_TEXT"/>
+	<ship load="C_PIRATE_CRUISER_SMUG" hostile="true"/>
+	<status type="divide" target="enemy" system="reactor" amount="2"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="CE_PIRATE_HOME_FIGHT_CRUISER_TEXT">
+	<text>As you jump into the system, a pirate advances on your position, one that has commandeered a Class IV cruiser. They are refusing all hails. Prepare for a tough fight.</text>
+	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot. This is not your average buccaneer, these pirates command a high-tech cruiser of the most recent design.</text>
+	<text planet="PLANET_POPULATED_SMALL">You are hailed by a small cruiser in orbit around this planet: "I don't know who you are but this is Purple Tentacle turf. We'll fire on you until you leave."</text>
+	<text planet="PLANET_POPULATED_SMALL">You consider searching for an orbital trader near this busy planet, but receive nothing but "No Federation Allowed" messages. A modified outlaw cruiser de-cloaks before your ship right when you are about to leave. They load weapons!</text>
+	<text planet="PLANET_POPULATED_SMALL">A local pirate overlord informs you that she does not accept intrusion in her territories. A guard cruiser is dispatched against you.</text>
+	<text planet="PLANET_UNPOPULATED">A ship near this barren planet catches your eye. It seem far more sophisticated than the usual pirate ships with their refit layouts and makeshift arsenals. Your scans do not give you any clues about the origin of the cruiser, but they do a good job with angering the pirates.</text>
+</textList>
+<eventList name="C_CRUISER_PIRATE_DESTROYED_DEFAULT">
+	<event>
+		<text>You did it; the pirate cruiser breaks apart! You collect what usable material floats nearby, but the wreckage is so big that more time would be necessary to salvage everything. You run a quick debris-drift analysis to see what you could gather.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text>Spend more time making another sweep of the debris.</text>
+			<event>
+				<text>You slowly circle around the beacon a few times and have your crew keep track of all the drifting parts that seem valuable. The stuff you collect isn't bad, but the Rebel fleet will have surely managed to close in.</text>
+				<modifyPursuit amount="1"/>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+		<choice>
+			<text>Ignite the FTL drive and jump to the next beacon.</text>
+			<event>
+				<text>Time to get out of here.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You did it; the pirate cruiser breaks apart! You collect what usable material floats nearby but the wreckage is so big that more time would be necessary to salvage everything. You run a quick debris-drift analysis to see what you could gather.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text>Spend more time making another sweep of the debris.</text>
+			<event>
+				<text>You slowly circle around the beacon a few times and have your crew keep track of all the drifting parts that seem valuable. The stuff you collect isn't bad, but the Rebel fleet will have surely managed to close in.</text>
+				<modifyPursuit amount="1"/>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+		<choice>
+			<text>Ignite the FTL drive and jump to the next beacon.</text>
+			<event>
+				<text>Time to get out of here.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>A final salvo pierces right through the cruiser and tears it apart. You gather what you can from the wave of scrap that is sent flying fast in all directions.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+</eventList>
+<eventList name="C_DEAD_CREW_PIRATE_CRUISER_DEFAULT">
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You dock and send in a salvage team.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You dock and send in a salvage team.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You dock and send in a salvage team.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You dock and send in a salvage team.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You dock and send in a salvage team, which is able able to take the fuel out of storage.</text>
+		<autoReward level="MED">fuel</autoReward>
+	</event>
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You dock and send in a salvage team, which is able able to take the fuel out of storage.</text>
+		<autoReward level="MED">fuel</autoReward>
+	</event>
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You dock and send in a salvage team. They find a prisoner who offers to join your crew.</text>
+		<crewMember amount="1"/>
+		<autoReward level="MED">fuel</autoReward>
+	</event>
+	<event>
+		<text>No more life signs are detected on the cruiser, the pirates are all dead. You find a weapon system on their ship. With no crew to stop you, you can install it on your own.</text>
+		<autoReward level="MED">fuel</autoReward>
+		<weapon name="RANDOM"/>
+	</event>
+</eventList>
+<event name="C_QUEST_PIRATE_HOME_RIVALRY" unique="true">
+	<img back="BACKGROUND" planet="PLANET_POPULATED_REAL"/>
+	<text>A cruiser docked at this planets main gateway station contacts you on secured channels. A smiling pirate lady in a ragged uniform appears on screen. "Hey, it's you! I've heard you are visiting our great sector. That is so nice of you, as you are not part of all these petty little rivalries we have going on here. You'll be useful!"</text>
+	<ship load="C_SHIP_PIRATE_CRUISER_QUEST_LADY" hostile="false"/>
+		<choice hidden="true"> 
+			<text>Continue...</text>
+			<event>
+				<text>"So before we even consider opening fire on each other and dancing the dance of death, I'd love to propose a deal. It's super simple: You go out there and murder the hell out of the Purple Tentacles clan lord. In return, you get rich. Just make sure you do not mention to anyone that the Claret Skulls sent you."</text>
+				<choice hidden="true"> 
+					<text>"Deal!"</text>
+					<event>
+						<text>"That is amazing! Give this person the coordinates of our grand nemesis please. Now scatter, go and fulfil your mission!"</text>
+						<quest event="C_QUEST_PIRATE_HOME_RIVALRY_LORD"/>
+					</event>
+				</choice>
+				<choice hidden="true"> 
+					<text>"No thanks."</text>
+					<event>
+						<text>"That is pathetic, but pretty much what I expected. Run away now, Federation dog. If you are not willing to take sides in this sector, you'll be always on your own."</text>
+					</event>
+				</choice>
+				<choice hidden="true"> 
+					<text>"Maybe we just take you out instead?"</text>
+					<event>
+						<text>The whole pirate crew burst into a laughter. "What? Look around, I'm the pirate president of this entire system. I command an entire army of goons that do my bidding. If you think you can come here and start trouble you'll be in over your head soon. Allow me to demonstrate..." Anti-Ship Batteries all around the planet power up and the cruiser's weapons come online.</text>
+						<environment type="PDS" target="player"/>
+						<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+					</event>
+				</choice>
+			</event>
+		</choice>
+</event>
+<event name="C_QUEST_PIRATE_HOME_RIVALRY_LORD">
+	<img back="BACKGROUND" planet="PLANET_POPULATED_REAL"/>
+	<text>You arrive near the home-planet of the Purple Tentacles. The commander of the Claret Skulls wants you to take out their leader, but you realize that you might be in over your head here. Anti-Ship Batteries line the planets orbits. You spot the pirates cruiser docked at a small trade depot.</text>
+				<choice hidden="true"> 
+					<text>Approach the planet and attack the pirate cruiser.</text>
+					<event>
+						<text>You speed towards the Purple Tentacle flagship with weapons hot. You hostile intentions are met with surprised hails, of which you answer none. The planetary weapons power up and the cruiser's weapons come online.</text>
+						<environment type="PDS" target="player"/>
+						<ship load="C_SHIP_PIRATE_CRUISER_QUEST_LORD" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>Hail them and reveal that you are a sent here by the Claret Skulls.</text>
+					<event>
+						<text>The local pirate lord is mildly surprised. "Is that so? You are supposed to be... some kind of assassin? I assume you do not intend to kill me then? Good for you. The Skulls are small time, but I thought they might try to pull something like this. Well, I will inform my Tentacles. Have some pocket scrap for sharing this information. Now be on your way."</text>
+						<autoReward level="LOW">scrap_only</autoReward>
+						<choice hidden="true"> 
+							<text>Leave.</text>
+							<event/>
+						</choice>
+						<choice hidden="true"> 
+							<text>Attack them.</text>
+							<event>
+								<text>You turn and speed towards the Purple Tentacle flagship with weapons hot. "Oh, you silly fool." The planetary weapons power up and the cruiser's weapons come online.</text>
+								<environment type="PDS" target="player"/>
+								<ship load="C_SHIP_PIRATE_CRUISER_QUEST_LORD_NO_REWARD" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+							</event>
+						</choice>
+					</event>
+				</choice>
+				<choice hidden="true"> 
+					<text>Abandon your quest and leave before they spot you.</text>
+					<event/>
+				</choice>
+</event>
+<event name="C_QUEST_PIRATE_HOME_RIVALRY_REWARD">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>You arrive at the coordinates given to you by the Claret Skulls agent. The beacon is located in empty space far away from any populated systems. Regardless, you pick up an X-shaped radiation signature. It leads to a small treasure cache, containing supplies and a weapon.</text>
+	<autoReward level="MED">stuff</autoReward>
+	<weapon name="RANDOM"/>
+</event>
+<event name="C_QUEST_PIRATE_HOME_RIVALRY_LORD_LADY_KILLED">
+	<img back="BACKGROUND" planet="PLANET_POPULATED_REAL"/>
+	<text>You arrive near the home-planet of the Purple Tentacles. Anti-ship batteries line the planets orbits. You spot the pirates flagship docked at a small trade depot.</text>
+				<choice hidden="true">
+					<text>Hail and inform them about what you did at the Claret Skull homeworld.</text>
+					<event>
+						<text>The local pirate lord is mildly surprised. "Is that so? You are supposed to be... some kind of assassin? But you decided to kill that lady instead of me? Good for you! The Skulls are small time, but I they might try to pull something like this... Very well, you shall receive some pocket scrap for your insubordinates. Now be on your way."</text>
+						<autoReward level="LOW">scrap_only</autoReward>
+						<choice hidden="true"> 
+							<text>Leave.</text>
+							<event/>
+						</choice>
+						<choice hidden="true"> 
+							<text>Attack them.</text>
+							<event>
+								<text>Leaving a pirate overlord alive just does not fit within your mindset. You turn and speed towards the Purple Tentacle flagship with weapons hot. "Oh, you silly fool." The planetary weapons power up and the cruiser's weapons come online.</text>
+								<environment type="PDS" target="player"/>
+								<ship load="C_SHIP_PIRATE_CRUISER_QUEST_LORD_LADY_DEAD" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+							</event>
+						</choice>
+					</event>
+				</choice>
+</event>

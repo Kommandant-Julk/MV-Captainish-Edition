@@ -1,0 +1,335 @@
+<mod:findLike type="ships">
+    <mod-append:ship name="PLAYER_SHIP_CE_KESTREL" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_KESTREL</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_KESTREL_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_KESTREL</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_ENGI" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_ENGI</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_ENGI_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_ENGI</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_FED" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_FED</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_FED_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_FED</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_ZOLTAN" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_ZOLTAN</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_ZOLTAN_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_ZOLTAN</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_MANTIS" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_MANTIS</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_MANTIS_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_MANTIS</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_SLUG" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_SLUG</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_SLUG_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_SLUG</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_ROCK" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_ROCK</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_ROCK_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_ROCK</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_STEALTH" b="true" c="true">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_STEALTH</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_STEALTH_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>
+        <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CE_STEALTH</shipReq>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_LANIUS" b="true" c="false">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_LANIUS</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CE_CRYSTAL" b="true" c="false">
+        <!--<unlock variant="a" silent="true">
+        <type>4</type>        
+        </unlock>-->
+        <!--<unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CE_CRYSTAL</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+        </unlock>-->
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_CE_KESTREL">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_KESTREL</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_KESTREL_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_KESTREL</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_KESTREL_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_KESTREL</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_ENGI">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ENGI</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_ENGI_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ENGI</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_ENGI_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ENGI</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_FED">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_FEDERATION</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_FED_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_FEDERATION</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_FED_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_FEDERATION</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_ZOLTAN">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ZOLTAN</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_ZOLTAN_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ZOLTAN</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_ZOLTAN_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ZOLTAN</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_MANTIS">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_HIVE</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_MANTIS_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_HIVE</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_MANTIS_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_HIVE</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_SLUG">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_SLUG</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_SLUG_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_SLUG</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_SLUG_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_SLUG</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_ROCK">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ROCK</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_ROCK_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ROCK</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_ROCK_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_ROCK</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_STEALTH">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_STEALTH</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_STEALTH_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_STEALTH</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_STEALTH_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_STEALTH</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_LANIUS">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_LANIUS</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_LANIUS_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_LANIUS</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod-append:customShip name="PLAYER_SHIP_CE_CRYSTAL">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_CRYSTAL</hiddenAug>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CE_CRYSTAL_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>SHIP_CRYSTAL</hiddenAug>
+    </mod-append:customShip>
+    
+    <mod:findLike type="shipOrder">
+        <mod-append:ship>PLAYER_SHIP_CE_KESTREL</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_ENGI</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_FED</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_ZOLTAN</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_MANTIS</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_SLUG</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_ROCK</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_STEALTH</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_LANIUS</mod-append:ship>
+        <mod-append:ship>PLAYER_SHIP_CE_CRYSTAL</mod-append:ship>
+    </mod:findLike>
+</mod:findLike>

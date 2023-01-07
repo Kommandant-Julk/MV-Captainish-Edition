@@ -1,0 +1,93 @@
+<mod:findName type="shipBlueprint" name="REBEL_FAT_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="REBEL_FAT_P_SAFE"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="REBEL_FAT_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="REBEL_FAT_P_DLC_SAFE"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="REBEL_SKINNY_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="REBEL_SKINNY_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="JELLY_BUTTON_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="JELLY_BUTTON_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="JELLY_CROISSANT_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="JELLY_CROISSANT_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="JELLY_TRUFFLE_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="JELLY_TRUFFLE_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ROCK_SCOUT_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ROCK_SCOUT_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ROCK_FIGHT_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ROCK_FIGHT_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="MANTIS_SCOUT_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="MANTIS_SCOUT_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="MANTIS_FIGHTER_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="MANTIS_FIGHTER_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="MANTIS_BOMBER_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="MANTIS_BOMBER_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ZOLTAN_FIGHTER_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ZOLTAN_FIGHTER_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ZOLTAN_BOMBER_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ZOLTAN_BOMBER_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="FED_SCOUT_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="FED_SCOUT_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="FED_BOMBER_P"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="FED_BOMBER_P_DLC"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="JELLY_TRUFFLE_NIGHTS"> 
+    <mod:removeTag />
+</mod:findName>	

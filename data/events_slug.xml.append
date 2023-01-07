@@ -1,0 +1,3177 @@
+<eventList name="NEBULA_NEUTRAL_SLUG">
+	<event load="NEBULA_SLUG_CHOOSE_DEATH"/>
+	<event load="NEBULA_SLUG_HULLFIX"/>
+	<event load="NEBULA_SLUG_FAKE_STORE"/>
+	<event load="SLUG_DRINK"/>
+	<event load="QUEST_SLUG_PIRATE_TRAP"/>
+	<event load="NEBULA_REBEL_UNDETECTED"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_WEAPONS_TRADER"/>
+	<event load="NEBULA_REBEL_CHASE"/>
+	<event load="REFUGEE_NO_DISTRESS_SLUG"/>
+	<event load="ROCK_SLUG_ARGUMENT_NEBULA"/>
+	<event load="NEBULA_BATTLEFIELD"/>
+	<event load="NEBULA_SLUG_HOSTAGE"/>
+	<event load="BS_EVENT_SLUG_BLACKMARKET_NEBULA"/>
+	<event load="BS_EVENT_SLUG_HACK_NEBULA"/>
+</eventList>
+<eventList name="NEBULA_HOSTILE_SLUG">
+	<event load="NEBULA_SLUG_FIGHT"/>
+	<event load="NEBULA_SLUG_MANTIS"/>
+	<event load="NEBULA_SLUG_PIRATE"/>
+	<event load="NEBULA_SLUG_DOORS"/>
+	<event load="NEBULA_SLUG_OXYGEN"/>
+	<event load="NEBULA_SLUG_MEDBAY"/>
+</eventList>
+<eventList name="DISTRESS_BEACON_SLUG">
+	<event load="SLUG_DISTRESS_ROCK"/>
+	<event load="SLUG_DISTRESS_QUESTION"/>
+	<event load="SLUG_DISTRESS_MANTIS"/>
+	<event load="SLUG_DISTRESS_TRICK"/>
+	<event load="SLUG_DISTRESS_RESCUE"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="REFUGEE_DISTRESS_SLUG"/>
+	<event load="CE_DISTRESS_OXYGEN"/>
+</eventList>
+<eventList name="NEUTRAL_SLUG">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="MERCENARY"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<event load="DONOR_PONY"/>
+	<event load="DONOR_PLAGUE"/>
+	<event load="CE_PIRATE_CREW_BOUNTY"/>
+	<event load="CE_LONE_SHUTTLE"/>
+	<event load="CE_DERELICT_TREASURE"/>
+	<event load="C_EVENT_CIVILIAN_TRANSPORT"/>
+	<event load="BS_EVENT_PIRATE_BLACKMARKET"/>
+	<event load="CE_CIVILIAN_THEFT"/>
+</eventList>
+<eventList name="DESTROYED_SHIP_SLUG">
+	<event>
+		<text load="SLUG_FIGHT_DESTROYED"/>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text load="SLUG_FIGHT_DESTROYED"/>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+</eventList>
+<textList name="SLUG_FIGHT_DESTROYED">  
+	<text>The gelatinous hull plating of the attacking Slug ship wobbles a little before being sent flying in many directions by its destruction.</text>
+	<text>These sly Slugs receive their just desserts in the form of weapons fire pulverizing their ship into scrap.</text>
+	<text>These telepathic beings did not foresee this, their impressive arsenal failed to repel yours and their destruction was the inevitable result.</text>
+	<text>Your wits manage to outdo these sneaky Slugs, their ship exploding into a mess of purple armour-plating and scrap materials.</text>
+	<text>The days of this particular group of gastropods are numbered, their fate sealed with the destruction of their prized ship.</text>
+</textList>
+<mod:findName type="event" name="SECRET_WORD_ABADOTH_CONCLUSION"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SECRET_WORD_ABADOTH_CONCLUSION">
+	<text>A Zoltan ship decloaks and demands your reason for being here!</text>
+	<choice>
+		<text>Explain about finding the dead crewman.</text>
+		<event>
+			<text>There is a moment of silence, and suddenly the Zoltan ship cloaks - must have been the wrong word to use... now you've got a fight on your hands!</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice req="engi" hidden="true">
+		<text>(Engi Crew) Say ABADOTH.</text>
+		<event>
+			<text>Your Engi crewman easily recalls the phrase the dead man used from its memory banks. There is a moment of silence, and the ship's captain solemnly thanks you for the information. He wishes you well on your journey, and he offers several upgrades to assist you in exchange for your service to the Zoltan race.</text>
+			<autoReward level="MED">standard</autoReward> 
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Say ANODYNE.</text>
+		<event>
+			<text>There is a moment of silence, and suddenly the Zoltan ship cloaks - must have been the wrong word to use... now you've got a fight on your hands!</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Say ABADOTH.</text>
+		<event>
+			<text>There is a moment of silence, and the ship's captain solemnly thanks you for the information. He wishes you well on your journey, and he offers several upgrades to assist you in exchange for your service to the Zoltan race.</text>
+			<autoReward level="MED">standard</autoReward> 
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Say ABATODH.</text>
+		<event>
+			<text>There is a moment of silence, and suddenly the Zoltan ship cloaks - must have been the wrong word to use... now you've got a fight on your hands!</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="NOTHING_SLUG"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NOTHING_SLUG">
+	<text load="NOTHING_SLUG"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_NEBULA"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some of your hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_NEBULA"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>Undisturbed as you are here you can lay some mines while the FTL charges. The Rebel forces will have to avoid this area, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="NOTHING_SLUG">
+	<text>You arrive at the beacon and are relieved at the sight of open space. Nebulae are terribly claustrophobic.</text>
+	<text>This beacon marks a "small" gap in the nebula. No colonies or ships in scanning distance.</text>
+	<text>You are relieved to see your sensors blink back on after the jump. No ships detected.</text>
+	<text>The Slugs rely heavily on their telepathic powers and are reluctant to give up that advantage by extending beyond nebulae. It's unlikely you'll encounter any this far from the clouds.</text>
+	<text>You arrive in an area clear of nebulae and quickly check to see if the sensors are working. Everything is fine and no ships are detected in the vicinity.</text>
+</textList>
+<event name="START_BEACON_SLUG_ACTUAL">
+	<text load="START_BEACON_SLUG"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_NEBULA"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_BOUNTYHUNTER" hidden="true">
+		<text>(Mercenary Database) Acquire a contract for this sector.</text>
+		<event load="CE_BOUNTY_LIST_SLUG"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="DRONES_BEAM" hidden="true">
+		<text>(Beam Drone) Refit some beam drones for mining duty and send them ahead into the sector. [ Drone Parts: -3 ]</text>
+		<event>
+			<text load="CE_DRONE_MINING_START_TEXT"/>
+			<item_modify>
+				<item type="drones" min="-3" max="-3"/>
+			</item_modify>
+			<quest event="CE_DRONE_MINING_CIVILIAN"/>
+		</event>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some of your hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_NEBULA"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="AE_SECTOR_MAPPING" hidden="true">
+		<text>(Sector Scout Unit) Send out mapping drones to gather detailed data on the sector. [ Drone Parts: -3 ]</text>
+		<event load="CE_SECTOR_MAPPING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>Undisturbed as you are here you can lay some mines while the FTL charges. The Rebel forces will have to avoid this area, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text>Continue...</text>
+		<event/>
+	</choice>
+</event>
+<textList name="START_BEACON_SLUG">
+	<text>The only thing that can render a nebula more dangerous is if it's also home to the Slugs. This particular nebula is just that.</text>
+	<text>This nebula is home to the telepathic Slugs. They'd sell their own slime for a crate of scrap, but they much prefer to just take it.</text>
+	<text>You're told the Slug home world is somewhere in this nebula. You can't see them, but you know they're watching.</text>
+	<text>The Slugs that live in this nebula field are a leisure-centred civilization. Everything in Slug life is done in the pursuit of more currency and more time in which to spend it on extravagant ventures. This, inevitably, leads to much treachery in open space.</text>
+	<text>The Slugs developed on an ocean planet where the ability to telepathically sense another organism was more important than sight. Today they use this ability to navigate unfettered the depths of the nebulae they inhabit.</text>
+</textList>
+<eventList name="CE_BOUNTY_LIST_SLUG">
+	<event>
+		<text>Job offers are plenty in this sector, but payment is mostly slim. Slugs from all slithers of life seek to recruit mercenaries to take out competitors. Target: Slug Ship. Payment: Low.</text>
+		<quest event="CE_BOUNTY_SLUG_NEBULA"/>
+	</event>
+	<event>
+		<text>Job offers are plenty in this sector, but payment is mostly slim. Slugs from all slithers of life seek to recruit mercenaries to take out competitors. Target: Slug Ship. Payment: Low.</text>
+		<quest event="CE_BOUNTY_SLUG_NEBULA"/>
+	</event>
+	<event>
+		<text>A certain pirate ship has been ambushing traders in these nebula for ages. The crews bounty has grown to a substantial amount. Target: Legendary Pirate. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_PIRATE_NEBULA"/>
+	</event>
+</eventList>
+<mod:findName type="event" name="NEBULA_NOTHING_SLUG"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_NOTHING_SLUG">
+	<environment type="nebula"/>
+	<text load="NEBULA_NOTHING_SLUG"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_NEBULA"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some of your hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_NEBULA"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>Undisturbed as you are here, you hide away some mines in the gas clouds. The Rebel forces will have to avoid this area, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="NEBULA_NOTHING_SLUG">
+	<text>When it comes to Slugs, no news is not necessarily good news. However, if they are watching, they don't seem to want to confront you.</text>
+	<text>It's not unusual to feel paranoia in a Slug controlled nebula, but for once it is unfounded.</text>
+	<text>Either this part of Slug space is deserted, or it's too dense for even Slugs to detect your presence. Time to move.</text>
+	<text>This area of the nebula seems entirely empty until a small Slug transport and its escorts emerges suddenly from the clouds, only to disappear again in a matter of seconds.</text>
+	<text>You explore around the beacon and are shocked when a rock the size of a small moon suddenly looms ahead of you. Scans reveal the solid-looking rock is just a husk, almost entirely mined out of useful minerals.</text>
+	<text>There are a number of small stations for travellers in the area, lit up by guiding lights and advertisements. Only Slug ships are docked so you decide it's better to avoid a confrontation and steer clear.</text>
+</textList>
+<mod:findName type="event" name="SLUG_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_FIGHT" unique="true">
+	<text>It's rare for the Slugs to stay exposed in open space for long periods - the ship here may be lost, or just passing through, but either way it moves in to attack!</text>
+	<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="SLUG_MANTIS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_MANTIS" unique="true">
+	<text>You intercept comm chatter from an incoming Mantis ship. "Look. This ship appears not to be owned by the squishy ones. Maybe they won't smell so bad when we cut them open." They move in on your position.</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event> 
+<mod:findName type="event" name="SLUG_PIRATE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_PIRATE" unique="false">
+	<text load="SLUG_PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="SLUG_REBEL"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_REBEL" unique="false">
+	<text load="SLUG_REBEL"/>
+	<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<eventList name="NEBULA_SLUG_HULLFIX_RESULT1">
+	<event>
+		<text>You pull up to the automatic station and, after a short time, they repair 10 hull damage. You begin to offer your thanks but discover that you can't detach from the station.</text>
+		<damage amount="-10"/>
+		<choice>
+			<text>Demand an explanation.</text>
+			<event load="NEBULA_SLUG_HULLFIX_RESULT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>You dock with the station hoping for a quick turnaround, but the automatic machines take their sweet time. When the process finally finishes, you notice only one damage has been repaired.</text>
+		<damage amount="-1"/>
+		<choice>
+			<text>Demand an explanation.</text>
+			<event load="NEBULA_SLUG_HULLFIX_RESULT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you dock with the station your readings go haywire. An EMP blast resonates throughout the ship and your engines shut down. You're a sitting duck as a ship reveals itself and silently moves in to attack!</text>
+		<status type="limit" target="player" system="engines" amount="1"/>
+		<ship load="JELLY_STATUS_ENGINES" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="FTL_BOOSTER" hidden="true">
+			<text>(FTL Charge Booster) Activate the backup generators.</text>
+			<event load="CE_RESIST_ENGINE_JAMMING"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEBULA_SLUG_HULLFIX_RESULT2">
+	<event>
+		<text>"We're glad you have enjoyed our servicessss. Perhaps some fuel would be an appropriate compensssation?"</text>
+		<choice hidden="true">
+			<text>Give them the 15 fuel they demand.</text>
+			<event>
+				<text>You transfer the fuel and they release your ship. "Tell your friendsss about us!" Their portable station slips into the clouds.</text>
+				<item_modify>
+					<item type="fuel" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>That's ridiculous!</text>
+			<event>
+				<text>"I'm ssssorry to hear that." He presses a button and an explosion rocks the ship. They must have planted a bomb while 'repairing'! Prepare for a fight!</text>
+				<ship load="JELLY" hostile="true"/>
+				<damage amount="2"/>
+				<damage amount="1" system="random"/>
+				<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"We're glad you have enjoyed our servicessss. Now for payment. To enssssure your cooperation we've taken the liberty of installing a limiter on your weapons system."</text>
+		<choice hidden="true">
+			<text>Give them the 50 scrap they demand.</text>
+			<event>
+				<text>You transfer the scrap and they release your ship. "Tell your friendsss about us!" Their portable station slips into the clouds.</text>
+				<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Let's get out of here!</text>
+			<event>
+				<text>You activate your thrusters and force your way away from the station. A ship quickly moves in to engage. You'll need to get out of here fast; there may not be time to get the weapons fully operational!</text>
+				<status type="divide" target="player" system="weapons" amount="2"/>
+				<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AUTO_COOLDOWN" hidden="true">
+			<text>(Weapon Charge Booster) Switch to full assisted targeting.</text>
+			<event load="CE_RESIST_WEAPON_JAMMING"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEBULA_SLUG_HULLFIX_REQUEST">
+	<event>
+		<text>"Ahhh. A fellow businessman. We offer to fix 10 damage for 50 ssscrap."</text>
+		<choice hidden="true">
+			<text>Accept.</text>
+			<event>
+				<text>You perform the transaction and watch carefully as their machines patch the hull however, everything seems fine. Once they're complete you get ready to jump.</text>
+				<damage amount="-10"/>				
+				<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Decline.</text>
+			<event>
+				<text>"Too bad. Farewell, traveller." Their mobile station slips into the clouds.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Just before the transmission is cut you hear, "They're not falling for it.  Just kill the crew and we can ssstrip..." Looks like you're not getting out of here without a fight.</text>
+		<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="NEBULA_SLUG_FAKE_STORE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_FAKE_STORE" unique="true">
+	<text>A Slug transport ship is stationed near the beacon with a military escort ship. They message you, "We have been waiting for a customer for agesss. Care to see our waresss?"</text>
+	<environment type="nebula"/>
+	<ship load="JELLY" hostile="false"/>
+	<choice hidden="true">
+		<text>Decline.</text>
+		<event>
+			<text>"Oh well... We ssshall wait here then."  You cautiously put distance between your ships before preparing to jump.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ask to see the goods.</text>
+		<event>
+			<text>"Before we get ahead of ourssselves, I need to explain sssome ground ruless of our transsaction. Thesse are dangerous times, yess?"</text>
+			<choice>
+				<text>Continue.</text>
+				<event>
+					<text>"Firssst... We accept no tradesss, couponss or refundss. Purchasess are final. Underssstand?"</text>
+					<choice>
+						<text>Understood.</text>
+						<event>
+							<text>"We hold no liability for productsss damaged post ssale. We offer no insurance or customer sservice. Not a problem?"</text>
+							<choice hidden="true">
+								<text>Not a problem.</text>
+								<event load="NEBULA_SLUG_FAKE_STORE_LIST"/>
+							</choice>
+							<choice hidden="true">
+								<text>Forget this.</text>
+								<event load="NEBULA_SLUG_FAKE_STORE_LEAVING"/>
+							</choice>
+						</event>
+					</choice>
+					<choice>
+						<text>Forget this.</text>
+						<event>
+							<text>"Fine... Not everyone appreciates good dealss..."</text>
+						</event>
+					</choice>
+					<choice hidden="true" req="slug">
+						<text>(Slug Crew) Our Slug senses someone aboard the ship. Investigate it.</text>
+						<event>
+							<text>It looks like the merchant was trying to stall you while someone teleported on board. You catch him before he could finish and he teleports away. You immediately prepare for battle.</text>
+							<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_SLUG_FAKE_STORE_LIST">
+	<event>
+		<text>"Great. Let me show you our waress.  It's not often I meet patient alienss, have this complimentary fuel as well."</text>
+		<item_modify>
+			<item type="fuel" min="5" max="5"/>
+		</item_modify>
+		<store/>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+	</event>
+	<event>
+		<text>"During our discussion, my man hass taken the liberty of disabling your weaponss to prevent any complications while completing our... transssaction..." You suddenly register multiple weapon locks, but your own weapons are not responding. Get out of there!</text>
+		<boarders min="1" max="1" class="slug"/>
+		<status type="limit" target="player" system="weapons" amount="0"/>
+		<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AUTO_COOLDOWN" hidden="true">
+			<text>(Weapon Charge Booster) Switch to full assisted targeting.</text>
+			<event load="CE_RESIST_WEAPON_JAMMING"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+	<event>
+		<text>"Thank you. If you could do me one more courtesssy... please die quietly." You suddenly hear gunshots aboard the ship. He must have been stalling for time while they boarded your ship!</text>
+		<boarders min="2" max="3" class="slug"/>
+		<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEBULA_SLUG_FAKE_STORE_LEAVING">
+	<event>
+		<text>"Very well... Impatient alienss..." You prepare to jump.</text>
+	</event>
+	<event>
+		<text>You prepare to leave but notice noises on your ship. It looks like the merchant was trying to stall you while they hacked into your systems. You barely have time to order an alert before a military ship flies through the clouds intent on your destruction!</text>
+		<boarders min="1" max="1" class="slug"/>
+		<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="NEBULA_SLUG_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_FIGHT">
+	<text load="NEBULA_SLUG_FIGHT"/>
+	<environment type="nebula"/>
+	<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+</event>
+<mod:findName type="event" name="NEBULA_SLUG_MANTIS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_MANTIS" unique="true">
+	<text>The Mantis attack ship here looks to have been hunting Slugs on their home turf - a rare test of honour for the mightiest Mantis crews. Weapons up!</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	<environment type="nebula"/>
+</event>
+<mod:findName type="event" name="NEBULA_SLUG_PIRATE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_PIRATE" unique="true">
+	<text>You're surprised to find a ship without Slug markings stranded all the way out here and move in to provide assistance. When you see the pirate insignia on the hull you quickly reconsider.</text>
+	<ship load="PIRATE" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>Attack!</text>
+		<event>
+			<text load="CE_PRE_FIGHT_TEXT"/>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Keep your distance and hope they haven't seen you yet.</text>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="NEBULA_SLUG_MEDBAY"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_MEDBAY" unique="true"> 
+	<text>A Slug ship hails you, "We've detected ssome worrying radiation coming from your medical unit, perhaps you sshould take a look?" As he signs off, your medical bay shuts off.</text>
+	<status type="limit" target="player" system="medbay" amount="0"/>
+	<status type="limit" target="player" system="clonebay" amount="0"/>
+	<ship load="JELLY_STATUS_MEDBAY" hostile="true"/>
+	<environment type="nebula"/>
+	<choice req="AE_TELEPORTER_JAMMER" hidden="true">
+		<text>(Teleporter Disruptor) "Well, we in return detected some worrying malfunction in your remote teleporters..."</text>
+		<event>
+			<text>"Yes... it appearss our engineering crew won't be able to help you then." The Slug snickers. "We will, uhm, try to reconfigure our weapon array and uhm... teleport sssome repair bombss!? Pleasse remain at your current position, will you?" Weapon locks detected. Their guns don't look like they are designed to fix things.</text>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>The Slug crew teleports aboard from a nearby station. They don't look like engineers. Your order your crew to repel the boarders.</text>
+			<boarders min="2" max="3" class="slug"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="medbay" lvl="2">
+		<text>(Lv2 Medbay) Try to squeeze some extra power to the system.</text>
+		<event>
+			<text>The Slug crew teleports aboard from a nearby station. They don't look like engineers. Fearing the imminent battle you desperately try to get the medbay working again. Its lights flicker back on and you turn to face the intruders.</text>
+			<boarders min="2" max="3" class="slug"/>
+			<status type="divide" target="player" system="medbay" amount="2"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="clonebay" lvl="2">
+		<text>(Lv2 Clone Bay) Try to squeeze some extra power to the system.</text>
+		<event>
+			<text>The Slug crew teleports aboard from a nearby station. They don't look like engineers. Fearing the imminent battle you desperately try to get the clone bay working again. Its lights flicker back on and you turn to face the intruders.</text>
+			<boarders min="2" max="3" class="slug"/>
+			<status type="divide" target="player" system="clonebay" amount="2"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="STORM_SLUG_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="STORM_SLUG_FIGHT">
+	<text load="STORM_SLUG_FIGHT"/>
+	<environment type="nebula"/>
+	<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+</event>
+<mod:findName type="event" name="SLUG_DISTRESS_QUESTION_FALSE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_DISTRESS_QUESTION_FALSE">  
+	<text>"That issss... incorrect. Further, I have taken advantage of your lack of acuity to beam aboard your ship and steal your stuff!"</text>
+	<choice req="AE_TELEPORTER_JAMMER" hidden="true">
+		<text>(Teleporter Disruptor) Activate the jammer device.</text>
+		<event>
+			<text>The thief won't be able to teleport away again. You could order your crew to apprehend him. But you could also approach the matter more "diplomatically".</text>
+			<choice hidden="true">
+				<text>Have the crew search the ship and eliminate the hostile.</text>
+				<event>
+					<text>Your crew systematically searches the ship till it uncovers the cloaked intruder. The cornered Slug does not want to go down without a fight, it tries to escape by breaching your hull.</text>
+					<boarders breach="true" min="1" max="1" class="slug"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Offer to hire the Slug thief.</text>
+				<event>
+					<text>You make an announcement over the ship's intercom and describe the situation the thief fiends itself in. As expected, the Slug does greed would suggest and joins your crew.</text>
+					<item_modify>
+						<item type="scrap" min="-25" max="-25"/>
+					</item_modify>
+					<crewMember amount="1" class="slug"/>  
+				</event>
+			</choice>		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>You search the ship but find no trace of the Slug thief. A lot of equipment is missing though.</text>
+			<item_modify steal="true">
+				<item type="scrap" min="-35" max="-35"/>
+				<item type="fuel" min="-4" max="-2"/>
+				<item type="drones" min="-2" max="-1"/>
+				<item type="missiles" min="-4" max="-2"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<eventList name="SLUG_DISTRESS_ROCK_FIGHT">
+	<event>
+		<text>You charge weapons and the Slugs immediately back down. When you return to the freighter, the Rockmen have already repaired the worst of their damage and jump away without another word.</text>
+	</event>
+	<event>
+		<text>You power up weapons and the Slugs quickly change course to meet your charge.</text>
+		<ship load="JELLY_DISTRESS_ROCK" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="SLUG_DISTRESS_ROCK_AVOID">
+	<event>
+		<text>You have no desire to provoke Slugs in their own territory. You leave them alone.</text>
+	</event>
+	<event>
+		<text>You have no desire to provoke the Slugs in their own territory. You leave them alone.</text>
+	</event>
+	<event>
+		<text>After the Slugs board the ship you are surprised to see the Rock ship spring to life and decimate the other ship. They message you, "Pathetic. You are either a coward or an ally of the Slugs. Either way, you don't deserve to live."</text>
+		<ship load="ROCK_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="SLUG_DISTRESS_MANTIS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_DISTRESS_MANTIS" unique="true">
+	<text>The distress call appears to be emanating from a Slug ship caught in open space by a Mantis raider. They contact you on emergency frequencies, "Pleassse, we'll give you all we have if you sssave ussss!"</text>
+	<choice hidden="true">
+		<text>Attack the Mantis ship.</text>
+		<event>
+			<text>You lock onto the Mantis ship and engage.</text>
+			<ship load="SLUG_DISTRESS_MANTIS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attack the Slug ship.</text>
+		<event>
+			<text>You move to finish what the Mantis have started.</text>
+			<ship load="SLUG_DISTRESS_MANTIS_SLUG" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Of all the species in the galaxy, these two deserve one another. You power up the jump drive.</text>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="NEBULA_SLUG_FIGHT_UNLOCK"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_FIGHT_UNLOCK" unique="true">
+	<text load="NEBULA_SLUG_FIGHT"/>
+	<environment type="nebula"/>
+	<ship load="JELLY_UNLOCK1" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+</event>
+<mod:findName type="event" name="SLUG_UNLOCK_1"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_UNLOCK_1">
+	<text>You arrive to discover an impressive cruiser being worked on by a few smaller ships and guarded by an assault ship. The mobile construction platform is slowly slipping into the clouds. You have not yet been noticed.</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Charge them before they escape.</text>
+		<event>
+			<text>As you approach, the assault ship swoops in on an intercept trajectory. Prepare for a fight!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Try to tail them without being noticed.</text>
+		<event load="SLUG_UNLOCK_2"/>
+	</choice>
+</event>
+<mod:findName type="event" name="SLUG_UNLOCK_2"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_UNLOCK_2">
+	<text>You slip into the nebula undetected but at this rate you are likely to get lost and lose track of them.</text>
+	<choice hidden="true">
+		<text>Fly slowly toward their last known position.</text>
+		<event>
+			<text>You are advancing slowly when suddenly the assault ship bursts through the clouds. They must have been able to detect you with their telepathy!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Wait and hope the escort leaves.</text>
+		<event>
+			<text>You wait for a time before attempting to advance toward the platform. However, after some frantic searching you can't tell if they left or you simply miscalculated your trajectory... You give up the search and prepare to leave.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="slug">
+		<text>(Slug Crew) Have your crew member monitor their life signatures.</text>
+		<event>
+			<text>You try to stay just far enough away that they won't detect your life signatures without actively searching for you. After a time, your Slug tells you the ship with a larger crew has jumped away. He guides the helm toward the platform...</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>The only ship left near the cruiser is an interceptor. This should be easy!</text>
+					<ship load="JELLY_UNLOCK3" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="2">
+		<text>(Lv2 Sensors) Try to maintain a lock on their ships from a distance.</text>
+		<event>
+			<text>You overclock your sensors, trying to get them to function in the clouds. They work just enough to let you keep tabs on their general position. After a time, the assault ship and most of the escort jumps away from the platform. You take the opportunity and move in to attack.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>The only ship left near the cruiser is an interceptor. This should be easy!</text>
+					<ship load="JELLY_UNLOCK3" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="SLUG_DRINK"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_DRINK" unique="true">
+	<environment type="nebula"/>
+	<text>A Slug Captain hails and invites himself aboard your ship to present a flask of something slimy. "Now, most gracioussss Captain, you must join me please in a drink to our alliance!"</text>
+	<ship load="JELLY" hostile="false"/>
+	<choice hidden="true">
+		<text>Drink.</text>
+		<event load="SLUG_DRINK_DRINK"/>
+	</choice>
+	<choice hidden="true">
+		<text>Refuse.</text>
+		<event>
+			<text>The Slug feigns offense at your refusal, but you sense that he respects your caution. This does not, however, prevent him from returning to his ship and opening fire.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="rock">
+		<text>(Rock Crew) Have your Rockman pose as Captain.</text>
+		<event load="SLUG_DRINK_ROCK"/>
+	</choice>
+</event>
+<eventList name="SLUG_DRINK_ROCK">
+	<event>
+		<text>Even if there was something malicious in the drink, you doubt it would affect the Rock digestive system. The Slug casually celebrates your new-found trust by repairing part of your ship and offering to sell you his wares.</text>
+		<damage amount="-10"/>
+		<store/>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+	</event>
+	<event>
+		<text>Your crewman is able to identify a heavy anaesthetic contained in the flask when they feel slightly drowsy (Thankfully the Rock digestion system is very robust). His ruse discovered, the Slug immediately returns to his ship and opens fire.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="QUEST_SLUG_PIRATE_TRAP2"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="QUEST_SLUG_PIRATE_TRAP2"> 
+	<environment type="nebula"/>
+	<text>You catch up with the two Slug ships and they're already carrying out their raid! One is in close combat with the pirate, the other seems to be heading for a small space cache the pirate was protecting. </text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>Suddenly the first ship bursts into flames, and an urgent call arrives from the remaining Slugs. "We sssugest you dissstract the pirate vesssel while we retrieve the valuablesss. Fifty fifty sssplit."</text>
+			<choice hidden="true">
+				<text>Engage the pirate.</text>
+				<event>
+					<text>There's money to be made here. The Slugs know that. You turn on the pirate and intercept just before he can reach the cache!</text>
+					<ship load="QUEST_SLUG_PIRATE_TRAP1" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Head for the cache.</text>
+				<event>
+					<text>When he sees you making for the cache the Slug Captain hails, "Foolish alienss, no eye for profit. Bessst of luck to you." They jump off, leaving you toe to toe with the pirate!</text>
+					<ship load="QUEST_SLUG_PIRATE_TRAP2" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="SLUG_DISTRESS_TRICK_LIST">
+	<event>
+		<text>As soon as you board their ship their hostile intentions become clear. Despite being outnumbered, your crew is able to break free of the Slug trap and fight back to the airlock. You pull away from the enemy ship but not before a few Slugs make it on board.</text>
+		<boarders min="2" max="3" class="slug"/>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+	<event>
+		<text>As soon as you board their ship, their hostile intentions become clear. On your way back to the airlock, one of your crewman is taken out by a well aimed Slug blaster shot.</text>
+		<ship hostile="true"/>
+		<removeCrew>
+			<clone>true</clone>
+			<text>Fortunately, your crew member was immediately revived by the Clone Bay.</text>
+		</removeCrew>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+	<event>
+		<text>You cautiously board their ship and immediately smell the stale air of a malfunctioning life support system. In no time at all you're able to fix up the problem and head off again with some extra scrap in your hold.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+</eventList>	
+<mod:findName type="event" name="SLUG_DISTRESS_PILOTING"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="SLUG_DISTRESS_PILOTING" unique="true">
+	<text>The distress signal originates from a tampered jump beacon. A Slug vessel jumps in and its captain announces he has hacked your engine system. "Of course if you, asss one of the few remaining sshipsss in the Federation, ssswear allegiance to the SSSlug Empire you will be free to go."</text>
+	<environment type="nebula"/>
+	<status type="limit" target="player" system="engines" amount="1"/>
+	<ship load="JELLY_STATUS_ENGINES" hostile="false"/>
+	<choice hidden="true">
+		<text>Swear allegiance.</text>
+		<event load="SLUG_DISTRESS_PILOTING_SWEAR"/>
+	</choice>
+	<choice hidden="true">
+		<text>Never!</text>
+		<event>
+			<text>The Slug is unimpressed by your bravado and moves in to attack. Get the shields up, you're a sitting duck with malfunctioning thrusters!</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="FTL_BOOSTER" hidden="true">
+			<text>(FTL Charge Booster) Activate the backup generators.</text>
+			<event load="CE_RESIST_ENGINE_JAMMING"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="pilot" lvl="2">
+		<text>(Lv2 Helm) Override his control.</text>
+		<event>
+			<text>You quickly re-wire through a secondary control module. Once they realize you're not likely to agree to their demands they move in to attack.</text>
+			<status type="clear" target="player" system="engines" amount="100"/>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="SLUG_DISTRESS_PILOTING_SWEAR">
+	<event>
+		<text>"Wow, I didn't think you'd go through with it..." He turns to his second in command, "Looks like I owe you some scrap." Strangely enough, they simply let you pass.</text>
+		<status type="clear" target="player" system="engines" amount="100"/>
+	</event>
+	<event>
+		<text>Words come cheap, especially these ones. You assure the Slug of your loyalty and he welcomes you to the fold: "...and finally, let me introduce you to your new Slug Empire Overseer. He will ensure you stay true to the cause." A bored-looking Slug teleports over.</text>
+		<crewMember amount="1" class="slug"/>
+		<status type="clear" target="player" system="engines" amount="100"/>
+	</event>
+</eventList>
+<mod:findName type="event" name="NEBULA_SLUG_CHOOSE_DEATH"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_CHOOSE_DEATH" unique="true">
+	<text>You are immediately hailed by a dangerous looking ship. "I'm feeling generouss today. I sshall allow you to choosse your own death. Which do you like leasst, sshields, oxygen, or weaponsss?"</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Shields.</text>
+		<event>
+			<text>"Very good then!" Your shield power suddenly drops and they charge.</text>
+			<status type="loss" target="player" system="shields" amount="2"/>
+			<ship load="JELLY_STATUS_SHIELDS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="SHIELD_RECHARGE" hidden="true">
+			<text>(Shield Charge Booster) Activate the backup generators.</text>
+			<event load="CE_RESIST_SHIELD_JAMMING"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Oxygen.</text>
+		<event>
+			<text>"A being that would choose sssuffocation? Who am I to judge..." Your life support shuts off and they move in to attack.</text>
+			<status type="divide" target="player" system="oxygen" amount="2"/>
+			<ship load="JELLY_STATUS_OXYGEN" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Weapons.</text>
+		<event>
+			<text>"Your acceptance of death is almosst admirable... Almosst." Your weapons system registers a hacking module. You hardly have time to respond before they attack.</text>
+			<status type="divide" target="player" system="weapons" amount="2"/>
+			<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AUTO_COOLDOWN" hidden="true">
+			<text>(Weapon Charge Booster) Switch to full assisted targeting.</text>
+			<event load="CE_RESIST_WEAPON_JAMMING"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Offer 35 scrap to leave you alone.</text>
+		<event>
+			<text>"I really am feeling generousss..." They take the scrap and leave.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="WEAPONS_EFFECTOR">
+		<text>(System Disruptor) Configure you disruptor to identify and counter system intrusions while you distract the Slug.</text> 
+		<event>
+			<text>Your pretend that you want to buy yourself free until your equipment starts to sabotage the Slugs ship's Hacking Module. Their commander seems not amused. "What? Imposssible! Engage them anyway!" He cuts communication and charges weapons.</text>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="NEBULA_SLUG_DOORS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_DOORS" unique="true">
+	<text>There are few more vicious beasts in the galaxy than a Slug with their back to the wall. The faltering ship at this beacon disables your door system and then charges fire-weapons - they're going to burn you out!</text>
+		<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+		<text load="CE_PRE_FIGHT_TEXT"/>
+			<status type="limit" target="player" system="doors" amount="0"/>
+			<ship load="JELLY_STATUS_DOORS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="WEAPONS_EFFECTOR">
+		<text>(System Disruptor) Disable the enemy hacking module.</text> 
+		<event>
+			<text>Your disruptor is far superior to the enemy hacking software. Your door system comes back online.</text>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="NEBULA_SLUG_OXYGEN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_SLUG_OXYGEN" unique="true">
+	<text>The Slugs here use a tactic you hoped you'd never see; they sabotage your oxygen production system and then charge fire-weapons - you're going to suffocate!</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text load="CE_PRE_FIGHT_TEXT"/>
+			<ship load="JELLY_STATUS_OXYGEN_FIRE" hostile="true"/>
+			<status type="limit" target="player" system="oxygen" amount="0"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="oxygen" lvl="2">
+		<text>(Lv2 Life Support) Try to squeeze some extra power to the system.</text>
+		<event>
+			<text>Thankfully your improved subsystem is able to counter their hacking enough to keep the life support barely functional. That should keep you alive at least...</text>
+			<ship load="JELLY_STATUS_OXYGEN_FIRE" hostile="true"/>
+			<status type="divide" target="player" system="oxygen" amount="2"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="WEAPONS_EFFECTOR">
+		<text>(System Disruptor) Counter the cyber-attack.</text> 
+		<event>
+			<text>Luckily the Slug's hacking routines are no match for your disruptive device. Your life support comes back online.</text>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<event name="BS_EVENT_SLUG_BLACKMARKET_NEBULA" unique="true">
+	<text load="BS_EVENT_SLUG_BLACKMARKET_TEXT"/>
+	<ship load="BS_SLUG" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>Continue...</text>
+	<event>
+	<text>You consider dealing with the station.</text>
+	<choice>
+		<text>Purchase Slug mind-maps of the nebula.</text>
+		<event>
+			<text>Your map has been updated.</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-15"/>
+			</item_modify>
+			<reveal_map/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Purchase an unknown weapon from a weapon shop. [Scrap: -50]</text>
+		<event load="BS_EVENT_SLUG_BLACKMARKET_NEBULA_TRADE"/>
+	</choice>
+	<choice hidden="true" req="slug">
+		<text>(Slug Crew) Have your slug negotiate a better deal.</text>
+		<event>
+			<text>After the slugs intensely stare at each other for some time, the dealer agrees to improve his offer. You can only imagine how difficult it must be to barter with someone who can read minds.</text>
+			<choice hidden="true">
+				<text>Take the deal and purchase an unknown weapon. [ Scrap: 40 ]</text>
+				<event>
+					<text>You write a scrap transfer order and the Slug agrees to send the weapon to your ship. The gun has seen better days, but it works.</text>	
+					<item_modify>
+						<item type="scrap" min="-40" max="-40"/>
+					</item_modify>
+					<weapon name="RANDOM"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Change your mind.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Have a Slug engineer fix up 10 hull damage.</text>
+		<event load="BS_EVENT_SLUG_BLACKMARKET_NEBULA_REPAIR"/>
+	</choice>
+	<choice>
+		<text>Dealing with telepaths isn't without dangers. Better move on.</text>
+		<event/>
+	</choice>
+	<choice>
+		<text>Attack and raid the station.</text>
+		<event>
+			<text>The Slugs are not highly regarded among the Federation and your crew agrees that these individuals can't be trusted with keeping quiet about your whereabouts. You decide to punish these Slugs for the countless betrayals the Federation has suffered from their kind.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	</event>
+	</choice>
+</event>
+<textList name="BS_EVENT_SLUG_BLACKMARKET_TEXT">
+	<text>You find a busy Slug trade station hidden in this part of the nebula. They agree to let you dock and offer some services</text>
+	<text>A Slug station hails you shortly after you arrive, "Come travellerss, see our waress!"</text>
+	<text>As you jump in the crew already expects another Slug hacker trying to set your ship on fire. You are glad to just find a slimy Slug trade-post instead. They even offer their services to you. </text>
+	<text>This area of the nebula seems devoid of life, but as your charge your FTL a Slug station suddenly de-cloaks a few klicks behind you. They hail and explain that they are a trade-post open for business.</text>
+</textList>
+<eventList name="BS_EVENT_SLUG_BLACKMARKET_NEBULA_TRADE">
+	<event>
+		<text>You write a scrap transfer order and the Slug agrees to send the weapon to your ship. The gun has seen better days, but it works.</text>
+		<item_modify>
+			<item type="scrap" min="-50" max="-50"/>
+		</item_modify>
+		<weapon name="RANDOM"/>
+	</event>
+	<event>
+		<text>You write a scrap transfer order and the Slug agrees to send the weapon to your ship. As it does not arrive after quite some time you go back to the shop only to find it empty. Inquiry for the owner only results in frustration, every Slug you ask denies that this shop is actually in business. It seems you got ripped off.</text>
+		<item_modify>
+			<item type="scrap" min="-50" max="-50"/>
+		</item_modify>
+		<choice>
+			<text>This is outrageous. Attack the station!</text>
+			<event>
+				<text>These Slugs need to be taught a lesson.</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Vow to never deal with Slugs unprepared again and move on.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="BS_EVENT_SLUG_BLACKMARKET_NEBULA_REPAIR">
+	<event>
+		<text>You transfer the scrap and the engineer sends out a drone that starts to replace damaged hull parts on your ship. Once the repair is complete you prepare the FTL drive.</text>
+		<item_modify>
+			<item type="scrap" min="-30" max="-30"/>
+		</item_modify>
+		<damage amount="-10"/>				
+	</event>
+	<event>
+		<text>You transfer scrap and the engineer sends out a drone that starts to replace damaged hull parts on your ship. Strangely it leaves again after having only repaired some minor damage. The station then detaches your ship from the docking bay and does not even answer your hails. It seems the customer isn't exactly king here.</text>
+		<item_modify>
+			<item type="scrap" min="-30" max="-30"/>
+		</item_modify>
+		<damage amount="-3"/>
+		<choice hidden="true">
+			<text>This is outrageous. Attack the station!</text>
+			<event>
+				<text load="CE_PRE_FIGHT_TEXT"/>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Vow to never deal with Slugs unprepared again and move on.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<event name="BS_EVENT_SLUG_HACK_NEBULA" unique="true">
+	<text>You are hailed by a well-armed Slug station. "Coming here was a misstake. Nothing perssonal, but we will sscrap your sship for our own profit. We have a very neoliberal economy, you know?"</text>
+	<environment type="nebula"/>
+	<ship load="BS_JELLY_STATUS" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack!</text>
+		<event load="BS_EVENT_SLUG_HACK_NEBULA_RESULTS"/>
+	</choice>
+	<choice hidden="true">
+		<text>Offer 35 scrap to buy yourself out of this.</text>
+		<event>
+			<text>"Hm... well thisss might jussst ssufice." They take the scrap and you hurry to leave.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<eventList name="BS_EVENT_SLUG_HACK_NEBULA_RESULTS">
+	<event>
+		<text>"Very well. Thiss ssstation hass a wide array of electronic warfare capabilitiesss. Let'ss ssse what we can do..."</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>Your ship computer registers a cyber-attack directed at the weapons systems. The station locks onto your ship!</text>
+				<ship hostile="true"/>
+				<status type="divide" target="player" system="weapons" amount="2"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AUTO_COOLDOWN" hidden="true">
+			<text>(Weapon Charge Booster) Switch to full assisted targeting.</text>
+			<event load="CE_RESIST_WEAPON_JAMMING"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="WEAPONS_EFFECTOR">
+			<text>(System Disruptor) Counter their hacking attempts.</text> 
+			<event>
+				<text>Your disruptor manages to eliminate the station's override routines that have been introduced into your systems. Time to mop them up!</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"Prepare to burn then." Your ship computer registers an enemy cyber-attack.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>Warning lights flicker all over your ship airlocks as your door systems and life support are sabotaged by the station's hacking modules.</text>
+				<ship hostile="true"/>
+				<status type="divide" target="player" system="oxygen" amount="2"/>
+				<status type="limit" target="player" system="doors" amount="0"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="WEAPONS_EFFECTOR">
+			<text>(System Disruptor) Counter their hacking attempts.</text> 
+			<event>
+				<text>Your disruptor manages to eliminate the station's override routines that have been introduced into your systems. Time to mop them up!</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"All right, hope you don't feel too defenssseless without your sshields." An Effector hidden inside the station targets your shield system and interferes with you medical equipment.</text>
+		<choice hidden="true">
+		<text>Continue...</text>
+			<event>
+				<text>You engage the station and prepare for the worst.</text>
+				<ship hostile="true"/>
+				<status type="loss" target="player" system="shields" amount="2"/>
+				<status type="loss" target="player" system="medbay" amount="1"/>
+				<status type="loss" target="player" system="clonebay" amount="1"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="SHIELD_RECHARGE" hidden="true">
+			<text>(Shield Charge Booster) Activate the backup generators.</text>
+			<event load="CE_RESIST_SHIELD_JAMMING"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="WEAPONS_EFFECTOR">
+			<text>(System Disruptor) Counter their hacking attempts.</text> 
+			<event>
+				<text>Your disruptor manages to eliminate the station's override routines that have been introduced into your systems. Time to mop them up!</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"We will ssstart by immobilizzzing you." Your ship's engines and nav-com are targeted by an electronic warfare device and start to fail.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>You hope your shields will be able to take the enemy fire and move to engage.</text>
+				<ship hostile="true"/>
+				<status type="limit" target="player" system="engines" amount="1"/>
+				<status type="limit" target="player" system="pilot" amount="1"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="FTL_BOOSTER" hidden="true">
+			<text>(FTL Charge Booster) Activate the backup generators.</text>
+			<event load="CE_RESIST_ENGINE_JAMMING"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="WEAPONS_EFFECTOR">
+			<text>(System Disruptor) Counter their hacking attempts.</text> 
+			<event>
+				<text>Your disruptor manages to eliminate the station's override routines that have been introduced into your systems. Time to mop them up!</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<event name="NEBULA_SLUG_HOSTAGE" unique="true">
+	<text>You detect a weak brainwave emitter nearby. One of your crew members walks to a console to check it out, but then decides to broadcast their personal teleporter ID into open space?!</text>
+	<environment type="nebula"/>
+	<choice req="AE_TELEPORTER_JAMMER" hidden="true"> 
+		<text>(Teleporter Disruptor) This is a kidnapping attempt - We need teleporter disruption right away!</text>
+		<event>
+			<text>Your crewman has already started to de-materialize, but the disruption field prevents them from being teleported away altogether. A Slug ship emerges near the source of the Mind Control signal. With their initial plans frustrated, the Slugs decide to engage in direct combat.</text>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice req="AE_FIREWALL" hidden="true"> 
+		<text>(Resistive Plating) This is a kidnapping attempt - We need control-protection right away!</text>
+		<event>
+			<text>The rest of the bridge personnel jumps at your crewman, preventing them from sending their last ID sequence. Once the plating is polarized, the crewmen stops resisting. A Slug ship emerges near the source of the Mind Control signal. With their initial plans frustrated, the Slugs decide to engage in direct combat.</text>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind"> 
+		<text>(Mind Control) This is a kidnapping attempt - Control that crewmen!</text>
+		<event>
+			<text>Your own Mind Control system allows your crew member to regain control over their body, preventing them from sending their last ID sequence. A Slug ship emerges near the source of the mind control signal. With their initial plans frustrated, the Slugs decide to engage in direct combat.</text>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Continue...</text>
+		<event>
+			<text>Your crew member is teleported away the same instant and a ship reveals itself nearby: "Greetingss. Asss you can ssee we have controlled and kidnapped your crewman. You will have to pay a ranssom if you want to get them back alive." Your crewman desperately looks at you from the vidscreen, being held at gunpoint by an especially slimy Slug. "Don't compromise the mission, Sir. Do what you must do!"</text>
+			<choice hidden="true">
+				<text>Pay. [ Scrap: -30 ]</text>
+				<event>
+					<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are visibly shaken up, but mostly unharmed.</text>
+					<item_modify>
+						<item type="scrap" min="-30" max="-30"/>
+					</item_modify>
+					<choice hidden="true">
+						<text>Leave.</text>
+						<event/>
+					</choice>
+					<choice hidden="true">
+						<text>Attack the Slug Kidnappers.</text>
+						<event>
+							<text>"I sssee. We wanted to avoid unnecessary bloodshed, but if it is your wish we will still fight you for more profit."</text>
+							<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Negotiate.</text>
+				<event load="NEBULA_SLUG_HOSTAGE_NEGOTIATE"/>
+			</choice>
+			<choice hidden="true" req="weapons" lvl="5"> 
+				<text>(Weapons) Threaten.</text>
+				<event load="NEBULA_SLUG_HOSTAGE_THREATEN"/>
+			</choice>
+			<choice hidden="true">
+				<text>Attack.</text>
+				<event>
+					<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs puts a blaster to your crewmens head, making you watch as it pulls the trigger.</text>
+					<removeCrew>
+						<clone>true</clone>
+						<text>"Oh... a clonebay? We did not forsssee that. Well then, undersstand thiss asss a preview of what will happen to all of you in a ssecond." The Slugs engage your ship.</text>
+					</removeCrew>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_SLUG_HOSTAGE_NEGOTIATE">
+	<event>
+		<text>The Slugs refuse to negotiate. Your crewman gets beaten and shock-prodded several times. "We are tired of this, you should have paid, but now you've sealed your friend'ss fate." The Slugs puts a blaster to your crewman's head, making you watch as it pulls the trigger. Filled by rage, you move in to attack.</text>
+		<removeCrew>
+			<clone>true</clone>
+			<text>"Oh... a clonebay? We did not forsssee that. Well then, undersstand thiss asss a preview of what will happen to all of you in a ssecond."</text>
+		</removeCrew>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+		</event>
+	<event>
+		<text>The Slugs agree to lower the ransom after some tense discussion. Your crewman gets beaten and shock-prodded several times. "Alright, you got your discount, now pay up or we lay waste to your crewman right here on the spot."</text>
+		<choice hidden="true">
+			<text>Pay. [ Scrap: -15 ]</text>
+			<event>
+				<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are visibly shaken up, but mostly unharmed. The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately.</text>
+				<item_modify>
+					<item type="scrap" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true"> 
+			<text>Negotiate.</text>
+			<event>
+				<text>The Slugs are no longer willing to listen. "You don't ssseem to undersstand the concept of a hosstage ssituation." One Slug draws a modified shock blaster and shoots your crewman in the leg, causing them to break down screaming. "Your time iss running out!"</text>
+				<choice hidden="true">
+					<text>Pay. [ Scrap: -15 ]</text>
+					<event>
+						<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are badly wounded and need urgent medical attention. The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately.</text>
+						<item_modify>
+							<item type="scrap" min="-15" max="-15"/>
+						</item_modify>
+						<choice>
+							<text>Perform first aid.</text>
+							<event>
+								<text>Your efforts are fruitless, the Slug blaster inflicted critical tissue damage on your crewman. They eventually succumb to their wounds.</text>
+								<removeCrew>
+									<clone>true</clone>
+									<text>The crew member's clone is already ready. The clone has trouble coming to terms with what happened here. "So you escalated the hostage situation, got me shot, then paid up to get me released, only to let me bleed to death? What the hell, Cap?"</text>
+								</removeCrew>
+							</event>
+						</choice>
+						<choice hidden="true" req="medbay" lvl="2">
+							<text>(Lv2 Medbay) Stabilize your crewman.</text>
+							<event>
+								<text>Your crew member makes it, but remains deeply shaken. "I'd rather get out of Slug space soon, Captain."</text>
+							</event>
+						</choice>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>Attack.</text>
+					<event>
+						<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+						<removeCrew>
+							<clone>false</clone>
+							<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+						</removeCrew>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="weapons" lvl="5"> 
+			<text>(Lv5 Weapons) Threaten.</text>
+			<event>
+				<text>The Slugs remain unimpressed. "You don't seem to understand the concept of a hostage situation." One Slug draws a modified shock blaster and shoots your crewman in the leg, causing them to break down screaming. "Your time iss running out!"</text>
+				<choice hidden="true">
+					<text>Pay. [ Scrap: -15 ]</text>
+					<event>
+						<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are badly wounded and need urgent medical attention. The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately.</text>
+						<item_modify>
+							<item type="scrap" min="-15" max="-15"/>
+						</item_modify>
+						<choice>
+							<text>Perform first aid.</text>
+							<event>
+								<text>Your efforts are fruitless, the Slug blaster inflicted critical tissue damage on your crewman. They eventually succumb to their wounds.</text>
+								<removeCrew>
+									<clone>true</clone>
+									<text>The crew member's clone is already ready, but the clone has trouble coming to terms with what happened here. "So you escalated the hostage situation, got me shot, then paid the ransom to get me released, only to let me bleed to death? What the hell, Cap?"</text>
+								</removeCrew>
+							</event>
+						</choice>
+						<choice hidden="true" req="medbay" lvl="2">
+							<text>(Lv2 Medbay) Stabilize your crewman.</text>
+							<event>
+								<text>Your crew member makes it, but remains deeply shaken. "I'd rather get out of Slug space soon, Captain."</text>
+							</event>
+						</choice>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>Attack.</text>
+					<event>
+						<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+						<removeCrew>
+							<clone>false</clone>
+							<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+						</removeCrew>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Attack.</text>
+			<event>
+				<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+				</removeCrew>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>The Slugs agree to lower the ransom after some tense discussion. Your crewman gets beaten and shock-prodded several times. "Alright, you got your dissscount, now pay up or we lay wasste to your crewman right here on the sspot."</text>
+		<choice hidden="true">
+			<text>Pay. [ Scrap: -15 ]</text>
+			<event>
+				<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are visibly shaken up, but mostly unharmed. The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately.</text>
+				<item_modify>
+					<item type="scrap" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true"> 
+			<text>Negotiate.</text>
+			<event>
+				<text>The Slugs are no longer willing to listen. "You don't seem to understand the concept of a hostage situation." One Slug draws a modified shock blaster and shoots your crewman in the leg, causing them to break down screaming. "Your time is running out!"</text>
+				<choice hidden="true">
+					<text>Pay. [ Scrap: -15 ]</text>
+					<event>
+						<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are badly wounded and need urgent medical attention. The Slugs had enough time to charge their FTL during the negotiations and jump away immediately.</text>
+						<item_modify>
+							<item type="scrap" min="-15" max="-15"/>
+						</item_modify>
+						<choice>
+							<text>Perform first aid.</text>
+							<event>
+								<text>Your efforts are fruitless, the Slug blaster inflicted critical tissue damage on your crewmen. The person succumbs to its wounds.</text>
+								<removeCrew>
+									<clone>true</clone>
+									<text>The crew member's clone is already ready. The clone has trouble coming to terms with what happened here. "So you escalated the hostage situation, got me shot, then paid up to get me released, only to let me bleed to death? What the hell, Cap?"</text>
+								</removeCrew>
+							</event>
+						</choice>
+						<choice hidden="true" req="medbay" lvl="2">
+							<text>(Lv2 Medbay) Stabilize your crewman.</text>
+							<event>
+								<text>Your crew member makes it, but remains deeply shaken. "I'd rather get out of Slug space soon, Captain."</text>
+							</event>
+						</choice>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>Attack.</text>
+					<event>
+						<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+						<removeCrew>
+							<clone>false</clone>
+							<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+						</removeCrew>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="weapons" lvl="5"> 
+			<text>(Lv5 Weapons) Threaten.</text>
+			<event>
+				<text>The Slugs remain unimpressed. "You don't seem to understand the concept of a hostage situation." One Slug draws a modified shock blaster and shoots your crewman in the leg, causing them to break down screaming. "Your time iss running out!"</text>
+				<choice hidden="true">
+					<text>Pay. [ Scrap: -15 ]</text>
+					<event>
+						<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewmen back. The team member is visibly shaken, but mostly unharmed. The Slugs had enough time to charge their FTL during the negotiations and jump away immediately.</text>
+						<item_modify>
+							<item type="scrap" min="-15" max="-15"/>
+						</item_modify>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>Attack.</text>
+					<event>
+						<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and jump away immediately, taking your crewman with them.</text>
+						<removeCrew>
+							<clone>false</clone>
+							<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+						</removeCrew>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Attack.</text>
+			<event>
+				<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+				</removeCrew>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>The Slugs agree to lower the ransom after some tense discussion. Your crewman gets beaten and shock-prodded several times, but suddenly lashes out to grab a blaster, guns down one of the Slug and runs for the ship's teleporters. "I got this Cap, but you have to cover my escape. Strike now!" You engage the Slug craft to distract its crew and your crewman manages to teleport back in one piece.</text>
+			<ship load="JELLY" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<choice req="AE_NEBULA_SCANNER" hidden="true"> 
+			<text>(Subspace Scanner) Probe the environment with your advanced scanner device and re-route the data to your sensors. [ Power: -1 ]</text> 
+			<event load="CE_PRE_FIGHT_NEBULA_SCANNER"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEBULA_SLUG_HOSTAGE_THREATEN">
+	<event>
+		<text>The Slugs agree that you could probably overpower them in direct combat. "But that won't sssave your friend." They casually beat and shock your crewman as a reminder. "We are not animalss though and there iss no need for more violence. You got your disscount, now pay up or we lay wasste to your crewman right here on the sspot."</text>
+		<choice hidden="true">
+			<text>Pay. [ Scrap: -15 ]</text>
+			<event>
+				<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are visibly shaken up, but mostly unharmed. The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately.</text>
+				<item_modify>
+					<item type="scrap" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true"> 
+			<text>Negotiate.</text>
+			<event>
+				<text>The Slugs are no longer willing to listen. "You don't seem to understand the concept of a hostage situation." One Slug draws a modified shock blaster and shoots your crewman in the leg, causing them to break down screaming. "Your time iss running out!"</text>
+				<choice hidden="true">
+					<text>Pay. [ Scrap: -15 ]</text>
+					<event>
+						<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are badly wounded and need urgent medical attention. The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately.</text>
+						<item_modify>
+							<item type="scrap" min="-15" max="-15"/>
+						</item_modify>
+						<choice>
+							<text>Perform first aid.</text>
+							<event>
+								<text>Your efforts are fruitless, the Slug blaster inflicted critical tissue damage on your crewman. They eventually succumb to their wounds.</text>
+								<removeCrew>
+									<clone>true</clone>
+									<text>The crew member's clone is already ready. The clone has trouble coming to terms with what happened here. "So you escalated the hostage situation, got me shot, then paid up to get me released, only to let me bleed to death? What the hell, Cap?"</text>
+								</removeCrew>
+							</event>
+						</choice>
+						<choice hidden="true" req="medbay" lvl="2">
+							<text>(Lv2 Medbay) Stabilize your crewman.</text>
+							<event>
+								<text>Your crew member makes it, but remains deeply shaken. "I'd rather get out of Slug space soon, Captain."</text>
+							</event>
+						</choice>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>Attack.</text>
+					<event>
+						<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+						<removeCrew>
+							<clone>false</clone>
+							<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+						</removeCrew>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="weapons" lvl="5"> 
+			<text>(Weapons) Threaten.</text>
+			<event>
+				<text>The Slugs remain unimpressed. "You don't ssseem to undersstand the concept of a hosstage ssituation." One Slug draws a modified shock blaster and shoots your crewman in the leg, causing them to break down screaming. "Your time iss running out!"</text>
+				<choice hidden="true">
+					<text>Pay. [ Scrap: -15 ]</text>
+					<event>
+						<text>"We are content that a fruitful agreement could be reached, hehe." They take the scrap and teleport your crewman back. They are badly wounded and need urgent medical attention. The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately.</text>
+						<item_modify>
+							<item type="scrap" min="-15" max="-15"/>
+						</item_modify>
+						<choice>
+							<text>Perform first aid.</text>
+							<event>
+								<text>Your efforts are fruitless, the Slug blaster inflicted critical tissue damage on your crewman. They eventually succumb to their wounds.</text>
+								<removeCrew>
+									<clone>true</clone>
+									<text>The crew member's clone is already ready. The clone has trouble coming to terms with what happened here. "So you escalated the hostage situation, got me shot, then paid the ransom to get me released, only to let me bleed to death? What the hell, Cap?"</text>
+								</removeCrew>
+							</event>
+						</choice>
+						<choice hidden="true" req="medbay" lvl="2">
+							<text>(Lv2 Medbay) Stabilize your crewman.</text>
+							<event>
+								<text>Your crew member makes it, but remains deeply shaken. "I'd rather get out of Slug space soon, Captain."</text>
+							</event>
+						</choice>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>Attack.</text>
+					<event>
+						<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+						<removeCrew>
+							<clone>false</clone>
+							<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+						</removeCrew>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Attack.</text>
+			<event>
+				<text>The Slugs easily detect the power increase in your weapons. "Thisss wass a mistake. You've sssealed your friend'ss fate." The Slugs had enough time to charge their FTL during the negotiations and they jump away immediately, taking your crewman with them.</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>Your crewman is gone and will likely be sold into slavery, should they survive at all. The clone bay won't be able to bring them back.</text>
+				</removeCrew>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="NEBULA_STORE_SLUG"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NEBULA_STORE_SLUG">
+	<text load="NEBULA_STORE_SLUG"/>
+	<store/>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+	<choice hidden="true">
+		<text>Check to see what trade goods they sell here.</text>
+		<event load="TE_STORE_SLUG_LIST_BUY"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+		<text>Offload your current trade goods.</text>
+		<event load="TE_STORE_SLUG_LIST_BOOSTED"/>
+	</choice>
+</event>
+<textList name="NEBULA_STORE_SLUG">
+	<text>A huge Slug teleports from nowhere onto the bridge! Before you can open fire, he's spread his wares across the helm and is brandishing things at you.</text>
+	<text>You cautiously approach a Slug colony on a huge asteroid. It's a brave person who sets foot on a Slug planet - it can take weeks to get the mucus out of your clothes - but there's business to be done.</text>
+	<text>A Slug pleasure station floods the channels with its advertisements here. They offer all kinds of services you have neither time, use, or money for. They also sell various things, from strange alien lifeforms to even weirder artworks.</text>
+</textList>
+<eventList name="TE_STORE_SLUG_LIST">
+	<event load="TE_STORE_SLUG_LIST_BOOSTED"/>
+</eventList>
+<textList name="STORE_SLUG_BUY_TEXT">
+	<text>The Slugs can read minds so they should know what you want, right? They definitely aren't that cooperative. While they slowly load the cargo you have a look at the ship equipment the shop also offers.</text>
+	<text>You take extra care when transferring the scrap and have your crew stand by for security. Dealing with Slugs is never easy for non-telepaths. Loading the cargo takes some time. You check the ship equipment catalog while waiting.</text>
+	<text>The Slug invites you for a drink to celebrate the deal and the ship's computer says the stuff is not dangerous. It's still quite strong though. You can't command a ship like ths. While waiting for your head to clear you check the ship equipment they offer here.</text>
+	<text>To seal the deal you are invited for some Slug drinks. The scanner says it's safe but you get quite sick from it. Why can't trading ever be easy?</text>
+</textList>
+<textList name="STORE_SLUG_SELL_TEXT">
+	<text>You ask the trader to refrain from poking around in your mind, but you can't help assuming that he is intruding while you discuss. After receiving some scrap as advance you are asked to unload the cargo at the shop to get the rest of your payment.</text>
+	<text>You try to negotiate a good price, as far as this is possible with telepaths. After receiving some scrap as advance you are asked to unload the cargo at the shop to get the rest of your payment.</text>
+	<text>After time-consuming haggling you reach an agreement. You still have to unload the cargo at the shop to receive the rest of your payment.</text>
+	<text>After time-consuming negotiations you get an advance payment. "You get the rest after you unload the cargo at the shop." They don't seem to trust you much.</text>
+	<text>From reading your mind the Slug already knows the minimum you'll accept for your cargo and that's all he offers. After taking your scrap advance you have to transfer the cargo to the shop to seal the deal.</text>
+</textList>
+<eventList name="TE_STORE_SLUG_LIST_BUY">
+	<event>
+		<text>You consider striking a deal with the trader.</text>
+		<choice>
+			<text>Buy some tube-bred animals. You wonder who'd be most comfortable operating with such beings.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<item_modify>
+					<item type="scrap" min="-20" max="-20"/>
+				</item_modify>
+				<augment name="TE_GOODS_SLUG_ANIMALS"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Buy some strange artwork. You wonder who'd be eccentric enough to find it most fascinating.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<item_modify>
+					<item type="scrap" min="-25" max="-25"/>
+				</item_modify>
+				<augment name="TE_GOODS_SLUG_ART"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Buy a drugs shipment. Outlaws will naturally buy these, assuming law enforcers don't confiscate them first.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<item_modify>
+					<item type="scrap" min="-35" max="-35"/>
+				</item_modify>
+				<augment name="TE_GOODS_SLUG_DRUGS"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just quickly check the available ship equipment.</text>
+			<event/>
+		</choice>
+		<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+			<text>Offload your current trade goods.</text>
+			<event load="TE_STORE_SLUG_LIST_BOOSTED"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="TE_STORE_SLUG_LIST_BOOSTED">
+	<event>
+		<text>You consider striking a deal with the Slugs. You feel uncomfortable negotiating with telepaths, but they seem trustworthy.</text>
+		<choice req="TE_GOODS_SLUG_ANIMALS" hidden="true">
+			<text>The animals roaming around inside your cargo bay aren't catching the interest of the Slugs.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ART" hidden="true">
+			<text>Your collection of 'art' isn't fetching a good price here, from the looks of things.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_SLUG_DRUGS" hidden="true">
+			<text>Your drugs shipment doesn't look like it'll sell well in Slug space.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_ROCK_ORE" hidden="true">
+			<text>You have the feeling someone is poking around in your mind. "Hmm... you have raw ore? Hah, I already know how much you want. Deal!" [Sell Raw Asteroid Ore for about 30 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ROCK_ORE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="28" max="32"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_LUXURY" hidden="true">
+			<text>You hear a voice in your head, "You remember your cargo lisst well. Come to my ssshop. I pay good sscrap for thesse fancy goods!" [Sell Luxury Goods for about 65 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_LUXURY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="61" max="69"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AMBRA" hidden="true">
+			<text>The merchants greets you full of excitement, looks like the Slug already knows what you have to offer: "Preciouss Ambra... we ssshall pay well!" [Sell Space Whale Ambra for about 45 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AMBRA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="42" max="48"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_FOOD" hidden="true">
+			<text>[Sell Space Rations for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_FOOD"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_CONSUMER" hidden="true">
+			<text>[Sell Consumer Goods for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_CONSUMER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MEDICINE" hidden="true">
+			<text>[Sell Pharmaceuticals for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MEDICINE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_ELECTRONICS" hidden="true">
+			<text>[Sell Ship Hardware for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_ELECTRONICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MACHINES" hidden="true">
+			<text>[Sell Industrial Machinery for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MACHINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_BEACONS" hidden="true">
+			<text>[Sell Beacon Parts for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_BEACONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_CODEX" hidden="true">
+			<text>[Sell the Zoltan Legal Codex for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_CODEX"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_SHIELDS" hidden="true">
+			<text>[Sell Shield Components for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_SHIELDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_LITERATURE" hidden="true">
+			<text>[Sell Religious Rock Literature for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ROCK_LITERATURE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_HULLS" hidden="true">
+			<text>[Sell Ship Hull Panels for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_HULLS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_ENGINES" hidden="true">
+			<text>[Sell Engine Parts for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_ENGINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_WEAPONS" hidden="true">
+			<text>[Sell Weapon Components for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_WEAPONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_BOUNTY" hidden="true">
+			<text>[Sell Looted Bounty for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_BOUNTY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PIRATE_ARMS" hidden="true">
+			<text>[Sell Small Arms for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PIRATE_ARMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_REBEL_CONTRABAND" hidden="true">
+			<text>[Sell Federation Contraband for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_REBEL_CONTRABAND"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_NEBULA_GAS" hidden="true">
+			<text>Look around you. Do you expect anyone here to be in need of nebula gas? Didn't think so.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_CRYSTAL_ARTIFACTS" hidden="true">
+			<text>[Sell Crystal Artifacts for about 75 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CRYSTAL_ARTIFACTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="70" max="80"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_FED_WRECK" hidden="true">
+			<text>[Sell Ship Wreckage for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_FED_WRECK"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_HAZARD_ELEMENTS" hidden="true">
+			<text>[Sell Rare Elements for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_HAZARD_ELEMENTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_DATA" hidden="true">
+			<text>[Sell AI Research Data for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_DATA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_NANOBOTS" hidden="true">
+			<text>[Sell Obedient Nanobots for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_NANOBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_QUARANTINE_DISEASE" hidden="true">
+			<text>[Sell Disease Samples for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_QUARANTINE_DISEASE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_TERRAFORMING" hidden="true">
+			<text>[Sell Terraforming Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_TERRAFORMING"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_REACTOR" hidden="true">
+			<text>[Sell Reactor Modules for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_REACTOR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LANIUS_POLYMERS" hidden="true">
+			<text>[Sell Plastic Items for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LANIUS_POLYMERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GIRDERS" hidden="true">
+			<text>[Sell Building Material for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GIRDERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CHEMICALS" hidden="true">
+			<text>[Sell Basic Chemicals for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CHEMICALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_TEXTILES" hidden="true">
+			<text>[Sell Synth-Textiles for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_TEXTILES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ORGANISMS" hidden="true">
+			<text>[Sell Xeno Organisms for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ORGANISMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_O2" hidden="true">
+			<text>[Sell Stored Oxygen for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_O2"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_H2O" hidden="true">
+			<text>[Sell Huge Water Supply for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_H2O"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SEEDS" hidden="true">
+			<text>[Sell Bio-Engineered Seeds for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SEEDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CONDUITS" hidden="true">
+			<text>[Sell Power Conduits for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CONDUITS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PRODUCE" hidden="true">
+			<text>[Sell Station-Grown Vegetables for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PRODUCE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ANTIMATTER" hidden="true">
+			<text>[Sell Antimatter for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ANTIMATTER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GAMES" hidden="true">
+			<text>[Sell Virtual Games for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GAMES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SENSORS" hidden="true">
+			<text>[Sell Sensor Components for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SENSORS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LIFESUPPORT" hidden="true">
+			<text>[Sell Life Support Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LIFESUPPORT"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROBOTS" hidden="true">
+			<text>[Sell Serve Drones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RESEARCH" hidden="true">
+			<text>[Sell Research Equipment for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RESEARCH"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SOLAR" hidden="true">
+			<text>[Sell Solar Panels for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SOLAR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RELICS" hidden="true">
+			<text>[Sell Archaeological Relics for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RELICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CLONES" hidden="true">
+			<text>[Sell Trooper DNA Backups for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CLONES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GLANDS" hidden="true">
+			<text>[Sell Alien Glands for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GLANDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GEMS" hidden="true">
+			<text>[Sell Deep-Space Gemstones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GEMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just check the available ship equipment.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>

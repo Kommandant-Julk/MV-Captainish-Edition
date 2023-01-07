@@ -1,0 +1,1864 @@
+<mod:findName type="blueprintList" name="DLC_ITEMS">
+	<mod-append:name>SHOTGUN_3</mod-append:name>
+	<mod-append:name>BA_ION_2_STUN</mod-append:name>
+	<mod-append:name>BA_ION_BURST_1_STUN</mod-append:name>
+	<mod-append:name>BA_BOMB_CLUSTER_STUN</mod-append:name>
+	<mod-append:name>BA_LASER_LIGHT_CHAINGUN</mod-append:name>
+	<mod-append:name>BA_SHOTGUN_SMALL</mod-append:name>
+	<mod-append:name>BA_SHOTGUN_SCATTER</mod-append:name>
+	<mod-append:name>BA_SHOTGUN_MISSILES</mod-append:name>
+	<mod-append:name>BA_BEAM_ADAPTIVE_3</mod-append:name>
+	<mod-append:name>BA_BEAM_ADAPTIVE_1</mod-append:name>
+	<mod-append:name>BA_BEAM_ADAPTIVE_2</mod-append:name>
+	<mod-append:name>BA_LASER_CHARGEGUN_HEAVY</mod-append:name>
+	<mod-append:name>BA_MISSILE_CHARGEGUN_SMALL</mod-append:name>
+	<mod-append:name>BA_LASER_CHARGEGUN_MEDIUM</mod-append:name>
+	<mod-append:name>BA_STUNGUN_1</mod-append:name>
+	<mod-append:name>BA_STUNGUN_2</mod-append:name>
+	<mod-append:name>BA_PLASMA_1</mod-append:name>
+	<mod-append:name>BA_PLASMA_2</mod-append:name>
+	<mod-append:name>DE_DRONE_LIGHT_MISSILE_STUN</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_2</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_EFFECTOR</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_MISSILES</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_LASER_HEAVY</mod-append:name>
+	<mod-append:name>AE_FIREWALL</mod-append:name>
+	<mod-append:name>ION_CHARGEGUN_2</mod-append:name>
+	<mod-append:name>LASER_CHARGEGUN_LARGE</mod-append:name>
+	<mod-append:name>TORPEDOES_1</mod-append:name>
+	<mod-append:name>TORPEDOES_DUAL</mod-append:name>
+	<mod-append:name>TORPEDOES_BURST</mod-append:name>
+	<mod-append:name>LASER_HEAVY_CHAIN</mod-append:name>
+	<mod-append:name>FLARE_CANNON</mod-append:name>
+	<mod-append:name>LASER_AUTO</mod-append:name>
+	<mod-append:name>MISSILES_HELLFIRE</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="DLC_WEAPONS">
+	<mod-append:name>BA_ION_2_STUN</mod-append:name>
+	<mod-append:name>BA_ION_BURST_1_STUN</mod-append:name>
+	<mod-append:name>BA_BOMB_CLUSTER_STUN</mod-append:name>
+	<mod-append:name>BA_LASER_LIGHT_CHAINGUN</mod-append:name>
+	<mod-append:name>BA_SHOTGUN_SMALL</mod-append:name>
+	<mod-append:name>BA_SHOTGUN_SCATTER</mod-append:name>
+	<mod-append:name>BA_SHOTGUN_MISSILES</mod-append:name>
+	<mod-append:name>BA_BEAM_ADAPTIVE_3</mod-append:name>
+	<mod-append:name>BA_BEAM_ADAPTIVE_1</mod-append:name>
+	<mod-append:name>BA_BEAM_ADAPTIVE_2</mod-append:name>
+	<mod-append:name>BA_LASER_CHARGEGUN_HEAVY</mod-append:name>
+	<mod-append:name>BA_MISSILE_CHARGEGUN_SMALL</mod-append:name>
+	<mod-append:name>BA_LASER_CHARGEGUN_MEDIUM</mod-append:name>
+	<mod-append:name>BA_STUNGUN_1</mod-append:name>
+	<mod-append:name>BA_STUNGUN_2</mod-append:name>
+	<mod-append:name>BA_PLASMA_1</mod-append:name>
+	<mod-append:name>BA_PLASMA_2</mod-append:name>
+	<mod-append:name>ION_CHARGEGUN_2</mod-append:name>
+	<mod-append:name>LASER_CHARGEGUN_LARGE</mod-append:name>
+	<mod-append:name>TORPEDOES_1</mod-append:name>
+	<mod-append:name>TORPEDOES_DUAL</mod-append:name>
+	<mod-append:name>TORPEDOES_BURST</mod-append:name>
+	<mod-append:name>LASER_HEAVY_CHAIN</mod-append:name>
+	<mod-append:name>FLARE_CANNON</mod-append:name>
+	<mod-append:name>LASER_AUTO</mod-append:name>
+	<mod-append:name>MISSILES_HELLFIRE</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="DLC_DRONES">
+	<mod-append:name>DE_DRONE_LIGHT_MISSILE_STUN</mod-append:name>
+	<mod-append:name>DE_DRONE_STEALTH_BEAM_1</mod-append:name>
+	<mod-append:name>DE_DRONE_STEALTH_BEAM_2</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_2</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_EFFECTOR</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_MISSILES</mod-append:name>
+	<mod-append:name>DE_ANTI_DRONE_LASER_HEAVY</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="DLC_AUGMENTS">
+	<mod-append:name>AE_FIREWALL</mod-append:name>
+</mod:findName>
+
+<mod:findName type="shipBlueprint" name="ANAEROBIC_SCOUT"> 
+    <mod:removeTag />
+</mod:findName>	
+<mod:findName type="shipBlueprint" name="ANAEROBIC_BOMBER"> 
+    <mod:removeTag />
+</mod:findName>	
+<blueprintList name="SHIPS_LANIUS">
+	<name>TB_ANAEROBIC_SCOUT</name>
+	<name>TB_ANAEROBIC_BOMBER</name>
+	<name>TB_ANAEROBIC_ASSAULT</name>
+	<name>TB_ANAEROBIC_BROODSHIP</name>
+	<name>TB_ANAEROBIC_INSTIGATOR</name>
+	<name>TB_ANAEROBIC_INTERCEPTOR</name>
+</blueprintList>
+<blueprintList name="WEAPONS_ANAEROBIC">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_A</name>
+	<name>LASER_BURST_3</name>
+	<name>LASER_BURST_4</name>
+	<name>LASER_BURST_5</name>
+	<name>LASER_HEAVY_1</name>
+	<name>LASER_HEAVY_2</name>
+	<name>SHOTGUN</name>
+	<name>SHOTGUN_2</name>
+	<name>ION_2</name>
+	<name>MISSILES_1</name>
+	<name>MISSILES_2</name>
+	<name>MISSILES_3</name>
+	<name>MISSILES_BREACH</name>
+	<name>BEAM_1</name>
+	<name>BEAM_2</name>
+	<name>BOMB_1</name>
+	<name>BA_BEAM_BARDICHE</name>
+	<name>BA_BEAM_PERNACH</name>
+	<name>BA_LASER_DUAL_2</name>
+	<name>BA_LASER_BURST_SCATTER_1</name>
+	<name>BA_LASER_BURST_SCATTER_2</name>
+	<name>BA_LASER_HEAVY_SCATTER_1_ENEMY</name>
+	<name>BA_BOMB_BIG</name>
+	<name>BA_BOMB_CLUSTER_1</name>
+	<name>BA_SHOTGUN_SMALL</name>
+	<name>BA_LASER_CHARGEGUN_HEAVY</name>
+</blueprintList>
+<mod:findName type="weaponBlueprint" name="LASER_CHAINGUN">
+	<mod-overwrite:rarity>1</mod-overwrite:rarity>
+	<mod-overwrite:tip>lore_LASER_CHAINGUN</mod-overwrite:tip>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="LASER_CHAINGUN_2">
+	<mod-overwrite:tip>lore_LASER_CHAINGUN_2</mod-overwrite:tip>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="LASER_CHARGEGUN">
+	<mod-overwrite:rarity>1</mod-overwrite:rarity>
+	<mod-overwrite:title>Laser Charger Mark I</mod-overwrite:title>
+	<mod-overwrite:tip>lore_LASER_CHARGEGUN</mod-overwrite:tip>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="SHOTGUN_PLAYER">
+	<mod-overwrite:title>Custom Flak Cannon II</mod-overwrite:title>
+	<mod-overwrite:short>Flak Cannon II+</mod-overwrite:short>
+	<mod-overwrite:tip>lore_SHOTGUN_PLAYER</mod-overwrite:tip>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="LASER_CHARGEGUN_PLAYER">
+	<mod-overwrite:title>Custom Laser Charger I</mod-overwrite:title>
+	<mod-overwrite:short>Charge L+</mod-overwrite:short>
+	<mod-overwrite:tip>lore_LASER_CHARGEGUN_PLAYER</mod-overwrite:tip>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="BOMB_HEAL_SYSTEM">
+	<mod-overwrite:rarity>0</mod-overwrite:rarity>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="BOMB_STUN">
+	<mod-overwrite:tip>lore_BOMB_STUN</mod-overwrite:tip>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ION_CHAINGUN">
+	<mod-overwrite:tip>lore_ION_CHAINGUN</mod-overwrite:tip>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="SHOTGUN">
+	<mod-overwrite:title>Flak Cannon Mark II</mod-overwrite:title>
+	<mod-overwrite:short>Flak Cannon II</mod-overwrite:short>
+	<mod-overwrite:tip>lore_SHOTGUN</mod-overwrite:tip>
+	<mod-overwrite:rarity>3</mod-overwrite:rarity>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="SHOTGUN_2">
+	<mod-overwrite:title>Flak Cannon Mark III</mod-overwrite:title>
+	<mod-overwrite:short>Flak Cannon III</mod-overwrite:short>
+	<mod-overwrite:tip>lore_SHOTGUN_2</mod-overwrite:tip>
+	<mod-overwrite:rarity>3</mod-overwrite:rarity>
+</mod:findName>
+<mod:findName type="droneBlueprint" name="ANTI_DRONE">
+	<mod-overwrite:title>Ion Anti-Combat Drone</mod-overwrite:title>
+	<mod-overwrite:short>Anti-Drone I.</mod-overwrite:short>
+	<mod-append:tip>lore_ANTI_DRONE</mod-append:tip>
+	<mod-overwrite:rarity>4</mod-overwrite:rarity>
+</mod:findName>
+<mod:findName type="droneBlueprint" name="COMBAT_BEAM_2">
+	<mod-overwrite:title>Mini Beam Drone Mark II</mod-overwrite:title>
+	<mod-overwrite:short>Beam II</mod-overwrite:short>
+	<mod-append:tip>lore_COMBAT_BEAM_2</mod-append:tip>
+	<mod-overwrite:rarity>5</mod-overwrite:rarity>
+</mod:findName>
+<mod:findName type="droneBlueprint" name="COMBAT_FIRE">
+	<mod-overwrite:short>Fire Beam</mod-overwrite:short>
+	<mod-append:tip>lore_COMBAT_FIRE</mod-append:tip>
+	<mod-overwrite:rarity>5</mod-overwrite:rarity>
+</mod:findName>
+<mod:findName type="droneBlueprint" name="DRONE_SHIELD_PLAYER">
+	<mod-append:tip>lore_DRONE_SHIELD</mod-append:tip>
+</mod:findName>
+<weaponBlueprint name="ARTILLERY_LANIUS">
+  <type>BURST</type>
+  <flavorType>Physical Projectile Blast</flavorType>
+  <title>Flak Artillery</title>
+  <short>Flak A.</short>
+  <desc>Slow, high-powered flak gun that fires seven projectiles. 40 seconds base cooldown.</desc>
+	<tooltip></tooltip>
+  <radius>35</radius>
+  <damage>1</damage>
+  <spin>720</spin>
+  <shots>1</shots>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <cooldown>40</cooldown>
+  <power>3</power>
+  <cost>75</cost>
+  <bp>10</bp>
+  <speed>26</speed>
+  <rarity>0</rarity>
+  <projectiles>
+    <projectile count="3" fake="false">debris_large</projectile>
+    <projectile count="4" fake="false">debris_med</projectile>
+    <projectile count="7" fake="true">debris_small</projectile>
+  </projectiles>
+  <launchSounds>
+    <sound>flak</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>flakImpact1</sound>
+    <sound>flakImpact2</sound>
+    <sound>flakImpact3</sound>
+    <sound>flakImpact4</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <iconImage>flak</iconImage>
+  <weaponArt>ce_artillery_invisible</weaponArt>
+</weaponBlueprint>
+<augBlueprint name="AE_FIREWALL">  
+	<title>Resistive Plating</title>
+	<desc>A defensive combat augment that renders your ship invulnerable to hostile Hacking and Mind Control attempts. Requires 1 power to function.</desc>
+	<cost>50</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<mod:findName type="weaponBlueprint" name="LASER_CHARGEGUN_2">
+	<mod-overwrite:title>Laser Charger Mark III</mod-overwrite:title>
+	<mod-overwrite:tip>lore_LASER_CHARGEGUN_2</mod-overwrite:tip>
+</mod:findName>
+<weaponBlueprint name="BA_MISSILE_CHARGEGUN_SMALL">
+	<type>MISSILES</type>
+	<flavorType>Charge-Based Missile</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Duplex Missile Launcher</title>
+	<tip>lore_BA_MISSILE_CHARGEGUN_SMALL</tip>
+	<short>Duplex M.</short>
+	<desc>A compact missile launcher which equips a miniature replicator to double up on firepower.</desc>
+	<tooltip></tooltip>
+	<missiles>1</missiles>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<drone_targetable>1</drone_targetable> 
+	<cooldown>6</cooldown>
+	<power>1</power>
+	<chargeLevels>2</chargeLevels>
+	<cost>45</cost>
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<explosion>explosion_small</explosion>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>engine_missile_launch1</sound>
+		<sound>engine_missile_launch2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_chargemissile_small</weaponArt>  
+	<iconImage>missile_charge</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_MISSILE_CHARGEGUN_SMALL_ENEMY">
+	<type>MISSILES</type>
+	<flavorType>Charge-Based Missile</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Swarm Missiles Mark I</title>
+	<tip>lore_BA_MISSILE_CHARGEGUN_SMALL</tip>
+	<short>Swarm M.</short>
+	<desc>A missile launcher which equips a miniature replicator to double up on firepower.</desc>
+	<tooltip></tooltip>
+	<missiles>1</missiles>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<drone_targetable>1</drone_targetable> 
+	<cooldown>6</cooldown>
+	<power>2</power>
+	<chargeLevels>2</chargeLevels>
+	<cost>50</cost>
+	<bp>10</bp>
+	<rarity>0</rarity>
+	<explosion>explosion_small</explosion>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>engine_missile_launch1</sound>
+		<sound>engine_missile_launch2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_chargemissile_small</weaponArt>  
+	<iconImage>missile_charge</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_LASER_CHARGEGUN_HEAVY"> 
+	<type>LASER</type>
+	<flavorType>Charge-Based Laser Cannon</flavorType>
+	<title>Heavy Laser Charger</title>
+	<short>Charge H.</short>
+	<tip>lore_LASER_CHARGEGUN_HEAVY</tip>
+	<desc>This heavy laser comes equipped with double barrels and charges each of its shots one at a time.</desc>
+	<tooltip></tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>2</fireChance>
+	<breachChance>2</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>7</cooldown> 
+	<power>3</power>
+	<cost>70</cost> 
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<chargeLevels>2</chargeLevels>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_chargelaser_heavy</weaponArt> 
+	<iconImage>laser_charge2</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_LASER_CHARGEGUN_MEDIUM"> 
+	<type>LASER</type>
+	<flavorType>Charge-Based Laser</flavorType>
+	<title>Laser Charger Mark II</title>
+	<short>Charge L.</short>
+	<tip>lore_LASER_CHARGEGUN_MED</tip>
+	<desc>A triple-barrelled laser weapon that charges each of its three shots separately. An exceptionally versatile laser, if slightly slower than similar weapons.</desc>
+	<tooltip></tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>5</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>2</bp>
+	<rarity>2</rarity>
+	<image>laser_light1</image>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_laser_charger_medium</weaponArt> 
+	<iconImage>laser_charge2</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_BEAM_ADAPTIVE_1">
+	<type>BEAM</type>
+	<tip>lore_BA_BEAM_ADAPTIVE_1</tip>
+	<flavorType>Momentum-Based Beam</flavorType>
+	<title>Charge Beam Mark I</title>
+	<short>Charge B. I</short>
+	<desc>An unusual beam weapon which uses reserve energy to charge its capacitors, granting the user a small damage increase during long battles. Short range and below average strike speed.</desc>
+	<tooltip></tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>4</speed>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>12</bp>
+	<rarity>5</rarity>
+	<length>50</length>
+	<image>beam_contact</image>
+	<boost>
+		<type>damage</type>
+		<amount>0.5</amount>
+		<count>2</count>
+	</boost>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>ba_beam_adaptive_1</weaponArt> 
+</weaponBlueprint>
+<weaponBlueprint name="BA_BEAM_ADAPTIVE_2">
+	<type>BEAM</type>
+	<tip>lore_BA_BEAM_ADAPTIVE_2</tip>
+	<flavorType>Momentum-Based Beam</flavorType>
+	<title>Charge Beam Mark II</title>
+	<short>Charge B. II</short>
+	<desc>An unusual beam weapon which uses reserve energy to augment later attacks, granting the user a strong damage increase during long battles. Short range and below average strike speed.</desc>
+	<tooltip></tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>4</speed>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>75</cost>
+	<bp>12</bp>
+	<rarity>5</rarity>
+	<length>50</length>
+	<image>beam_contact</image>
+	<boost>
+		<type>damage</type>
+		<amount>1</amount>
+		<count>2</count>
+	</boost>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>ba_beam_adaptive_2</weaponArt> 
+</weaponBlueprint>
+<weaponBlueprint name="BA_BEAM_ADAPTIVE_3">
+	<type>BEAM</type>
+	<tip>lore_BA_BEAM_ADAPTIVE_3</tip>
+	<flavorType>Momentum-Based Beam</flavorType>
+	<title>Charge Beam Mark III</title>
+	<short>Charge B. III</short>
+	<desc>An advanced beam design which increases in power with consecutive attacks, granting the user an intense damage increase during long battles. Short range and below average strike speed.</desc>
+	<tooltip></tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>4</speed>
+	<cooldown>16</cooldown>
+	<power>4</power>
+	<cost>95</cost>
+	<bp>12</bp>
+	<rarity>5</rarity>
+	<length>50</length>
+	<image>beam_contact</image>
+	<boost>
+		<type>damage</type>
+		<amount>1</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>ba_beam_adaptive_3</weaponArt> 
+</weaponBlueprint>
+<weaponBlueprint name="BA_STUNGUN_1">
+	<type>BURST</type>
+	<flavorType>Neural Stunner</flavorType>
+	<title>Neural Stunner Mark I</title>
+	<tip>lore_BA_STUNGUN_1</tip>
+	<short>Neural Stun I</short>
+	<desc>A bizarre neutralising device which deals no damage but incapacitates enemy crew members for a short time, disrupting ship operations and repairs.</desc>
+	<tooltip></tooltip>
+	<radius>70</radius>
+	<damage>0</damage>
+	<stun>5</stun>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>1</power>
+	<cost>35</cost>
+	<bp>10</bp>
+	<speed>300</speed>
+	<rarity>5</rarity>
+	<explosion>ba_explosion_stungun</explosion>
+	<projectiles>
+		<projectile count="15" fake="false">ba_effector_impact_1</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>silence</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>silence</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ba_stungun_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_STUNGUN_2">
+	<type>BURST</type>
+	<flavorType>Neural Stunner</flavorType>
+	<title>Neural Stunner Mark II</title>
+	<tip>lore_BA_STUNGUN_2</tip>
+	<short>Neural Stun II</short>
+	<desc>A powerful neutralising device which can incapacitate enemy crew members across a vast area, disrupting ship operations and repairs.</desc>
+	<tooltip></tooltip>
+	<radius>100</radius>
+	<damage>0</damage>
+	<stun>7</stun>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>10</bp>
+	<speed>300</speed>
+	<rarity>5</rarity>
+	<explosion>ba_explosion_stungun</explosion>
+	<projectiles>
+		<projectile count="45" fake="false">ba_effector_impact_1</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>silence</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>silence</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ba_stungun_2</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_PLASMA_1">
+	<type>BURST</type>
+	<flavorType>Plasma Cannon</flavorType>
+	<title>Plasma Cannon Mark I</title>
+	<tip>lore_BA_PLASMA_1</tip>
+	<short>Plasma Cannon I</short>
+	<desc>A compact energy weapon that launches a small burst of hot plasma towards enemy ships. It deals no damage but reliably ignites fires and burns crew members caught in the blast.</desc>
+	<tooltip></tooltip>
+	<radius>45</radius>
+	<damage>0</damage>
+	<persDamage>1</persDamage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>8</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<power>1</power>
+	<cost>50</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>5</rarity>
+	<explosion>ba_explosion_fire</explosion>
+	<projectiles>
+		<projectile count="3" fake="false">ba_plasma_shot</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_plasma_thrower_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_PLASMA_2">
+	<type>BURST</type>
+	<flavorType>Plasma Cannon</flavorType>
+	<title>Plasma Cannon Mark II</title>
+	<tip>lore_BA_PLASMA_2</tip>
+	<short>Plasma Cannon II</short>
+	<desc>A powerful energy weapon that launches a large volume of hot plasma towards enemy ships. It deals no damage but reliably ignites fires and burns crew members caught in the blast.</desc>
+	<tooltip></tooltip>
+	<radius>55</radius>
+	<damage>0</damage>
+	<persDamage>1</persDamage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>8</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>5</rarity>
+	<explosion>ba_explosion_fire</explosion>
+	<projectiles>
+		<projectile count="5" fake="false">ba_plasma_shot</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_plasma_thrower_2</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_SHOTGUN_MISSILES">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<flavorType>Micro-Missile Launcher</flavorType>
+	<title>Hydra Missile Battery</title>
+	<short>Hydra M.</short>
+	<tip>lore_MISSILES_HYDRA</tip>
+	<desc>A sophisticated weapon that fires micro-missiles towards hostile targets. Overwhelms enemy defenses but is difficult to aim accurately.</desc>
+	<tooltip></tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>55</cost>
+	<bp>10</bp>
+	<speed>37</speed>
+	<rarity>5</rarity>
+	<explosion>explosion_small</explosion>
+	<projectiles>
+		<projectile count="5" fake="false">missile_hydra</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hit_hull_scatter_1</sound>
+		<sound>hit_hull_scatter_2</sound>
+		<sound>hit_hull_scatter_3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hit_shield_scatter_1</sound>
+		<sound>hit_shield_scatter_2</sound>
+		<sound>hit_shield_scatter_3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_hydra</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_SHOTGUN_SCATTER">
+	<type>BURST</type>
+	<flavorType>High-Spread Laser</flavorType>
+	<title>Shotgun Laser</title>
+	<tip>lore_BA_SHOTGUN_SCATTER</tip>
+	<short>Shotgun Laser</short>
+	<desc>A cannon that fires a vast volume of micro-lasers simultaneously towards the enemy. Its attacks are powerful and effective, but suffer from a small degree of inaccuracy.</desc>
+	<tooltip></tooltip>
+	<radius>35</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>17</cooldown>
+	<power>4</power>
+	<cost>90</cost>
+	<bp>10</bp>
+	<speed>60</speed>
+	<rarity>3</rarity>
+	<explosion>ba_explosion_laser_burst_scatter</explosion>
+	<projectiles>
+		<projectile count="5" fake="false">ba_laser_burst_scatter_shot</projectile>
+		<projectile count="5" fake="true">ba_shotgun_scatter_shot</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hit_hull_scatter_1</sound>
+		<sound>hit_hull_scatter_2</sound>
+		<sound>hit_hull_scatter_3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hit_shield_scatter_1</sound>
+		<sound>hit_shield_scatter_2</sound>
+		<sound>hit_shield_scatter_3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_shotgun_scatter</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_SHOTGUN_SMALL">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable>
+	<flavorType>Flak Cannon</flavorType>
+	<title>Flak Cannon Mark I</title>
+	<tip>lore_BA_SHOTGUN_SMALL</tip>
+	<short>Flak Cannon I</short>
+	<desc>A small cannon that fires a burst of debris towards enemy ships. A cheap, effective and versatile weapon, but suffers from terrible reliability at damaging ships.</desc>
+	<tooltip></tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>40</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>1</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="4" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_shotgun_small</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_BOMB_CLUSTER_STUN"> 
+	<type>BOMB</type>
+	<flavorType>Crew-Stunning Cluster Bomb</flavorType>
+	<tip>lore_BA_BOMB_CLUSTER_STUN</tip>
+	<title>Stun Cluster Bomb</title>
+	<short>Stun C.</short>
+	<locked>1</locked>
+	<desc>An advanced bomb teleporter that deploys 3 self-teleporting explosives, repeatedly ionising and stunning hostile targets. Can target your own ship.</desc>
+	<tooltip></tooltip>
+	<damage>0</damage>
+	<stun>10</stun>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<ion>1</ion>
+	<missiles>1</missiles>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<image>bomb_stun_anim</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombteleport_cluster</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>ba_bomblauncher_cluster_flashbang</weaponArt> 
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<mod:findName type="weaponBlueprint" name="ION_STUN">
+	<mod-overwrite:title>Ion Blast Stunner</mod-overwrite:title>
+	<mod-overwrite:short>Blast Stunner</mod-overwrite:short>
+	<mod-overwrite:tip>lore_ION_STUN</mod-overwrite:tip>
+</mod:findName>
+<weaponBlueprint name="BA_ION_BURST_1_STUN">
+	<type>LASER</type>
+	<tip>lore_ION_BURST_1_STUN</tip>
+	<flavorType>Stunning Burst-Fire Ion Blaster</flavorType>
+	<title>Ion Burst Stunner</title>
+	<short>Burst Stunner</short>
+	<locked>1</locked>
+	<desc>A specialised ion weapon that locks down systems and stuns enemy personnel with a volley of ionic charges.</desc>
+	<tooltip></tooltip>
+	<stun>5</stun>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>50</speed>
+	<shots>2</shots>
+	<spin>720</spin>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>13</cooldown>
+	<power>2</power>
+	<cost>40</cost>
+	<bp>3</bp>
+	<rarity>4</rarity>
+	<image>ion_stun_shot</image>
+	<explosion>explosion_stun_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_ion_burst_1_stun</weaponArt> 
+</weaponBlueprint>
+<weaponBlueprint name="BA_ION_2_STUN">
+	<type>LASER</type>
+	<flavorType>Stunning Ion Cannon</flavorType>
+	<title>Heavy Ion Stunner</title>
+	<short>Heavy Stunner</short>
+	<tip>lore_ION_2_STUN</tip>
+	<locked>1</locked>
+	<desc>A powerful ion weapon that disables systems and stuns enemy personnel for a greater duration than other Ion Stunners.</desc>
+	<tooltip></tooltip>
+	<stun>7</stun>
+	<damage>0</damage>
+	<ion>2</ion>
+	<speed>60</speed>
+	<shots>1</shots>
+	<spin>720</spin>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<image>ba_ion_stun_shot_2</image>
+	<explosion>explosion_stun_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_ion_2_stun</weaponArt> 
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_SHOTGUN_ION_1">
+	<type>BURST</type>
+	<flavorType>Spreadshot Ion Blaster</flavorType>
+	<title>Ion Pulse Mark I</title>
+	<tip>lore_BA_SHOTGUN_ION_1</tip>
+	<short>Ion Pulse I</short>
+	<desc>A strong but somewhat inaccurate ion blaster that simultaneously launches two charges towards enemy systems. Effective, but suffers reliability issues against shieldless targets.</desc>
+	<tooltip></tooltip>
+	<radius>40</radius>
+	<damage>0</damage>
+	<ion>1</ion>
+	<stunChance>1</stunChance>
+	<speed>35</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>10</bp>
+	<rarity>3</rarity>
+	<explosion>ba_explosion_ion_medium</explosion>
+	<projectiles>
+		<projectile count="2" fake="false">ba_shotgun_ion_shot_1</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_shotgun_ion_1</weaponArt> 
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BA_SHOTGUN_ION_2">
+	<type>BURST</type>
+	<flavorType>Spreadshot Ion Blaster</flavorType>
+	<title>Ion Pulse Mark II</title>
+	<tip>lore_BA_SHOTGUN_ION_2</tip>
+	<short>Ion Pulse II</short>
+	<desc>A powerful but somewhat inaccurate ion blaster that simultaneously launches three charges towards enemy systems. Effective, but suffers reliability issues against shieldless targets.</desc>
+	<tooltip></tooltip>
+	<radius>40</radius>
+	<damage>0</damage>
+	<ion>1</ion>
+	<stunChance>1</stunChance>
+	<speed>35</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>11</cooldown>
+	<power>3</power>
+	<cost>55</cost>
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<explosion>ba_explosion_ion_medium</explosion>
+	<projectiles>
+		<projectile count="3" fake="false">ba_shotgun_ion_shot_2</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_shotgun_ion_2</weaponArt> 
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+<droneBlueprint name="DE_DRONE_LIGHT_MISSILE_STUN">
+	<type>COMBAT</type>
+	<tip>lore_DE_DRONE_LIGHT_MISSILE_STUN</tip>
+	<title>Concussion Drone</title>
+	<short>Concussion</short>
+	<desc>A support drone that stuns and injures enemy crew members with specialised explosive charges.</desc>
+	<power>1</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>15</speed>
+	<cost>40</cost>
+	<bp>3</bp>
+	<droneImage>de_drone_missiles_light_flashbang</droneImage>
+	<weaponBlueprint>DE_DRONE_MISSILES_STUN</weaponBlueprint>
+	<rarity>5</rarity>
+</droneBlueprint>
+<droneBlueprint name="DE_DRONE_STEALTH_BEAM_1">
+	<type>COMBAT</type>
+	<tip>lore_DE_DRONE_STEALTH_BEAM_1</tip>
+	<title>Stealth Beam Drone Mark I</title>
+	<short>Stealth B. I</short>
+	<desc>An augmented beam drone that utilises stealth technology to evade damage from enemy Anti-Combat drones.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>9</dodge>
+	<speed>15</speed> 
+	<cost>45</cost>
+	<bp>3</bp>
+	<droneImage>de_drone_stealth_beam_1</droneImage>
+	<weaponBlueprint>DRONE_BEAM</weaponBlueprint>
+	<rarity>4</rarity>
+	<iconImage>beam</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_DRONE_STEALTH_BEAM_2">
+	<type>COMBAT</type>
+	<title>Stealth Beam Drone Mark II</title>
+	<tip>lore_DE_DRONE_STEALTH_BEAM_2</tip>
+	<short>Stealth B. II</short>
+	<desc>An augmented beam drone that utilises stealth technology to evade damage from enemy Anti-Combat drones.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown> 
+	<dodge>9</dodge>
+	<speed>13</speed> 
+	<cost>55</cost>
+	<bp>3</bp>
+	<droneImage>de_drone_stealth_beam_2</droneImage>
+	<weaponBlueprint>DRONE_BEAM2</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>beam2</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_DRONE_ANTI_CRYSTAL_HEAVY">
+	<type>DEFENSE</type>
+	<tip>lore_DE_DRONE_ANTI_CRYSTAL_HEAVY</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Crystal Anti-Combat Drone</title>
+	<short>Anti-Drone C.</short>
+	<desc>An exotic sentry drone that destroys combat drones with crystal shards. Takes 4 seconds to recharge.</desc>
+	<power>1</power>
+	<cooldown>4000</cooldown>
+	<dodge>0</dodge>
+	<speed>2</speed>
+	<cost>50</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_crystal_heavy</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_CRYSTAL</weaponBlueprint>
+	<rarity>0</rarity> <!-- 3 -->
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_DRONE_ANTI_CRYSTAL_HEAVY_ENEMY">
+	<type>DEFENSE</type>
+	<tip>tip_defense</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Crystal Anti-Combat Drone</title>
+	<short>Anti-Drone C.</short>
+	<desc>An exotic sentry drone that destroys combat drones with crystal shards. Takes 4 seconds to recharge.</desc>
+	<power>2</power>
+	<cooldown>4000</cooldown>
+	<dodge>0</dodge>
+	<speed>2</speed>
+	<cost>50</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_crystal_heavy</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_CRYSTAL_ENEMY</weaponBlueprint>
+	<rarity>0</rarity> <!-- 3 -->
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_2">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_2</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Heavy Anti-Combat Drone</title>
+	<short>Anti-Drone H.</short>
+	<desc>A dedicated sentry drone that uses a high-powered ion cannon to stun hostile combat drones. Takes 6 seconds to recharge.</desc>
+	<power>2</power>
+	<cooldown>6000</cooldown>
+	<dodge>0</dodge>
+	<speed>4</speed>
+	<cost>40</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_2</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_ION_2</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_2_ENEMY">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_2</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Heavy Anti-Combat Drone</title>
+	<short>Anti-Drone H.</short>
+	<desc>A dedicated sentry drone that uses a high-powered ion cannon to stun hostile combat drones. Takes 6 seconds to recharge.</desc>
+	<power>3</power>
+	<cooldown>6000</cooldown>
+	<dodge>0</dodge>
+	<speed>4</speed>
+	<cost>40</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_2</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_ION_2</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_EFFECTOR">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_EFFECTOR</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Anti-Combat Disruptor Drone</title>
+	<short>Anti-Drone D.</short>
+	<desc>An advanced sentry drone that remotely scrambles and disables hostile combat drones. Takes 6 seconds to recharge.</desc>
+	<power>2</power>
+	<cooldown>6000</cooldown>
+	<dodge>0</dodge>
+	<speed>7</speed>
+	<cost>45</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_effector</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_EFFECTOR_INVISIBLE</weaponBlueprint>
+	<rarity>4</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_EFFECTOR_ENEMY">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_EFFECTOR</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Anti-Combat Disruptor Drone</title>
+	<short>Anti-Drone D.</short>
+	<desc>An advanced sentry drone that remotely scrambles and disables hostile combat drones. Takes 6 seconds to recharge.</desc>
+	<power>3</power>
+	<cooldown>6000</cooldown>
+	<dodge>0</dodge>
+	<speed>7</speed>
+	<cost>45</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_effector</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_EFFECTOR_INVISIBLE</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_MISSILES">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_MISSILES</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Anti-Combat Missile Drone</title>
+	<short>Anti-Drone M.</short>
+	<desc>A defensive drone that uses missiles to defeat hostile combat drones. Takes 6 seconds to recharge.</desc>
+	<power>2</power>
+	<cooldown>6000</cooldown>
+	<dodge>0</dodge>
+	<speed>1</speed>
+	<cost>45</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_missiles_swarm</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_MISSILES_SWARM</weaponBlueprint>
+	<rarity>4</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_MISSILES_ENEMY">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_MISSILES</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Anti-Combat Missile Drone</title>
+	<short>Anti-Drone M.</short>
+	<desc>A defensive drone that uses missiles to defeat hostile combat drones. Takes 6 seconds to recharge.</desc>
+	<power>3</power>
+	<cooldown>6000</cooldown>
+	<dodge>0</dodge>
+	<speed>1</speed>
+	<cost>45</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_anti_missiles_swarm</droneImage>
+	<weaponBlueprint>BA_ANTI_DRONE_MISSILES_SWARM</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_LASER_HEAVY">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_LASER_HEAVY</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Anti-Combat Laser Drone</title>
+	<short>Anti-Drone L.</short>
+	<desc>A defensive drone that uses a laser cannon to defeat hostile combat drones. Takes 3 seconds to recharge.</desc>
+	<power>3</power>
+	<cooldown>3000</cooldown>
+	<dodge>0</dodge>
+	<speed>2</speed>
+	<cost>50</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_defense_heavy_2</droneImage>
+	<weaponBlueprint>DE_DRONE_LASER_HEAVY_ANTI</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<droneBlueprint name="DE_ANTI_DRONE_LASER_HEAVY_ENEMY">
+	<type>DEFENSE</type>
+	<tip>lore_DE_ANTI_DRONE_LASER_HEAVY</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Anti-Combat Laser Drone</title>
+	<short>Anti-Drone L.</short>
+	<desc>A defensive drone that uses a laser cannon to defeat hostile combat drones. Takes 3 seconds to recharge.</desc>
+	<power>4</power>
+	<cooldown>3000</cooldown>
+	<dodge>0</dodge>
+	<speed>2</speed>
+	<cost>50</cost>
+	<bp>2</bp>
+	<droneImage>de_drone_defense_heavy_2</droneImage>
+	<weaponBlueprint>DE_DRONE_LASER_HEAVY_ANTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+<weaponBlueprint name="BA_EFFECTOR_ADAPTIVE">
+	<type>BOMB</type>
+	<flavorType>Momentum-Based System Disruptor</flavorType>
+	<tip>lore_BA_EFFECTOR_ADAPTIVE</tip>
+	<title>Chain Disruptor</title>
+	<short>Chain Dis.</short>
+	<locked>1</locked>
+	<desc>An advanced hacking device that builds up momentum with every disruption, allowing it to increase in effectiveness during long battles. Extremely effective at full power.</desc>
+	<tooltip></tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>60</cost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<image>ba_effector_impact_invisible</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>3</count>
+	</boost>
+	<explosion>ba_explosion_ionfield_small</explosion>
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ba_effector_adaptive</weaponArt> 
+</weaponBlueprint>
+<weaponBlueprint name="BA_LASER_LIGHT_CHAINGUN">  
+	<type>LASER</type>
+	<flavorType>Momentum-Based Anti-Personnel Laser</flavorType>
+	<title>Light Vulcan Laser</title>
+	<short>Light V.</short>
+	<tip>lore_BA_LASER_LIGHT_CHAINGUN</tip>
+	<desc>A deadly momentum light laser that takes a moment to gain full attack power.</desc>
+	<tooltip></tooltip>
+	<persDamage>1</persDamage>
+	<sysDamage>1</sysDamage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>4</power>
+	<cost>90</cost>
+	<bp>2</bp>
+	<speed>120</speed>
+	<rarity>5</rarity>
+	<image>ba_laser_light_chain_shot</image>
+	<explosion>ba_explosion_laser_light</explosion>
+	<boost>
+		<type>cooldown</type>
+		<amount>1.76</amount>
+		<count>5</count>
+	</boost>
+	<launchSounds>
+		<sound>apLaser1</sound>
+		<sound>apLaser2</sound>
+		<sound>apLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_laser_light_chain</weaponArt> 
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="LASER_HEAVY_CHAIN">
+	<type>LASER</type>
+	<flavorType>Momentum-Based High-Energy Laser</flavorType>
+	<title>Chain Heavy Laser</title>
+	<short>Chain H.</short>
+	<locked>1</locked>
+	<tip>lore_LASER_HEAVY_CHAIN</tip>
+	<desc>This laser cannon powers up after each attack, striking for major damage.</desc>
+	<tooltip></tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>4</rarity>
+	<image>laser_heavy1</image>
+	<boost>
+		<type>damage</type>
+		<amount>1</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>heavy_chain</weaponArt> 
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="FLARE_CANNON">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable>
+	<flavorType>Flare Cannon</flavorType>
+	<title>Flare Cannon</title>
+	<short>Flare Cannon</short>
+	<tip>lore_FLARE_CANNON</tip>
+	<desc>Primarily intended for use against defense drones, this launcher also doubles as a means of igniting enemy ships.</desc>
+	<tooltip></tooltip>
+	<radius>65</radius>
+	<damage>0</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<power>1</power>
+	<cost>45</cost>
+	<bp>10</bp>
+	<speed>37</speed>
+	<rarity>3</rarity>
+	<projectiles>
+		<projectile count="7" fake="false">flare_cannon_shot</projectile>
+	</projectiles>
+	<explosion>explosion_small</explosion>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flareHit</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>flareHit</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>flare_cannon</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="LASER_AUTO">
+	<type>LASER</type>
+	<flavorType>Fully-Automatic Laser</flavorType>
+	<title>Automatic Laser</title>
+	<short>Auto L.</short>
+	<tip>lore_LASER_AUTO</tip>
+	<desc>Designed for suppressive fire, this laser weapon can fire fast enough to prevent enemy shields from recharging.</desc>
+	<tooltip></tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<cooldown>7</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>4</rarity>
+	<image>laser_light2</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>1</amount>
+		<count>5</count>
+	</boost>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_auto</weaponArt> 
+</weaponBlueprint>
+<weaponBlueprint name="LASER_CHARGEGUN_LARGE"> 
+	<type>LASER</type>
+	<title>Laser Charger Mark IV</title>
+	<flavorType>Charge-Based Laser</flavorType>
+	<short>Charge L.</short>
+	<tip>lore_LASER_CHARGEGUN_LARGE</tip>
+	<desc>An awesome laser design that charges each of its five shots separately. The rapid pace of its attacks make for a powerful but cumbersome weapon.</desc>
+	<tooltip></tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>4</power>
+	<cost>90</cost>
+	<bp>2</bp>
+	<rarity>3</rarity>
+	<image>laser_light1</image>
+	<chargeLevels>5</chargeLevels>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>chargelaser_large</weaponArt> 
+	<iconImage>laser_charge2</iconImage>
+</weaponBlueprint>
+<mod:findName type="weaponBlueprint" name="ION_CHARGEGUN">
+	<mod-overwrite:title>Ion Charger Mark I</mod-overwrite:title>
+	<mod-overwrite:tip>lore_ION_CHARGEGUN</mod-overwrite:tip>
+</mod:findName>
+<weaponBlueprint name="ION_CHARGEGUN_2"> 
+	<type>LASER</type>
+	<flavorType>Charge-Based Ion Blaster</flavorType>
+	<title>Ion Charger Mark II</title>
+	<short>Charge I.</short>
+	<tip>lore_ION_CHARGEGUN_2</tip>
+	<desc>An advanced ion weapon that charges up to four shots, capable of storing a huge volume of ionic potential before firing.</desc>
+	<tooltip></tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<shots>1</shots>
+	<spin>720</spin>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<speed>35</speed>
+	<breachChance>0</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>5</cooldown>
+	<power>3</power>
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<image>ion_1_shot</image>
+	<chargeLevels>4</chargeLevels>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>chargeion2</weaponArt> 
+	<iconImage>ion_charge</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="SHOTGUN_3">
+	<type>BURST</type>
+	<flavorType>Flak Cannon</flavorType>
+	<drone_targetable>1</drone_targetable> 
+	<title>Flak Cannon Mark IV</title>
+	<short>Flak Cannon IV</short>
+	<tip>lore_SHOTGUN_3</tip>
+	<desc>A brutal cannon that fires a massive blast of debris towards enemy ships. Unmatched strength at defeating Shields, but suffers from lacklustre accuracy and usability.</desc>
+	<tooltip></tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>19</cooldown>
+	<power>4</power>
+	<cost>85</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>3</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">debris_large</projectile>
+		<projectile count="4" fake="false">debris_med</projectile>
+		<projectile count="7" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>shotgun_3</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="TORPEDOES_1">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<flavorType>Torpedo Launcher</flavorType>
+	<title>Atlantis Torpedo Launcher</title>
+	<short>Atlantis T.</short>
+	<tip>lore_TORPEDOES_1</tip>
+	<desc>An explosive weapon which launches powerful torpedoes towards enemy ships. High damage, but requires fire support to get past shields.</desc>
+	<tooltip></tooltip>
+	<radius>25</radius>
+	<damage>3</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>6</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>10</bp>
+	<speed>37</speed>
+	<rarity>5</rarity>
+	<explosion>explosion_random</explosion>
+	<projectiles>
+		<projectile count="1" fake="false">torpedo_1</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>torpedoes_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="TORPEDOES_DUAL">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<flavorType>Torpedo Launcher</flavorType>
+	<title>Poseidon Torpedo Launcher</title>
+	<short>Poseidon T.</short>
+	<tip>lore_TORPEDOES_DUAL</tip>
+	<desc>A double-barrelled weapon which launches two torpedoes towards enemy ships. High damage, but requires fire support to get past shields.</desc>
+	<tooltip></tooltip>
+	<radius>25</radius>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>2</fireChance>
+	<breachChance>4</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>10</bp>
+	<speed>37</speed>
+	<rarity>5</rarity>
+	<explosion>explosion_random</explosion>
+	<projectiles>
+		<projectile count="1" fake="false">torpedo_dual_W</projectile>
+		<projectile count="1" fake="false">torpedo_dual_E</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>torpedoes_dual</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="TORPEDOES_BURST">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<flavorType>Torpedo Launcher</flavorType>
+	<title>Piranha Torpedo Launcher</title>
+	<short>Piranha T.</short>
+	<tip>lore_TORPEDOES_BURST</tip>
+	<desc>A powerful weapon which launches five small torpedoes towards enemy ships. Very high damage, but requires fire support to get past shields and is somewhat inaccurate.</desc>
+	<tooltip></tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>2</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>10</bp>
+	<speed>37</speed>
+	<rarity>5</rarity>
+	<explosion>explosion_small</explosion>
+	<projectiles>
+		<projectile count="1" fake="false">torpedo_burst_WW</projectile>
+		<projectile count="1" fake="false">torpedo_burst_W</projectile>
+		<projectile count="1" fake="false">torpedo_burst_C</projectile>
+		<projectile count="1" fake="false">torpedo_burst_E</projectile>
+		<projectile count="1" fake="false">torpedo_burst_EE</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hydraExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>torpedoes_burst</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_HELLFIRE">
+	<type>MISSILES</type>
+	<flavorType>Charge Missile Launcher</flavorType>
+	<title>Hellfire Missile Launcher</title>
+	<tip>lore_MISSILES_HELLFIRE</tip>
+	<short>Hellfire M.</short>
+	<desc>An advanced multi-missile launcher with an exceptional level of versatility.</desc>
+	<tooltip></tooltip>
+	<missiles>1</missiles>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<drone_targetable>1</drone_targetable> 
+	<cooldown>5</cooldown>
+	<power>3</power>
+	<chargeLevels>5</chargeLevels>
+	<cost>60</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<image>missile_swarm</image>
+	<explosion>explosion_small</explosion>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_hellfire</weaponArt>  
+	<iconImage>missile_charge</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_HELLFIRE_ENEMY">
+	<type>MISSILES</type>
+	<flavorType>Charge Missile Launcher</flavorType>
+	<title>Hellfire Missile Launcher</title>
+	<tip>lore_MISSILES_HELLFIRE</tip>
+	<short>Hellfire M.</short>
+	<desc>An advanced multi-missile launcher with an exceptional level of versatility.</desc>
+	<tooltip></tooltip>
+	<missiles>1</missiles>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<drone_targetable>1</drone_targetable> 
+	<cooldown>5</cooldown>
+	<power>4</power>
+	<chargeLevels>5</chargeLevels>
+	<cost>60</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<image>missile_swarm</image>
+	<explosion>explosion_small</explosion>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_hellfire</weaponArt>  
+	<iconImage>missile_charge</iconImage>
+</weaponBlueprint>

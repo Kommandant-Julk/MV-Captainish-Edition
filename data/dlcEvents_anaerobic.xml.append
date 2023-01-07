@@ -1,0 +1,2340 @@
+<eventList name="HOSTILE_LANIUS">
+	<event load="LANIUS_FIGHT"/>
+	<event load="LANIUS_REBEL_FIGHT"/>
+	<event load="LANIUS_PIRATE_FIGHT"/>
+	<event load="LANIUS_HARVESTER"/>
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO"/>
+	<event load="BS_EVENT_LANIUS"/>
+</eventList>
+<eventList name="NEUTRAL_LANIUS">
+	<event load="LANIUS_CIVILIAN"/>
+	<event load="LANIUS_PIRATE_CIVILIAN"/>
+	<event load="LANIUS_SOLO_SALVAGE"/>
+	<event load="LANIUS_SCARED_CIVILIAN"/>
+	<event load="LANIUS_AUTO_REBEL"/>
+	<event load="LANIUS_GROUP_AUTO"/>
+	<event load="LANIUS_BEACON_EATER"/>
+	<event load="LANIUS_DORMANT_EVENT"/>
+	<event load="LANIUS_FUELING_STATION"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>	
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="C_EVENT_CIVILIAN_TRANSPORT"/>
+	<event load="CE_LANIUS_DECONSTRUCT"/>
+	<event load="CE_LANIUS_STRANDED"/>
+</eventList>	
+<event name="START_BEACON_LANIUS_ACTUAL">
+	<text load="START_BEACON_LANIUS"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" hidden="true">
+		<text>(Production Augment) Produce something on-board.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_BOUNTYHUNTER" hidden="true">
+		<text>(Mercenary Database) Acquire a contract for this sector.</text>
+		<event load="CE_BOUNTY_LIST_LANIUS"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="DRONES_BEAM" hidden="true">
+		<text>(Beam Drone) Refit some beam drones for mining duty and send them ahead into the sector. [ Drone Parts: -3 ]</text>
+		<event>
+			<text load="CE_DRONE_MINING_START_TEXT"/>
+			<item_modify>
+				<item type="drones" min="-3" max="-3"/>
+			</item_modify>
+			<quest event="CE_DRONE_MINING_CIVILIAN"/>
+		</event>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="AE_SECTOR_MAPPING" hidden="true">
+		<text>(Sector Scout Unit) Send out mapping drones to gather detailed data on the sector. [ Drone Parts: -3 ]</text>
+		<event load="CE_SECTOR_MAPPING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>Undisturbed as you are here, you can lay out some mines around the beacon while the FTL charges. The Rebel forces will have to avoid this beacon, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="START_BEACON_LANIUS">
+	<text>This sector has been largely abandoned since a series of battles decimated the local population. An unusual alien race is reportedly scavenging in the area. You'd best be on guard.</text>
+	<text>This sector was the site of many major battles between the Federation and Rebel fleets. Strangely, there's very little evidence of those battles remaining...</text>
+	<text>There have been a number of reports of advanced ships salvaging the wrecks and abandoned mining facilities in this sector. Could it be that the Lanius have resurfaced?</text>
+	<text>The war tore through this civilian sector, and just recently even the few life signs that remained have begun blinking out. Rumours suggest the Lanius are responsible.</text>
+</textList>
+<eventList name="CE_BOUNTY_LIST_LANIUS">
+	<event>
+		<text>Its the usual deal: A small backwater colony is terrorized by a local raider. The farmers collected a meagre amount of ship scrap as payment and put a bounty on the pirate's head, seemingly the only way they see to escape their peril. Target: Unknown Pirate Craft. Payment: Low.</text>
+		<quest event="CE_BOUNTY_PIRATE_RAIDER"/>
+	</event>
+	<event>
+		<text>Since the sector has been largely abandoned, the last remaining locals depend on the rare mercenary to defend their colonies against the Lanius invaders. Target: Lanius Scavengers. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_LANIUS"/>
+	</event>
+	<event>
+		<text>Since the sector has been largely abandoned, the last remaining locals depend on the rare mercenary to defend their colonies against the Lanius invaders. Target: Lanius Scavengers. Payment: Medium.</text>
+		<quest event="CE_BOUNTY_LANIUS"/>
+	</event>
+	<event>
+		<text>There are no legal marks available in this sector. Most people have already left.</text>
+	</event>
+</eventList>
+<mod:findName type="event" name="NOTHING_LANIUS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="NOTHING_LANIUS">
+	<text load="NOTHING_LANIUS"/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" hidden="true">
+		<text>(Production Augment) Produce something on-board.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>You quickly place some mines around the beacon while the FTL charges. The Rebel forces will have to avoid this beacon, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<textList name="NOTHING_LANIUS">
+	<text>The charts indicate this was the location of a small skirmish over a military facility on a nearby moon. Oddly, scans pick up no signs of debris from either the battle or the station. Yet another area sucked dry by the Lanius.</text>
+	<text>Scans show no signs of any ships or settlements nearby. You have no way of knowing if the area was always uninhabited or if it was simply erased by the Lanius.</text>
+	<text>A few refugee ships are preparing for the long journey to another sector. They explain how a number of Lanius military ships surrounded them and began to hack their FTL drives. Fortunately the Lanius moved on after briefly scanning the civilian ships, leaving them more than a little shaken up.</text>
+	<text>You pass a civilian ship that warns of the nearby Lanius. "One of them attacked a civilian transport and started to melt their fracking hull. But then the weirdest thing happened... another metal ship actually fired on its companion until it backed off." Apparently there are disagreements among the Lanius about what should be salvaged.</text> 
+	<text>You question a local settlement and they describe a fleet of metal ships wordlessly collecting all of the abandoned metal and debris in the area. When they approached important satellites, the settlements fired a few ASB warning shots. The Lanius moved on despite clearly having the firepower to overwhelm the settlements.</text>
+	<text>You come across a human civilian ship preparing to leave the sector. They message you, "We're getting out of here! There was some cult rambling about the spreading of the disease, Humanitis. They forcefully boarded our ship and tried to open all of our airlocks, shouting, "Be purged!" Is nowhere safe anymore?"</text>
+	<text>The charts indicate this was the location of a small skirmish over a military facility on a nearby moon. Oddly, scans pick up no signs of debris from either the battle or the station. Yet another area sucked dry by the Lanius.</text>
+	<text>Scans show no signs of any ships or settlements nearby. You have no way of knowing if the area was always uninhabited or if it was simply erased by the Lanius.</text>
+</textList>
+<mod:findName type="event" name="LANIUS_DISTRESS_EMPTY"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_DISTRESS_EMPTY" unique="true">
+	<text>You arrive at the location of the distress signal prepared for a fight, but on first glance it's entirely empty. The signal is coming from a small plastic satellite orbiting a moon. A looping message describes how settlers have recently abandoned the area due to the Lanius threat. You fail to find any other signs of a settlement nearby.</text>
+	<distressBeacon/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" hidden="true">
+		<text>(Production Augment) Produce something on-board.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>You quickly place some mines around the beacon while the FTL charges. The Rebel forces will have to avoid this beacon, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_DISTRESS_TOOLATE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_DISTRESS_TOOLATE" unique="true">
+	<text>When you get to the beacon you quickly try to locate the source of the distress call. As you are looking, the signal blinks out. It is then that you notice the small fleet of scavenger ships absorbing debris from a large battle nearby. You can't help but wonder where the distress signal came from, but you decide not to risk pressuring the fleet.</text>
+	<distressBeacon/>
+	<choice hidden="true">
+		<text>Socialize with your crew while the FTL charges.</text>
+		<event load="CE_SOCIAL_HOSTILE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" hidden="true">
+		<text>(Production Augment) Produce something on-board.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="AE_COMBAT_SIMULATOR" hidden="true">
+		<text>(Training Simulator) Have your crew train their skills in a simulation.</text>
+		<event load="CE_COMBAT_SIM_START"/>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true">
+		<text>(Research Laboratory) Conduct some research on the nearby systems.</text>
+		<event load="CE_RESEARCH"/>
+	</choice>
+	<choice req="AE_REPAIR_KIT" hidden="true">
+		<text>(Hull Maintenance Kit) Repair some hull damage.</text>
+		<event load="CE_SHIP_MAINTENANCE"/>
+	</choice>
+	<choice req="AE_BEACON_KIT" hidden="true">
+		<text>(Beacon Access Kit) Cover your tracks in the FTL network to delay the Rebel fleet.</text>
+		<event load="CE_BEACON_KIT_HOSTILE"/>
+	</choice>
+	<choice req="AE_SECTOR_SCANNER" hidden="true">
+		<text>(Astrometrics Lab) Spend some time scanning the entire sector.</text>
+		<event load="CE_SECTOR_SCANNING"/>
+	</choice>
+	<choice req="DRONES_COMBAT_PROJECTILE" hidden="true">
+		<text>(Combat Drone) Leave some drones behind to harass the Rebel fleet. [ Drone Parts: -3 ]</text>
+		<event load="CE_DRONE_COMBAT_FLEET_DELAY"/>
+	</choice>
+	<choice req="DRONES_MINELAYER" hidden="true">
+		<text>(Minelayer Drone) Have your drone place a minefield to delay the Rebel fleet. [ Drone Parts: -1 ]</text>
+		<event load="CE_DRONE_MINELAYER_FLEET_DELAY"/>
+	</choice>
+	<choice req="WEAPONS_MINES" hidden="true"> 
+		<text>(Mines) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+		<event>
+			<text>You quickly place some mines around the beacon while the FTL charges. The Rebel forces will have to avoid this beacon, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+			<item_modify>
+				<item type="missiles" min="-3" max="-3"/>
+			</item_modify>
+			<modifyPursuit amount="-1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> 
+		<text load="GENERIC_CONTINUE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<eventList name="LANIUS_DESTROYED">
+	<event>
+		<text>The ship explodes, leaving behind a collection of useful scrap material.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>The ship explodes, leaving behind a collection of useful scrap material.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>The ship explodes, leaving behind a collection of useful scrap material.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>The ship explodes, revealing their cargo of unprocessed metal. You collect a significant amount of scrap.</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="LANIUS_DEAD_CREW">
+	<event>
+		<text>There are no more life-signs remaining on the ship. You strip it of useful materials.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>There are no more life-signs remaining on the ship. You strip it of useful materials.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>There are no more life-signs remaining on the ship. You strip it of useful materials.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>There are no more life-signs remaining on the ship. You strip it of useful materials.</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>There are no more life-signs remaining on the ship. You strip it of useful materials.</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>With the Lanius dispatched you are able to take the fuel out of storage. You also take all the scrap you can manage.</text>
+		<autoReward level="HIGH">fuel</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>You find a weapon on their ship. With no crew to stop you, you can install it on your own.</text>
+		<autoReward level="MED">weapon</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>You find a drone schematic on their ship. With no crew to stop you, you can install it on your own.</text>
+		<autoReward level="MED">drone</autoReward>
+		<choice>
+			<text load="GENERIC_CONTINUE_TEXT"/>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<event name="LANIUS_FIGHT_AUGMENTED" unique="true">
+	<text load="LANIUS_FIGHT_TEXT"/>
+	<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="LANIUS_DISTRESS_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_DISTRESS_FIGHT" unique="true">
+	<text>You immediately do a short-range scan after arriving at the beacon. It appears to be coming from a small civilian vessel under fire from a Lanius ship. Not all Lanius are content with simply scavenging the wrecks of previous battles.</text>
+	<distressBeacon/>
+	<ship load="LANIUS_CIVILIAN" hostile="false"/>
+	<choice hidden="true">
+		<text>Fight the Lanius ship.</text>
+		<event>
+			<text>You move in to intercept the ship. Detecting a greater threat, the Lanius prepare to fight.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Avoid the conflict.</text>
+		<event>
+			<text>Your crew seems unhappy to leave the civilians to such a fate but you try to convince them of the greater good. You don't speak of your own misgivings, however.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="anaerobic">
+		<text>(Lanius Crew) Have your crew admonish their captain.</text>
+		<event load="LANIUS_DISTRESS_FIGHT_LANIUS"/>
+	</choice>
+</event>
+<eventList name="LANIUS_DISTRESS_FIGHT_LANIUS">
+	<event>
+		<text>After a discussion that your translator fails to comprehend, the enemy ship powers down its weapons. You learn that your crew member successfully reminded them of their treaties promising to leave the property of sentient aliens alone. If this is a widespread rule of this race, there appear to be many who disagree with it. You attempt to hail the civilian ship now that it's safe.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="SAVE_CIVILIAN_LIST"/>
+		</choice>
+	</event>
+	<event>
+		<text>The ship refuses all hails, even from one of its own kind. It appears to have gone completely rogue. Before you can react, it begins to target your ship. Prepare for a fight.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="LANIUS_SLUG_DISTRESS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_SLUG_DISTRESS" unique="true">
+	<text>The distress signal from this system is coming from a Slug vessel under attack by the Lanius! The Slugs beg for assistance as the Lanius tear into their hull plating.</text>
+	<distressBeacon/>
+	<choice>
+		<text>Attack the Lanius ship.</text>
+		<event>
+			<text load="CE_PRE_FIGHT_TEXT"/>
+			<ship load="LANIUS_SLUG_DISTRESS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Leave the Slugs to their fate.</text>
+		<event>
+			<text>You leave the Lanius ship alone, and prepare to jump to the next beacon.</text>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_DISTRESS_TRAP"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_DISTRESS_TRAP" unique="true">
+	<text>You are too late - whatever once was emitting the distress signal from this system drew a Lanius ship as well as your own. Having consumed the original target, the Lanius turn their attention to your vessel.</text>
+	<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	<distressBeacon/>
+</event>
+<mod:findName type="event" name="LANIUS_MANTIS_DISTRESS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_MANTIS_DISTRESS" unique="true">
+	<text>The Mantis ship in this system looks like its distress beacon is malfunctioning... likely due to the Lanius ship mining their hull and sub-systems! It doesn't look like the Mantis ship will last much longer.</text>
+	<distressBeacon/>
+	<choice>
+		<text>Attack the Lanius ship.</text>
+		<event>
+			<text>The Lanius don't seem to have noticed you yet - but they will. Launching into the fray, you target the Lanius vessel!</text>
+			<ship load="LANIUS_MANTIS_DISTRESS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Leave the Mantis to their fate.</text>
+		<event>
+			<text>The Mantis ship is quickly overcome by the Lanius vessel, and you move away as the Lanius feed on the remains.</text>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_ROCK_DISTRESS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_ROCK_DISTRESS" unique="true">
+	<text>A distress beacon pulses weakly from a Rockman ship in this system... their hull (and their crew) are being mined by the Lanius, lasers and weapons tearing through the ship!</text>
+	<distressBeacon/>
+	<choice>
+		<text>Attack the Lanius ship.</text>
+		<event>
+			<text>The Rockmen need your help - you target the Lanius ship and grimly prepare for battle.</text>
+			<ship load="LANIUS_ROCK_DISTRESS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Leave the Rockmen to their fate.</text>
+		<event>
+			<text>As you make your escape, the Rockman's ship's engines explode, and you watch the Lanius ship slowly feed on the remains - and the crew.</text>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_RESEARCHER_CONTACT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_RESEARCHER_CONTACT" unique="true">
+	<text>A Federation science craft is docked with a few Lanius ships. You hail them and ask what is going on. "Greetings! We have been attempting to understand our region's newest visitors, the Lanius, although we have been making little headway in deciphering their language."</text>
+	<ship load="C_CIVILIAN_TRANSPORT" hostile="false"/>
+	<choice hidden="true">
+		<text>Ask if they have anything that could help your mission.</text>
+		<event load="LANIUS_RESEARCHER_CONTACT_LIST"/>
+	</choice>
+	<choice hidden="true" req="anaerobic">
+		<text>(Lanius Crew) Offer to copy your translator's data suite.</text>
+		<event>
+			<text>Your Lanius crew had tweaked the ship's translator to slowly improve itself over time. The data collected from your interactions with the Lanius could be very helpful to these scientists.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="LANIUS_RESEARCHER_CONTACT_LIST2"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="AE_SCIENCE" hidden="true"> 
+		<text>(Research Laboratory) Offer to share the linguistic data you have gathered.</text>
+		<event>
+			<text>Your on-board library is full of Lanius speech samples you recorded while travelling through the sector. The data could be very helpful to these scientists.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="LANIUS_RESEARCHER_CONTACT_LIST2"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Leave.</text>
+		<event>
+			<text>You wish them well and prepare to jump.</text>
+		</event>
+	</choice>
+	<choice req="PIRACY_CHECK_ATTACK" hidden="true" blue="false" max_group="0">
+		<text>Attack the civilians. This is an act of piracy, but your crew will obey your orders.</text>
+		<event load="CR_PIRACY_ATTACK_START"/>
+	</choice>
+	<choice req="engines" hidden="true" blue="false" max_group="0">
+		<text>Attack the civilians. However this is an act of piracy, your crew may be disturbed.</text>
+		<event load="C_PIRACY_RESULTS"/>
+	</choice>
+	<choice req="AE_REQUISITION" hidden="true"> 
+		<text>(Requisition License) Order the seizure of their cargo.</text>
+		<event load="CE_REQUISITION_CIVILIAN"/>
+	</choice>
+</event>	
+<mod:findName type="event" name="LANIUS_TRADER_TRANSLATOR"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_TRADER_TRANSLATOR" unique="true">
+	<text>A Lanius merchant appears to have a significantly-improved translator as you clearly understand their message. "Metal content more than sufficient. Does your ship care to exchange resources for our excess metal?"</text>
+	<choice>
+		<text>Agree to the exchange.</text>
+		<event load="LANIUS_TRADER_LIST"/>
+	</choice>
+	<choice>
+		<text>Decline.</text>
+		<event>
+			<text>They leave without a word.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Decline but ask about their translation device.</text>
+		<event>
+			<text>"Yes. It is quality. Our ship contains excess. Care to purchase?"</text>
+			<choice hidden="true">
+				<text>Purchase the translator for 40 scrap.</text>
+				<event>
+					<text>Your ships dock and you are more than a little surprised when the Lanius you spoke with boards your ship. It appears the 'device' you purchased was one of the beings that learned your language.</text>
+					<crewMember amount="1" class="anaerobic">Translator</crewMember>
+					<item_modify>
+						<item type="scrap" min="-40" max="-40"/>
+					</item_modify>
+				</event>
+			</choice>
+			<choice>
+				<text>Decline again.</text>
+				<event>
+					<text>"No matter. This one does not mind this ship." They pull away and you are left to wonder what it meant by that. Perhaps the translation device has not yet been perfected?</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Attack the ship.</text>
+		<event>
+			<text>The Lanius can't be trusted. You open fire on the vessel without a warning.</text>
+			<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_TRADER"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_TRADER" unique="true">
+	<text load="LANIUS_TRADER_TEXT"/>
+	<choice>
+		<text>Agree to the exchange.</text>
+		<event load="LANIUS_TRADER_LIST"/>
+	</choice>
+	<choice>
+		<text>Decline.</text>
+		<event>
+			<text>They leave without a word.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="anaerobic">
+		<text>(Lanius Crew) Ask for an alternative trade.</text>
+		<event>
+			<text>After a short discussion you do not understand, the trader comes back with a second proposal.</text>
+			<choice>
+				<text>Agree to the exchange.</text>
+				<event load="LANIUS_TRADER_LIST2"/>
+			</choice>
+			<choice>
+				<text>Decline.</text>
+				<event>
+					<text>They leave without a word.</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Attack the ship.</text>
+		<event>
+			<text>The Lanius cant be trusted. You open fire on the vessel without a warning.</text>
+			<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_FIGHT">
+	<text load="LANIUS_FIGHT_TEXT"/>
+	<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="LANIUS_REBEL_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_REBEL_FIGHT">
+	<text load="LANIUS_REBEL_FIGHT_TEXT"/>
+	<ship load="REBEL" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="LANIUS_PIRATE_FIGHT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_PIRATE_FIGHT">
+	<text load="LANIUS_PIRATE_FIGHT_TEXT"/>
+	<ship load="PIRATE" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="LANIUS_FIGHT_ASTEROID"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_FIGHT_ASTEROID" unique="true">
+	<text>This beacon appears to have been set up within an asteroid field to access a mining settlement. However, half of the settlement has been disassembled by a number of Lanius scavengers. Their military escort moves in to scare you off.</text>
+	<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	<environment type="asteroid"/>
+</event>
+<mod:findName type="event" name="LANIUS_FIGHT_PULSAR"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_FIGHT_PULSAR" unique="true">
+	<text>There appears to be some sort of research station near a pulsar, although it's hard to tell since a portion of it has been melted. The Lanius ship that has been working at it moves in to intercept you, totally oblivious to the threat of EM pulses.</text>
+	<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	<environment type="pulsar"/>
+</event>
+<mod:findName type="event" name="LANIUS_NOBOARDERS_PDS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_NOBOARDERS_PDS" unique="true">
+	<img back="BG_WARNING_ASB_ALLIED" planet="NONE"/>
+	<text back="BG_WARNING_ASB_CIVILIAN" planet="NONE">Upon arrival you are immediately surrounded by chaos: a planet's Anti-Ship Battery is firing on a number of Lanius ships; one of the combat ships mistakenly believes your ship has arrived to assist the planetary defenses. Combat positions!</text>
+	<environment type="PDS" target="enemy"/>
+	<ship load="LANIUS_BOARDERS_PDS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<mod:findName type="event" name="LANIUS_HARVESTER"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_HARVESTER" unique="true">
+	<text>Your scans have picked up a Lanius vessel in this system: it appears to be navigating a rich debris field, harvesting the minerals.</text>
+	<choice hidden="true">
+		<text>Attempt to harvest some for yourself.</text>
+		<event>
+			<text>As you attempt to navigate the debris, you come too close to the Lanius ship - and they proceed to try to harvest you!</text>
+			<ship load="LANIUS_HARVESTER_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="2" hidden="true" max_group="0">
+		<text>(Lv2/3 Helm) Engage the auto-pilot and safely harvest the debris.</text>
+		<event>
+			<text>With help from the computer, you are able to keep a comfortable distance between you and the Lanius ship, and you are able to gather resources from the debris field without conflict.</text>
+			<autoReward level="MED">standard</autoReward>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="3" hidden="true" max_group="0">
+		<text>(Lv3/3 Helm) Engage the auto-pilot and safely harvest the debris.</text>
+		<event>
+			<text>With help from the computer, you are able to keep a comfortable distance between you and the Lanius ship, and you gather a considerable amount of resources from the debris field without conflict.</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attack the vessel.</text>
+		<event>
+			<text>You go on the offensive and power up your weapons - with any luck, you'll soon have the mineral field all to yourself.</text>
+			<ship load="LANIUS_HARVESTER_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore the vessel.</text>
+		<event>
+			<text>You charge up your drive and prepare to make the next jump. No sense in antagonizing the Lanius if you don't need to.</text>
+		</event>
+	</choice>
+</event>	
+<mod:findName type="event" name="LANIUS_CIVILIAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_CIVILIAN" unique="true">
+	<text load="LANIUS_CIVILIAN_TEXT"/>
+	<ship load="LANIUS_CIVILIAN" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the Lanius ship.</text>
+		<event>
+			<text>You charge your weapons, which quickly gets the Lanius ship's attention.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Avoid the conflict.</text>
+		<event>
+			<text>Unfortunately it is not your mission to save every person affected by this war or the Lanius invasion.</text>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_PIRATE_CIVILIAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_PIRATE_CIVILIAN">
+	<text load="LANIUS_PIRATE_CIVILIAN_TEXT"/>
+	<ship load="PIRATE_CIVILIAN_LANIUS" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the pirate.</text>
+		<event>
+			<text>You charge your weapons, which quickly gets the pirate ship's attention.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Avoid the conflict.</text>
+		<event>
+			<text>Unfortunately it is not your mission to save every person affected by this war or the Lanius invasion.</text>
+		</event>
+	</choice>
+</event>
+<mod:findName type="event" name="LANIUS_SOLO_SALVAGE"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_SOLO_SALVAGE">
+	<text load="LANIUS_SOLO_SALVAGE_TEXT"/>
+	<ship load="LANIUS_SHIP" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the ship.</text>
+		<event>
+			<text>You move in and power up your weapons. Detecting the threat, they stop what they were doing and prepare for a fight.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Leave them alone.</text>
+		<event>
+			<text>You ignore the ship and prepare to jump.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="anaerobic">
+		<text>(Lanius Crew) Request some scrap.</text>
+		<event load="LANIUS_SOLO_SALVAGE_LIST"/>
+	</choice>
+</event>
+<eventList name="LANIUS_SOLO_SALVAGE_LIST">
+	<event>
+		<text>Your crew hails their ship, wondering if they have any extra salvage. Their crew seems happy to share.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Your crew member hails them, asking if they have any extra scrap. They state that they are extremely low and cannot spare any.</text>
+	</event>
+	<event>
+		<text>They scoff at your crew member's request and utter something that was translated as, "Get your own, lazy solder."</text>
+		<choice hidden="true">
+			<text>Attack the ship.</text>
+			<event>
+				<text>You move in and power up your weapons. Detecting the threat, they stop what they were doing and prepare for a fight.</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave.</text>
+			<event>
+				<text>You ignore their derisive tone and prepare to jump.</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="LANIUS_SCARED_CIVILIAN"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_SCARED_CIVILIAN" unique="true">
+	<text>You arrive at the beacon to discover a civilian ship fleeing from a lone Lanius craft. The civilian messages you, "Help! The metal monsters are coming to melt down our ship!" Strangely, no active weapon signatures are detected.</text>
+	<ship load="LANIUS_SHIP" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the Lanius ship.</text>
+		<event>
+			<text>The civilian ship hastily retreats while you intercept the path of the ship and lock on weapons. It turns and prepares for a fight.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Stay out of it.</text>
+		<event>
+			<text>You ignore the ship's pleas and watch as it hastily escapes. Oddly, the Lanius ship makes no move to chase it. You wonder if they were ever a threat at all.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Try to contact the Lanius ship.</text>
+		<event>
+			<text>You approach the ship without activating weapons and the civilian ship says, "Don't go any closer! Just kill them!" before hastily making their retreat.</text>
+			<choice hidden="true">
+				<text>Ignore them and continue.</text>
+				<event load="LANIUS_SCARED_CIVILIAN_LIST"/>
+			</choice>
+		</event>
+	</choice>		
+	<choice hidden="true" req="anaerobic">
+		<text>(Lanius Crew) Try to contact the ship.</text>
+		<event>
+			<text>Your crew member opens a channel with them. It seems they are scouting for a merchant's guild which is seeking to establish connections with the other sentient races. You suggest they invest research time into developing better translators and ask to see if they are selling anything at the moment.</text>
+			<store/>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="LANIUS_SCARED_CIVILIAN_LIST">
+	<event>
+		<text>You ask what they want and the translator chirps their response, "Explore. Assess trade potential." It appears to be a merchant ship attempting to make connections with the other races. The civilian must have simply been too scared to ask. You check what they have to sell at the moment.</text>
+		<store/>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+	</event>
+	<event>
+		<text>You ask what they are doing here but the translator clearly has problems with the request. It chirps with their response, "Expunge... Floral... Proposition..." You try to clarify their answer but to no avail. Both you and the Lanius captain end the transmission despondently.</text>
+	</event>
+	<event>
+		<text>You ask what they are doing here but the translator clearly has problems with the request. The Lanius seem enraged for an indiscernible reason. They cut transmission and power their weapons. Looks like you'll have to fight after all!</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>			
+<mod:findName type="event" name="LANIUS_AUTO_REBEL"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_AUTO_REBEL" unique="true">
+	<text>You come across a Lanius ship in the process of absorbing a Rebel automated scout. If you scare off the Lanius you could probably make use of it.</text>
+	<ship load="LANIUS_AUTO_REBEL" hostile="false"/>
+	<choice hidden="true">
+		<text>Fight the ship.</text>
+		<event>
+			<text>You power up your weapons, which quickly gets the attention of the ship.</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave them alone.</text>
+		<event>
+			<text>Whatever assistance the disabled scout could provide is not worth the risk of fighting more Lanius. You prepare to move on.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="LANIUS_GROUP_AUTO_LIST">
+	<event>
+		<text>You try your best to convey the notion that the approaching Rebel fleet has countless automated ships scouting for them. However, either the translation device has failed or they're simply not interested. They cut the channel and continue to absorb the ships.</text>
+	</event>
+	<event>
+		<text>You try your best to convey the notion that the approaching Rebel fleet has countless automated ships scouting for them. You're not certain if you were misunderstood but they appear to scoff at your suggestion. Most ships continue what they were doing but a single ship moves to fight you.</text>
+		<ship load="LANIUS_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You try your best to convey the notion that the approaching Rebel fleet has countless automated ships scouting for them. They thank you for the tip and prepare to jump in the direction you came. That will hopefully delay the fleet. You scrap what remains of the Rebel station.</text>
+		<autoReward level="MED">standard</autoReward>
+		<modifyPursuit amount="-1"/>
+	</event>
+</eventList>
+<eventList name="LANIUS_BEACON_EATER_ASK">
+	<event>
+		<text>After a long message the translator is only able to spurt out "critical... must... metal..." You can only surmise they are desperate for scrap.</text>
+		<choice hidden="true">
+			<text>Give them 30 scrap.</text>
+			<event>
+				<text>You release the material out of the airlock and the Lanius quickly collect it and start melting it down. They are grateful for your assistance and send over a ship augmentation.</text>
+				<item_modify>    
+					<item type="scrap" min="-30" max="-30"/>
+				</item_modify>	
+				<augment name="RANDOM"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Leave.</text>
+			<event load="LANIUS_BEACON_EATER_LEAVE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You begin to message the ship but it quickly powers on its weapons defensively. It appears to be fully functional and looking for a fight!</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="LANIUS_BEACON_EATER_SCRAP">
+	<event>
+		<text>You release the material out of the airlock and the Lanius quickly collect it and start melting it down. They are grateful for your assistance and send over a ship augmentation.</text>
+		<item_modify>    
+			<item type="scrap" min="-30" max="-30"/>
+		</item_modify>	
+		<augment name="RANDOM"/>
+	</event>
+	<event>
+		<text>You release the scrap out of the airlock and they greedily collect it. Shortly afterwards their impulse engines flicker on and they power up their weapons. It appears you haven't sated their lust for metal!</text>
+		<item_modify>    
+			<item type="scrap" min="-30" max="-30"/>
+		</item_modify>	
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="LANIUS_BEACON_EATER_LEAVE">
+	<event>
+		<text>You prepare to jump as soon as possible. You don't want to be around if they disable this beacon.</text>
+	</event>
+	<event>
+		<text>You prepare to jump as soon as possible. You don't want to be around if they disable this beacon.</text>
+	</event>
+	<event>
+		<text>You prepare to jump as soon as possible. You don't want to be around if they disable this beacon.</text>
+	</event>
+	<event>
+		<text>You make preparations to jump but are surprised when the Lanius ship pulls away from the beacon towards you. It appears to be fully operational!</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="LANIUS_DORMANT_EVENT"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_DORMANT_EVENT" unique="true">
+	<text>You have picked up a Lanius vessel drifting in this sector. There is no damage to the hull, and it appears to be powered down.</text>
+	<ship load="LANIUS_SHIP" hostile="false"/>
+	<choice hidden="true">
+		<text>Scan the ship for lifeforms.</text>
+		<event>
+			<text>As you scan the vessel, the scan frequencies awaken the Lanius crew from hibernation - and they're hungry for raw materials!</text>
+			<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Power weapons to attack.</text>
+		<event load="LANIUS_DORMANT_WEAPONS"/>
+	</choice>
+	<choice hidden="true">
+		<text>Investigate the vessel.</text>
+		<event load="LANIUS_DORMANT_INVESTIGATE"/>
+	</choice>
+</event>
+<eventList name="LANIUS_DORMANT_WEAPONS">
+	<event>
+		<text>You power up your weapons, and in response, the Lanius ship does the same! Prepare for a fight.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You power up your weapons, but don't get a response.</text>
+		<choice hidden="true">
+			<text>Investigate the vessel.</text>
+			<event load="LANIUS_DORMANT_INVESTIGATE"/>
+		</choice>
+		<choice hidden="true">
+			<text>Destroy and scrap it.</text>
+			<event>
+				<text>As soon as you lock your weapons onto their vessel, it awakens... they must have been in hibernation and were awoken by the danger!</text>
+				<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="LANIUS_DORMANT_PILOT">
+	<event>
+		<text>As you drift toward the vessel, your piloting skill is unable to match your intent - the Lanius ship powers up, hungry for raw materials!</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+	</event>
+	<event>
+		<text>You clumsily manage to strip some hull plating before being forced to retreat or risk collision.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+</eventList>
+<mod:findName type="event" name="LANIUS_FUELING_STATION"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_FUELING_STATION" unique="true">
+	<text>You detect a refuelling platform near the beacon, although its broadcast signal is garbled, and you can't make out the message.</text>
+	<choice>
+		<text>Hail the platform and attempt to communicate.</text>
+		<event>
+			<text>There is a screech from your comm system, and the broadcast suddenly cuts off. The platform suddenly begins to move, revealing itself to be a Lanius ship!</text>
+			<ship load="LANIUS_FUELING_STATION_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Dock with the platform.</text>
+		<event>
+			<text>Your ship enters one of the refuelling station berths, grateful for a rest.</text>
+			<choice hidden="true">
+				<text>Signal for a refuel.</text>
+				<event load="LANIUS_FUELING_STATION_LIST"/>
+			</choice>
+			<choice req="doors" lvl="2" hidden="true">
+				<text>(Lv2 Doors) Secure your blast doors - best to be safe when docked.</text>
+				<event>
+					<text>Your reinforced doors save you from an attempted ambush by the Lanius, who cluster around the doors and hull, attempting to consume your ship. Coldly, you wipe them out one by one with your weapon array, then take control of the station and take its fuel reserves.</text>
+					<item_modify>
+						<item type="fuel" min="5" max="5"/>
+					</item_modify>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Ignore the platform.</text>
+		<event>
+			<text>You leave the platform alone, and prepare to jump.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="LANIUS_FUELING_STATION_LIST">
+	<event>
+		<text>Your ship's dash suddenly lights up with warnings - a hull breach! Lanius were on board the platform and are now on board your ship. A hidden cruiser comes into view!</text>
+		<ship load="LANIUS_FUELING_STATION_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<boarders breach="true" min="1" max="1" class="anaerobic"/>
+	</event>
+	<event>
+		<text>What seemed to be a brief respite turns into a Lanius trap... the first warning is an explosion from your engine room, followed moments later by detection of a Lanius ship at sensor range!</text>
+		<ship load="LANIUS_FUELING_STATION_SHIP" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+		<damage amount="3" system="engines"/>
+	</event>
+	<event>
+		<text>No one answers your hails. You run some scans and discover that the station has been recently abandoned, no doubt due to the threat of the Lanius. You empty their fuel reserves before leaving.</text> 
+		<item_modify>
+			<item type="fuel" min="3" max="5"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event/>
+		</choice>
+		<choice req="sensors" lvl="2" hidden="true" max_group="0">
+			<text>(Lv2/3 Sensors) Run another scan at maximum sensitivity.</text>
+			<event>
+				<text>You run an additional more focused scan and find one of the auxiliary refuelling platforms has some unclaimed fuel.</text>
+				<item_modify>
+					<item type="fuel" min="1" max="3"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="sensors" lvl="3" hidden="true" max_group="0">
+			<text>(Lv3/3 Sensors) Run another scan at maximum sensitivity.</text>
+			<event>
+				<text>You run an additional more focused scan and find one of the auxiliary refuelling platforms has some unclaimed fuel and drone parts.</text>
+				<item_modify>
+					<item type="fuel" min="2" max="3"/>
+					<item type="drones" min="1" max="3"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<mod:findName type="event" name="LANIUS_PIRATE_BOARDERS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="LANIUS_PIRATE_BOARDERS" unique="false">
+	<text>An image of some weak and hungry humans comes onto your screen. "Those metal bastards think they can just absorb half of our engines and leave us here to die? I hope you understand the need to take your ship by force."</text>
+	<choice req="AE_TELEPORTER_JAMMER" hidden="true">
+		<text>(Teleporter Disruptor) Secure the ship against teleporting intruders.</text>
+		<event>
+			<text>The disruptor field stabilizes before the intruders can beam aboard. To avoiding further surprises, you immediately prepare the FTL, leaving them to their fate.</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Continue...</text>
+		<event>
+			<text>You hear the sounds of someone beaming aboard followed by the shouts of a boarding party. Intruder alert!</text>
+			<boarders min="3" max="5" class="human"/>
+		</event>
+	</choice>
+</event>
+<event name="CE_LANIUS_DECONSTRUCT" unique="true">
+	<text>The lone Lanius you meet at this beacon flies a dilapidated, dimly lit shuttle. You are surprised that the being is almost fluent in the Federation language: "Unique service available! Metal necessary for survival. Death approaching. Agree to hull deconstruction? Much metal for you! Beneficial for all!"</text>
+	<choice hidden="true">
+		<text>Allow the Lanius to deconstruct 4 points of hull.</text>
+		<event>
+			<text>"Gratitude is dispensed." The Lanius emerges from its craft and starts to dismantle your ship, feeding on the parts while gathering them into neatly arranged piles. The remaining material might be put to good use elsewhere now. "Service complete. Have a nice day."</text>
+			<damage amount="4"/>
+			<autoReward level="LOW">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Allow the Lanius to deconstruct 7 points of hull.</text>
+		<event>
+			<text>"Gratitude is dispensed." The Lanius emerges from its craft and starts to dismantle your ship, feeding on the parts while gathering them into neatly arranged piles. The remaining material might be put to good use elsewhere now. "Service complete. Have a nice day."</text>
+			<damage amount="7"/>
+			<autoReward level="MED">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Allow the Lanius to deconstruct 10 points of hull.</text>
+		<event>
+			<text>"Gratitude is dispensed." The Lanius emerges from its craft and starts to dismantle your ship, feeding on the parts while gathering them into neatly arranged piles. The remaining material might be put to good use elsewhere now. "Service complete. Have a nice day."</text>
+			<damage amount="10"/>
+			<autoReward level="HIGH">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="anaerobic">
+		<text>(Lanius Crew) Have your crew negotiate a better deal.</text>
+		<event>
+			<text>After a short discussion you do not understand, the wretched Lanius agrees to take a little less plate metal for itself.</text>
+			<choice hidden="true">
+				<text>Allow the Lanius to deconstruct 3 points of hull.</text>
+				<event>
+					<text>"Gratitude is dispensed." The Lanius emerges from its craft and starts to dismantle your ship, feeding on the parts while gathering them into neatly arranged piles. The remaining material might be put to good use elsewhere now. "Service complete. Have a nice day."</text>
+					<damage amount="3"/>
+					<autoReward level="LOW">scrap_only</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Allow the Lanius to deconstruct 6 points of hull.</text>
+				<event>
+					<text>"Gratitude is dispensed." The Lanius emerges from its craft and starts to dismantle your ship, feeding on the parts while gathering them into neatly arranged piles. The remaining material might be put to good use elsewhere now. "Service complete. Have a nice day."</text>
+					<damage amount="6"/>
+					<autoReward level="MED">scrap_only</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Allow the Lanius to deconstruct 8 points of hull.</text>
+				<event>
+					<text>"Gratitude is dispensed." The Lanius emerges from its craft and starts to dismantle your ship, feeding on the parts while gathering them into neatly arranged piles. The remaining material might be put to good use elsewhere now. "Service complete. Have a nice day."</text>
+					<damage amount="8"/>
+					<autoReward level="HIGH">scrap_only</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Decline.</text>
+		<event>
+			<text>The Lanius on the screen holds up a plastic panel showing a badly-drawn sad face. "Sadness approaches."</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Destroy the shuttle.</text>
+		<event>
+			<text>The craft is atomized by a full weapon salvo.</text>
+		</event>
+	</choice>
+</event>
+<event name="CE_LANIUS_STRANDED" unique="true">
+	<text>You detect life signs ahead. A couple of Lanius float helpless among a few scorched debris parts. The area is littered with corpses of their own dead. Looks like the ship is shipwrecked and adrift in space. They won't last long out here, radiation or starvation will make them perish sooner or later.</text>
+	<choice hidden="true">
+		<text>Rescue the Lanius and take them to safety.</text>
+		<event load="CE_LANIUS_STRANDED_RESCUE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Keep your distance.</text>
+		<event load="CE_LANIUS_STRANDED_LEAVE"/>
+	</choice>
+</event>
+<eventList name="CE_LANIUS_STRANDED_RESCUE">
+	<event>
+		<text>You open the airlocks and take the Lanius aboard. The group is grateful, but also completely starved. Soon they start to feed from your ship. Your crew tries to reason with the survivors but the situation escalates quickly.</text>
+		<boarders min="2" max="2" class="anaerobic"/>
+	</event>
+	<event>
+		<text>You open the airlocks and take the Lanius aboard. The group is grateful, but also completely starved. Soon they start to feed from your ship. Your crew tries to reason with the survivors but the situation escalates quickly.</text>
+		<boarders min="2" max="2" class="anaerobic"/>
+	</event>
+	<event>
+		<text>You open the airlocks and take the Lanius aboard. The group is grateful and their leader keeps a tight reign over them. Any attempts of the survivors to feed from your ship is immediately punished. One of the younger Lanius speaks some fed-standard. It inquires if there are "work involvements available" in exchange for "food".</text>
+			<choice hidden="true">
+				<text>Hire the Lanius and feed it 30 scrap.</text>
+				<event>
+					<text>The Lanius leader agrees to let his kind go, under the condition of being allowed to contact the local Lanius forces. They fix a pickup point and you drop the remaining survivors at a small science satellite. A dark Lanius warship that refuses any hails jumps in soon after and teleports them away.</text>
+					<crewMember amount="1" class="anaerobic"/>
+					<item_modify>
+						<item type="scrap" min="-30" max="-30"/>
+					</item_modify>
+				</event>
+			</choice>
+			<choice>
+				<text>Decline.</text>
+				<event>
+					<text>You neither have the time nor the scrap to deal with a hungry Lanius youth aboard your ship. The survivors are dropped off at the next save beacon and you hope to have seen the last of them.</text>
+				</event>
+			</choice>
+	</event>
+</eventList>
+<eventList name="CE_LANIUS_STRANDED_LEAVE">
+	<event>
+		<text>You prepare to charge the drive, but the Lanius seem unwilling to accept their fate. Many of them still have fuel in their booster packs. They propel themselves towards your ship. A first wave of Lanius sacrifice themselves to deplete your shields, after that a second group breaches through your hull and begins to wreck havoc.</text>
+		<boarders breach="true" min="2" max="2" class="anaerobic"/>
+	</event>
+	<event>
+		<text>You watch as the helpless Lanius tumble through space while the FTL drive charges. These creatures brought this upon themselves and probably deserve it. Right?</text>
+	</event>
+	<event>
+		<text>You watch as the helpless Lanius tumble through space while the FTL drive charges. These creatures brought this upon themselves and probably deserve it. Right?</text>
+	</event>
+</eventList>
+<event name="BS_EVENT_LANIUS" unique="true">
+	<text load="BS_EVENT_LANIUS_TEXT"/>
+	<ship load="BS_LANIUS" hostile="true"/>
+		<choice hidden="true">
+			<text load="GENERIC_ATTACK_TEXT"/>
+			<event/>
+		</choice>
+		<choice req="AE_COMBATAUGS" hidden="true"> 
+			<text load="GENERIC_CAS_TEXT"/>
+			<event load="SMCE_CAS_INTERFACE"/>
+		</choice>
+</event>
+<textList name="BS_EVENT_LANIUS_TEXT">
+	<text>A station is guarding this beacon - the Lanius have detected your arrival and are powering up their weapons!</text>
+	<text>A Lanius weapon platform is located at this beacon, and it's unclear as to how they managed to bring it here. They hail your ship, but the translator barely can cope with their language: "... metallic opportunity... acquisition... by force..." Looks like they won't let you go in peace.</text>
+	<text>You arrive to discover a fully-weaponized Lanius station. How could they have built these things so fast? The installation is busy using its recovery arms to tear an automated ship apart, but powers up the weapons when they spot you.</text>
+	<text>You receive a message on a wide-band frequency, originating from a small Lanius station. It appears not to be directed at you, but your translator does its best all the same: "... metallic opportunity... acquisition... by force..." Looks like you're in for a fight.</text>
+	<text>A weaponized Lanius station has been constructed here. The installation seems fully-functional and the Lanius activate their weapon arrays when you passively scan it for weak-spots. You prepare for combat.</text>
+	<text planet="PLANET_POPULATED">The Lanius have converted materials salvaged from this planet into a fully functional battle station. They open fire before you have a chance to hail.</text>
+</textList>
+<mod:findName type="event" name="STORE_LANIUS"> 
+    <mod:removeTag />
+</mod:findName>	
+<event name="STORE_LANIUS">
+	<text load="STORE_LANIUS"/>
+	<store/>
+	<choice hidden="true">
+		<text load="GENERIC_STORE_TEXT"/>
+		<event/>
+	</choice>
+	<choice hidden="true">
+		<text>Check to see what trade goods they sell here.</text>
+		<event load="TE_STORE_LANIUS_LIST_BUY"/>
+	</choice>
+	<choice hidden="true">
+		<text>Consider some upgrades to your custom ship equipment.</text>
+		<event load="CE_AUGMENT_UPGRADE_CIVILIAN"/>
+	</choice>
+	<choice req="AE_AUGMENTS_PRODUCTION" blue="false" hidden="true">
+		<text>Produce something on board the ship.</text>
+		<event load="CE_PRODUCTION"/>
+	</choice>
+	<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+		<text>Offload your current trade goods.</text>
+		<event load="TE_STORE_LANIUS_LIST_BOOSTED"/>
+	</choice>
+</event>
+<textList name="STORE_LANIUS">
+	<text>A large transport ship undergoing maintenance hails you. "Greetings, friend. We're getting out of this sector as soon as this Coolant Shaft is fixed and I suggest you do the same. I half expect those damn metal freaks to come and try to melt down our ship at any moment. We're trying to offload some inventory - interested in buying something?"</text>
+	<text>You arrive to discover a number of Lanius ships docked at what appears to be a station. You hasten to leave but are relieved when they message you in your language. "Buy? Sell? Traders." Apparently some merchants emigrated with the scavengers.</text>
+	<text>A trading depot is set up near the beacon. A surprising number of military ships guard the station. You pick up an advertisement on a wide band channel, "Ship parts, repairs, refuelling, souvenirs - we got it all. Check out the only store not afraid of scavengers this side of Omicron 6."</text>
+	<text>You arrive at an empty space station, no doubt abandoned due to the Lanius threat. Life signatures are detected at the ship depot and you spot a few crude signs stating "Everything Must Go!"</text>
+	<text>This beacon is bustling with activity. It looks like some merchants decided to capitalize on the fact that dozens of refugee ships are using this location to recharge their FTL drives. You browse their wares.</text>
+	<text>You receive a message from a nearby station, "The end is upon us! The metal demons have come to absorb your very being! But it's not too late to prepare for the worst!" It appears that was an advertisement for a space dock. You scan their products.</text>
+	<text planet="PLANET_POPULATED">The Lanius have picked this entire planet clean. Now their trade vessels sell whatever the metal beings cannot absorb. You wonder what happened to the planets population.</text>
+</textList>
+<eventList name="TE_STORE_LANIUS_LIST">
+	<event load="TE_STORE_LANIUS_LIST_BOOSTED"/>
+</eventList>
+<textList name="STORE_LANIUS_BUY_TEXT">
+	<text>You transfer the scrap. While your crew loads the cargo, you have a look at the ship equipment the shop also offers. Time passes.</text>
+	<text>You write a scrap transfer order. Processing it takes a while, but loading the cargo takes even longer. You check the ship equipment catalogue while waiting.</text>
+	<text>You hand over the crates with the scrap. Loading the cargo takes some time. The cargo drones are in much less of a hurry than you. While waiting, you get a chance to check the ship equipment they offer here.</text>
+</textList>
+<textList name="STORE_LANIUS_SELL_TEXT">
+	<text>It takes a while to negotiate a good price. After receiving some scrap in advance, you are asked to unload the cargo at the shop to get the rest of your payment.</text>
+	<text>Negotiations are interrupted by a rogue Lanius scavenger, approaching in to steal from the shop. The trader only resumes communication once the hostile is driven away by his escort and you still have to unload the cargo at the shop to receive the rest of your payment.</text>
+	<text>You try to negotiate a good price. After receiving some scrap in advance you are asked to unload the cargo at the shop to get the rest of your payment. This took a while.</text>
+	<text>After some time-consuming haggling, you reach an agreement. You still have to unload the cargo at the shop to receive the rest of your payment.</text>
+	<text>After some time-consuming negotiations, you get an advance payment. "You get the rest after you unload the cargo at the shop." They don't seem to trust you much.</text>
+</textList>
+<eventList name="TE_STORE_LANIUS_LIST_BUY">
+	<event>
+		<text>You consider striking a deal with the trader.</text>
+		<choice>
+			<text>Buy some materials the Lanius left behind. Easy to recycle into other items, and such dedicated facilities exist.</text>
+			<event>
+				<text load="STORE_BUY_TEXT_BOOSTED"/>
+				<augment name="TE_GOODS_LANIUS_POLYMERS"/>
+				<item_modify>
+					<item type="scrap" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just quickly check the available ship equipment.</text>
+			<event/>
+		</choice>
+		<choice req="TE_AUGMENTS_TRADEGOODS" hidden="true" blue="false">
+			<text>Offload your current trade goods.</text>
+			<event load="TE_STORE_LANIUS_LIST_BOOSTED"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="TE_STORE_LANIUS_LIST_BOOSTED">
+	<event>
+		<text>You consider striking a deal with the trader.</text>
+		<choice req="TE_GOODS_LANIUS_POLYMERS" hidden="true">
+			<text>The plastic you're carrying might fetch a good price here... if they were raw materials instead of items.</text>
+			<event/>
+		</choice>
+		<choice req="TE_GOODS_ROCK_HULLS" hidden="true">
+			<text>A nearby Lanius ship scans your cargo and starts sending crude messages: "Need... happening..." [Sell Ship Hull Panels for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ROCK_HULLS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_FED_WRECK" hidden="true">
+			<text>A nearby Lanius shows its interest in you cargo by repeatedly scanning it. They send a detailed list with scrap materials, labelled "Exchange!" [Sell Ship Wreckage for about 30 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_FED_WRECK"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="28" max="32"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_DATA" hidden="true">
+			<text>The Lanius are known to make effective use of holograms. This data will surely interest them, and you succeed in finding a middle man willing to buy it. [Sell AI Research Data for about 35 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_AI_DATA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_ORE" hidden="true">
+			<text>Some locals try to keep the Lanius away by offering them tribute. Any metal will do, even raw ore. [Sell Raw Asteroid Ore for about 30 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_ROCK_ORE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="28" max="32"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_HAZARD_ELEMENTS" hidden="true">
+			<text>Not before long, a squad of small Lanius trade scouts swarm your ship, continuously scanning your holds. They repeatedly send a message: "Tasty!" [Sell Rare Elements for about 65 Scrap]</text>
+			<event>
+				<remove name="TE_GOODS_HAZARD_ELEMENTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="61" max="69"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_FOOD" hidden="true">
+			<text>[Sell Space Rations for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_FOOD"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_CONSUMER" hidden="true">
+			<text>[Sell Consumer Goods for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_CONSUMER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CIVILIAN_LUXURY" hidden="true">
+			<text>[Sell Luxury Goods for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CIVILIAN_LUXURY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_CODEX" hidden="true">
+			<text>[Sell the Zoltan Legal Codex for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_CODEX"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_SHIELDS" hidden="true">
+			<text>[Sell Shield Components for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_SHIELDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MEDICINE" hidden="true">
+			<text>[Sell Pharmaceuticals for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MEDICINE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_ELECTRONICS" hidden="true">
+			<text>[Sell Ship Hardware for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_ELECTRONICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ENGI_MACHINES" hidden="true">
+			<text>You receive an offer from a nearby group of Lanius who are taking interest in your machines. You suspect they won't be used for their intended purpose, but the pay is tempting. [Sell Industrial Machinery for about 30 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ENGI_MACHINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="28" max="32"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ZOLTAN_BEACONS" hidden="true">
+			<text>[Sell Beacon Parts for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ZOLTAN_BEACONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROCK_LITERATURE" hidden="true">
+			<text>[Sell Religious Rock Scriptures for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROCK_LITERATURE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_ENGINES" hidden="true">
+			<text>[Sell Engine Parts for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_ENGINES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_WEAPONS" hidden="true">
+			<text>[Sell Weapon Components for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_WEAPONS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_MANTIS_BOUNTY" hidden="true">
+			<text>[Sell Looted Bounty for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_MANTIS_BOUNTY"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_DRUGS" hidden="true">
+			<text>[Sell Slug Hallucinogens for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_DRUGS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ART" hidden="true">
+			<text>[Sell Eccentric Artworks for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ART"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SLUG_ANIMALS" hidden="true">
+			<text>[Sell Alien Livestock for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SLUG_ANIMALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PIRATE_ARMS" hidden="true">
+			<text>[Sell Small Arms for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PIRATE_ARMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_REBEL_CONTRABAND" hidden="true">
+			<text>[Sell Federation Contraband for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_REBEL_CONTRABAND"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_NEBULA_GAS" hidden="true">
+			<text>[Sell Compressed Nebula Gas for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_NEBULA_GAS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CRYSTAL_ARTIFACTS" hidden="true">
+			<text>[Sell Crystal Artifacts for about 75 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CRYSTAL_ARTIFACTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="70" max="80"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AI_NANOBOTS" hidden="true">
+			<text>[Sell Obedient Nanobots for about 50 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AI_NANOBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="47" max="53"/>  
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_QUARANTINE_DISEASE" hidden="true">
+			<text>[Sell Disease Samples for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_QUARANTINE_DISEASE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_TERRAFORMING" hidden="true">
+			<text>[Sell Terraforming Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_TERRAFORMING"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_INDUSTRIAL_REACTOR" hidden="true">
+			<text>[Sell Reactor Modules for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_INDUSTRIAL_REACTOR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<!-- generic -->
+		<choice req="TE_GOODS_GIRDERS" hidden="true">
+			<text>[Sell Space Building Material for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GIRDERS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CHEMICALS" hidden="true">
+			<text>[Sell Basic Chemicals for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CHEMICALS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_TEXTILES" hidden="true">
+			<text>[Sell Synth-Textiles for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_TEXTILES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ORGANISMS" hidden="true">
+			<text>[Sell Xeno Organisms for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ORGANISMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_O2" hidden="true">
+			<text>[Sell Stored Oxygen for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_O2"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_H2O" hidden="true">
+			<text>[Sell Huge Water Supply for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_H2O"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SEEDS" hidden="true">
+			<text>[Sell Bio-Engineered Seeds for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SEEDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CONDUITS" hidden="true">
+			<text>[Sell Power Conduits for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CONDUITS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_PRODUCE" hidden="true">
+			<text>[Sell Station-Grown Vegetables for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_PRODUCE"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ANTIMATTER" hidden="true">
+			<text>[Sell Antimatter for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ANTIMATTER"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GAMES" hidden="true">
+			<text>[Sell Virtual Games for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GAMES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SENSORS" hidden="true">
+			<text>[Sell Sensor Components for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SENSORS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_LIFESUPPORT" hidden="true">
+			<text>[Sell Life Support Gear for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_LIFESUPPORT"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_ROBOTS" hidden="true">
+			<text>You receive an offer from a nearby group of Lanius who are taking interest in your drones. You suspect they won't be used for their intended purpose, but the pay is tempting. [Sell Serve Drones for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_ROBOTS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RESEARCH" hidden="true">
+			<text>[Sell Research Equipment for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RESEARCH"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_SOLAR" hidden="true">
+			<text>[Sell Solar Panels for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_SOLAR"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_RELICS" hidden="true">
+			<text>[Sell Archaeological Relics for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_RELICS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_CLONES" hidden="true">
+			<text>[Sell Trooper DNA Backups for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_CLONES"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GLANDS" hidden="true">
+			<text>[Sell Alien Glands for about 20 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GLANDS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="18" max="22"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_GEMS" hidden="true">
+			<text>[Sell Deep-Space Gemstones for about 25 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_GEMS"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="23" max="27"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice req="TE_GOODS_AMBRA" hidden="true">
+			<text>[Sell Space Whale Ambra for about 35 Scrap]</text> 
+			<event>
+				<remove name="TE_GOODS_AMBRA"/>
+				<text load="STORE_SELL_TEXT_BOOSTED"/>
+				<choice>
+					<text>Continue...</text>
+					<event/>
+				</choice>
+				<item_modify>
+					<item type="scrap" min="33" max="37"/> 
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Just quickly check the available ship equipment.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
